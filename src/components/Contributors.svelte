@@ -2,17 +2,17 @@
     let contributors = [
         {
             "name": "@jakobdk",
-            "github_url": "",
+            "github_url": "https://github.com/jakobrosenberg/",
             "imgpath": "jk"
         },
         {
             "name": "@rixo",
-            "github_url": "",
+            "github_url": "https://github.com/rixo",
             "imgpath": "rx"
         },
         {
             "name": "@wolfr_",
-            "github_url": "",
+            "github_url": "https://github.com/wolfr",
             "imgpath": "jr"
         }
     ]
@@ -57,7 +57,7 @@
 <ul>
     {#each contributors as contributor}
     <li>
-        <a href="#">
+        <a href="{contributor.github_url}">
             <img src="/images/{contributor.imgpath}.jpg">
             <span>{contributor.name}</span>
         </a>
