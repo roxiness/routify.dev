@@ -27,21 +27,6 @@
     ]
 </script>
 
-<style>
-
-    .c-usps {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .c-usps__item {
-        flex: 1 0 29%;
-        padding-right: 2.4rem;
-    }
-
-</style>
-
 <ul class="c-usps">
     {#each usps as usp}
       <li class="c-usps__item c-content">

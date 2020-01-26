@@ -1,0 +1,21 @@
+/* ==========================================================================
+  c-usps
+   ========================================================================== */
+
+.c-usps__item {
+  margin: 0 0 2.4rem;
+}
+@media (min-width: $bp-navigation-medium) {
+
+  .c-usps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .c-usps__item {
+    flex: 1 0 29%;
+    padding-right: 2.4rem;
+  }
+
+}

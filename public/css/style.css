@@ -189,12 +189,14 @@ a.c-button {
   font-size: 3.2rem;
   font-weight: 600;
   color: #000000;
+  line-height: 1.25;
   font-family: "Overpass", sans-serif;
   margin: 0 0 1.6rem; }
 
 .c-h2 {
   font-size: 2.4rem;
   font-weight: 600;
+  line-height: 1.25;
   color: #000000;
   font-family: "Overpass", sans-serif;
   margin: 0 0 1.6rem; }
@@ -258,6 +260,9 @@ a.c-button {
   list-style: disc; }
 
 .c-content code {
+  font-size: 85%;
+  padding: 0.3rem;
+  border-radius: 0.2rem;
   font-family: Monaco, Menlo, monospace;
   background: #FFF6FF; }
 
@@ -277,6 +282,29 @@ a.c-button {
 
 .c-header .c-navigation {
   margin-left: auto; }
+
+/* ==========================================================================
+  c-hero
+   ========================================================================== */
+@media (min-width: 900px) {
+  .c-hero {
+    padding: 9.6rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; } }
+
+@media (max-width: 900px) {
+  .c-hero__content {
+    margin-bottom: 2.4rem; } }
+
+.c-hero__illustration {
+  border: 0.1rem solid #FD8AF7;
+  padding: 2.4rem 4.8rem;
+  border-radius: 0.8rem; }
+
+@media (min-width: 900px) {
+  .c-hero__illustration img {
+    max-width: 38rem; } }
 
 /* ==========================================================================
    c-navigation
@@ -395,6 +423,21 @@ a.c-button {
 @media (max-width: 500px) {
   .c-navigation-mobile__links {
     padding: 9.6rem 2.4rem 0; } }
+
+/* ==========================================================================
+  c-usps
+   ========================================================================== */
+.c-usps__item {
+  margin: 0 0 2.4rem; }
+
+@media (min-width: 900px) {
+  .c-usps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  .c-usps__item {
+    flex: 1 0 29%;
+    padding-right: 2.4rem; } }
 
 /* ==========================================================================
   Utilities: Flex
