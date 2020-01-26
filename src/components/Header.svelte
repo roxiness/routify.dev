@@ -30,8 +30,7 @@
 <header class="c-header">
     <h1>
         <a href="/" class="c-logo">
-            Routify
-            <!-- @todo Place SVG here -->
+            <img src="/images/logo.svg" alt="Routify">
         </a>
     </h1>
 

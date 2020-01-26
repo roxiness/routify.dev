@@ -3,7 +3,7 @@
     import Footer from '../components/Footer.svelte';
 </script>
 
-<div class="c-container">
+<div class="c-container-horizontal">
     <Header />
     <slot />
     <Footer />

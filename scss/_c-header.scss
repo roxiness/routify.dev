@@ -2,21 +2,10 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+  border-bottom: 0.1rem solid $g-divider-color;
   padding: 1.6rem 3.2rem;
 }
 
 .c-header .c-navigation {
   margin-left: auto;
-}
-
-@media (max-width: $bp-navigation-medium) {
-  .c-header {
-    padding: 3.2rem 2.4rem 3.2rem;
-  }
-}
-
-@media (max-width: $bp-navigation-small) {
-  .c-header {
-    padding: 2.4rem 2.4rem;
-  }
 }

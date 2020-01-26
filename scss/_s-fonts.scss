@@ -1,5 +1,5 @@
 /* ==========================================================================
-  Fonts
+  s-fonts
    ========================================================================== */
 
 $font-location: "../fonts/" !default;
@@ -76,29 +76,31 @@ $font-location: "../fonts/" !default;
        url("#{$font-location}Inter-BoldItalic.woff?v=3.11") format("woff");
 }
 
-@font-face {
-  font-family: 'Inter';
-  font-style:  normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url("#{$font-location}Inter-ExtraBold.woff2?v=3.11") format("woff2"),
-       url("#{$font-location}Inter-ExtraBold.woff?v=3.11") format("woff");
-}
 
-@font-face {
-  font-family: 'Inter';
-  font-style:  italic;
-  font-weight: 800;
-  font-display: swap;
-  src: url("#{$font-location}Inter-ExtraBoldItalic.woff2?v=3.11") format("woff2"),
-       url("#{$font-location}Inter-ExtraBoldItalic.woff?v=3.11") format("woff");
-}
 
+/* overpass-regular - latin */
 @font-face {
-  font-family: 'Inter';
-  font-style:  normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("#{$font-location}Inter-Black.woff2?v=3.11") format("woff2"),
-       url("#{$font-location}Inter-Black.woff?v=3.11") format("woff");
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/overpass-v4-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Overpass Regular'), local('Overpass-Regular'),
+       url('../fonts/overpass-v4-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/overpass-v4-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/overpass-v4-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/overpass-v4-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/overpass-v4-latin-regular.svg#Overpass') format('svg'); /* Legacy iOS */
+}
+/* overpass-700 - latin */
+@font-face {
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/overpass-v4-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Overpass Bold'), local('Overpass-Bold'),
+       url('../fonts/overpass-v4-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/overpass-v4-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/overpass-v4-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/overpass-v4-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/overpass-v4-latin-700.svg#Overpass') format('svg'); /* Legacy iOS */
 }

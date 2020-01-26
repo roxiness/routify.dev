@@ -5,7 +5,7 @@
 /* Variables
    ========================================================================== */
 
-$c-button-primary-color: #0E83FC !default;
+$c-button-primary-color: #E938C2 !default;
 $c-button-link-color: $c-button-primary-color !default;
 
 /* Component
@@ -17,6 +17,7 @@ $c-button-link-color: $c-button-primary-color !default;
   border-radius: 0.2rem;
   border: none;
   appearance: none;
+  border-radius: 0.8rem;
   font-size: 1.6rem;
 }
 
@@ -43,4 +44,8 @@ a.c-button {
 
 .c-button--link {
   color: $c-button-link-color;
+}
+
+.c-button--large {
+  padding: 1.6rem 2rem;
 }

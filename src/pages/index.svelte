@@ -1,35 +1,27 @@
 <script>
     import Usps from '../components/Usps.svelte';
     import Contributors from '../components/Contributors.svelte';
+    import Contribute from '../components/Contribute.svelte';
+    import Hero from '../components/Hero.svelte';
 </script>
 
-<style>
-    .c-hero {
-        padding: 9.6rem 0;
-    }
-</style>
-
 <main>
-  <div class="c-hero">
-    <div class="c-hero__content">
-      <h2>Routes for Svelte, automated by your file structure.</h2>
-      <p>Routify offers a great developer experience to build the routes for your Svelte app.</p>
-      <p><a href="#" class="c-button c-button--primary c-button--large">Get started</a></p>
+    <div class="c-container-vertical">
+        <Hero />
     </div>
-    <div class="c-hero__illustration">
-
-    </div>
-  </div>
 </main>
 
-<Usps />
+<div class="c-container-vertical">
+    <Usps />
+</div>
 
-<h3>Contributors</h3>
+<div class="c-container-vertical">
+    <Contributors />
+</div>
 
-<Contributors />
+<div class="c-container-vertical">
+    <Contribute />
+</div>
 
-<p>Want to help? Use Routify, file issues, pick up issues. Let’s make the best router for Svelte 3!</p>
-
-<p>Give us a star on Github:</p>
 
 <!-- @todo add github widget -->

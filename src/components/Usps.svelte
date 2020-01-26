@@ -14,11 +14,11 @@
         },
         {
             headline: "Single source of truth",
-            text: "If /recipes/cupcakes doesn't exist in your browser, it doesn't exist in your project. That's easy debugging."
+            text: "If <code>/recipes/cupcakes</code> doesn't exist in your browser, it doesn't exist in your project. That's easy debugging."
         },
         {
             headline: "Resets",
-            text: "Sometimes you don't want everything to be scoped. Maybe you don't want /restaurants/burger-queen to inherit any layout."
+            text: "Sometimes you don't want everything to be scoped. Maybe you don't want <code>/restaurants/burger-queen</code> to inherit any layout."
         },
         {
             headline: "And more...",
@@ -32,18 +32,21 @@
     .c-usps {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-around;
     }
 
     .c-usps__item {
-        flex: 1 0 33%;
+        flex: 1 0 29%;
+        padding-right: 2.4rem;
     }
 
 </style>
+
 <ul class="c-usps">
     {#each usps as usp}
-      <li class="c-usps__item">
+      <li class="c-usps__item c-content">
           <h3>{usp.headline}</h3>
-          <p>{usp.text}</p>
+          <p>{@html usp.text}</p>
       </li>
   {/each}
 </ul>
