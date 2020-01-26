@@ -1,5 +1,5 @@
 {
-    "name": "routify-starter",
+    "name": "routify-docs-2020",
     "routes": [{
         "src": "/[^\\.]+",
         "dest": "/index.html"
