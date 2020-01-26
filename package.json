@@ -27,5 +27,8 @@
     "node-sass": "^4.13.1",
     "rollup-plugin-svg": "^2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@sveltech/bricks": "^1.0.0",
+    "svelte-prism": "^1.0.5"
+  }
 }
