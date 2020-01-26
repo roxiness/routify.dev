@@ -26,6 +26,14 @@
   margin: 0 0 1.6rem;
 }
 
+.c-h4 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: $g-heading-color;
+  font-family: $g-headings-font-family;
+  margin: 0 0 1.6rem;
+}
+
 .c-p {
   margin-bottom: 1.6rem;
 }
@@ -56,6 +64,14 @@
 
   h3 {
     font-size: 1.8rem;
+    font-weight: 600;
+    color: $g-heading-color;
+    font-family: $g-headings-font-family;
+    margin: 0 0 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.6rem;
     font-weight: 600;
     color: $g-heading-color;
     font-family: $g-headings-font-family;

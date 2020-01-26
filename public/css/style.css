@@ -172,6 +172,10 @@ a.c-button {
   max-width: 120rem;
   margin: 0 auto; }
 
+.c-container-horizontal--narrow {
+  max-width: 70rem;
+  margin: 0 auto; }
+
 /* ==========================================================================
   c-container-vertical
    ========================================================================== */
@@ -202,6 +206,13 @@ a.c-button {
   font-family: "Overpass", sans-serif;
   margin: 0 0 1.6rem; }
 
+.c-h4 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #000000;
+  font-family: "Overpass", sans-serif;
+  margin: 0 0 1.6rem; }
+
 .c-p {
   margin-bottom: 1.6rem; }
 
@@ -225,6 +236,13 @@ a.c-button {
 
 .c-content h3 {
   font-size: 1.8rem;
+  font-weight: 600;
+  color: #000000;
+  font-family: "Overpass", sans-serif;
+  margin: 0 0 1.6rem; }
+
+.c-content h4 {
+  font-size: 1.6rem;
   font-weight: 600;
   color: #000000;
   font-family: "Overpass", sans-serif;
