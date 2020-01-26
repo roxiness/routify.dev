@@ -28,7 +28,7 @@
     "svelte": "^3.16.7"
   },
   "dependencies": {
-    "@sveltech/bricks": "1.0.1-2",
+    "@sveltech/bricks": "^1.0.1-3",
     "svelte-prism": "^1.0.5"
   }
 }
