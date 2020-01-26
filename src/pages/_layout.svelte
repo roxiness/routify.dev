@@ -1,2 +1,10 @@
+<script>
+    import Header from '../components/Header.svelte';
+    import Footer from '../components/Footer.svelte';
+</script>
 
-<slot />
+<div class="c-container">
+    <Header />
+    <slot />
+    <Footer />
+</div>

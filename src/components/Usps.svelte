@@ -27,7 +27,18 @@
     ]
 </script>
 
+<style>
 
+    .c-usps {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .c-usps__item {
+        flex: 1 0 33%;
+    }
+
+</style>
 <ul class="c-usps">
     {#each usps as usp}
       <li class="c-usps__item">

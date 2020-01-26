@@ -1,0 +1,71 @@
+/* ==========================================================================
+  Content
+   ========================================================================== */
+
+.c-h1 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: $g-heading-color;
+  margin: 0 0 1.6rem;
+}
+
+.c-h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: $g-heading-color;
+  margin: 0 0 1.6rem;
+}
+
+.c-h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $g-heading-color;
+  margin: 0 0 1.6rem;
+}
+
+.c-p {
+  margin-bottom: 1.6rem;
+}
+
+.c-ul {
+  margin: 0 0 1.6rem 2.4rem;
+}
+
+.c-ul > li {
+  list-style: disc;
+}
+
+.c-content {
+
+  h1 {
+    font-size: 3.2rem;
+    color: $g-heading-color;
+    margin: 0 0 1.6rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    color: $g-heading-color;
+    margin: 0 0 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $g-heading-color;
+    margin: 0 0 1.6rem;
+  }
+
+  p {
+    margin-bottom: 1.6rem;
+  }
+
+  ul {
+    margin: 0 0 1.6rem 2.4rem;
+  }
+
+  li {
+    list-style: disc;
+  }
+
+}

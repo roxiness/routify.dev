@@ -1,0 +1,463 @@
+/* ==========================================================================
+  Styles for Routify Docs Website 2020
+   ========================================================================== */
+/* ==========================================================================
+  Reset
+   ========================================================================== */
+html, body {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0; }
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+/* ==========================================================================
+  Fonts
+   ========================================================================== */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2?v=3.11") format("woff2"), url("../fonts/Inter-Regular.woff?v=3.11") format("woff"); }
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Inter-Italic.woff2?v=3.11") format("woff2"), url("../fonts/Inter-Italic.woff?v=3.11") format("woff"); }
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2?v=3.11") format("woff2"), url("../fonts/Inter-Medium.woff?v=3.11") format("woff"); }
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/Inter-MediumItalic.woff2?v=3.11") format("woff2"), url("../fonts/Inter-MediumItalic.woff?v=3.11") format("woff"); }
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/Inter-SemiBold.woff2?v=3.11") format("woff2"), url("../fonts/Inter-SemiBold.woff?v=3.11") format("woff"); }
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/Inter-SemiBoldItalic.woff2?v=3.11") format("woff2"), url("../fonts/Inter-SemiBoldItalic.woff?v=3.11") format("woff"); }
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2?v=3.11") format("woff2"), url("../fonts/Inter-Bold.woff?v=3.11") format("woff"); }
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Inter-BoldItalic.woff2?v=3.11") format("woff2"), url("../fonts/Inter-BoldItalic.woff?v=3.11") format("woff"); }
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/Inter-ExtraBold.woff2?v=3.11") format("woff2"), url("../fonts/Inter-ExtraBold.woff?v=3.11") format("woff"); }
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/Inter-ExtraBoldItalic.woff2?v=3.11") format("woff2"), url("../fonts/Inter-ExtraBoldItalic.woff?v=3.11") format("woff"); }
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/Inter-Black.woff2?v=3.11") format("woff2"), url("../fonts/Inter-Black.woff?v=3.11") format("woff"); }
+
+/* ==========================================================================
+   Global variables
+   Prefixed with $g-
+   ========================================================================== */
+/* Type
+   ========================================================================== */
+/* Breakpoints
+   ========================================================================== */
+/* ==========================================================================
+  Base
+  Only base element styling
+   ========================================================================== */
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background: #FFF;
+  color: #4C5567;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  font-size: 1.6rem; }
+
+/* ==========================================================================
+  c-button
+   ========================================================================== */
+/* Variables
+   ========================================================================== */
+/* Component
+   ========================================================================== */
+.c-button {
+  padding: 0.6rem 1rem;
+  display: inline-flex;
+  border-radius: 0.2rem;
+  border: none;
+  appearance: none;
+  font-size: 1.6rem; }
+
+a.c-button {
+  text-decoration: none; }
+
+.c-button--default {
+  background: #DDD;
+  color: #333; }
+
+.c-button--primary {
+  background: #0E83FC;
+  color: #FFF; }
+  .c-button--primary:hover, .c-button--primary:focus {
+    background: #409dfd; }
+  .c-button--primary:active {
+    background: #036ad4; }
+
+.c-button--link {
+  color: #0E83FC; }
+
+/* ==========================================================================
+  c-container
+   ========================================================================== */
+.c-container {
+  width: 120rem;
+  margin: 0 auto; }
+
+/* ==========================================================================
+  Content
+   ========================================================================== */
+.c-h1 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 1.6rem; }
+
+.c-h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 1.6rem; }
+
+.c-h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 1.6rem; }
+
+.c-p {
+  margin-bottom: 1.6rem; }
+
+.c-ul {
+  margin: 0 0 1.6rem 2.4rem; }
+
+.c-ul > li {
+  list-style: disc; }
+
+.c-content h1 {
+  font-size: 3.2rem;
+  color: #000000;
+  margin: 0 0 1.6rem; }
+
+.c-content h2 {
+  font-size: 2.4rem;
+  color: #000000;
+  margin: 0 0 1.6rem; }
+
+.c-content h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 1.6rem; }
+
+.c-content p {
+  margin-bottom: 1.6rem; }
+
+.c-content ul {
+  margin: 0 0 1.6rem 2.4rem; }
+
+.c-content li {
+  list-style: disc; }
+
+/* ==========================================================================
+  Component: Toolbar
+  ---
+  Component for aligning multiple sub components on a horizontal axis
+   ========================================================================== */
+/* Variables
+   ========================================================================== */
+/* Component
+   ========================================================================== */
+.c-toolbar {
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-around;
+  height: 4.8rem; }
+
+.c-toolbar--spaced {
+  padding: 0 2.4rem; }
+
+.c-toolbar--auto {
+  height: auto; }
+
+.c-toolbar__left {
+  z-index: 2;
+  justify-content: flex-start; }
+  .c-toolbar__left .c-toolbar__item {
+    margin-right: 1.6rem; }
+    .c-toolbar__left .c-toolbar__item:only-child {
+      margin: 0; }
+
+.c-toolbar__right {
+  z-index: 2;
+  justify-content: flex-end; }
+  .c-toolbar__right .c-toolbar__item {
+    margin-left: 1.6rem; }
+    .c-toolbar__right .c-toolbar__item:only-child {
+      margin: 0; }
+
+.c-toolbar__left,
+.c-toolbar__right {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center; }
+
+.c-toolbar__item {
+  position: relative; }
+
+.c-toolbar__center {
+  position: absolute;
+  margin-left: 50%;
+  left: 0; }
+
+.c-toolbar__center-inner {
+  margin-left: -50%;
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center; }
+  .c-toolbar__center-inner .c-toolbar__item {
+    margin: 0 0.8rem; }
+    .c-toolbar__center-inner .c-toolbar__item:only-child {
+      margin: 0; }
+
+.c-toolbar__center--interactive {
+  z-index: 1; }
+
+.c-toolbar__center-inner--alt {
+  margin-left: -100%; }
+
+/* Specific children
+   ========================================================================== */
+.c-toolbar__title {
+  font-weight: 600;
+  font-size: 1.8rem; }
+
+/* Justified toolbar
+   ========================================================================== */
+.c-toolbar__justified {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center; }
+  .c-toolbar__justified .c-toolbar__item {
+    margin-right: 1.6rem; }
+
+.c-toolbar__item--stretch {
+  flex: 1; }
+
+.c-toolbar__justified .c-toolbar__item:last-child {
+  margin: 0; }
+
+/* ==========================================================================
+   c-navigation
+   ========================================================================== */
+.c-navigation ul {
+  display: flex;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased; }
+
+.c-navigation ul li {
+  list-style: none; }
+
+.c-navigation a {
+  text-decoration: none; }
+  .c-navigation a:hover {
+    color: #000; }
+
+.c-navigation__item--selected a {
+  color: #000; }
+
+.c-navigation ul li + li a {
+  margin-left: 3.2rem; }
+
+.c-navigation-mobile {
+  display: none; }
+
+.c-navigation-toggle {
+  display: none;
+  text-decoration: none; }
+
+@media (max-width: 900px) {
+  .c-navigation {
+    display: none; }
+  .c-navigation-mobile {
+    background: #FFF;
+    bottom: 0;
+    display: block;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    height: 100%;
+    overflow: auto; }
+  .c-navigation-mobile__links {
+    padding: 9.6rem 4.8rem 0; }
+  .c-navigation-mobile__links ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+  .c-navigation-mobile__links ul li {
+    font-size: 1.8rem;
+    padding: 0;
+    transition: 0.2s all ease-out;
+    opacity: 0;
+    transform: translateY(0.8rem); }
+    .c-navigation-mobile__links ul li a {
+      display: block;
+      text-decoration: none;
+      padding: 1.6rem 0; }
+    .c-navigation-mobile__links ul li.current-menu-item a {
+      color: #FFF;
+      font-weight: 500; }
+  .c-navigation-mobile__links li + li {
+    border-top: 0.2rem solid red; }
+  .c-navigation-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 11; }
+    .c-navigation-toggle svg {
+      display: block; } }
+    @media (max-width: 900px) and (prefers-color-scheme: dark) {
+      .c-navigation-toggle svg rect {
+        fill: #FFF; } }
+
+@media (max-width: 900px) {
+  .c-navigation-toggle__label {
+    color: #000;
+    margin-right: 0rem;
+    display: inline-flex; } }
+  @media (max-width: 900px) and (prefers-color-scheme: dark) {
+    .c-navigation-toggle__label {
+      color: #FFF; } }
+
+@media (max-width: 900px) {
+  .c-navigation-toggle__line1,
+  .c-navigation-toggle__line2,
+  .c-navigation-toggle__line3 {
+    transform-origin: 20px 20px;
+    transition: all 0.2s ease-in-out; }
+  .c-navigation-toggle__line1 {
+    transform: translateY(-0.7rem); }
+  .c-navigation-toggle__line3 {
+    transform: translateY(0.7rem); }
+  .c-navigation-toggle--active svg * {
+    fill: #FFF; }
+  .c-navigation-toggle--active .c-navigation-toggle__label {
+    color: #FFF; }
+  .c-navigation-toggle--active .c-navigation-toggle__line1 {
+    transform: rotate(-45deg); }
+  .c-navigation-toggle--active .c-navigation-toggle__line2 {
+    opacity: 0;
+    transform: scaleX(0); }
+  .c-navigation-toggle--active .c-navigation-toggle__line3 {
+    transform: rotate(45deg); }
+  .c-navigation-mobile--active {
+    opacity: 1;
+    pointer-events: auto; }
+    .c-navigation-mobile--active .c-navigation-mobile__links li {
+      opacity: 1;
+      transform: translateY(0); } }
+
+@media (max-width: 500px) {
+  .c-navigation-mobile__links {
+    padding: 9.6rem 2.4rem 0; } }
+
+.c-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem 3.2rem; }
+
+.c-header .c-navigation {
+  margin-left: auto; }
+
+@media (max-width: 900px) {
+  .c-header {
+    padding: 3.2rem 2.4rem 3.2rem; } }
+
+@media (max-width: 500px) {
+  .c-header {
+    padding: 2.4rem 2.4rem; } }
+
+/* ==========================================================================
+  Utilities: Flex
+   ========================================================================== */
+.u-flex {
+  display: flex; }
+
+/* ==========================================================================
+  Utilities: Spacer
+   ========================================================================== */
+.u-spacer {
+  padding: 1.6rem; }
+
+/*# sourceMappingURL=style.css.map */

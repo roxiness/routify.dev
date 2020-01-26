@@ -1,0 +1,24 @@
+/* ==========================================================================
+  Base
+  Only base element styling
+   ========================================================================== */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #FFF;
+  color: $g-text-color;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}

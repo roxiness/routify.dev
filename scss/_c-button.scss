@@ -1,0 +1,46 @@
+/* ==========================================================================
+  c-button
+   ========================================================================== */
+
+/* Variables
+   ========================================================================== */
+
+$c-button-primary-color: #0E83FC !default;
+$c-button-link-color: $c-button-primary-color !default;
+
+/* Component
+   ========================================================================== */
+
+.c-button {
+  padding: 0.6rem 1rem;
+  display: inline-flex;
+  border-radius: 0.2rem;
+  border: none;
+  appearance: none;
+  font-size: 1.6rem;
+}
+
+a.c-button {
+  text-decoration: none;
+}
+
+.c-button--default {
+  background: #DDD;
+  color: #333;
+}
+
+.c-button--primary {
+  background: $c-button-primary-color;
+  color: #FFF;
+  &:hover,
+  &:focus {
+    background: lighten($c-button-primary-color, 10%);
+  }
+  &:active {
+    background: darken($c-button-primary-color, 10%);
+  }
+}
+
+.c-button--link {
+  color: $c-button-link-color;
+}
