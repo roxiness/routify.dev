@@ -1,0 +1,15 @@
+{
+  "background_color": "#ffffff",
+  "theme_color": "#E938C2",
+  "name": "Routify",
+  "short_name": "Routify",
+  "start_url": ".",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/images/routify-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
