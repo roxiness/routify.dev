@@ -35,5 +35,5 @@ npm run build
 ### Deploy
 
 `npm install -g now`
-`cd public && now deploy --name routify-docs-2020 --prod -A ../now.json`
+`npm run build && cd public && now deploy --name routify-docs-2020 --prod -A ../now.json`
 
