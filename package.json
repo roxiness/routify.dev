@@ -2,33 +2,35 @@
   "name": "routify-docs-2020",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -c",
-    "buildnow": "npm run build && cd public && now --prod",
-    "dev": "run-p watch:routify watch:rollup",
-    "dev:split": "run-p watch:routify:split watch:rollup",
-    "watch:rollup": "rollup -c -w",
-    "watch:routify": "routify",
-    "watch:routify:split": "routify -D",
-    "start": "sirv public --single",
-    "start:split": "sirv public --single dynamic.html",
+    "dev": "routify",
+    "dev:split": "routify --dynamic-imports",
+    "build": "routify -b && rollup -c && routify -bD && rollup -c --environment BUILDING && routify export",
+    "start": "sirv dist --single __app.html",
+    "preview-build": "cd scripts/server && node index",
+    "deploy:now": "cd scripts/now && npm run deploy",
+    "deploy:netlify": "cd scripts/netlify && npm run deploy",
+    "rollup": "rollup -cw",
     "css-dev": "node-sass --watch --recursive --output public/css --source-map true --source-map-contents scss"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^6.0.0",
     "@sveltech/routify": "next",
+    "concurrently": "^5.0.2",
+    "rimraf": "^3.0.0",
     "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.5",
     "rollup": "^1.12.0",
     "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-copy": "^3.2.1",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-terser": "^5.1.2",
     "sirv-cli": "^1.0.0-next.2",
-    "svelte": "^3.16.7"
-  },
-  "dependencies": {
+    "svelte": "^3.16.7",
+    "js-yaml": "^3.13.1",
     "@sveltech/bricks": "^1.0.1-3",
     "svelte-prism": "^1.0.5"
-  }
+  },
+  "dependencies": {}
 }
