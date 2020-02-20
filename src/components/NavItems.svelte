@@ -5,7 +5,7 @@
 
     let navItems = [];
     $: navItems = [
-      ['/', 'Home'],
+      ['/index', 'Home'],
       ['/installation', 'Installation'],
       ['/configuration', 'Configuration'],
       ['/guide', 'Guide'],
