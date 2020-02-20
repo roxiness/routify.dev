@@ -5,15 +5,19 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import { config } from '@sveltech/routify'
 import copy from 'rollup-plugin-copy'
-import rimraf from 'rimraf'
+import del from 'del'
+import ppidChanged from 'ppid-changed'
+import scss from 'rollup-plugin-scss'
 
 
 const production = !process.env.ROLLUP_WATCH;
-
 const { distDir, staticDir, sourceDir, dynamicImports: split } = config
 const buildDir = `${distDir}/build`
+const template = staticDir + (split ? '/__dynamic.html' : '/__bundled.html')
 
-if (!process.env.BUILDING) rimraf.sync(distDir)
+// Delete the dist folder, but not between build steps
+// ("build": "build-step-1 && build-step-2 && etc")
+if (ppidChanged()) del.sync(distDir + '/**')
 
 export default {
 	input: `${sourceDir}/main.js`,
@@ -24,7 +28,8 @@ export default {
 		[split ? 'dir' : 'file']: split ? `${buildDir}` : `${buildDir}/bundle.js`
 	}],
 	plugins: [
-		copy({ targets: [{ src: staticDir+'/*', dest: distDir }] }),
+		copy({ targets: [{ src: staticDir + '/*', dest: distDir }] }),
+		copy({ targets: [{ src: template, dest: distDir, rename: '__app.html' }] }),
 		svelte({
 			// enable run-time checks when not in production
 			dev: !production,
@@ -34,7 +39,8 @@ export default {
 			css: css => {
 				css.write(`${buildDir}/bundle.css`);
 			}
-		}),
+    }),
+    scss({output: `${buildDir}/global.css`}),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
