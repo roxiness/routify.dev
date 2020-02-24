@@ -1,8 +1,12 @@
 .c-logo {
   display: flex;
-  width: 17.2rem;
+  width: 12rem;
 
   img {
     width: 100%;
+  }
+
+  @media (min-width: $bp-navigation-medium) {
+    width: 17.2rem;
   }
 }
