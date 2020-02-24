@@ -28,8 +28,7 @@
         <li class:c-navigation__item--selected={active}>
             <a href="{url}" on:click="{handleNavigationClick}">
                 {#if name == "Github"}
-                    <!-- @todo place github icon here-->
-                    Github
+                    <img class="c-navigation__github-logo" src="/images/github.svg" alt="Github logo">
                 {:else}
                     {name}
                 {/if}
