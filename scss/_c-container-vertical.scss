@@ -3,5 +3,9 @@
    ========================================================================== */
 
 .c-container-vertical {
-  padding: 4.8rem 0;
+  padding: 2.4rem 0;
+
+  @media (min-width: $bp-navigation-medium) {
+    padding: 4.8rem 0;
+  }
 }

@@ -6,10 +6,12 @@
   background-image: url("/images/logo-background.png");
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.50) 25%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.50) 75%, rgba(255,255,255,1) 100%), url("/images/logo-background.png");
   background-size: cover;
+  display: flex;
+  flex-direction: column-reverse;
 
   @media (min-width: $bp-navigation-medium) {
     padding: 9.6rem 0;
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
@@ -17,7 +19,6 @@
 
 .c-hero__content {
   width: 100%;
-  margin-bottom: 3.2rem;
 
   @media (min-width: $bp-navigation-medium) {
     width: 50%;
@@ -32,14 +33,17 @@
 }
 
 .c-hero__illustration {
-  border: 0.1rem solid #FD8AF7;
-  background-color: #FFF;
+  background-color: #FFF6FF;
   padding: 3.2rem 4rem;
   border-radius: 0.8rem;
   width: 100%;
+  margin-bottom: 3.2rem;
 
   @media (min-width: $bp-navigation-medium) {
     width: 50%;
+    border: 0.1rem solid #FD8AF7;
+    background-color: #FFF;
+    margin-bottom: 0;
   }
 }
 
