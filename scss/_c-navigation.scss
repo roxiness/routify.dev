@@ -15,14 +15,15 @@
 .c-navigation {
   a {
     text-decoration: none;
+    color: #1D2C48;
     &:hover {
-      color: #000;
+      color: $g-link-color;
     }
   }
 }
 
 .c-navigation__item--selected a {
-  color: #000;
+  color: $g-link-color;
 }
 
 .c-navigation ul li + li a {
