@@ -8,21 +8,12 @@ New design for the Roufity docs site.
 **Dev + codesplitting** ``npm run dev:split``
 **Build** ``npm run build``
 
-### Compiling SCSS
-
-Run
-
-```bash
-npm run-script css-dev
-```
-
 ### Production
 
 Please make sure that url rewrite is enabled on our server.
 
 - For apps without code splitting redirect to index.html
 - For apps with code splitting redirect to dynamic.html
-
 
 ### Building and running in production mode
 
