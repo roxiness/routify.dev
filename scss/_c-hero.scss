@@ -3,6 +3,9 @@
    ========================================================================== */
 
 .c-hero {
+  background-image: url("/images/logo-background.png");
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.50) 25%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.50) 75%, rgba(255,255,255,1) 100%), url("/images/logo-background.png");
+  background-size: cover;
   @media (min-width: $bp-navigation-medium) {
     padding: 9.6rem 0;
     display: flex;
@@ -24,6 +27,7 @@
 
 .c-hero__illustration {
   border: 0.1rem solid #FD8AF7;
+  background-color: #FFF;
   padding: 2.4rem 4.8rem;
   border-radius: 0.8rem;
 }
