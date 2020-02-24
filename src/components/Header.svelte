@@ -20,19 +20,11 @@
 
 </script>
 
-<style>
-    .c-header {
-        display: flex;
-        justify-content: space-between;
-    }
-</style>
-
 <header class="c-header">
-    <h1>
-        <a href="/" class="c-logo">
-            <img src="/images/logo.svg" alt="Routify">
-        </a>
-    </h1>
+
+    <a href="/" class="c-logo">
+        <img src="/images/logo.svg" alt="Routify">
+    </a>
 
     <nav role="navigation" class="c-navigation">
         <NavItems />
