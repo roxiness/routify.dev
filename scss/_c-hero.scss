@@ -6,6 +6,7 @@
   background-image: url("/images/logo-background.png");
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.50) 25%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.50) 75%, rgba(255,255,255,1) 100%), url("/images/logo-background.png");
   background-size: cover;
+
   @media (min-width: $bp-navigation-medium) {
     padding: 9.6rem 0;
     display: flex;
@@ -14,26 +15,34 @@
   }
 }
 
-@media (max-width: $bp-navigation-medium) {
-  .c-hero__content {
-    margin-bottom: 2.4rem;
-  }
-}
+.c-hero__content {
+  width: 100%;
+  margin-bottom: 3.2rem;
 
-.c-hero__content p {
-  font-size: 2rem;
-  padding: 1.6rem 0;
+  @media (min-width: $bp-navigation-medium) {
+    width: 50%;
+    margin-right: 4rem;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 2rem;
+    padding: 0 0 1.6rem 0;
+  }
 }
 
 .c-hero__illustration {
   border: 0.1rem solid #FD8AF7;
   background-color: #FFF;
-  padding: 2.4rem 4.8rem;
+  padding: 3.2rem 4rem;
   border-radius: 0.8rem;
+  width: 100%;
+
+  @media (min-width: $bp-navigation-medium) {
+    width: 50%;
+  }
 }
 
 .c-hero__illustration img {
-  @media (min-width: $bp-navigation-medium) {
-    max-width: 38rem;
-  }
+  max-width: 100%;
 }
