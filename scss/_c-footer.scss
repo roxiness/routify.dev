@@ -5,4 +5,9 @@
 .c-footer {
   border-top: 0.1rem solid $g-divider-color;
   padding: 1.6rem 3.2rem;
+  margin-top: 2.4rem;
+
+  @media (min-width: $bp-navigation-medium) {
+    margin-top: 4.8rem;
+  }
 }

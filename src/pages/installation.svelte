@@ -10,6 +10,16 @@
 
 <OpenGraph {pageTitle} />
 
+<style>
+    .tabpages {
+        border: 1px dashed #AFB9CB;
+        border-radius: .6rem;
+        margin-top: 1.6rem;
+        padding: 3.2rem;
+    }
+
+</style>
+
 <div class="c-container-horizontal--narrow">
     <div class="c-content">
         <div class="c-container-vertical--small">
@@ -21,9 +31,9 @@
 
         <div class="step c-container-vertical--small">
             <h2>1. Install module</h2>
-            <div class="card">
-            <div class="pb-2">Run in project folder</div>
-            <span class="code py-1">npm i -d @sveltech/routify@next</span>
+            <div>
+                <div class="pb-2">Run in project folder</div>
+                <span class="code py-1">npm i -d @sveltech/routify@next</span>
             </div>
         </div>
 
