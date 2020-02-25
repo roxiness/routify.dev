@@ -1,0 +1,23 @@
+.c-tabs button {
+  padding: .8rem;
+  background: #FFF;
+  color: $g-primary-color;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid $g-primary-color;
+    color: $g-text-color;
+    outline-style: none;
+  }
+}
+
+.c-tabs {
+  .selected {
+    border-bottom: 2px solid $g-primary-color;
+    color: $g-text-color;
+  }
+}

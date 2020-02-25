@@ -31,7 +31,7 @@
               <h2>2. Choose a bundler</h2>
               <div class="card">
                 <Tabs>
-                  <div class="tablinks">
+                  <div class="c-tabs">
                     <TabsLink class="px-2 font-semibold">CLI</TabsLink>
                     <TabsLink class="px-2 font-semibold">Rollup</TabsLink>
 
@@ -95,7 +95,7 @@
               </p>
               <div class="card">
                 <Tabs>
-                  <div class="tablinks">
+                  <div class="c-tabs">
                     <TabsLink class="px-2 font-semibold">Sirv</TabsLink>
                     <TabsLink class="px-2 font-semibold">Apache</TabsLink>
                     <TabsLink class="px-2 font-semibold">Other</TabsLink>
