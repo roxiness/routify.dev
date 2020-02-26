@@ -10,7 +10,8 @@
     "deploy:now": "cd scripts/now && npm run deploy",
     "deploy:netlify": "cd scripts/netlify && npm run deploy",
     "rollup": "rollup -cw",
-    "css-dev": "node-sass --watch --recursive --output public/css --source-map true --source-map-contents scss"
+    "build:sass": "node-sass --recursive --output dist/build --source-map true --source-map-contents scss",
+    "watch:sass": "npm run build:sass && npm run build:sass -- --watch"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^6.0.0",
