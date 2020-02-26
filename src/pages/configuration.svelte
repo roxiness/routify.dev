@@ -1,6 +1,6 @@
 <script>
     let pageTitle = "Configuration";
-    import OpenGraph from '../Components/OpenGraph.svelte';
+    import OpenGraph from '../components/OpenGraph.svelte';
 </script>
 
 <OpenGraph {pageTitle} />
