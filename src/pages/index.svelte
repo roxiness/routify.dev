@@ -4,7 +4,7 @@
     import Contribute from '../components/Contribute.svelte';
     import Hero from '../components/Hero.svelte';
     let pageTitle = "Home";
-    import OpenGraph from '../Components/OpenGraph.svelte';
+    import OpenGraph from '../components/OpenGraph.svelte';
 </script>
 
 <OpenGraph {pageTitle} />

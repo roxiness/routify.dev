@@ -1,6 +1,6 @@
 <script>
     let pageTitle = "Installation";
-    import OpenGraph from '../Components/OpenGraph.svelte';
+    import OpenGraph from '../components/OpenGraph.svelte';
 
   import { url } from "@sveltech/routify";
   import Prism from "svelte-prism";
