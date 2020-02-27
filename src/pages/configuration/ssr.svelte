@@ -1,5 +1,5 @@
 <script>
-    let pageTitle = "Configuration - Code splitting";
+    let pageTitle = "Configuration - Server-side rendering";
     import OpenGraph from '../../components/OpenGraph.svelte';
 </script>
 
@@ -10,17 +10,17 @@
         <nav>
             <ul class="c-sidebar-nav">
                 <li class="c-sidebar-nav__item"><a href="/configuration/basics">Basics</a></li>
-                <li class="c-sidebar-nav__item c-sidebar-nav__item--selected"><a href="/configuration/code-splitting">Code-splitting</a></li>
+                <li class="c-sidebar-nav__item"><a href="/configuration/code-splitting">Code-splitting</a></li>
                 <li class="c-sidebar-nav__item"><a href="/configuration/prerendering">Prerendering</a></li>
                 <li class="c-sidebar-nav__item"><a href="/configuration/deployments">Deployments</a></li>
-                <li class="c-sidebar-nav__item"><a href="/configuration/ssr">SSR</a></li>
+                <li class="c-sidebar-nav__item c-sidebar-nav__item--selected"><a href="/configuration/ssr">SSR</a></li>
                 <li class="c-sidebar-nav__item"><a href="/configuration/cache">Cache</a></li>
             </ul>
         </nav>
     </div>
     <div class="c-sidebar-layout__main">
         <div class="c-content">
-            <h1>Code splitting</h1>
+            <h1>Server-side rendering</h1>
             <p>Documentation TBD.</p>
         </div>
     </div>

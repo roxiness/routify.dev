@@ -15,7 +15,7 @@
     <div class="c-container-vertical--small">
         <h1 class="c-h1">Getting started</h1>
         <p>
-            This is a manual for the manual installation. Aternatively to installing Routify in your project manually, you can also clone the <a href="https://github.com/sveltech/routify-starter">Routify starter template</a>.
+            This is a manual for the manual installation. Aternatively to installing Routify in your project manually, you can also clone the <a href="https://github.com/sveltech/routify-starter">Routify starter template</a>. View the starter template <a href="https://routify-starter.now.sh/">here</a>.
         </p>
     </div>
 
@@ -23,9 +23,9 @@
         <div class="c-content">
             <h2>1. Install module</h2>
             <p>Run in project folder</p>
-            <pre>
-                <code>npm i -d @sveltech/routify@next</code>
-            </pre>
+            <Prism>
+npm i -d @sveltech/routify@next
+</Prism>
         </div>
     </div>
 
