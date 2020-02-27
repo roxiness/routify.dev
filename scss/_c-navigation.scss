@@ -17,6 +17,7 @@
     text-decoration: none;
     color: #1D2C48;
     padding: 1rem 1.6rem;
+    border-radius: .8rem;
 
     &:hover,
     &:focus {
@@ -28,11 +29,8 @@
 
 .c-navigation__item--selected a {
   background-color: #FFE3FF;
-  border-radius: .8rem;
   color: $g-link-color;
 }
-
-
 
 .c-navigation ul li + li a {
   margin-left: 1.6rem;
