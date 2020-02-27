@@ -20,6 +20,7 @@
 }
 
 .c-sidebar-nav__item a {
+  border-radius: .8rem;
   &:hover,
   &:focus {
     color: $g-link-color;
@@ -29,7 +30,6 @@
 
 .c-sidebar-nav__item--selected a {
   background: #FFE3FF;
-  border-radius: .8rem;
   color: $g-link-color;
 }
 
