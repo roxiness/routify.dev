@@ -1,0 +1,17 @@
+/* ==========================================================================
+  c-sidebar-layout
+   ========================================================================== */
+
+.c-sidebar-layout {
+  display: flex;
+  margin: 3.6rem 0;
+}
+
+.c-sidebar-layout__side {
+  flex: 0 0 20%;
+  margin-right: 6.4rem;
+}
+
+.c-sidebar-layout__main {
+  flex: 1 1 auto;
+}

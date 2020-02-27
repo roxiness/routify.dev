@@ -6,9 +6,11 @@
     let navItems = [];
     $: navItems = [
       ['/index', 'Home'],
-      ['/installation', 'Installation'],
-      ['/configuration', 'Configuration'],
-      ['/guide', 'Guide'],
+      ['/getting-started', 'Getting started'],
+      ['/guide/scheme-structure', 'Guide'],
+      ['/helpers', 'Helpers'],
+      ['/configuration/basics', 'Configuration'],
+      ['/examples', 'Examples'],
       ['https://github.com/sveltech/routify', 'Github']
     ].map(([url, name]) => {
       return {

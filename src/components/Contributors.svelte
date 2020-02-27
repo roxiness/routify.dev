@@ -14,6 +14,11 @@
             "name": "@wolfr_",
             "github_url": "https://github.com/wolfr",
             "imgpath": "jr"
+        },
+        {
+            "name": "@evajacobs",
+            "github_url": "https://github.com/evajacobs",
+            "imgpath": "ej"
         }
     ]
 </script>

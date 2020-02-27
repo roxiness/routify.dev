@@ -18,17 +18,21 @@
     color: #1D2C48;
     padding: 1rem 1.6rem;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $g-link-color;
+      background: #FFF6FF;
     }
   }
 }
 
 .c-navigation__item--selected a {
-  background-color: #FFF6FF;
+  background-color: #FFE3FF;
   border-radius: .8rem;
   color: $g-link-color;
 }
+
+
 
 .c-navigation ul li + li a {
   margin-left: 1.6rem;
@@ -43,7 +47,7 @@
   text-decoration: none;
 }
 
-@media (max-width: $bp-navigation-medium) {
+@media (max-width: $g-bp-2) {
 
   .c-navigation {
     display: none;
@@ -177,7 +181,7 @@
   }
 }
 
-@media (max-width: $bp-navigation-small) {
+@media (max-width: $g-bp-1) {
 
   .c-navigation-mobile__links {
     padding: 9.6rem 2.4rem 0;
