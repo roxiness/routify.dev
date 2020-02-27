@@ -10,6 +10,7 @@
 
   .e404 {
     text-align: center;
+    margin: 6.4rem 0 9.6rem;
   }
 
 </style>
