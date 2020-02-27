@@ -8,7 +8,7 @@
       ['/index', 'Home'],
       ['/getting-started', 'Getting started'],
       ['/guide/scheme-structure', 'Guide'],
-      ['/helpers', 'Helpers'],
+      ['/helpers/auth', 'Helpers'],
       ['/configuration/basics', 'Configuration'],
       ['/examples', 'Examples'],
       ['https://github.com/sveltech/routify', 'Github']

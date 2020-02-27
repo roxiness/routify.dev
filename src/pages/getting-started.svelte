@@ -3,6 +3,7 @@
     import OpenGraph from '../components/OpenGraph.svelte';
 
     import { url } from "@sveltech/routify";
+
     import Prism from "svelte-prism";
     import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
 
@@ -37,7 +38,6 @@
             <div class="c-tabs">
             <TabsLink>CLI</TabsLink>
             <TabsLink>Rollup</TabsLink>
-
             </div>
             <div class="c-tabs-pages">
             <TabsPage>
