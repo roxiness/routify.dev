@@ -1,5 +1,5 @@
 <script>
-    let pageTitle = "Guide";
+    let pageTitle = "URL parameters";
     import OpenGraph from '../../components/OpenGraph.svelte';
     import Prism from "svelte-prism";
 </script>
@@ -21,13 +21,24 @@
     </div>
     <div class="c-sidebar-layout__main">
         <h1 class="c-h1">URL parameters</h1>
-        <p>Parameters are passed as props to their respective pages/layouts.</p>
-        <p>To access all parameters, use the "params" helper.</p>
-        <Prism>
-          <!-- src/pages/users/[userId]/posts/[postId].svelte -->
-          <!-- URL: /users/jimbo/posts/123 -->
-          Code here, @jakob I was unable to render this code without a compile error
-          code from https://routify.now.sh/docs/parameters
+        <div class="c-content">
+            <p>Parameters are passed as props to their respective pages/layouts.</p>
+            <p>To access all parameters, use the "params" helper.</p>
+        </div>
+        <Prism language="svelte">
+{`<!-- src/pages/users/[userId/posts/[postId].svelte -->
+<!-- URL: /users/jimbo/posts/123 -->
+<scr`}{`ipt>
+  import { params } from '@sveltech/routify'
+  export let postId, userId
+
+  console.log( postId ) /** '123' **/
+  console.log( userId ) /** undefined **/
+  console.log( $params ) /** {userId: 'jimbo', postId: '123'} **/
+</script>
+`}
         </Prism>
     </div>
 </main>
+
+
