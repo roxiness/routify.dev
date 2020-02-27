@@ -7,7 +7,6 @@ import { config } from '@sveltech/routify'
 import copy from 'rollup-plugin-copy'
 import del from 'del'
 import ppidChanged from 'ppid-changed'
-import scss from 'rollup-plugin-scss'
 
 
 const production = !process.env.ROLLUP_WATCH;
@@ -40,7 +39,6 @@ export default {
 				css.write(`${buildDir}/bundle.css`);
 			}
     }),
-    scss({output: `${buildDir}/global.css`}),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
@@ -79,6 +77,10 @@ function serve() {
 				started = true;
 
 				require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {
+					stdio: ['ignore', 'inherit', 'inherit'],
+					shell: true
+				});
+				require('child_process').spawn('npm', ['run', 'watch:sass'], {
 					stdio: ['ignore', 'inherit', 'inherit'],
 					shell: true
 				});
