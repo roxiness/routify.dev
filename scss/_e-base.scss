@@ -1,5 +1,6 @@
 /* ==========================================================================
-  Base
+  e-base
+  ---
   Only base element styling
    ========================================================================== */
 
@@ -19,7 +20,7 @@ body {
   border-top: 0.4rem solid #E938C2;
   background: #FFF;
   color: $g-text-color;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.5;
   font-size: 1.6rem;
 }

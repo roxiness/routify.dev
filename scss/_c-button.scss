@@ -25,6 +25,9 @@ a.c-button {
   text-decoration: none;
 }
 
+/* Skin variants
+   ========================================================================== */
+
 .c-button--default {
   background: #DDD;
   color: #333;
@@ -45,6 +48,9 @@ a.c-button {
 .c-button--link {
   color: $c-button-link-color;
 }
+
+/* Size variants 
+   ========================================================================== */
 
 .c-button--large {
   padding: 1.2rem 2.4rem;
