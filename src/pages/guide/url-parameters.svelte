@@ -1,5 +1,5 @@
 <script>
-  let pageTitle = "Guide";
+  let pageTitle = "URL parameters";
   import OpenGraph from "../../components/OpenGraph.svelte";
   import Prism from "svelte-prism";
 </script>

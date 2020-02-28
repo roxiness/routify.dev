@@ -12,10 +12,10 @@
             <ul class="c-sidebar-nav">
                 <li class="c-sidebar-nav__item c-sidebar-nav__item--selected"><a href="/configuration/basics">Basics</a></li>
                 <li class="c-sidebar-nav__item"><a href="/configuration/code-splitting">Code-splitting</a></li>
-                <li class="c-sidebar-nav__item"><a href="#">Prerendering</a></li>
-                <li class="c-sidebar-nav__item"><a href="#">Deployments</a></li>
-                <li class="c-sidebar-nav__item"><a href="#">SSR</a></li>
-                <li class="c-sidebar-nav__item"><a href="#">Cache</a></li>
+                <li class="c-sidebar-nav__item"><a href="/configuration/prerendering">Prerendering</a></li>
+                <li class="c-sidebar-nav__item"><a href="/configuration/deployments">Deployments</a></li>
+                <li class="c-sidebar-nav__item"><a href="/configuration/ssr">SSR</a></li>
+                <li class="c-sidebar-nav__item"><a href="/configuration/cache">Cache</a></li>
             </ul>
         </nav>
     </div>
@@ -35,7 +35,7 @@
             <tr>
                 <td>debug</td>
                 <td>boolean</td>
-                <td>false</td>
+                <td><code>false</code></td>
                 <td>Show extra debug information</td>
             </tr>
             <tr>
@@ -53,19 +53,19 @@
             <tr>
                 <td>unusedPropWarnings</td>
                 <td>boolean</td>
-                <td>false</td>
+                <td><code>false</code></td>
                 <td>Show warnings about unused props passed by filerouter.</td>
             </tr>
             <tr>
                 <td>dynamicImports</td>
                 <td>boolean</td>
-                <td>false</td>
+                <td><code>false</code></td>
                 <td>Enable code splitting.</td>
             </tr>
             <tr>
                 <td>singleBuild</td>
                 <td>boolean</td>
-                <td>false</td>
+                <td><code>false</code></td>
                 <td>Don't watch for file changes.</td>
             </tr>
         </table>
@@ -93,8 +93,16 @@ Commands:
 
             <h2 class="c-h2">CLI + Sirv example</h2>
 
-            <Prism>
-                    code here
-            </Prism>
+<Prism>
+  {`/** package.json **/
+...
+"scripts": {
+  "debug:routify": "routify -du --pages ./src/path/to/pages",
+  "start:routify": "routify --pages ./src/path/to/pages",
+  "dev:start": "run-p debug:routify start:sirv autobuild",
+  ...
+}  
+`}
+</Prism>
     </div>
 </main>

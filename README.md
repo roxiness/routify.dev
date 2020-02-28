@@ -1,6 +1,6 @@
 # Routify site 2020
 
-New design for the Roufity docs site.
+This is the repo for the Roufity docs site.
 
 ### Usage
 
@@ -10,10 +10,7 @@ New design for the Roufity docs site.
 
 ### Production
 
-Please make sure that url rewrite is enabled on our server.
-
-- For apps without code splitting redirect to index.html
-- For apps with code splitting redirect to dynamic.html
+Please make sure that url rewrite redirects to ``dist/__app.html`` on our server.
 
 ### Building and running in production mode
 
@@ -25,5 +22,4 @@ npm run build
 
 ### Deploy
 
-`npm install -g now`
-`npm run-script deploy:now`
+``npm run deploy:now``

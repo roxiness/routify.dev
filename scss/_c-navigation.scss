@@ -16,7 +16,7 @@
   a {
     text-decoration: none;
     color: #1D2C48;
-    padding: 1rem 1.6rem;
+    padding: 1rem 1.2rem;
     border-radius: .8rem;
 
     &:hover,
@@ -33,7 +33,7 @@
 }
 
 .c-navigation ul li + li a {
-  margin-left: 1.6rem;
+  margin-left: 1.2rem;
 }
 
 .c-navigation-mobile {
@@ -84,7 +84,6 @@
       color: #1D2C48;
     }
 
-
     font-size: 1.8rem;
     padding: 0;
     transition: 0.2s all ease-out;
@@ -106,12 +105,6 @@
 
     svg {
       display: block;
-
-      @media (prefers-color-scheme: dark) {
-        rect {
-          fill: #FFF;
-        }
-      }
     }
   }
 
@@ -121,7 +114,7 @@
 
   .c-navigation-toggle__label {
     color: #1D2C48;
-    margin-right: 0rem;
+    margin-right: 0;
     display: inline-flex;
 
     @media (prefers-color-scheme: dark) {

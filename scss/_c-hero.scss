@@ -25,21 +25,36 @@
     margin-right: 4rem;
     margin-bottom: 0;
   }
+}
 
-  p {
+.c-hero__para {
+  padding: 0 0 1.6rem 0;
+  @media (min-width: $g-bp-2) {
     font-size: 2rem;
-    padding: 0 0 1.6rem 0;
+  }
+}
+
+.c-hero__title {
+  font-weight: 600;
+  color: $g-heading-color;
+  line-height: 1.25;
+  font-family: $g-headings-font-family;
+  margin: 0 0 1.6rem;
+  font-size: 2.8rem;
+  @media (min-width: $g-bp-2) {
+    font-size: 4rem;
   }
 }
 
 .c-hero__illustration {
   background-color: #FFF6FF;
-  padding: 3.2rem 4rem;
   border-radius: 0.8rem;
   width: 100%;
   margin-bottom: 3.2rem;
+  padding: 1.6rem;
 
   @media (min-width: $g-bp-2) {
+    padding: 3.2rem 4rem;
     width: 50%;
     border: 0.1rem solid #FD8AF7;
     background-color: #FFF;

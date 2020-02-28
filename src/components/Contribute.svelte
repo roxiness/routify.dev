@@ -5,7 +5,7 @@
 </style>
 
 <div>
-    <p>Want to help? Use Routify, file issues, pick up issues.</p>
+    <p>Want to help? Use Routify, <a href="https://github.com/sveltech/routify/issues">file issues</a>, or pick up issues.</p>
     <p>Let’s make the best router for Svelte 3!</p>
     <br/>
     <p class="u-spacer-bottom--small">Give us a star on Github:</p>

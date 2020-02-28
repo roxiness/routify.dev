@@ -1,3 +1,3 @@
 <footer class="c-footer">
-  <p>MIT Licensed</p>
+  <p>Routify is MIT Licensed.</p>
 </footer>
