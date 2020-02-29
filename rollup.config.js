@@ -19,76 +19,79 @@ const template = staticDir + (split ? '/__dynamic.html' : '/__bundled.html')
 if (ppidChanged()) del.sync(distDir + '/**')
 
 export default {
-	input: `${sourceDir}/main.js`,
-	output: [{
-		sourcemap: true,
-		name: 'app',
-		format: split ? 'esm' : 'iife',
-		[split ? 'dir' : 'file']: split ? `${buildDir}` : `${buildDir}/bundle.js`
-	}],
-	plugins: [
-		copy({
-			targets: [
-				{ src: staticDir + '/*', dest: distDir },
-				{ src: template, dest: distDir, rename: '__app.html' },
-			], copyOnce: true
-		}),
-		svelte({
-			// enable run-time checks when not in production
-			dev: !production,
-			hydratable: true,
-			// we'll extract any component CSS out into
-			// a separate file — better for performance
-			css: css => {
-				css.write(`${buildDir}/bundle.css`);
-			}
+  input: `${sourceDir}/main.js`,
+  output: [{
+    sourcemap: true,
+    name: 'app',
+    format: split ? 'esm' : 'iife',
+    [split ? 'dir' : 'file']: split ? `${buildDir}` : `${buildDir}/bundle.js`
+  }],
+  plugins: [
+    copy({
+      targets: [
+        { src: staticDir + '/*', dest: distDir },
+        { src: template, dest: distDir, rename: '__app.html' },
+      ], copyOnce: true
+    }),
+    svelte({
+      // enable run-time checks when not in production
+      dev: !production,
+      hydratable: true,
+      // we'll extract any component CSS out into
+      // a separate file — better for performance
+      css: css => {
+        css.write(`${buildDir}/bundle.css`);
+      }
     }),
 
-		// If you have external dependencies installed from
-		// npm, you'll most likely need these plugins. In
-		// some cases you'll need additional configuration —
-		// consult the documentation for details:
-		// https://github.com/rollup/rollup-plugin-commonjs
-		resolve({
-			browser: true,
-			dedupe: importee => importee === 'svelte' || importee.startsWith('svelte/')
-		}),
-		commonjs(),
+    // If you have external dependencies installed from
+    // npm, you'll most likely need these plugins. In
+    // some cases you'll need additional configuration —
+    // consult the documentation for details:
+    // https://github.com/rollup/rollup-plugin-commonjs
+    resolve({
+      browser: true,
+      dedupe: importee => importee === 'svelte' || importee.startsWith('svelte/')
+    }),
+    commonjs(),
 
-		// In dev mode, call `npm run start` once
-		// the bundle has been generated
-		!production && serve(),
+    // In dev mode, call `npm run start` once
+    // the bundle has been generated
+    postScript(production),
 
-		// Watch the `public` directory and refresh the
-		// browser on changes when not in production
-		!production && livereload(distDir),
+    // Watch the `public` directory and refresh the
+    // browser on changes when not in production
+    !production && livereload(distDir),
 
-		// If we're building for production (npm run build
-		// instead of npm run dev), minify
-		production && terser()
-	],
-	watch: {
-		clearScreen: false
-	}
+    // If we're building for production (npm run build
+    // instead of npm run dev), minify
+    production && terser()
+  ],
+  watch: {
+    clearScreen: false
+  }
 }
 
-function serve() {
-	let started = false;
+function postScript(production) {
+  let started = false;
+  const sassTask = production ? 'build:sass' : 'watch:sass'
 
-	return {
-		writeBundle() {
-			if (!started) {
-				started = true;
+  return {
+    writeBundle() {
+      if (!started) {
+        started = true;
 
-				require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {
-					stdio: ['ignore', 'inherit', 'inherit'],
-					shell: true
-				});
-				require('child_process').spawn('npm', ['run', 'watch:sass'], {
-					stdio: ['ignore', 'inherit', 'inherit'],
-					shell: true
-				});
-			}
-		}
-	};
+        if (!production)
+          require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {
+            stdio: ['ignore', 'inherit', 'inherit'],
+            shell: true
+          });
+
+        require('child_process').spawn('npm', ['run', sassTask], {
+          stdio: ['ignore', 'inherit', 'inherit'],
+          shell: true
+        });
+      }
+    }
+  };
 }
