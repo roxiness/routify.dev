@@ -3,7 +3,7 @@
    Prefixed with $g-
    ========================================================================== */
 
-/* Type
+/* Colors
    ========================================================================== */
 
 $g-heading-color: #000000;
@@ -11,7 +11,12 @@ $g-text-color: #4C5567;
 $g-divider-color: #C9CDD4;
 $g-primary-color: #E938C2;
 $g-link-color: #BD239B;
+
+/* Type
+   ========================================================================== */
+
 $g-headings-font-family: "Overpass", sans-serif;
+$g-text-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 /* Breakpoints
    ========================================================================== */
