@@ -15,7 +15,7 @@
     <div class="c-container-vertical--small">
         <h1 class="c-h1">Getting started</h1>
         <p>
-            This is a manual for the manual installation. Aternatively to installing Routify in your project manually, you can also clone the <a href="https://github.com/sveltech/routify-starter">Routify starter template</a>. View the starter template <a href="https://routify-starter.now.sh/">here</a>.
+            This is a manual for the manual installation. Alternatively to installing Routify in your project manually, you can also clone the <a href="https://github.com/sveltech/routify-starter">Routify starter template</a>. View the starter template <a href="https://routify-starter.now.sh/">here</a>.
         </p>
     </div>
 
@@ -63,10 +63,10 @@ npm i -d @sveltech/routify@next
 ...
 import {routify} from '@sveltech/routify'
 ...
-    plugins: [
+plugins: [
     routify({ /** options **/ }),
     ...
-        ]`}
+]`}
                 </Prism>
             </TabsPage>
             </div>
