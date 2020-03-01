@@ -7,7 +7,7 @@
     $: navItems = [
       ['/index', 'Home'],
       ['/getting-started', 'Getting started'],
-      ['/guide/scheme-structure', 'Guide'],
+      ['/guide/structure', 'Guide'],
       ['/helpers/auth', 'Helpers'],
       ['/configuration/basics', 'Configuration'],
       ['/examples', 'Examples'],
