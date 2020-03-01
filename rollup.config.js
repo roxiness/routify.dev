@@ -3,11 +3,11 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
-import { config } from '@sveltech/routify'
-import copy from 'rollup-plugin-copy'
-import del from 'del'
-import ppidChanged from 'ppid-changed'
-
+import { config } from '@sveltech/routify';
+import copy from 'rollup-plugin-copy';
+import del from 'del';
+import ppidChanged from 'ppid-changed';
+import svg from 'rollup-plugin-svg';
 
 const production = !process.env.ROLLUP_WATCH;
 const { distDir, staticDir, sourceDir, dynamicImports: split } = config
@@ -33,6 +33,7 @@ export default {
         { src: template, dest: distDir, rename: '__app.html' },
       ], copyOnce: true
     }),
+    svg(),
     svelte({
       // enable run-time checks when not in production
       dev: !production,
@@ -43,7 +44,6 @@ export default {
         css.write(`${buildDir}/bundle.css`);
       }
     }),
-
     // If you have external dependencies installed from
     // npm, you'll most likely need these plugins. In
     // some cases you'll need additional configuration —

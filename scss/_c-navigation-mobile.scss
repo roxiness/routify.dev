@@ -1,0 +1,48 @@
+/* ==========================================================================
+  c-navigation-mobile
+   ========================================================================== */
+
+.c-navigation-mobile__links li ul {
+  padding-left: 2.4rem;
+}
+
+.c-navigation-mobile__item {
+  a {
+    text-decoration: none;
+    display: block;
+    padding: 1.6rem;
+    color: #1D2C48;
+  }
+}
+
+.c-navigation-mobile__item--active a,
+.c-navigation-mobile__item-child--active a {
+  background-color: #FFE3FF;
+  border-radius: .8rem;
+  color: $g-link-color;
+  
+}
+
+.c-navigation-mobile__item-child {
+}
+
+.c-navigation-mobile__item ul {
+  margin: 1.2rem 0 1.2rem 2.4rem;
+  border-left: 0.2rem solid #E938C2;
+  padding-left: 2.4rem;
+}
+
+.c-navigation-mobile__section-header {
+  background: none;
+  border: none;
+  width: 100%;
+  font-size: 1.6rem;
+  color: #1D2C48;
+  display: flex;
+  padding: 1.6rem;
+  justify-content: space-between;
+  svg {
+    opacity: 0.5;
+  }
+  
+}

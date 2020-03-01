@@ -10,6 +10,11 @@
   margin: 0 0 2.4rem;
 }
 
+@media (max-width: $g-bp-2) {
+  .c-sidebar-layout__side {
+    display: none;
+  }
+}
 
 @media (min-width: $g-bp-2) {
   .c-sidebar-layout {

@@ -13,7 +13,10 @@ html, body {
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 50%;
+  @media (min-width: $g-bp-2) {
+    font-size: 62.5%;
+  }
 }
 
 body {

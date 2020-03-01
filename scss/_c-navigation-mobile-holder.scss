@@ -1,0 +1,30 @@
+/* ==========================================================================
+   c-navigation-mobile-holder
+   ---
+   The frame in which the mobile nav lives
+   ========================================================================== */
+
+.c-navigation-mobile-holder {
+  display: none;
+  background: #FFF;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  height: 100%;
+  overflow: auto;
+}
+
+.c-navigation-mobile-holder--active {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.c-navigation-mobile-holder--active > nav {
+  padding: 9.6rem 2.4rem 0;
+}

@@ -1,8 +1,6 @@
 <script>
     import { isActive, url } from '@sveltech/routify'
 
-    import { mobileNavActive } from '../stores/mobilenavactive.js';
-
     let navItems = [];
     $: navItems = [
       ['/index', 'Home'],
@@ -20,15 +18,12 @@
       }
     });
 
-    function handleNavigationClick(e) {
-        mobileNavActive.update(mobileNavActive => false);
-    }
 </script>
 
 <ul>
     {#each navItems as {name, url, active}}
         <li class:c-navigation__item--selected={active}>
-            <a href="{url}" on:click="{handleNavigationClick}">
+            <a href="{url}">
                 {#if name == "Github"}
                     <img class="c-navigation__github-logo" src="/images/github.svg" alt="Github logo">
                 {:else}

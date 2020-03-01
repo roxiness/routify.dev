@@ -2,6 +2,7 @@
 
     import { mobileNavActive } from '../stores/mobilenavactive.js';
     import NavItems from './NavItems.svelte';
+    import NavItemsMobile from './NavItemsMobile.svelte';
 
     let bodyElement = document.querySelector('body');
     let htmlElement = document.querySelector('html');
@@ -35,7 +36,6 @@
         class:c-navigation-toggle--active={$mobileNavActive}
         on:click|preventDefault={handleToggleClick}
     >
-        <a class="c-navigation__github-logo" href="https://github.com/sveltech/routify"><img src="/images/github.svg" alt="Github logo"></a>
         <svg width="40" height="40" viewBox="0 0 40 40">
             <rect fill="#000" width="18" height="2" x="11" y="19" class="c-navigation-toggle__line1"></rect>
             <rect fill="#000" width="18" height="2" x="11" y="19" class="c-navigation-toggle__line2"></rect>
@@ -45,8 +45,8 @@
 
 </header>
 
-<div class="c-navigation-mobile" class:c-navigation-mobile--active={$mobileNavActive}>
-    <nav class="c-navigation-mobile__links" role="navigation">
-        <NavItems />
+<div class="c-navigation-mobile-holder" class:c-navigation-mobile-holder--active={$mobileNavActive}>
+    <nav role="navigation">
+        <NavItemsMobile />
     </nav>
 </div>
