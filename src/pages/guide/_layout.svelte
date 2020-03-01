@@ -28,4 +28,3 @@
     <slot />
   </div>
 </main>
-asd
