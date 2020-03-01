@@ -77,7 +77,7 @@ $c-table-row-odd-color: #EEE !default;
 }
 
 .c-table--bordered {
-  border: 1px solid $c-table-border-color;
+  border: 0.1rem solid $c-table-border-color;
   border-radius: 0.3rem;
   border-collapse: separate;
 }
