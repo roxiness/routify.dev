@@ -30,9 +30,10 @@
   import { TabsTransition } from "@sveltech/routify/decorators"
   const width = writable();
 </script>
-  <div bind:offsetWidth={$width}>
-    <slot decorator={TabsTransition} scoped={{ width }} />
-  </div>`}</Prism>
+
+<div bind:offsetWidth={$width}>
+  <slot decorator={TabsTransition} scoped={{ width }} />
+</div>`}</Prism>
 
   <h3>BaseTransition</h3>
   <p>Template for creating your own decorations.</p>
