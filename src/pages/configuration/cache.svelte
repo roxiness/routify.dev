@@ -5,23 +5,7 @@
 
 <OpenGraph {pageTitle} />
 
-<main class="c-sidebar-layout">
-    <div class="c-sidebar-layout__side">
-        <nav>
-            <ul class="c-sidebar-nav">
-                <li class="c-sidebar-nav__item"><a href="/configuration/basics">Basics</a></li>
-                <li class="c-sidebar-nav__item"><a href="/configuration/code-splitting">Code-splitting</a></li>
-                <li class="c-sidebar-nav__item"><a href="/configuration/prerendering">Prerendering</a></li>
-                <li class="c-sidebar-nav__item"><a href="/configuration/deployments">Deployments</a></li>
-                <li class="c-sidebar-nav__item"><a href="/configuration/ssr">SSR</a></li>
-                <li class="c-sidebar-nav__item c-sidebar-nav__item--selected"><a href="/configuration/cache">Cache</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="c-sidebar-layout__main">
-        <div class="c-content">
-            <h1>Cache</h1>
-            <p>Documentation TBD.</p>
-        </div>
-    </div>
-</main>
+<div class="c-content">
+    <h1>Cache</h1>
+    <p>Documentation TBD.</p>
+</div>

@@ -5,21 +5,6 @@
 </script>
 
 <OpenGraph {pageTitle} />
-
-<main class="c-sidebar-layout">
-    <div class="c-sidebar-layout__side">
-        <nav>
-            <ul class="c-sidebar-nav">
-                <li class="c-sidebar-nav__item c-sidebar-nav__item--selected"><a href="/configuration/basics">Basics</a></li>
-                <li class="c-sidebar-nav__item"><a href="/configuration/code-splitting">Code-splitting</a></li>
-                <li class="c-sidebar-nav__item"><a href="/configuration/prerendering">Prerendering</a></li>
-                <li class="c-sidebar-nav__item"><a href="/configuration/deployments">Deployments</a></li>
-                <li class="c-sidebar-nav__item"><a href="/configuration/ssr">SSR</a></li>
-                <li class="c-sidebar-nav__item"><a href="/configuration/cache">Cache</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="c-sidebar-layout__main">
         <div class="c-content">
             <h1>Configuration</h1>
             <p>Routify can be configured with the following options.</p>
@@ -69,7 +54,7 @@
                 <td>Don't watch for file changes.</td>
             </tr>
         </table>
-        
+
         <!-- @todo prism needs to syntax highlight bash -->
         <h2 class="c-h2">To use with CLI</h2>
         <Prism>$ npx routify --help
@@ -101,8 +86,6 @@ Commands:
   "start:routify": "routify --pages ./src/path/to/pages",
   "dev:start": "run-p debug:routify start:sirv autobuild",
   ...
-}  
+}
 `}
 </Prism>
-    </div>
-</main>
