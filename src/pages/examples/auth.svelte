@@ -1,45 +1,38 @@
 <script>
-    let pageTitle = "Helpers - Auth";
-    import OpenGraph from '../../components/OpenGraph.svelte';
+  let pageTitle = "Helpers - Auth";
+  import OpenGraph from "../../components/OpenGraph.svelte";
 
-    import Prism from "svelte-prism";
-    import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
-
+  import Prism from "svelte-prism";
+  import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
 </script>
 
 <OpenGraph {pageTitle} />
 
+<div class="c-content">
+  <h1 class="c-h1">{pageTitle}</h1>
+  <p>
+    With Routify, you don't need any router included functions to authenticate
+    users and protect your app.
+  </p>
+  <p>
+    Since everything in Routify is scoped, protecting a layout, automatically
+    protects all nested components recursively.
+  </p>
 
-<main class="c-sidebar-layout">
-    <div class="c-sidebar-layout__side">
-        <nav>
-            <ul class="c-sidebar-nav">
-                <li class="c-sidebar-nav__item c-sidebar-nav__item--selected"><a href="/helpers/auth">Auth</a></li>
-                <li class="c-sidebar-nav__item"><a href="/helpers/login">Login</a></li>
-                <li class="c-sidebar-nav__item"><a href="/helpers/guards">Guards</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="c-sidebar-layout__main">
-        <div class="c-content">
-            <h1 class="c-h1">{pageTitle}</h1>
-            <p>With Routify, you don't need any router included functions to authenticate users and protect your app.</p>
-            <p>Since everything in Routify is scoped, protecting a layout, automatically protects all nested components recursively.</p>
+  <h2>Authentication guards</h2>
+  <p>
+    Users should generally be authenticated in the root layout.
+    <Tabs>
+      <div class="c-tabs">
+        <TabsLink>Minimal</TabsLink>
+        <TabsLink>Basic</TabsLink>
+        <TabsLink>Store</TabsLink>
 
-            <h2>Authentication guards</h2>
-            <p>Users should generally be authenticated in the root layout.
-
-  <Tabs>
-    <div class="c-tabs">
-      <TabsLink>Minimal</TabsLink>
-      <TabsLink>Basic</TabsLink>
-      <TabsLink>Store</TabsLink>
-
-    </div>
-    <div class="c-tabs-pages">
-      <TabsPage>
-        <Prism language="svelte">
-          {`<!-- src/pages/_layout.svelte -->
+      </div>
+      <div class="c-tabs-pages">
+        <TabsPage>
+          <Prism language="svelte">
+            {`<!-- src/pages/_layout.svelte -->
 <scr`}{`ipt>
   import { authenticate } from 'my-auth-service'
 </script>
@@ -51,11 +44,11 @@ This prevents small UI glitches and premature authorization checks. -->
   <slot />
 {/await}
 `}
-        </Prism>
-      </TabsPage>
-      <TabsPage>
-        <Prism language="svelte">
-          {`<!-- src/pages/_layout.svelte -->
+          </Prism>
+        </TabsPage>
+        <TabsPage>
+          <Prism language="svelte">
+            {`<!-- src/pages/_layout.svelte -->
 <scr`}{`ipt>
   import { authenticate } from 'my-auth-service'
 </script>
@@ -72,11 +65,11 @@ This prevents small UI glitches and premature authorization checks. -->
   <slot scoped={{user}} />
 {/await}
 `}
-        </Prism>
-      </TabsPage>
-      <TabsPage>
-        <Prism language="svelte">
-          {`<!-- src/pages/_layout.svelte -->
+          </Prism>
+        </TabsPage>
+        <TabsPage>
+          <Prism language="svelte">
+            {`<!-- src/pages/_layout.svelte -->
 <scr`}{`ipt>
   import { user } from '../store'
 </script>
@@ -86,14 +79,16 @@ This prevents small UI glitches and premature authorization checks. -->
 {/if}
 
 `}
-        </Prism>
-      </TabsPage>
-    </div>
-  </Tabs>
+          </Prism>
+        </TabsPage>
+      </div>
+    </Tabs>
 
-
-            <h2>Authorization Guards</h2>
-            <p>Guards should be implemented in the component or module which they protect.</p>
+  </p>
+  <h2>Authorization Guards</h2>
+  <p>
+    Guards should be implemented in the component or module which they protect.
+  </p>
 
   <Tabs>
     <div class="c-tabs">
@@ -122,7 +117,7 @@ This prevents small UI glitches and premature authorization checks. -->
           {`<!-- src/pages/admin/_layout.svelte -->
 <scr`}{`ipt>
   import { goto, routifyContext } from '@sveltech/routify'
-  import { authorize } from 'my-auth-service'  
+  import { authorize } from 'my-auth-service'
 </script>
 
 {#await authenticate()}
@@ -144,7 +139,7 @@ This prevents small UI glitches and premature authorization checks. -->
   import { goto } from '@sveltech/routify'
   import { authenticate } from 'my-auth-service'
   import Login from '../components/Login.svelte'
-  
+
   let user = false
   let sessionVerified = false
 
@@ -177,7 +172,7 @@ This prevents small UI glitches and premature authorization checks. -->
 
   /** show if the current page is "/login" **/
   let show = $routifyContext.component.path === '/login'
-  
+
   /** else only show if user is authorized. Otherwise, redirect to login. **/
   if(!show)
     authorize()
@@ -195,17 +190,12 @@ This prevents small UI glitches and premature authorization checks. -->
     </div>
   </Tabs>
 
+  <h3>Realtime guards</h3>
+  <p>
+    For realtime guards, simply replace
+    <code>{'{#await <promise>}'}</code>
+    with
+    <code>{'{#if <reactive condition>}'}</code>
+  </p>
 
-
-<h3>Realtime guards</h3>
-<p>
-  For realtime guards, simply replace
-  <code>{'{#await <promise>}'}</code>
-  with
-  <code>{'{#if <reactive condition>}'}</code>
-</p>
-
-        </div>
-    </div>
-</main>
-
+</div>

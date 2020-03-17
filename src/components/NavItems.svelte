@@ -6,9 +6,9 @@
       ['/index', 'Home'],
       ['/getting-started', 'Getting started'],
       ['/guide/structure', 'Guide'],
-      ['/helpers/auth', 'Helpers'],
+      ['/helpers', 'Helpers'],
       ['/configuration/basics', 'Configuration'],
-      ['/examples', 'Examples'],
+      ['/examples/auth', 'Examples'],
       ['https://github.com/sveltech/routify', 'Github']
     ].map(([url, name]) => {
       return {
