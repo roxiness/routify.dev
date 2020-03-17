@@ -5,10 +5,10 @@
     $: navItems = [
       ['/index', 'Home'],
       ['/getting-started', 'Getting started'],
-      ['/guide/structure', 'Guide'],
+      ['/guide', 'Guide'],
       ['/helpers', 'Helpers'],
-      ['/configuration/basics', 'Configuration'],
-      ['/examples/auth', 'Examples'],
+      ['/configuration', 'Configuration'],
+      ['/examples', 'Examples'],
       ['https://github.com/sveltech/routify', 'Github']
     ].map(([url, name]) => {
       return {
