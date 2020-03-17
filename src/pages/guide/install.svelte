@@ -1,18 +1,20 @@
 <script>
   let pageTitle = "Installation";
   import OpenGraph from "../../components/OpenGraph.svelte";
-
-  import { url } from "@sveltech/routify";
-
+  import { url, focus, meta } from "@sveltech/routify";
   import Prism from "svelte-prism";
   import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
+
+
+
+
 </script>
 
 <OpenGraph {pageTitle} />
 
 <div class="c-container-horizontal--narrow">
   <div class="c-container-vertical--small">
-    <h1 class="c-h1">Install in existing project</h1>
+    <h1 class="c-h1" use:focus>Install in existing project</h1>
     <p>
       This is a guide for installing Routify in an existing project. If you wish
       to create a new project instead. Please refer to our
@@ -25,7 +27,7 @@
     <div class="c-content">
       <h2>1. Install module</h2>
       <p>Run in project folder</p>
-      <Prism>npm i -d @sveltech/routify</Prism>
+      <Prism>npm i -D @sveltech/routify</Prism>
     </div>
   </div>
 
@@ -47,8 +49,8 @@
       <code>routify -c</code>
       is shorthand for
       <code>routify --childprocess</code>
-      . If you do not wish to launch your server as a child process, you can
-      use an npm task runner like
+      . If you do not wish to launch your server as a child process, you can use
+      an npm task runner like
       <code>npm-run-all</code>
     </p>
   </div>

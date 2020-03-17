@@ -10,14 +10,13 @@
 
 <h1 class="c-h1">Props</h1>
 <div class="c-content">
-    <p>All pages can pass props to nested pages with the "scoped" prop.</p>
 
-    <p>I.e. Any prop made available in <code>/docs/_layout.svelte</code> is available to all files nested in the <code>/docs/</code> folder and subfolders.</p>
+    <p>Props can be passed by using the <code>scoped</code> prop.</p>
+    <Prism language="html">{`<slot scoped={{user: 'jimbo'}} />`}</Prism>
+    <br>
+    <p>Props are available to all descendant layouts and pages.</p>
 
-    <!-- Another problem here where Svelte is literally parsing the code-->
-    <Prism>{`
-<!-- src/pages/_layout.svelte -->
-<slot scoped={{user: 'jimbo', foo: 'bar'}} />
-`}</Prism>
+    <Prism>{`export let scoped
+$: {user} = scoped`}</Prism>
 
 </div>

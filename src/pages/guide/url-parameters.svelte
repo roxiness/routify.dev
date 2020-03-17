@@ -7,28 +7,49 @@
 <OpenGraph {pageTitle} />
 
 <h1 class="c-h1">URL parameters</h1>
-<p>A parameter is passed as a prop to its respective page or layout.</p>
-<p>To access all parameters, use the "params" helper.</p>
-<Prism>
-  {`<!-- src/pages/users/[userId]/posts/[postId].svelte -->
-<!-- URL: /users/jimbo/posts/123 -->
-<script>
-  import { params } from '@sveltech/routify'
-  export let postId, userId
+<div class="c-content">
+  <p>
+    Routify can access URL parameters by using parameterized files and folders.
+  </p>
 
-  console.log( postId ) /** '123' **/
-  console.log( userId ) /** undefined **/
-  console.log( $params ) /** {userId: 'jimbo', postId: '123'} **/
-</script>`}
-</Prism>
+  <p>
+    A file or folder is parameterized if it is wrapped in brackets.
+    <code>[slug].svelte</code>
+    or
+    <code>[slug]/index.svelte</code>
+  </p>
 
-<p>
-  In the example above
-  <code>[userId]/_layout.svelte</code>
-  can access
-  <code>userId</code>
-  and
-  <code>[postId].svelte</code>
-  can access
-  <code>postId</code>.
-</p>
+  <br />
+  <h3 class="c-h3">Local parameters</h3>
+
+  <p>
+    A parameterized file/folder can access its parameter with
+    <Prism source="export let slug" />
+  </p>
+  <p>
+    A Folder's parameter is passed to
+    <code>[slug]/_layout.svelte</code>
+  </p>
+
+  <br />
+  <h3 class="c-h3">Global parameters</h3>
+  <p>
+    To access all parameters from anywhere, use the
+    <code>$params</code>
+    helper.
+  </p>
+
+  <Prism>
+    {`import { params } from '@sveltech/routify'
+$: { slug } = $params`}
+  </Prism>
+
+  <br />
+  <h3 class="c-h3">Synchronisity</h3>
+  <p>
+    Local parameters are directly synchronized with the address bar whereas
+    global parameters are first propagated through the layout component chain.
+    The propagation is to prevent race conditions between parameters and
+    component state.
+  </p>
+</div>
