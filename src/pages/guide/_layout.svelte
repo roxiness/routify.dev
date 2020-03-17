@@ -3,8 +3,8 @@
   const links = [
     ["./structure", "File structure"],
     ["./url-parameters", "URL parameters"],
-    ["./metadata", "Metadata"],
     ["./props", "Props"],
+    ["./metadata", "Metadata"],
     ["./decorators", "Decorators"],
     ["./transitions", "Transitions"]
   ];
