@@ -1,9 +1,7 @@
 <script>
-    let pageTitle = "Guide";
-    import OpenGraph from '../../components/OpenGraph.svelte';
+import { meta } from '@sveltech/routify'
+meta.title = 'Structure'
 </script>
-
-<OpenGraph {pageTitle} />
 
 <h1 class="c-h1">Scheme/structure</h1>
 <div class="c-content">

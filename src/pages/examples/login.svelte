@@ -1,11 +1,11 @@
 <script>
-  let pageTitle = "Helpers - Login";
-  import OpenGraph from "../../components/OpenGraph.svelte";
+  import Prism from "svelte-prism";
+  import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
+  import { meta } from "@sveltech/routify";
+  meta.title = "Login";
 </script>
 
-<OpenGraph {pageTitle} />
-
 <div class="c-content">
-  <h1 class="c-h1">{pageTitle}</h1>
+  <h1 class="c-h1">Helpers - Login</h1>
   <p>Documentation TBD.</p>
 </div>

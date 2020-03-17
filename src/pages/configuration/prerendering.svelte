@@ -1,9 +1,7 @@
 <script>
-    let pageTitle = "Configuration - Prerendering";
-    import OpenGraph from '../../components/OpenGraph.svelte';
+  import { meta } from "@sveltech/routify";
+  meta.title = "Prerendering";
 </script>
-
-<OpenGraph {pageTitle} />
 
 <div class="c-content">
     <h1>Pre-rendering</h1>

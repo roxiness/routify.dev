@@ -1,12 +1,9 @@
 <script>
-    let pageTitle = "Configuration - Code splitting";
-    import OpenGraph from '../../components/OpenGraph.svelte';
+  import { meta } from "@sveltech/routify";
+  meta.title = "Code splitting";
 </script>
 
-<OpenGraph {pageTitle} />
-
-
 <div class="c-content">
-    <h1>Code splitting</h1>
-    <p>Documentation TBD.</p>
+  <h1>Code splitting</h1>
+  <p>Documentation TBD.</p>
 </div>

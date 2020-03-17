@@ -1,9 +1,7 @@
 <script>
-    let pageTitle = "Configuration - Deployments";
-    import OpenGraph from '../../components/OpenGraph.svelte';
+  import { meta } from "@sveltech/routify";
+  meta.title = "Deployments";
 </script>
-
-<OpenGraph {pageTitle} />
 
 <div class="c-content">
     <h1>Deployments</h1>

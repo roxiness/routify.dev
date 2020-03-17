@@ -1,9 +1,7 @@
 <script>
-    let pageTitle = "Configuration - Server-side rendering";
-    import OpenGraph from '../../components/OpenGraph.svelte';
+  import { meta } from "@sveltech/routify";
+  meta.title = "SSR";
 </script>
-
-<OpenGraph {pageTitle} />
 
 <div class="c-content">
     <h1>Server-side rendering</h1>

@@ -1,12 +1,8 @@
 <script>
-    let pageTitle = "Props - Guide";
-    import OpenGraph from '../../components/OpenGraph.svelte';
-    import Prism from "svelte-prism";
-
+  import Prism from "svelte-prism";
+  import { meta } from "@sveltech/routify";
+  meta.title = "Props";
 </script>
-
-<OpenGraph {pageTitle} />
-
 
 <h1 class="c-h1">Props</h1>
 <div class="c-content">

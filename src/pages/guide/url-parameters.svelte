@@ -1,10 +1,8 @@
 <script>
-  let pageTitle = "URL parameters";
-  import OpenGraph from "../../components/OpenGraph.svelte";
   import Prism from "svelte-prism";
+  import { meta } from "@sveltech/routify";
+  meta.title = "Decorators";
 </script>
-
-<OpenGraph {pageTitle} />
 
 <h1 class="c-h1">URL parameters</h1>
 <div class="c-content">

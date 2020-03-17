@@ -1,15 +1,12 @@
 <script>
-  let pageTitle = "Helpers - Auth";
-  import OpenGraph from "../../components/OpenGraph.svelte";
-
   import Prism from "svelte-prism";
   import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
+  import { meta } from "@sveltech/routify";
+  meta.title = "Auth";
 </script>
 
-<OpenGraph {pageTitle} />
-
 <div class="c-content">
-  <h1 class="c-h1">{pageTitle}</h1>
+  <h1 class="c-h1">Helpers - Auth</h1>
   <p>
     With Routify, you don't need any router included functions to authenticate
     users and protect your app.

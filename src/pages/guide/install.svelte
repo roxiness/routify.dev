@@ -1,16 +1,9 @@
 <script>
-  let pageTitle = "Installation";
-  import OpenGraph from "../../components/OpenGraph.svelte";
   import { url, focus, meta } from "@sveltech/routify";
   import Prism from "svelte-prism";
   import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
-
-
-
-
+  meta.title = "Installation";
 </script>
-
-<OpenGraph {pageTitle} />
 
 <div class="c-container-horizontal--narrow">
   <div class="c-container-vertical--small">

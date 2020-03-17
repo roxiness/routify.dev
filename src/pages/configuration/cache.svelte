@@ -1,11 +1,9 @@
 <script>
-    let pageTitle = "Configuration - Cache";
-    import OpenGraph from '../../components/OpenGraph.svelte';
+  import { meta } from "@sveltech/routify";
+  meta.title = "Cache";
 </script>
 
-<OpenGraph {pageTitle} />
-
 <div class="c-content">
-    <h1>Cache</h1>
-    <p>Documentation TBD.</p>
+  <h1>Cache</h1>
+  <p>Documentation TBD.</p>
 </div>

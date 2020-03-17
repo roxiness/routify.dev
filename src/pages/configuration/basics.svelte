@@ -1,10 +1,9 @@
 <script>
-    let pageTitle = "Configuration - Basics";
-    import OpenGraph from '../../components/OpenGraph.svelte';
     import Prism from "svelte-prism";
+    import { meta } from "@sveltech/routify";
+    meta.title = "Basics";
 </script>
 
-<OpenGraph {pageTitle} />
         <div class="c-content">
             <h1>Configuration</h1>
             <p>Routify can be configured with the following options.</p>

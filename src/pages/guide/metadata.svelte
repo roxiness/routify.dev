@@ -1,12 +1,8 @@
 <script>
-    let pageTitle = "Metadata";
-    import OpenGraph from '../../components/OpenGraph.svelte';
     import Prism from "svelte-prism";
-    import {context} from '@sveltech/routify'
-    console.log($context)
+    import { meta } from "@sveltech/routify";
+    meta.title = "Metadata";
 </script>
-
-<OpenGraph {pageTitle} />
 
 <h1 class="c-h1">Metadata</h1>
 <div class="c-content">

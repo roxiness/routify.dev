@@ -3,11 +3,7 @@
     import Contributors from '../components/Contributors.svelte';
     import Contribute from '../components/Contribute.svelte';
     import Hero from '../components/Hero.svelte';
-    let pageTitle = "Home";
-    import OpenGraph from '../components/OpenGraph.svelte';
 </script>
-
-<OpenGraph {pageTitle} />
 
 <main>
     <div class="c-container-vertical">

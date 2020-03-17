@@ -1,10 +1,8 @@
 <script>
-  let pageTitle = "Transitions - Guide";
-  import OpenGraph from "../../components/OpenGraph.svelte";
   import Prism from "svelte-prism";
+  import { meta } from "@sveltech/routify";
+  meta.title = "Transitions";
 </script>
-
-<OpenGraph {pageTitle} />
 
 <h1 class="c-h1">Transitions</h1>
 <div class="c-container-vertical--small">
