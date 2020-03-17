@@ -16,7 +16,7 @@
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^6.0.0",
     "@sveltech/bricks": "^1.0.1-3",
-    "@sveltech/routify": "^1.0.3",
+    "@sveltech/routify": "^1.1.0-0",
     "concurrently": "^5.0.2",
     "del": "^5.1.0",
     "js-yaml": "^3.13.1",
