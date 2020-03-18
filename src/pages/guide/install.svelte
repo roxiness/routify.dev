@@ -29,14 +29,15 @@
       <h2>2. Update package.json</h2>
     </div>
     <Prism language="javascript">
-      {`/** package.json **/
-...
-"scripts": {
-    "dev": "routify -c my-server",
-    "my-server": "rollup -c -w",
-    ...
-}
-`}
+      {`
+        /** package.json **/
+        ...
+        "scripts": {
+            "dev": "routify -c my-server",
+            "my-server": "rollup -c -w",
+            ...
+        }
+      `}
     </Prism>
     <p>
       <code>routify -c</code>
@@ -54,14 +55,15 @@
     </div>
     <div class="card">
       <Prism language="html">
-        {`<!-- src/App.svelte -->
-<scrip`}{`t>
-    import { Router } from "@sveltech/routify";
-    import { routes } from "@sveltech/routify/tmp/routes";
-</script>
+        {`
+          <!-- src/App.svelte -->
+          <scrip`}{`t>
+            import { Router } from "@sveltech/routify";
+            import { routes } from "@sveltech/routify/tmp/routes";
+          </script>
 
-<Router {routes} />
-`}
+          <Router {routes} />
+        `}
       </Prism>
     </div>
   </div>
@@ -88,23 +90,26 @@
           <TabsPage>
             <p>For Sirv, enable the single option.</p>
             <Prism language="javascript">
-              {`/** package.json **/
-...
-"scripts": {
-    "start": "sirv public --single"
-    ...
-}
-`}
+              {`
+                /** package.json **/
+                ...
+                "scripts": {
+                    "start": "sirv public --single"
+                    ...
+                }
+              `}
             </Prism>
           </TabsPage>
           <TabsPage>
             <Prism>
-              {`RewriteEngine On
-RewriteBase /
-RewriteRule ^index\.html$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.html [L]`}
+              {`
+                RewriteEngine On
+                RewriteBase /
+                RewriteRule ^index\.html$ - [L]
+                RewriteCond %{REQUEST_FILENAME} !-f
+                RewriteCond %{REQUEST_FILENAME} !-d
+                RewriteRule . /index.html [L]
+              `}
             </Prism>
           </TabsPage>
           <TabsPage>

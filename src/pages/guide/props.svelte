@@ -12,7 +12,11 @@
     <br>
     <p>Props are available to all descendant layouts and pages.</p>
 
-    <Prism>{`export let scoped
-$: {user} = scoped`}</Prism>
+    <Prism>
+        {`
+            export let scoped
+            $: {user} = scoped
+        `}
+    </Prism>
 
 </div>

@@ -38,8 +38,10 @@
   </p>
 
   <Prism>
-    {`import { params } from '@sveltech/routify'
-$: { slug } = $params`}
+    {`
+        import { params } from '@sveltech/routify'
+        $: { slug } = $params
+    `}
   </Prism>
 
   <br />
