@@ -1,6 +1,6 @@
 # Routify site 2020
 
-This is the repo for the Roufity docs site.
+This is the repo for the Routify docs site.
 
 ### Usage
 
