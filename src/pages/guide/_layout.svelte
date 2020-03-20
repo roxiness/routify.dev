@@ -3,7 +3,7 @@
   import LeftNavLayout from "../../components/LeftNavLayout.svelte";
   const links = [
     ["./structure", "File structure"],
-    ["./url-parameters", "URL parameters"],
+    ["./parameters", "Parameters"],
     ["./props", "Props"],
     ["./metadata", "Metadata"],
     ["./decorators", "Decorators"],

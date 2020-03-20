@@ -12,9 +12,10 @@
 
   <p>
     A file or folder is parameterized if it is wrapped in brackets.
+  (ie.
     <code>[slug].svelte</code>
     or
-    <code>[slug]/index.svelte</code>
+    <code>[slug]/index.svelte</code>)
   </p>
 
   <br />
