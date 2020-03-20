@@ -6,12 +6,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  * @author Lea Verou
  */
 
-/* Code
-   ========================================================================== */
-
-code[class*="language-"], pre[class*="language-"] {
-  font-size: 1.2rem;
-}
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Nova+Mono&family=Roboto+Mono:wght@300;400&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* Regular code blocks
    ========================================================================== */
@@ -21,23 +16,24 @@ code {
   padding: 0.2rem;
   color: #CE2F55;
   background: #FFF6FF;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: "Roboto Mono", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 code[class*="language-"],
 pre[class*="language-"] {
-  color: black;
-  text-shadow: 0 0.1rem white;
+  color: #ffb0e2;
+  // text-shadow: 0 0.1rem white;
   background: none;
 
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  font-size: 1.2rem;
+  font-family: "Source Code Pro", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-weight: 500;
+  font-size: 1.5rem;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1.5;
+  line-height: 1.7;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -85,7 +81,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  background: #FFF6FF;
+  background: #360044;
 }
 
 /* Inline code
@@ -97,15 +93,18 @@ pre[class*="language-"] {
   white-space: normal;
 }
 
+
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: slategray;
+  font-style: italic;
+  font-weight: 400;
+  color: #BAA7BE;
 }
 
 .token.punctuation {
-  color: #999;
+  color: white;
 }
 
 .namespace {
@@ -119,7 +118,7 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #905;
+  color: #ffb0e2;
 }
 
 .token.selector,
@@ -142,7 +141,7 @@ pre[class*="language-"] {
 .token.atrule,
 .token.attr-value,
 .token.keyword {
-  color: #07A;
+  color: white;
 }
 
 .token.function,
@@ -167,4 +166,42 @@ pre[class*="language-"] {
 
 .token.entity {
   cursor: help;
+}
+
+
+/* Command line
+   ========================================================================== */
+
+.command-line-prompt {
+	border-right: 1px solid #999;
+	display: block;
+	float: left;
+	font-size: 100%;
+	letter-spacing: -1px;
+	margin-right: 1em;
+	pointer-events: none;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.command-line-prompt > span:before {
+	color: #999;
+	content: ' ';
+	display: block;
+	padding-right: 0.8em;
+}
+
+.command-line-prompt > span[data-user]:before {
+	content: "[" attr(data-user) "@" attr(data-host) "] $";
+}
+
+.command-line-prompt > span[data-user="root"]:before {
+	content: "[" attr(data-user) "@" attr(data-host) "] #";
+}
+
+.command-line-prompt > span[data-prompt]:before {
+	content: attr(data-prompt);
 }
