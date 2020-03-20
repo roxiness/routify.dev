@@ -3,7 +3,6 @@
 
     let navItems = [];
     $: navItems = [
-      ['/index', 'Home'],
       ['/getting-started', 'Getting started'],
       ['/guide', 'Guide'],
       ['/helpers', 'Helpers'],
