@@ -114,6 +114,12 @@ $c-table-row-odd-color: #EEE !default;
 .c-table--horizontal {
   th {
     width: 18rem;
+    border-width: 0.1rem;
+  }
+  tr:last-child {
+    th {
+      border: none;
+    }
   }
 }
 
