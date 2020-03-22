@@ -22,13 +22,15 @@
 <ul>
     {#each navItems as {name, url, active}}
         <li class:c-navigation__item--selected={active}>
-            <a href="{url}">
-                {#if name == "Github"}
-                    <img class="c-navigation__github-logo" src="/images/github.svg" alt="Github logo">
-                {:else}
-                    {name}
-                {/if}
+            {#if name == "Github"}
+            <a href="{url}" class="c-navigation__github-link">
+                <img class="c-navigation__github-logo" src="/images/github.svg" alt="Github logo">
             </a>
+            {:else}
+            <a href="{url}">
+                {name}
+            </a>
+            {/if}
         </li>
     {/each}
 </ul>
