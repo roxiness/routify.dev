@@ -31,7 +31,7 @@
         {#each contributors as contributor}
         <li class="c-contributors__list-item">
             <a href="{contributor.github_url}">
-                <img class="c-contributors__img" src="/images/{contributor.imgpath}.jpg" alt="contributor image">
+                <img class="c-contributors__img" src="/images/collaborators/{contributor.imgpath}.jpg" alt="contributor image">
                 <span class="c-contributors__name">{contributor.name}</span>
             </a>
         </li>
