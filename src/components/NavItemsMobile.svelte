@@ -1,70 +1,56 @@
 <script>
+    import Accordion from './Accordion.svelte';
+    import NavItemMobile from './NavItemMobile.svelte';
 
-    import { mobileNavActive } from '../stores/mobilenavactive.js';
-
-    import Icon from './Icon.svelte';
-
-    function handleNavigationClick(e) {
-        mobileNavActive.update(mobileNavActive => false);
-    }
-    
 </script>
-    
 
 <div class="c-navigation-mobile-holder c-navigation-mobile-holder--active">
     
     <nav role="navigation">
         <ul class="c-navigation-mobile">
-            <li class="c-navigation-mobile__item c-navigation-mobile__item--active"><a on:click="{handleNavigationClick}" href="/">Home</a></li>
-            <li class="c-navigation-mobile__item"><a on:click="{handleNavigationClick}" href="/getting-started">Getting started</a></li>
+            <NavItemMobile href="/">Home</NavItemMobile>
+            <NavItemMobile href="/getting-started">Getting started</NavItemMobile>
             <li class="c-navigation-mobile__item">
-                <button class="c-navigation-mobile__section-header">
-                    <span>Guide</span>
-                    <Icon icon="chevron-down" />
-                </button>
-                <ul>
-                    <li class="c-navigation-mobile__item-child"><a on:click="{handleNavigationClick}" href="/guide/structure">File structure</a></li>
-                    <li class="c-navigation-mobile__item-child"><a on:click="{handleNavigationClick}" href="/guide/url-parameters">URL parameters</a></li>
-                    <li class="c-navigation-mobile__item-child"><a on:click="{handleNavigationClick}" href="/guide/metadata">Metadata</a></li>
-                    <li class="c-navigation-mobile__item-child"><a on:click="{handleNavigationClick}" href="/guide/structure">Props</a></li>
-                    <li class="c-navigation-mobile__item-child"><a on:click="{handleNavigationClick}" href="/guide/decorators">Decorators</a></li>
-                    <li class="c-navigation-mobile__item-child"><a on:click="{handleNavigationClick}" href="/guide/transitions">Transitions</a></li>
-                </ul>
+                <Accordion title="Guide">
+                    <ul>
+                        <NavItemMobile href="/guide/structure">File structure</NavItemMobile>
+                        <NavItemMobile href="/guide/url-parameters">URL parameters</NavItemMobile>
+                        <NavItemMobile href="/guide/metadata">Metadata</NavItemMobile>
+                        <NavItemMobile href="/guide/structure">Props</NavItemMobile>
+                        <NavItemMobile href="/guide/decorators">Decorators</NavItemMobile>
+                        <NavItemMobile href="/guide/transitions">Transitions</NavItemMobile>
+                    </ul>
+                </Accordion>
             </li>
             <li class="c-navigation-mobile__item">
-                <button class="c-navigation-mobile__section-header">
-                    <span>Helpers</span>
-                    <Icon icon="chevron-down" />
-                </button>
-                <ul>
-                    <li class="c-navigation-mobile__item-child"><a on:click="{handleNavigationClick}" href="/helpers/auth">Auth</a></li>
-                    <li class="c-navigation-mobile__item-child"><a on:click="{handleNavigationClick}" href="/helpers/login">Login</a></li>
-                    <li class="c-navigation-mobile__item-child"><a on:click="{handleNavigationClick}" href="/helpers/guards">Guards</a></li>
-                </ul>
+                <Accordion title="Helpers">
+                    <ul>
+                    
+                        <NavItemMobile href="/helpers/auth">Auth</NavItemMobile>
+                        <NavItemMobile href="/helpers/login">Login</NavItemMobile>
+                        <NavItemMobile href="/helpers/guards">Guards</NavItemMobile>
+                    </ul>
+                </Accordion>
             </li>
             <li class="c-navigation-mobile__item">
-                <button class="c-navigation-mobile__section-header">
-                    <span>Configuration</span>
-                    <Icon icon="chevron-down" />
-                </button>
-                <ul>
-                    <li class="c-navigation-mobile__item-child"><a on:click="{handleNavigationClick}" href="/configuration/basics">Basics</a></li>
-                    <li class="c-navigation-mobile__item-child"><a on:click="{handleNavigationClick}" href="/configuration/code-splitting">Code splitting</a></li>
-                    <li class="c-navigation-mobile__item-child"><a on:click="{handleNavigationClick}" href="/configuration/pre-rendering">Pre-rendering</a></li>
-                    <li class="c-navigation-mobile__item-child"><a on:click="{handleNavigationClick}" href="/configuration/deployments">Deployments</a></li>
-                    <li class="c-navigation-mobile__item-child"><a on:click="{handleNavigationClick}" href="/configuration/ssr">SSR</a></li>
-                    <li class="c-navigation-mobile__item-child"><a on:click="{handleNavigationClick}" href="/configuration/cache">Cache</a></li>
-                </ul>
+                <Accordion title="Configuration">
+                    <ul>
+                        <NavItemMobile href="/configuration/basics">Basics</NavItemMobile>
+                        <NavItemMobile href="/configuration/code-splitting">Code splitting</NavItemMobile>
+                        <NavItemMobile href="/configuration/pre-rendering">Pre-rendering</NavItemMobile>
+                        <NavItemMobile href="/configuration/deployments">Deployments</NavItemMobile>
+                        <NavItemMobile href="/configuration/ssr">SSR</NavItemMobile>
+                        <NavItemMobile href="/configuration/cache">Cache</NavItemMobile>
+                    </ul>
+                </Accordion>
             </li>
             <li class="c-navigation-mobile__item">
-                <button class="c-navigation-mobile__section-header">
-                    <span>Examples</span>
-                    <Icon icon="chevron-down" />
-                </button>
-                <ul>
-                    <li class="c-navigation-mobile__item-child"><a on:click="{handleNavigationClick}" href="#">Example item 1</a></li>
-                    <li class="c-navigation-mobile__item-child"><a on:click="{handleNavigationClick}" href="#">Example item 2</a></li>
-                </ul>
+                <Accordion title="Examples">
+                    <ul>
+                        <NavItemMobile href="/">Example item 1</NavItemMobile>
+                        <NavItemMobile href="/">Example item 2</NavItemMobile>
+                    </ul>
+                </Accordion>
             </li>
         </ul>
     </nav>
