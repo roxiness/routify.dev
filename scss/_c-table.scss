@@ -189,19 +189,3 @@ $i: 1;
     border: 0;
   }
 }
-
-/* Card + table context
-   ========================================================================== */
-
-.c-panel .c-table {
-  background: #FFF;
-  tr td {
-    padding: 1.6rem;
-  }
-  tr td:first-child {
-    padding-left: 2.4rem;
-  }
-  tr td:last-child {
-    padding-right: 2.4rem;
-  }
-}
