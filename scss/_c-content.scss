@@ -57,6 +57,17 @@
 
 .c-content {
 
+  a {
+    color: #597CD7;
+    text-decoration: none;
+    border-bottom: 1px solid #B6C8F5;
+  }
+
+  a:visited {
+    color: #AD62BF;
+    border-color: #E8BDF3;
+  }
+
   h1 {
     font-weight: 600;
     color: $g-heading-color;
