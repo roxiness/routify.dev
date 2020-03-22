@@ -1,6 +1,6 @@
 <script>
-  import { meta } from "@sveltech/routify";
-  meta.title = "Deployments";
+    import { meta } from "@sveltech/routify";
+    meta.title = "Deployments";
 </script>
 
 <div class="c-content">

@@ -1,6 +1,6 @@
 <script>
-  import { meta } from "@sveltech/routify";
-  meta.title = "Prerendering";
+    import { meta } from "@sveltech/routify";
+    meta.title = "Prerendering";
 </script>
 
 <div class="c-content">
