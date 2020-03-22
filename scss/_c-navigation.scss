@@ -2,6 +2,15 @@
    c-navigation
    ========================================================================== */
 
+.c-navigation__github-logo {
+  img {
+    display: block;
+  }
+}
+.c-navigation__github-link {
+  display: block;
+  margin-right: 1.6rem;
+}
 .c-navigation ul {
   display: flex;
 }
@@ -39,9 +48,6 @@
   color: $g-link-color;
 }
 
-.c-navigation__github-logo {
-  margin-right: 1.6rem;
-}
 
 @media (max-width: $g-bp-2) {
 

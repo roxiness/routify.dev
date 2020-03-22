@@ -22,6 +22,3 @@
 <div class="c-container-vertical">
     <Contribute />
 </div>
-
-
-<!-- @todo add github widget -->

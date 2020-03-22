@@ -114,6 +114,12 @@ $c-table-row-odd-color: #EEE !default;
 .c-table--horizontal {
   th {
     width: 18rem;
+    border-width: 0.1rem;
+  }
+  tr:last-child {
+    th {
+      border: none;
+    }
   }
 }
 
@@ -187,21 +193,5 @@ $i: 1;
   // Prevent double border on horizontal scroll due to use of `display: block;`
   > .c-table--bordered {
     border: 0;
-  }
-}
-
-/* Card + table context
-   ========================================================================== */
-
-.c-panel .c-table {
-  background: #FFF;
-  tr td {
-    padding: 1.6rem;
-  }
-  tr td:first-child {
-    padding-left: 2.4rem;
-  }
-  tr td:last-child {
-    padding-right: 2.4rem;
   }
 }
