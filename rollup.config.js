@@ -8,6 +8,7 @@ import copy from 'rollup-plugin-copy';
 import del from 'del';
 import ppidChanged from 'ppid-changed';
 import svg from 'rollup-plugin-svg';
+import alias from '@rollup/plugin-alias'
 
 const production = !process.env.ROLLUP_WATCH;
 const { distDir, staticDir, sourceDir, dynamicImports: split } = config
@@ -33,7 +34,8 @@ export default {
         { src: template, dest: distDir, rename: '__app.html' },
       ], copyOnce: true
     }),
-    svg(),
+    svg(), //todo are we using this?
+    alias({ entries: [{ find: '@', replacement: './src' },] }),
     svelte({
       // enable run-time checks when not in production
       dev: !production,

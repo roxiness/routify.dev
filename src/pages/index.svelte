@@ -1,8 +1,8 @@
 <script>
-    import Usps from '../components/Usps.svelte';
-    import Contributors from '../components/Contributors.svelte';
-    import Contribute from '../components/Contribute.svelte';
-    import Hero from '../components/Hero.svelte';
+    import Usps from '@/components/Usps.svelte';
+    import Contributors from '@/components/Contributors.svelte';
+    import Contribute from '@/components/Contribute.svelte';
+    import Hero from '@/components/Hero.svelte';
 </script>
 
 <main>
