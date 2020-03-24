@@ -4,6 +4,8 @@
     meta.title = "Metadata";
 </script>
 
+<!-- routify:options $index=40 -->
+
 <h1 class="c-h1">Metadata</h1>
 <div class="c-content">
 

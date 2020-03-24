@@ -1,17 +1,27 @@
 <script>
-  import { url, isActive } from "@sveltech/routify";
-  export let links
+  import { isActive, url, context } from "@sveltech/routify";
+  $: ({ component } = $context);
+  $: list = component.parent.children.filter(child => child.isIndexable);
 </script>
 
 <main class="c-sidebar-layout">
   <div class="c-sidebar-layout__side">
     <nav>
       <ul class="c-sidebar-nav">
-        {#each links as [path, name]}
+        {#each list as { path, prettyName, children }}
           <li
             class="c-sidebar-nav__item "
             class:c-sidebar-nav__item--selected={$isActive(path)}>
-            <a href={$url(path)}>{name}</a>
+            <a href={$url(path)}>{prettyName}</a>
+            {#if children && children.length && $isActive(path)}
+              <ul class="c-sidebar-nav-child">
+                {#each children.filter(c => c.isIndexable) as child}
+                  <li class="c-sidebar-nav-child__item">
+                    <a href={$url(child.shortPath)}>{child.prettyName}</a>
+                  </li>
+                {/each}
+              </ul>
+            {/if}
           </li>
         {/each}
       </ul>
