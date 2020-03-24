@@ -1,0 +1,30 @@
+/* ==========================================================================
+  c-note
+   ========================================================================== */
+
+.c-note {
+  margin: 1.6rem 0;
+  background: #FBE4FD;
+  padding: 2.4rem;
+  position: relative;
+}
+
+.c-note:after {
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 2rem 2rem 0;
+  border-color: transparent #EDBCF1 transparent transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.c-note > *:last-child {
+  margin-bottom: 0;
+}
+
+.c-note code {
+  background: #F9D5FC;
+}

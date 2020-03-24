@@ -2,33 +2,6 @@
   c-function-doc
    ========================================================================== */
 
-.c-function-doc__note {
-  margin: 1.6rem 0;
-  background: #FBE4FD;
-  padding: 2.4rem;
-  position: relative;
-}
-
-.c-function-doc__note:after {
-  content: ' ';
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 2rem 2rem 0;
-  border-color: transparent #EDBCF1 transparent transparent;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.c-function-doc__note div > *:last-child {
-  margin-bottom: 0;
-}
-
-.c-function-doc__note .c-content code {
-  background: #F9D5FC;
-}
-
 /* Hash link */
 .c-function-doc__header a {
   color: #0DA5CC;
