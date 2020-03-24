@@ -7,16 +7,19 @@ meta.title = 'Structure'
 <h1 class="c-h1">Scheme/structure</h1>
 <div class="c-content">
 
-    <h3>Mapping</h3>
-    <p><code>about.svelte</code> corresponds to <code>/about</code></p>
-    <p><code>recipes/cupcakes.svelte</code> corresponds to <code>/recipes/cupcakes</code></p>
-    <p><code>recipes/index.svelte</code> corresponds to <code>/recipes</code> and <code>/recipes/index</code></p>
+    <h3>File to URL mapping</h3>
+    <p>In Routify, files correspond to URLs.</p>
+    <ul>
+      <li><code>about.svelte</code> corresponds to <code>/about</code></li>
+      <li><code>recipes/cupcakes.svelte</code> corresponds to <code>/recipes/cupcakes</code></li>
+      <li><code>recipes/index.svelte</code> corresponds to <code>/recipes</code> and <code>/recipes/index</code></li>
+    </ul>
 
     <h3>Parameters</h3>
     <p><code>src/pages/admin/[business].svelte</code> corresponds to <code>/admin/:business</code>, where :business is a parameter.</p>
 
     <h3>Excluding files</h3>
-    <p>Files and directories prefixed with underscore will <u>not</u> be picked up by Routify. (except for <code>_layout.svelte</code> and <code>_reset.svelte</code>)</p>
+    <p>Files and directories prefixed with underscore will <strong>not</strong> be picked up by Routify. (except for <code>_layout.svelte</code> and <code>_reset.svelte</code>)</p>
 
     <h3>Layouts and resets</h3>
     <p>Layout files are named <code>_layout.svelte</code> and apply to all adjacent and nested Svelte files. A file can have multiple layouts if multiple layouts are recursively present in parent folders.</p>
