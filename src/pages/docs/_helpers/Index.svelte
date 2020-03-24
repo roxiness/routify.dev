@@ -1,3 +1,9 @@
+<script>
+  import GetDirection from "./getDirection.svelte";
+  import Url from "./url.svelte";
+  const helpers = [Url, GetDirection];
+</script>
+
 <!-- routify:options links={
     url:'#url',
     goto: '#goto',
@@ -6,6 +12,14 @@
 } -->
 <div class="c-container-horizontal--narrow">
   <div class="c-container-vertical--small">
+
+    {#each helpers as helper, index}
+      {#if index}
+        <hr />
+      {/if}
+      <svelte:component this={helper} />
+    {/each}
+
     <h1 class="c-h1">Helpers</h1>
     <table class="c-table c-table--styled c-table--horizontal">
       <tr>
