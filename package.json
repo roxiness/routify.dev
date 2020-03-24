@@ -1,6 +1,11 @@
 {
   "name": "routify-docs-2020",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sveltech/routify-site-2020.git"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "routify",
     "dev:split": "routify --dynamic-imports",
