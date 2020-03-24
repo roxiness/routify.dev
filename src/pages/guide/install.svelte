@@ -5,6 +5,8 @@
   meta.title = "Installation";
 </script>
 
+<!-- routify:options $index=false -->
+
 <div class="c-container-horizontal--narrow">
   <div class="c-container-vertical--small">
     <h1 class="c-h1" use:focus>Install in existing project</h1>

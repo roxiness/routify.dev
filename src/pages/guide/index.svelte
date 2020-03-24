@@ -1,4 +1,4 @@
 <script>
   import { goto } from "@sveltech/routify";
-  $goto('../structure')
+  $goto('../getting-started')
 </script>

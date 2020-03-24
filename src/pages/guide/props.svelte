@@ -3,6 +3,7 @@
   import { meta } from "@sveltech/routify";
   meta.title = "Props";
 </script>
+<!-- routify:options $index=40 -->
 
 <h1 class="c-h1">Props</h1>
 <div class="c-content">

@@ -11,6 +11,8 @@
   ];
 </script>
 
+<!-- routify:options $index=10 -->
+
 <LeftNavLayout {links}>
   <slot />
 </LeftNavLayout>
