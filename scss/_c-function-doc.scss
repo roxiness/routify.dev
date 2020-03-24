@@ -1,0 +1,54 @@
+/* ==========================================================================
+  c-function-doc
+   ========================================================================== */
+
+.c-function-doc__note {
+  margin: 1.6rem 0;
+  background: #FBE4FD;
+  padding: 2.4rem;
+  position: relative;
+}
+
+.c-function-doc__note:after {
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 2rem 2rem 0;
+  border-color: transparent #EDBCF1 transparent transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.c-function-doc__note div > *:last-child {
+  margin-bottom: 0;
+}
+
+.c-function-doc__note .c-content code {
+  background: #F9D5FC;
+}
+
+/* Hash link */
+.c-function-doc__header a {
+  color: #0DA5CC;
+  text-decoration: none;
+  display: inline-block;
+  height: 2.4rem;
+  width: 2.4rem;
+  text-align: center;
+  line-height: 2.4rem;
+  border-radius: 0.3rem;
+  font-size: 90%;
+}
+
+.c-function-doc__header a:hover {
+  color: #0DA5CC;
+  background: #D7F7FF;
+  text-decoration: none;
+  transition: 0.18s background ease-in-out;
+}
+
+.c-function-doc__content {
+  padding-left: 1.6rem;
+}

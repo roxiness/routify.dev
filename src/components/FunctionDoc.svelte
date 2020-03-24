@@ -6,40 +6,46 @@
 </script>
 
 <style>
-  .c-function-doc {
+  .df {
+    opacity: 0.6;
   }
-
-  .c-function-doc__note {
-    background: #FBE4FD;
-    padding: 2.4rem;
+  h3 code {
+    font-weight: 700;
   }
 </style>
 
 <div class="c-function-doc">
-  <h3 class="c-h3">{name}({paramNames.join(', ')})</h3>
-  <div class="c-content">
-    <ul>
-    {#each params as param}
-      <li>
-        <div>
-          <span class="type">{`{${param.type}}`}</span>
-          <span class="name">{param.name}</span>
-          <span class="default-value">default value {param.default}</span>
-        </div>
-        <div class="param-description">{param.description}</div>
-      </li>
-    {/each}
-  </ul>
+  <div class="c-function-doc__header">
+    <h3 class="c-h3">
+      <a id="haslinkhere" href="#haslinkhere">#</a> <code>{name}({paramNames.join(', ')})</code>
+    </h3>
   </div>
-  <div class="c-content">
-    <slot />
-  </div>
-  <div class="c-function-doc__note">
-    <slot name="note" />
-  </div>
-  <div class="example">
-    <Prism>
-      <slot name="code" />
-    </Prism>
+  <div class="c-function-doc__content">
+    <div class="c-content">
+      <ul>
+      {#each params as param}
+        <li>
+          {param.name}
+          <ul>
+            <li>type: <code>{`{${param.type}}`}</code> <span class="df">(default value: <code>{param.default}</code>)</span></li>
+            <li>{param.description}</li>
+          </ul>
+        </li>
+      {/each}
+    </ul>
+    </div>
+    <div class="c-content">
+      <slot />
+    </div>
+    <div class="c-function-doc__note">
+      <div class="c-content">
+        <slot name="note" />
+      </div>
+    </div>
+    <div class="example">
+      <Prism>
+        <slot name="code" />
+      </Prism>
+    </div>
   </div>
 </div>
