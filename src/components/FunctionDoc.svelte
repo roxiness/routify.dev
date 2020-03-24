@@ -5,9 +5,20 @@
   $: paramNames = params.map(param => param.name);
 </script>
 
-<div class="function-doc">
-  <h3>{name}({paramNames.join(', ')})</h3>
-  <ul>
+<style>
+  .c-function-doc {
+  }
+
+  .c-function-doc__note {
+    background: #FBE4FD;
+    padding: 2.4rem;
+  }
+</style>
+
+<div class="c-function-doc">
+  <h3 class="c-h3">{name}({paramNames.join(', ')})</h3>
+  <div class="c-content">
+    <ul>
     {#each params as param}
       <li>
         <div>
@@ -19,10 +30,11 @@
       </li>
     {/each}
   </ul>
-  <div class="description">
+  </div>
+  <div class="c-content">
     <slot />
   </div>
-  <div class="note">
+  <div class="c-function-doc__note">
     <slot name="note" />
   </div>
   <div class="example">
