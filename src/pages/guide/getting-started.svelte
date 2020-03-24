@@ -19,7 +19,7 @@
       <p>Alternatively, download the repository and follow the instructions.</p> 
       <p>
           If you wish to add Routify to an existing project, please refer to our
-          <a href={$url('../../guide/install')}>install guide</a>
+          <a href={$url('../../guide/install')}>install guide</a>.
       </p>
     </div>
   </div>
