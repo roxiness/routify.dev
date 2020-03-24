@@ -14,6 +14,7 @@
   ]
 </script>
 
+<!-- routify:options $index=10 -->
 <!-- routify:options links=[
   {name: "url", href:"#url"},
   {name: "isActive", href:"#is-active"},
