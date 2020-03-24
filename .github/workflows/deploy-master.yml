@@ -30,4 +30,5 @@ jobs:
         now-org-id: ${{ secrets.NOW_ORG_ID}}  #Required
         now-project-id: ${{ secrets.NOW_PROJECT_ID}} #Required 
         working-directory: ./scripts/now    
-    - run: echo ${{ steps.now.outputs.preview-url }}
+    - run: |
+        echo ${{ steps.now.outputs.preview-url }}
