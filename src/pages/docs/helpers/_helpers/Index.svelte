@@ -1,7 +1,8 @@
 <script>
-  import GetDirection from "./getDirection.svelte";
   import Url from "./url.svelte";
-  const helpers = [Url, GetDirection];
+  import IsActive from "./isActive.svelte";
+  import GetDirection from "./getDirection.svelte";
+  const helpers = [Url, IsActive, GetDirection];
 </script>
 
 <!-- routify:options links={

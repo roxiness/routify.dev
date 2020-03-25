@@ -6,7 +6,7 @@
       type: "String",
       name: "path",
       default: "./",
-      description: "Absolute, relative or named string."
+      description: "Absolute, relative or named path."
     },
     {
       type: "Object",
@@ -23,7 +23,6 @@
   ];
 </script>
 
-<!-- routify:options $index=10 -->
 <FunctionDoc name="$url" {params}>
   <p>
     <code>$url</code>
@@ -36,6 +35,9 @@
       If used in a component outside of a layout or page, the url will be
       relative to the layout or page which imports the component.
     </p>
+
+  </div>
+  <div slot="note" class="c-note">
     <p>
       A named path is a path that doesn't start with
       <code>.</code>
@@ -43,8 +45,6 @@
       <code>/</code>
       .
     </p>
-  </div>
-  <div slot="note" class="c-note">
     <p>
       To name a page, add the name meta tag:
       <code>{`<!-- routify:options $name="blog" -->`}</code>
