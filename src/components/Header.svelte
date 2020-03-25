@@ -1,17 +1,15 @@
 <script>
-
-    import { mobileNavActive } from '../stores/mobilenavactive.js';
     import NavItems from './NavItems.svelte';
     import NavItemsMobile from './NavItemsMobile.svelte';
-
+    let showMobileNav = false
     let bodyElement = document.querySelector('body');
     let htmlElement = document.querySelector('html');
 
     function handleToggleClick(e) {
-      mobileNavActive.update(mobileNavActive => !mobileNavActive);
+      showMobileNav = !showMobileNav
     }
 
-    if ($mobileNavActive) {
+    if (showMobileNav) {
         bodyElement.classList.add('c-mobile-nav-active');
         htmlElement.classList.add('u-no-scroll');
     } else {
@@ -33,7 +31,7 @@
 
     <a href="#nav"
         class="c-navigation-toggle"
-        class:c-navigation-toggle--active={$mobileNavActive}
+        class:c-navigation-toggle--active={showMobileNav === !showMobileNav}
         on:click|preventDefault={handleToggleClick}
     >
         <svg width="40" height="40" viewBox="0 0 40 40">
@@ -45,8 +43,8 @@
 
 </header>
 
-<div class="c-navigation-mobile-holder" class:c-navigation-mobile-holder--active={$mobileNavActive}>
+<div class="c-navigation-mobile-holder" class:c-navigation-mobile-holder--active={showMobileNav}>
     <nav role="navigation">
-        <NavItemsMobile />
+        <NavItemsMobile bind:showMobileNav />
     </nav>
 </div>
