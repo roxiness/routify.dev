@@ -1,5 +1,6 @@
 <script>
   import Prism from "svelte-prism";
+  import { getContext } from "svelte";
   export let name = "";
   export let params = [];
   export let type = "function";
@@ -12,6 +13,10 @@
     .split(/(?=[A-Z])/)
     .map(x => x.toLowerCase())
     .join("-");
+
+  function addHashElement(node) {
+    getContext("hashLocation").elements.set(hash, node);
+  }
 </script>
 
 <style>
@@ -26,7 +31,7 @@
 <div class="c-function-doc">
   <div class="c-function-doc__header">
     <h3 class="c-function-doc__heading">
-      <a id={hash} href="#{hash}">#</a>
+      <a id={hash} href="#{hash}" use:addHashElement>#</a>
       <code>
         {name}
         {#if isFunction}({paramNames.join(', ')}){/if}
