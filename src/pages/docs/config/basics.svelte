@@ -20,15 +20,20 @@
     <th>Name</th>
     <th>Type</th>
     <th>Default value</th>
-    <th>Description</th>
+    <th>Flag</th>
   </tr>
   <tr>
-    <td>debug</td>
+    <td><strong>debug</strong></td>
     <td>boolean</td>
     <td>
       <code>false</code>
     </td>
-    <td>Show extra debug information</td>
+    <td>-d</td>
+  </tr>
+  <tr class="c-table__row--alt">
+    <td colspan="99">
+      Show extra debug information
+    </td>
   </tr>
   <tr>
     <td>pages</td>
@@ -36,13 +41,25 @@
     <td>
       <code>./src/pages</code>
     </td>
-    <td>Path to pages.</td>
+    <td>-p</td>
+  </tr>
+  <tr class="c-table__row--alt">
+    <td colspan="99">
+      Path to pages.
+    </td>
   </tr>
   <tr>
     <td>ignore</td>
     <td>array|string</td>
     <td>None</td>
-    <td>Files and dirs to be ignored. Interpreted as regular expression.</td>
+    <td>
+      <!--TODO -->
+    </td>
+  </tr>
+  <tr class="c-table__row--alt">
+    <td colspan="99">
+      Files and dirs to be ignored. Interpreted as regular expression.
+    </td>
   </tr>
   <tr>
     <td>unusedPropWarnings</td>
@@ -50,7 +67,14 @@
     <td>
       <code>false</code>
     </td>
-    <td>Show warnings about unused props passed by filerouter.</td>
+    <td>
+      <!--TODO -->
+    </td>
+  </tr>
+  <tr class="c-table__row--alt">
+    <td colspan="99">
+      Show warnings about unused props passed by filerouter.
+    </td>
   </tr>
   <tr>
     <td>dynamicImports</td>
@@ -58,7 +82,14 @@
     <td>
       <code>false</code>
     </td>
-    <td>Enable code splitting.</td>
+    <td>
+      <!--TODO -->
+    </td>
+  </tr>
+  <tr class="c-table__row--alt">
+    <td colspan="99">
+      Enable code splitting.
+    </td>
   </tr>
   <tr>
     <td>singleBuild</td>
@@ -66,13 +97,20 @@
     <td>
       <code>false</code>
     </td>
-    <td>Don't watch for file changes.</td>
+    <td>
+      <!--TODO -->
+    </td>
+  </tr>
+  <tr class="">
+    <td colspan="99">
+      Don't watch for file changes.
+    </td>
   </tr>
 </table>
 
 
 <h2 class="c-h2">To use with CLI</h2>
-<pre  class="command-line" data-output="2-18">
+<pre  class="command-line" data-output="2-18" style="max-width: 70rem; overflow-x: scroll;">
   <code use:highlight class="language-bash">
     {`
         npx @sveltech/routify --help

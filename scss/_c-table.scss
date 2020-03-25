@@ -35,6 +35,10 @@ $c-table-row-odd-color: #EEE !default;
 
 }
 
+.c-table__row--alt td {
+  background: #FFF4FF;
+}
+
 .c-table--styled {
   margin: 0 0 2.4rem;
 
