@@ -21,7 +21,7 @@
   <Index />
 </div>
 
-<FunctionDoc name="test" {params}>
+<!-- <FunctionDoc name="test" {params}>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -44,4 +44,4 @@
     </li>
   </ul>
   <div slot="note">Hey this is a note</div>
-</FunctionDoc>
+</FunctionDoc> -->
