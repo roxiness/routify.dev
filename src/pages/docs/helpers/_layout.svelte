@@ -6,7 +6,7 @@
   {name: "params", href:"#params"},
   {name: "context", href:"#context"},
   {name: "leftover", href:"#leftover"},
-  {name: "beforeUrlChange", href:"#beforeUrlChange"},
+  {name: "beforeUrlChange", href:"#before-url-change"},
   {name: "ready", href:"#ready"},
   {name: "getConcestor", href:"#getConcestor"},
   {name: "getDirection", href:"#getDirection"}

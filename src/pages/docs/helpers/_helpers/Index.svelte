@@ -1,9 +1,33 @@
 <script>
   import Url from "./url.svelte";
   import IsActive from "./isActive.svelte";
+  import Goto from "./goto.svelte";
+  import Params from "./params.svelte";
+  import Leftover from "./leftover.svelte";
+  import BeforeUrlChange from "./beforeUrlChange.svelte";
+  import GetConcestor from "./getConcestor.svelte";
   import GetDirection from "./getDirection.svelte";
-  const helpers = [Url, IsActive, GetDirection];
+  import Ready from "./ready.svelte";
+  import Context from "./context.svelte";
+  const helpers = [
+    Url,
+    IsActive,
+    Goto,
+    Params,
+    Context,
+    Leftover,
+    BeforeUrlChange,
+    Ready,
+    GetConcestor,
+    GetDirection
+  ];
 </script>
+
+<style>
+  hr {
+    margin: 96px 0;
+  }
+</style>
 
 <!-- routify:options links={
     url:'#url',

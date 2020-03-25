@@ -1,5 +1,6 @@
 <script>
   import FunctionDoc from "@/components/FunctionDoc.svelte";
+  import Code from "@/components/Code.svelte";
 
   const params = [
     {
@@ -20,27 +21,27 @@
 <FunctionDoc name="$isActive" {params}>
   <p>
     <code>$isActive</code>
-    Checks if a given path is part of the current route.
+    Checks if the provided path is part of the current route.
   </p>
 
-  <div slot="code">
+  <Code language="svelte">
     {`
-<!-- src/pages/_layout.svelte -->
-<`}{`script>
-  import { isActive, url } from '@sveltech/routify'
+      <!-- src/pages/_layout.svelte -->
+      <`}{`script>
+        import { isActive, url } from '@sveltech/routify'
 
-  const links = [
-    ['./index', 'Home'],
-    ['./about', 'About'],
-    ['./contact', 'Contact']
-  ]
-</}{script>
+        const links = [
+          ['./index', 'Home'],
+          ['./about', 'About'],
+          ['./contact', 'Contact']
+        ]
+      </script>
 
-{#each links as [path, name]}}
-  <a href={$url(path)} class:active={$isActive(path)}>{name}</a>
-{/each}
-  `}
-  </div>
-
+      {#each links as [path, name]}}
+        <a href={$url(path)} class:active={$isActive(path)}>
+          {name}
+        </a>
+      {/each}
+    `}
+  </Code>
 </FunctionDoc>
-

@@ -1,5 +1,6 @@
 <script>
   import FunctionDoc from "@/components/FunctionDoc.svelte";
+  import Code from "@/components/Code.svelte";
 
   const params = [
     {
@@ -51,25 +52,26 @@
     </p>
   </div>
 
-  <div slot="code">
+  <Code language="svelte">
     {`
-  <!-- src/pages/recipes/cakes/cupcakes.svelte -->
-<`}{`script>
-  import { url } from '@sveltech/routify'
-</{}script>
+      <!-- src/pages/recipes/cakes/cupcakes.svelte -->
+      <`}{`script>
+        import { url } from '@sveltech/routify'
+      </script>
 
-<!-- relative -->
-<a href={$url('../../ingredients/sugar')}>Info about sugar</a>
+      <!-- relative -->
+      <a href={$url('../../ingredients/sugar')}>Info about sugar</a>
 
-<!-- absolute -->
-<a href={$url('/ingredients/sugar')}>Info about sugar</a>
+      <!-- absolute -->
+      <a href={$url('/ingredients/sugar')}>Info about sugar</a>
 
-<!-- named -->
-<a href={$url('sugar')}>Info about sugar</a>
+      <!-- named -->
+      <a href={$url('sugar')}>Info about sugar</a>
 
-<!-- params -->
-<a href={$url('/users/:id', {id: '123'})}>Info author</a>
-  `}
-  </div>
+      <!-- params -->
+      <a href={$url('/users/:id', {id: '123'})}>Info author</a>
+    `}
+  </Code>
+
 
 </FunctionDoc>
