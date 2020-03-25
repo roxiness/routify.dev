@@ -3,6 +3,12 @@
   export let name = "";
   export let params = [];
   $: paramNames = params.map(param => param.name);
+
+  $: hash = name
+      .replace(/\$/, '')
+      .split(/(?=[A-Z])/)
+      .map(x => x.toLowerCase())
+      .join("-");
 </script>
 
 <style>
@@ -17,7 +23,8 @@
 <div class="c-function-doc">
   <div class="c-function-doc__header">
     <h3 class="c-h3">
-      <a id="haslinkhere" href="#haslinkhere">#</a> <code>{name}({paramNames.join(', ')})</code>
+      <a id="{hash}" href="#{hash}">#</a>
+      <code>{name}({paramNames.join(', ')})</code>
     </h3>
   </div>
   <div class="c-function-doc__content">
