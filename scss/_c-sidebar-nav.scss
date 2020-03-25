@@ -10,7 +10,14 @@
   }
 }
 
+.c-sidebar-layout__side nav {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 2rem;
+}
+
 .c-sidebar-nav {
+
   a {
     text-decoration: none;
     display: block;
