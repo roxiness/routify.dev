@@ -15,17 +15,17 @@
   .df {
     opacity: 0.6;
   }
-  h3 code {
+  h2 code {
     font-weight: 700;
   }
 </style>
 
 <div class="c-function-doc">
   <div class="c-function-doc__header">
-    <h3 class="c-h3">
+    <h2 class="c-h2">
       <a id="{hash}" href="#{hash}">#</a>
       <code>{name}({paramNames.join(', ')})</code>
-    </h3>
+    </h2>
   </div>
   <div class="c-function-doc__content">
     <div class="c-content">
