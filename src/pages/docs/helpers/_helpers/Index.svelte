@@ -9,6 +9,7 @@
   import GetDirection from "./getDirection.svelte";
   import Ready from "./ready.svelte";
   import Context from "./context.svelte";
+  import Focus from "./focus.svelte";
   const helpers = [
     Url,
     IsActive,
@@ -17,6 +18,7 @@
     Context,
     Leftover,
     BeforeUrlChange,
+    Focus,
     Ready,
     GetConcestor,
     GetDirection

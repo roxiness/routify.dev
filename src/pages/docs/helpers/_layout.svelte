@@ -7,9 +7,10 @@
   {name: "context", href:"#context"},
   {name: "leftover", href:"#leftover"},
   {name: "beforeUrlChange", href:"#before-url-change"},
+  {name: "focus", href:"#focus"},
   {name: "ready", href:"#ready"},
-  {name: "getConcestor", href:"#getConcestor"},
-  {name: "getDirection", href:"#getDirection"}
+  {name: "getConcestor", href:"#get-concestor"},
+  {name: "getDirection", href:"#get-direction"}
 ] -->
 
 <div data-routify="scroll-lock">
