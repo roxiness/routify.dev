@@ -23,11 +23,6 @@
   ];
 </script>
 
-<style>
-  hr {
-    margin: 96px 0;
-  }
-</style>
 
 <!-- routify:options links={
     url:'#url',
@@ -40,7 +35,7 @@
 
   {#each helpers as helper, index}
     {#if index}
-      <hr class="c-hr" />
+      <hr class="c-hr c-hr--big" />
     {/if}
     <svelte:component this={helper} />
   {/each}

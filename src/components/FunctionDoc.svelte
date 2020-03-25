@@ -25,7 +25,7 @@
 
 <div class="c-function-doc">
   <div class="c-function-doc__header">
-    <h3 class="c-h2">
+    <h3 class="c-function-doc__heading">
       <a id={hash} href="#{hash}">#</a>
       <code>
         {name}
