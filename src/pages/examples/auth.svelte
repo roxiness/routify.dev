@@ -22,71 +22,70 @@
     <h2>Authentication guards</h2>
     <p>
       Users should generally be authenticated in the root layout.
-      <Tabs>
-        <div class="c-tabs">
-          <TabsLink>Minimal</TabsLink>
-          <TabsLink>Basic</TabsLink>
-          <TabsLink>Store</TabsLink>
-
-        </div>
-        <div class="c-tabs-pages">
-          <TabsPage>
-            <Prism language="svelte">
-              {`
-                <!-- src/pages/_layout.svelte -->
-                <scr`}{`ipt>
-                  import { authenticate } from 'my-auth-service'
-                </script>
-
-                <!-- Wait with rendering the app till the user/guest is verified.
-                This prevents small UI glitches and premature authorization checks. -->
-                {#await authenticate()}
-                {:then}
-                  <slot />
-                {/await}
-              `}
-            </Prism>
-          </TabsPage>
-          <TabsPage>
-            <Prism language="svelte">
-              {`
-                <!-- src/pages/_layout.svelte -->
-                <scr`}{`ipt>
-                  import { authenticate } from 'my-auth-service'
-                </script>
-
-                <!-- Wait with rendering the app till the user/guest is verified.
-                This prevents small UI glitches and premature authorization checks. -->
-                {#await authenticate()}
-
-                <!-- Show a waiting message/page/animation here -->
-                Verifying user...
-
-                <!-- Pass the user to all nested pages in the project -->
-                {:then user}
-                  <slot scoped={{user}} />
-                {/await}
-              `}
-            </Prism>
-          </TabsPage>
-          <TabsPage>
-            <Prism language="svelte">
-              {`
-                <!-- src/pages/_layout.svelte -->
-                <scr`}{`ipt>
-                  import { user } from '../store'
-                </script>
-
-                {#if user}
-                  <slot />
-                {/if}
-              `}
-            </Prism>
-          </TabsPage>
-        </div>
-      </Tabs>
-
     </p>
+    <Tabs>
+      <div class="c-tabs">
+        <TabsLink>Minimal</TabsLink>
+        <TabsLink>Basic</TabsLink>
+        <TabsLink>Store</TabsLink>
+
+      </div>
+      <div class="c-tabs-pages">
+        <TabsPage>
+          <Prism language="svelte">
+            {`
+              <!-- src/pages/_layout.svelte -->
+              <scr`}{`ipt>
+                import { authenticate } from 'my-auth-service'
+              </script>
+
+              <!-- Wait with rendering the app till the user/guest is verified.
+              This prevents small UI glitches and premature authorization checks. -->
+              {#await authenticate()}
+              {:then}
+                <slot />
+              {/await}
+            `}
+          </Prism>
+        </TabsPage>
+        <TabsPage>
+          <Prism language="svelte">
+            {`
+              <!-- src/pages/_layout.svelte -->
+              <scr`}{`ipt>
+                import { authenticate } from 'my-auth-service'
+              </script>
+
+              <!-- Wait with rendering the app till the user/guest is verified.
+              This prevents small UI glitches and premature authorization checks. -->
+              {#await authenticate()}
+
+              <!-- Show a waiting message/page/animation here -->
+              Verifying user...
+
+              <!-- Pass the user to all nested pages in the project -->
+              {:then user}
+                <slot scoped={{user}} />
+              {/await}
+            `}
+          </Prism>
+        </TabsPage>
+        <TabsPage>
+          <Prism language="svelte">
+            {`
+              <!-- src/pages/_layout.svelte -->
+              <scr`}{`ipt>
+                import { user } from '../store'
+              </script>
+
+              {#if user}
+                <slot />
+              {/if}
+            `}
+          </Prism>
+        </TabsPage>
+      </div>
+    </Tabs>
   </div>
 </div>
 
