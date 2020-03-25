@@ -2,13 +2,16 @@
   import Prism from "svelte-prism";
   export let name = "";
   export let params = [];
+  export let type = "function";
+
+  $: isFunction = type === "function";
   $: paramNames = params.map(param => param.name);
 
   $: hash = name
-      .replace(/\$/, '')
-      .split(/(?=[A-Z])/)
-      .map(x => x.toLowerCase())
-      .join("-");
+    .replace(/\$/, "")
+    .split(/(?=[A-Z])/)
+    .map(x => x.toLowerCase())
+    .join("-");
 </script>
 
 <style>
@@ -23,23 +26,34 @@
 <div class="c-function-doc">
   <div class="c-function-doc__header">
     <h3 class="c-h3">
-      <a id="{hash}" href="#{hash}">#</a>
-      <code>{name}({paramNames.join(', ')})</code>
+      <a id={hash} href="#{hash}">#</a>
+      <code>
+        {name}
+        {#if isFunction}({paramNames.join(', ')}){/if}
+      </code>
     </h3>
   </div>
   <div class="c-function-doc__content">
     <div class="c-content">
       <ul>
-      {#each params as param}
-        <li>
-          {param.name}
-          <ul>
-            <li>type: <code>{`{${param.type}}`}</code> <span class="df">(default value: <code>{param.default}</code>)</span></li>
-            <li>{param.description}</li>
-          </ul>
-        </li>
-      {/each}
-    </ul>
+        {#each params as param}
+          <li>
+            {param.name}
+            <ul>
+              <li>
+                type:
+                <code>{`{${param.type}}`}</code>
+                <span class="df">
+                  (default value:
+                  <code>{param.default}</code>
+                  )
+                </span>
+              </li>
+              <li>{param.description}</li>
+            </ul>
+          </li>
+        {/each}
+      </ul>
     </div>
     <div class="c-content">
       <slot />
@@ -49,10 +63,6 @@
         <slot name="note" />
       </div>
     </div>
-    <div class="example">
-      <Prism>
-        <slot name="code" />
-      </Prism>
-    </div>
+
   </div>
 </div>
