@@ -13,5 +13,6 @@
 ] -->
 
 <div data-routify="scroll-lock">
+  <h1 class="c-h1">Helpers</h1>
   <slot />
 </div>
