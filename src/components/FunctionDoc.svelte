@@ -63,11 +63,6 @@
     <div class="c-content">
       <slot />
     </div>
-    <div class="c-function-doc__note">
-      <div class="c-content">
-        <slot name="note" />
-      </div>
-    </div>
 
   </div>
 </div>

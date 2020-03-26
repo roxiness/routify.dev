@@ -1,6 +1,7 @@
 <script>
   import FunctionDoc from "@/components/FunctionDoc.svelte";
   import Code from "@/components/Code.svelte";
+  import Note from "@/components/Note.svelte";
   import { context } from "@sveltech/routify";
   console.log($context.component);
 </script>
@@ -12,13 +13,6 @@
     to access the current component context.
   </p>
 
-  <div slot="note" class="c-note">
-    <p>
-      Components are undocumented and could change without notice. Use
-      at own risk.
-    </p>
-  </div>
-
   <Code language="svelte">
     {`
       <!-- /blog/[postId]/view.svelte -->
@@ -28,5 +22,9 @@
       </script>
   `}
   </Code>
+
+  <Note type="warning">
+    <p>Components are undocumented and could change without notice. Use at own risk.</p>
+  </Note>
 
 </FunctionDoc>

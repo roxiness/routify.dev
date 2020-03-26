@@ -1,6 +1,7 @@
 <script>
   import FunctionDoc from "@/components/FunctionDoc.svelte";
   import Code from "@/components/Code.svelte";
+  import Note from "@/components/Note.svelte";
 
   const params = [
     {
@@ -21,15 +22,7 @@
     Takes two components and returns their closest shared layout and their
     sibling ancestors.
   </p>
-  <div slot="note" class="c-note">
-    <p>
-      <code>$getConcestor</code>
-      is used by
-      <code>$getDirection</code>
-      to determine the direction when navigating.
-    </p>
 
-  </div>
   <Code language="svelte">
     {`
       <`}{`script>
@@ -40,5 +33,12 @@
       </script>
     `}
   </Code>
+
+  <Note type="info">
+      <code>$getConcestor</code>
+      is used by
+      <code>$getDirection</code>
+      to determine the direction when navigating.
+  </Note>
 
 </FunctionDoc>

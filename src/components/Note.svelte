@@ -1,14 +1,18 @@
 <script>
-  export let type;
+  export let type = "info";
   import Icon from './Icon.svelte';
+  import IconInfo from './icons/info.svg';
+  import IconWarning from './icons/warning.svg';
 </script>
 
 
 <div class="c-note c-note--{type}">
-  {#if type === "warning"}
-    <Icon large icon="warning" />
-  {:else}
-    <Icon large icon="info" />
-  {/if}
-  <p><slot></slot></p>
+  <div class="c-note__icon">
+    {#if type === "warning"}
+      {@html IconWarning}
+    {:else}
+      {@html IconInfo}
+    {/if}
+  </div>
+  <div class="c-note__text"><slot></slot></div>
 </div>

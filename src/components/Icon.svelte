@@ -1,6 +1,5 @@
 <script>
     export let icon;
-    export let large = false;
 
     // Possible icon types
     import IconChevronUp from './icons/chevron-up.svg';
@@ -18,14 +17,9 @@
         height: 1.6rem;
     }
 
-    .svg-icon--large {
-        width: 2.4rem;
-        height: 2.4rem;
-    }
-
 </style>
 
-<div class="svg-icon" class:svg-icon--large={large}>
+<div class="svg-icon">
 {#if icon == 'chevron-left'}
     {@html IconChevronLeft}
 {/if}

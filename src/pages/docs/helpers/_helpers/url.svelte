@@ -1,6 +1,7 @@
 <script>
   import FunctionDoc from "@/components/FunctionDoc.svelte";
   import Code from "@/components/Code.svelte";
+  import Note from "@/components/Note.svelte";
 
   const params = [
     {
@@ -23,7 +24,7 @@
     }
   ];
 </script>
-  
+
 <FunctionDoc name="$url" {params}>
   <p>
     <code>$url</code>
@@ -31,26 +32,6 @@
     ensures consistent URLs which are unaffected by the current browser address
     (unlike normal relative URLs).
   </p>
-  <div slot="note" class="c-note">
-    <p>
-      If used in a component outside of a layout or page, the url will be
-      relative to the layout or page which imports the component.
-    </p>
-
-  </div>
-  <div slot="note" class="c-note">
-    <p>
-      A named path is a path that doesn't start with
-      <code>.</code>
-      or
-      <code>/</code>
-      .
-    </p>
-    <p>
-      To name a page, add the name meta tag:
-      <code>{`<!-- routify:options $name="blog" -->`}</code>
-    </p>
-  </div>
 
   <Code language="svelte">
     {`
@@ -72,6 +53,20 @@
       <a href={$url('/users/:id', {id: '123'})}>Info author</a>
     `}
   </Code>
+
+  <Note type="info">
+    <p>If used in a component outside of a layout or page, the url will be
+    relative to the layout or page which imports the component.</p>
+  </Note>
+
+  <Note type="info">
+    <p>
+      A named path is a path that doesn't start with <code>.</code> or <code>/</code>.
+    </p>
+    <p>
+      To name a page, add the name meta tag:<code>{`<!-- routify:options $name="blog" -->`}</code>
+    </p>
+  </Note>
 
 
 </FunctionDoc>
