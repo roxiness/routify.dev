@@ -7,6 +7,13 @@
   background: #FBE4FD;
   padding: 2.4rem;
   position: relative;
+  display: flex;
+  align-items: center;
+  color: #1D2C48;
+
+  p {
+    padding-left: 1.2rem;
+  }
 }
 
 .c-note:after {
@@ -27,4 +34,24 @@
 
 .c-note code {
   background: #F9D5FC;
+}
+
+.c-note--alternate {
+  background: #E2F9FF;
+
+  &:after {
+    border-color: transparent #B7E4EF transparent transparent;
+  }
+}
+
+.c-note--warning {
+  background: #FFD7D7;
+
+  svg path {
+    fill: #BE1515;
+  }
+
+  &:after {
+    border-color: transparent #F1C4C4 transparent transparent;
+  }
 }
