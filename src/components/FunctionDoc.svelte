@@ -15,7 +15,7 @@
     .join("-");
 
   function addHashElement(node) {
-    getContext("hashLocation").elements.set(hash, node);
+    getContext("hashElements").set(hash, node);
   }
 </script>
 

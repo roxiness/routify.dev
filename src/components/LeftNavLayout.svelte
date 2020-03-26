@@ -4,10 +4,11 @@
   $: ({ component } = $context);
   $: list = component.parent.children.filter(child => child.isIndexable);
 
-  const { y, elements } = getContext("hashLocation");
+  const elements = getContext("hashElements");
   let currentId = false;
+  let y = 0
 
-  $: checkelements($y);
+  $: checkelements(y);
   function checkelements(y) {
     let smallest = false;
 
@@ -20,6 +21,8 @@
     });
   }
 </script>
+
+<svelte:window bind:scrollY={y} />
 
 <main class="c-sidebar-layout">
   <div class="c-sidebar-layout__side">

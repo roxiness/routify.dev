@@ -4,14 +4,8 @@
   import { routes } from "@sveltech/routify/tmp/routes";
   import { writable } from "svelte/store";
 
-  const elements = new Map();
-  let y = writable();
-  setContext("hashLocation", { elements, y });
-
-
+  setContext("hashElements", new Map());
 </script>
 
 <!-- src/App.svelte -->
 <Router {routes} />
-
-<svelte:window bind:scrollY={$y} />
