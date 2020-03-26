@@ -1,6 +1,7 @@
 <script>
   import FunctionDoc from "@/components/FunctionDoc.svelte";
   import Code from "@/components/Code.svelte";
+  import Note from "@/components/Note.svelte";
 
   const params = [];
 </script>
@@ -16,16 +17,6 @@
     is not present in your component, it will be rendered synchronously
     (instantly).
   </p>
-
-  <!-- todo: make this note a warning -->
-  <div slot="note" class="c-note warning">
-    <p>
-      If
-      <code>$ready</code>
-      is present in your code, but never called, your app will never be
-      considered loaded. This could cause issues like hanging SSR.
-    </p>
-  </div>
 
   <Code language="svelte">
     {`
@@ -45,5 +36,12 @@
       <h1>{data.name}</h1>
     `}
   </Code>
+
+  <Note type="warning">
+    If
+    <code>$ready</code>
+    is present in your code, but never called, your app will never be
+    considered loaded. This could cause issues like hanging SSR.
+  </Note>
 
 </FunctionDoc>

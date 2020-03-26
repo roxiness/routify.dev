@@ -1,20 +1,13 @@
 <script>
   import FunctionDoc from "@/components/FunctionDoc.svelte";
   import Code from "@/components/Code.svelte";
-
-
+  import Note from "@/components/Note.svelte";
 </script>
 
 <FunctionDoc name="$leftover" type="object">
   <p>
     <code>$leftover</code> is the part of the URL that's unconsumed by Routify. Useful in wigets redirect. Often handled in <code>_fallback.svelte</code>.
   </p>
-  <div slot="note" class="c-note">
-    <p>
-      <code>$leftover</code> is composed by subtracting the parent folder of the <code>_fallback.svelte</code> from the current URL.
-    </p>
-
-  </div>
 
   <Code language="svelte">
     {`
@@ -37,5 +30,8 @@
     Redirecting to the English page if the German page couldn't be found</div>
   </Code>
 
+  <Note type="info">
+    <code>$leftover</code> is composed by subtracting the parent folder of the <code>_fallback.svelte</code> from the current URL.
+  </Note>
 
 </FunctionDoc>

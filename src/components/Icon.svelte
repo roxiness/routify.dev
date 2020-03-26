@@ -6,6 +6,8 @@
     import IconChevronDown from './icons/chevron-down.svg';
     import IconChevronLeft from './icons/chevron-left.svg';
     import IconChevronRight from './icons/chevron-right.svg';
+    import IconInfo from './icons/info.svg';
+    import IconWarning from './icons/warning.svg';
 
 </script>
 
@@ -29,6 +31,12 @@
 {/if}
 {#if icon == 'chevron-up'}
     {@html IconChevronUp}
+{/if}
+{#if icon == 'info'}
+    {@html IconInfo}
+{/if}
+{#if icon == 'warning'}
+    {@html IconWarning}
 {/if}
 
 </div>
