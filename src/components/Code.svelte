@@ -1,7 +1,7 @@
 <script>
   import Prism from "svelte-prism";
   export let language;
-  export let title;
+  export let title = "";
 </script>
 
 <div>
