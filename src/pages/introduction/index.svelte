@@ -1,6 +1,6 @@
 <script>
   import { goto } from "@sveltech/routify";
-  $goto("../creating-an-app");
+  $goto("../getting-started");
 </script>
 
 <!-- routify:options $index=false -->
