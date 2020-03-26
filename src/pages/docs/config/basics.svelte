@@ -4,7 +4,7 @@
   import { meta } from "@sveltech/routify";
   import {default as Prism, highlight} from "svelte-prism";
   import "prismjs/plugins/command-line/prism-command-line.js";
-  import "prismjs/components/prism-bash";
+  import "prismjs/components/prism-shell-session";
   import "prismjs/components/prism-json";
 
   meta.title = "Basics";
@@ -110,31 +110,30 @@
 
 
 <h2 class="c-h2">To use with CLI</h2>
-<pre  class="command-line" data-output="2-18" style="max-width: 70rem; overflow-x: scroll;">
-  <code use:highlight class="language-bash">
+<div style="display: table; table-layout: fixed; width: 100%">
+  <Prism language="shell-session">
     {`
-        npx @sveltech/routify --help
+        $ npx @sveltech/routify --help
         Usage: cli [options] [command]
 
         Options:
         -d, --debug                    extra debugging
-        -p, --pages &#60;location>         path/to/pages (default: "src/pages")
-        -i, --ignore &#60;list>            Files and dirs. Can be string or array. Interpreted as regular expression (default: [])
+        -p, --pages <location>         path/to/pages (default: "src/pages")
+        -i, --ignore <list>            Files and dirs. Can be string or array. Interpreted as regular expression (default: [])
         -u, --unused-prop-warnings     Show warnings about unused props passed by filerouter (default: true)
         -D, --dynamic-imports          Code splitting) (default: false)
         -b, --single-build             Don't watch for file changes (default: false)
         -s, --scroll [behavior]        Scroll behavior (default: "smooth")
-        -e, --extensions &#60;names>       Included file extensions (comma separated) (default: ["html","svelte","md"])
-        -c, --child-process &#60;command>  Run command when Routify is ready
+        -e, --extensions <names>       Included file extensions (comma separated) (default: ["html","svelte","md"])
+        -c, --child-process <command>  Run command when Routify is ready
         -h, --help                     output usage information
 
         Commands:
         init
         export [options]
   `}
-  </code>
-</pre>
-<!-- </Prism> -->
+  </Prism>
+</div>
 
 <h2 class="c-h2">CLI + Sirv example</h2>
 
