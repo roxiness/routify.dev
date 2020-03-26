@@ -112,12 +112,15 @@ pre[class*="language-"] {
 }
 
 .token.property,
-.token.tag,
 .token.boolean,
 .token.number,
 .token.constant,
 .token.symbol,
 .token.deleted {
+  color: #F4B4E0;
+}
+
+.token.tag .token.tag {
   color: #F4B4E0;
 }
 
