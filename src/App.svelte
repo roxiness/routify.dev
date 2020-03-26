@@ -6,14 +6,13 @@
 
   setContext("hashElements", new Map());
 
-  self.addEventListener('app-loaded', async ()=>{
-    console.log('app is loaded, prefetching all pages')
-    // for (const route of routes) {
-    //   console.log('fetching', route.shortPath)
-    //   await route.component()
-    // }
-    routes.forEach(route => route.component())
-  })
+  self.addEventListener("app-loaded", async () => {
+    console.log("app is loaded, prefetching all pages");
+    routes.forEach(route => {
+      route.component();
+      route.layouts.forEach(layout => layout.component());
+    });
+  });
 </script>
 
 <!-- src/App.svelte -->
