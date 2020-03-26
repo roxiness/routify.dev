@@ -5,6 +5,15 @@
   import { writable } from "svelte/store";
 
   setContext("hashElements", new Map());
+
+  self.addEventListener('app-loaded', async ()=>{
+    console.log('app is loaded, prefetching all pages')
+    // for (const route of routes) {
+    //   console.log('fetching', route.shortPath)
+    //   await route.component()
+    // }
+    routes.forEach(route => route.component())
+  })
 </script>
 
 <!-- src/App.svelte -->
