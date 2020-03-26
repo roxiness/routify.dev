@@ -33,13 +33,14 @@
       color: #1D2C48;
       padding: 1rem 1.2rem;
       border-radius: .8rem;
-      text-transform: capitalize;
+      display: block; /* need for pseudo selector ::first-letter */
 
       &:hover,
       &:focus {
         color: $g-link-color;
         background: #FFF6FF;
       }
+      &::first-letter { text-transform: capitalize }
     }
   }
 }

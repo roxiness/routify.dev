@@ -12,6 +12,7 @@
     display: block;
     padding: 1.6rem;
     color: #1D2C48;
+    &::first-letter { text-transform: capitalize }
   }
   .svg-icon {
       margin-right: 1.2rem;
@@ -23,7 +24,6 @@
   background-color: #FFE3FF;
   border-radius: .8rem;
   color: $g-link-color;
-  
 }
 
 .c-navigation-mobile__item-child {
@@ -47,5 +47,8 @@
   svg {
     opacity: 0.5;
   }
-  
+  &>span {
+    &::first-letter { text-transform: capitalize }
+  }
+
 }

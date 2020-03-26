@@ -38,7 +38,7 @@
     color: $g-link-color;
     background: #FFF6FF;
   }
-  text-transform: capitalize;
+  &::first-letter { text-transform: capitalize }
 }
 
 .c-sidebar-nav .c-sidebar-nav__item--selected > a {
