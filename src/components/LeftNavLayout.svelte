@@ -6,12 +6,17 @@
 
   const elements = getContext("hashElements");
   let currentId = false;
-  let y = 0
+  let y = 0;
+  let navEl;
 
-  $: checkelements(y);
-  function checkelements(y) {
+  $: handleScroll(y);
+  function handleScroll(y) {
+    if (navEl)
+      navEl.style["max-height"] = `calc(100vh - ${
+        navEl.getBoundingClientRect().top
+      }px)`;
+
     let smallest = false;
-
     elements.forEach(he => {
       const top = he.getBoundingClientRect().top;
       if (!smallest || (50 > top && top > smallest)) {
@@ -26,7 +31,7 @@
 
 <main class="c-sidebar-layout">
   <div class="c-sidebar-layout__side">
-    <nav>
+    <nav bind:this={navEl}>
       <ul class="c-sidebar-nav">
         {#each list as { path, prettyName, children, meta }}
           <li
