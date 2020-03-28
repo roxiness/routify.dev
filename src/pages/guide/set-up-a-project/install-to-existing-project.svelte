@@ -116,8 +116,8 @@
         </TabsPage>
         <TabsPage>
           <p>
-            For other servers, consult the documentation on how to redirect
-            all requests. This is also known as URL-rewrites.
+            For other servers, consult the documentation on how to redirect all
+            requests. This is also known as URL-rewrites.
           </p>
         </TabsPage>
       </div>

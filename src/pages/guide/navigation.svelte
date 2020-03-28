@@ -3,7 +3,6 @@
   meta.title = "Navigation";
 </script>
 
-<!-- routify:options $index=60 -->
-<!-- routify:options $name="Navigation (soon)" -->
+<!-- routify:options $index=50 -->
 
-<h1 class="c-h1">Navigation (Coming soon)</h1>
+<h1 class="c-h1">Navigation</h1>

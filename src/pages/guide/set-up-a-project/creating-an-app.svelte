@@ -2,12 +2,11 @@
   import { url, meta, context } from "@sveltech/routify";
   import Prism from "svelte-prism";
   import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
-  const title = $context.component.meta.$name
+  const title = $context.component.prettyName
   meta.title = title;
 </script>
 
 <!-- routify:options $index=10 -->
-<!-- routify:options $name="Creating an app" -->
 
 
 

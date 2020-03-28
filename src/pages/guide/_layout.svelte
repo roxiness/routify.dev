@@ -1,10 +1,25 @@
 <script>
-  import { url, isActive } from "@sveltech/routify";
+  import { url, isActive, route, context } from "@sveltech/routify";
   import LeftNavLayout from "@/components/LeftNavLayout.svelte";
+
+  $: component = $context.component.parent.children.find(
+    c => !c.isNonIndexable && $isActive(c.path)
+  );
+  $: prev = component.prevSibling;
+  $: next = component.nextSibling;
 </script>
 
 <!-- routify:options $index=10 -->
 
-<LeftNavLayout >
+<LeftNavLayout>
+
   <slot />
+  {#if prev}
+    <a href={$url(prev.path)}>{'<'} {prev.prettyName}</a>
+  {/if}
+
+  {#if next}
+    <a href={$url(next.path)}>{next.prettyName} {`>`}</a>
+  {/if}
+
 </LeftNavLayout>
