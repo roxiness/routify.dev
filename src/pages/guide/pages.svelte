@@ -4,4 +4,4 @@
 
 
 
-<h1 class="c-h1">Pages (Comming soon)</h1>
+<h1 class="c-h1">Pages (Coming soon)</h1>

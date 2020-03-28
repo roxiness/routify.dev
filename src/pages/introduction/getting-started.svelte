@@ -2,7 +2,7 @@
   import { url, meta } from "@sveltech/routify";
   import Prism from "svelte-prism";
   import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
-  meta.title = "What is Routify";
+  meta.title = "Getting started";
   import Note from "@/components/Note.svelte";
 </script>
 
