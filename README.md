@@ -22,4 +22,6 @@ npm run build
 
 ### Deploy
 
-``npm run deploy:now``
+```bash
+npm run deploy:now
+```
