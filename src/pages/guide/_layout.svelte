@@ -5,8 +5,8 @@
   $: component = $context.component.parent.children.find(
     c => !c.isNonIndexable && $isActive(c.path)
   );
-  $: prev = component.prevSibling;
-  $: next = component.nextSibling;
+  $: prev = component && component.prevSibling;
+  $: next = component && component.nextSibling;
 </script>
 
 <!-- routify:options $index=10 -->
