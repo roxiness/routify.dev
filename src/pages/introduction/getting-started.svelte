@@ -13,7 +13,7 @@
 
   <p>
     To create your first Routify app, simply run
-    <code>npx @sveltech/routfiy init</code>
+    <code>npx @sveltech/routify init</code>
     in an empty folder.
   </p>
   <p>
