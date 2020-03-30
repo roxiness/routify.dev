@@ -10,7 +10,7 @@
 
 <div class="c-container-vertical--small">
   <div class="c-content">
-    <h1 class="c-h1">Getting started</h1>
+    <h1 class="c-h1">Creating an app</h1>
     <p>To create your first Routify app, open an empty folder and type</p>
 
     <Prism>{`npx @sveltech/routfiy init`}</Prism>
