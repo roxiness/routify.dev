@@ -1,15 +1,15 @@
 <script>
-  import { url, focus, meta } from "@sveltech/routify";
+  import { url, meta } from "@sveltech/routify";
   import Prism from "svelte-prism";
   import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
+  import Note from "@/components/Note.svelte";
   meta.title = "Installation";
 </script>
 
 <!-- routify:options $index=20 -->
-<!-- routify:options $name="Install in an existing project" -->
 
 <div class="c-container-vertical--small">
-  <h1 class="c-h1" use:focus>Install in an existing project</h1>
+  <h1 class="c-h1">Install to existing project</h1>
   <p>
     This is a guide for installing Routify in an existing project. If you wish
     to create a new project instead. Please refer to our
@@ -17,6 +17,13 @@
 
   </p>
 </div>
+
+<Note>
+  We recommend using the Starter Template for full functionality of Routify. If
+  starting a new project isn't an option, we refer to our
+  <a href="https://github.com/sveltech/routify-starter">Starter Template</a>
+  for implementation of features like SSR, prerendering and deployments.
+</Note>
 
 <div class="c-container-vertical--small">
   <div class="c-content">

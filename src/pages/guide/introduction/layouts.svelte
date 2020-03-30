@@ -8,7 +8,7 @@
 <!-- routify:options $index=40 -->
 <h1 class="c-h1">Layouts</h1>
 <p>
-  Layouts are components which are wrapped around the pages in their respective
+  Layouts are components which are wrapped around pages located in their respective
   folders and subfolders.
 </p>
 
@@ -28,5 +28,10 @@
   <p>
     Layouts are recursive, so whenever a page is displayed all layouts from all
     its parent folders are applied.
+  </p>
+</Note>
+<Note type="warning">
+  <p>
+    Layouts must always have a <code>{`<slot>`}</code> tag.
   </p>
 </Note>
