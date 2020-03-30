@@ -5,7 +5,7 @@
 /* Variables
    ========================================================================== */
 
-$c-button-primary-color: #E938C2 !default;
+$c-button-primary-color: #e938c2 !default;
 $c-button-link-color: $c-button-primary-color !default;
 
 /* Component
@@ -20,39 +20,48 @@ $c-button-link-color: $c-button-primary-color !default;
   border-radius: 0.8rem;
   font-size: 1.6rem;
   font-family: $g-text-font-family;
-}
+  @at-root a#{&} {
+    text-decoration: none;
+  }
 
-a.c-button {
-  text-decoration: none;
-}
-
-/* Skin variants
+  /* Skin variants
    ========================================================================== */
 
-.c-button--default {
-  background: #DDD;
-  color: #333;
-}
-
-.c-button--primary {
-  background: $c-button-primary-color;
-  color: #FFF;
-  &:hover,
-  &:focus {
-    background: lighten($c-button-primary-color, 10%);
+  &.c-button--default {
+    background: #ddd;
+    color: #333;
   }
-  &:active {
-    background: darken($c-button-primary-color, 10%);
+
+  &.c-button--primary {
+    background: $c-button-primary-color;
+    color: #fff;
+    &:hover,
+    &:focus {
+      background: lighten($c-button-primary-color, 10%);
+    }
+    &:active {
+      background: darken($c-button-primary-color, 10%);
+    }
   }
-}
 
-.c-button--link {
-  color: $c-button-link-color;
-}
+  &.c-button--outline {
+    padding: calc(0.6rem - 1px) calc(1rem - 1px);
+    border: 1px solid darken($c-button-primary-color, 10%);
+    color: darken($c-button-primary-color, 19%);
+    &:hover {
+      background: darken($c-button-primary-color, 10%);
+      color: white;
+    }
+  }
 
-/* Size variants 
+  &.c-button--link {
+    color: $c-button-link-color;
+  }
+
+  /* Size variants
    ========================================================================== */
 
-.c-button--large {
-  padding: 1.2rem 2.4rem;
+  &.c-button--large {
+    padding: 1.2rem 2.4rem;
+  }
 }
