@@ -6,7 +6,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  * @author Lea Verou
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Nova+Mono&family=Roboto+Mono:wght@300;400&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 /* Regular code blocks
    ========================================================================== */
@@ -16,7 +16,7 @@ code {
   padding: 0.2rem;
   color: #CE2F55;
   background: #FFF6FF;
-  font-family: "Roboto Mono", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: "Source Code Pro", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 code[class*="language-"],
