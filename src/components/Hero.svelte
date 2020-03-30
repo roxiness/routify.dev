@@ -11,7 +11,7 @@
         <div class="specific-btn-toolbar">
           <a href="/introduction/getting-started" class="c-button c-button--primary c-button--large">Get started</a>
           <a href="https://github.com/sveltech/routify">
-            <img alt="GitHub stars" src="https://img.shields.io/github/stars/sveltech/routify?style=social">
+            <img alt="GitHub stars" src="https://badgen.net/github/stars/sveltech/routify">
           </a>
         </div>
     </div>

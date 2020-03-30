@@ -12,7 +12,7 @@ meta.title = 'Structure'
     <ul>
       <li><code>about.svelte</code> corresponds to <code>/about</code></li>
       <li><code>recipes/cupcakes.svelte</code> corresponds to <code>/recipes/cupcakes</code></li>
-      <li><code>recipes/index.svelte</code> corresponds to <code>/recipes</code> and <code>/recipes/index</code></li>
+      <li><code>recipes/index.svelte</code> corresponds to <code>/recipes</code> (and <code>/recipes/index</code>)</li>
     </ul>
 
     <h3>Parameters</h3>

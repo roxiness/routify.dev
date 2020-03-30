@@ -4,6 +4,6 @@
 </script>
 
 <!-- routify:options $index=50 -->
-<!-- routify:options $name="Navigation (coming)" -->
+<!-- routify:options $name="Metadata (coming)" -->
 
-<h1 class="c-h1">Navigation</h1>
+<h1 class="c-h1">Metadata</h1>
