@@ -8,33 +8,41 @@
 
 <!-- routify:options $index=10 -->
 
-<div class="c-container-vertical--small">
-  <div class="c-content">
+<div class="c-content">
+  <div class="c-container-vertical--small">
     <h1 class="c-h1">Getting started</h1>
     <p>
-      If you want to dive right in and get started in your own editor, look no more.
+      The easiest way to try Routify is to visit our
+      <a
+        href="https://codesandbox.io/s/github/sveltech/routify-example-tvshow/tree/6-navigation">
+        TV Shows app
+      </a>
+      on Codesandbox. If you feel like playing with the code, you just click the
+      fork button.
     </p>
-    <a href={$url('../../installation')}>
-      <span class="c-button c-button--primary">Install</span>
-    </a>
+    <p>
+      The TV Shows app has a few steps
+      <a
+        href="https://github.com/sveltech/routify-example-tvshow/branches/active">
+        (branches)
+      </a>
+      - each of which can be imported, using Codesandbox's "Import from Github"
+      feature. In fact, any Routify project can be imported to Codesandbox.
+    </p>
+
   </div>
 </div>
 
 <div class="c-container-vertical--small">
   <div class="c-content">
+  <h3 class="h3">Installation</h3>
     <p>
-      If you'd prefer to get aquainted with Routify first, you can try one of
-      the sandboxes below.
+      Installing Routify locally is straight forward. We strongly recommend
+      creating a new project with our CLI. It comes with "batteries included" to
+      help you put your app into production much faster.
     </p>
   </div>
-
-    <a class="c-button c-button--outline"
-      href="https://codesandbox.io/s/github/sveltech/routify-example-tvshow/tree/6-navigation">
-      TV shows example (recommended)
-    </a>
-
-    <a class="c-button c-button--outline"
-      href="https://codesandbox.io/s/github/sveltech/routify-starter/tree/codesandbox">
-      The starter template
+    <a class="c-button c-button--primary" href={$url('../../installation')}>
+      Install
     </a>
 </div>
