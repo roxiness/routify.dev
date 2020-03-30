@@ -8,10 +8,12 @@
     <div class="c-hero__content">
         <h2 class="c-hero__title">Routes for Svelte, automated by your file structure.</h2>
         <p class="c-hero__para">Routify offers a great developer experience to build the routes for your Svelte app.</p>
-        
+
         <div class="specific-btn-toolbar">
           <a href="/introduction/getting-started" class="c-button c-button--primary c-button--large">Get started</a>
-          <a class="github-button" href="https://github.com/sveltech/routify" data-icon="octicon-star" data-show-count="true" aria-label="Star sveltech/routify on GitHub">Star</a>
+          <a href="https://github.com/sveltech/routify">
+            <img alt="GitHub stars" src="https://img.shields.io/github/stars/sveltech/routify?style=social">
+          </a>
         </div>
     </div>
     <div class="c-hero__illustration">
