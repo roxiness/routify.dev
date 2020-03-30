@@ -1,5 +1,5 @@
 <script>
   import { goto } from "@sveltech/routify";
-  $goto('../auth')
+  $goto('../auth', false, true)
 </script>
 <!-- routify:options $index=false -->
