@@ -3,4 +3,4 @@
   $goto("../installation", false, true);
 </script>
 
-<!-- routify:options $index=false -->
+<!-- routify:options index=false -->

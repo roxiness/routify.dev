@@ -5,7 +5,7 @@
   meta.title = "Layouts";
 </script>
 
-<!-- routify:options $index=40 -->
+<!-- routify:options index=40 -->
 <h1 class="c-h1">Layouts</h1>
 <p>
   Layouts are components which are wrapped around pages located in their respective

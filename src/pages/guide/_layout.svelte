@@ -15,7 +15,7 @@
   $: findSiblings($route);
 </script>
 
-<!-- routify:options $index=10 -->
+<!-- routify:options index=10 -->
 
 <LeftNavLayout>
 

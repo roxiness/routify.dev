@@ -2,7 +2,7 @@
 import { meta } from '@sveltech/routify'
 meta.title = 'Structure'
 </script>
-<!-- routify:options $index=20 -->
+<!-- routify:options index=20 -->
 
 <h1 class="c-h1">Scheme/structure</h1>
 <div class="c-content">

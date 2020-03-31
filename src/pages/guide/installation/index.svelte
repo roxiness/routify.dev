@@ -3,4 +3,4 @@
   $goto("../creating-an-app", false, true);
 </script>
 
-<!-- routify:options $index=false -->
+<!-- routify:options index=false -->

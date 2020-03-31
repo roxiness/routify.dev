@@ -6,7 +6,7 @@
   import Note from "@/components/Note.svelte";
 </script>
 
-<!-- routify:options $index=10 -->
+<!-- routify:options index=10 -->
 
 <div class="c-content">
   <div class="c-container-vertical--small">
