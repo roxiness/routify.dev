@@ -1,7 +1,7 @@
 <script>
     let contributors = [
         {
-            "name": "@jakobdk",
+            "name": "@jakedk",
             "github_url": "https://github.com/jakobrosenberg/",
             "imgpath": "jk"
         },

@@ -1,9 +1,9 @@
 <script>
   import Prism from "svelte-prism";
   import { meta } from "@sveltech/routify";
-  meta.title = "Decorators";
+  meta.title = "URL parameters";
 </script>
-<!-- routify:options $index=30 -->
+<!-- routify:options index=30 -->
 
 <h1 class="c-h1">URL parameters</h1>
 <div class="c-content">

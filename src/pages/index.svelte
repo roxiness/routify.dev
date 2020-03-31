@@ -4,7 +4,7 @@
     import Contribute from '@/components/Contribute.svelte';
     import Hero from '@/components/Hero.svelte';
 </script>
-<!-- routify:options $index=false -->
+<!-- routify:options index=false -->
 <main>
     <div class="c-container-vertical">
         <Hero />

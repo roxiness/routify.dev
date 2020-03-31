@@ -3,7 +3,7 @@
   import { meta } from "@sveltech/routify";
   meta.title = "Transitions";
 </script>
-<!-- routify:options $index=30 -->
+<!-- routify:options index=30 -->
 
 
 <h1 class="c-h1">Transitions</h1>

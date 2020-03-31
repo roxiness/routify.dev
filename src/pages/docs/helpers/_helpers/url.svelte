@@ -64,7 +64,7 @@
       A named path is a path that doesn't start with <code>.</code> or <code>/</code>.
     </p>
     <p>
-      To name a page, add the name meta tag:<code>{`<!-- routify:options $name="blog" -->`}</code>
+      To name a page, add the name meta tag:<code>{`<!-- routify:`}{`options name="blog" -->`}</code>
     </p>
   </Note>
 

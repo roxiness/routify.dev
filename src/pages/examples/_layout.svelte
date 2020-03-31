@@ -8,7 +8,7 @@
   ];
 </script>
 
-<!-- routify:options $index=40 -->
+<!-- routify:options index=40 -->
 
 <LeftNavLayout {links}>
   <slot />

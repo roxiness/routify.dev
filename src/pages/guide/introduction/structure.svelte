@@ -2,7 +2,7 @@
 import { meta } from '@sveltech/routify'
 meta.title = 'Structure'
 </script>
-<!-- routify:options $index=20 -->
+<!-- routify:options index=20 -->
 
 <h1 class="c-h1">Scheme/structure</h1>
 <div class="c-content">
@@ -12,7 +12,7 @@ meta.title = 'Structure'
     <ul>
       <li><code>about.svelte</code> corresponds to <code>/about</code></li>
       <li><code>recipes/cupcakes.svelte</code> corresponds to <code>/recipes/cupcakes</code></li>
-      <li><code>recipes/index.svelte</code> corresponds to <code>/recipes</code> and <code>/recipes/index</code></li>
+      <li><code>recipes/index.svelte</code> corresponds to <code>/recipes</code> (and <code>/recipes/index</code>)</li>
     </ul>
 
     <h3>Parameters</h3>
