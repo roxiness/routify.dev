@@ -3,6 +3,6 @@
   import LeftNavLayout from "@/components/LeftNavLayout.svelte";
 </script>
 
-<!-- routify:options $index=50 -->
+<!-- routify:options index=50 -->
 
 <slot />

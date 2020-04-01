@@ -3,7 +3,7 @@
   import FunctionDoc from "@/components/FunctionDoc.svelte";
 </script>
 
-<!-- routify:options $index=false -->
+<!-- routify:options index=false -->
 
 <div data-routify="scroll-lock">
   <Index />
