@@ -3,7 +3,6 @@
   import Code from "@/components/Code.svelte";
   import Note from "@/components/Note.svelte";
   import { context } from "@sveltech/routify";
-  console.log($context.component);
 </script>
 
 <FunctionDoc name="$context" type="object">
