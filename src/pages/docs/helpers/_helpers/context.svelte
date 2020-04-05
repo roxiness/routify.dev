@@ -8,7 +8,7 @@
 <FunctionDoc name="$context" type="object">
   <p>
     Use
-    <code>$params</code>
+    <code>$context</code>
     to access the current component context.
   </p>
 
