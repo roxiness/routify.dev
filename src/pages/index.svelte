@@ -5,6 +5,7 @@
     import Hero from '@/components/Hero.svelte';
 </script>
 <!-- routify:options index=false -->
+<!-- routify:options name="" -->
 <main>
     <div class="c-container-vertical">
         <Hero />

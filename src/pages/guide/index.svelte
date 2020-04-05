@@ -1,6 +1,6 @@
 <script>
-  import { goto } from "@sveltech/routify";
-  $goto("../installation", false, true);
+  import { redirect } from "@sveltech/routify";
+  $redirect("../installation");
 </script>
 
 <!-- routify:options index=false -->
