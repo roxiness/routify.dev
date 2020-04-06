@@ -34,7 +34,7 @@ export default {
         { src: template, dest: distDir, rename: '__app.html' },
       ], copyOnce: true
     }),
-    svg(), //todo are we using this?
+    svg(),
     alias({ entries: [{ find: '@', replacement: './src' },] }),
     svelte({
       // enable run-time checks when not in production
