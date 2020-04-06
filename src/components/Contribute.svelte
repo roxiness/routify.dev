@@ -16,6 +16,7 @@
       <img
         src="/images/discord.svg"
         width="24"
+        alt=""
         style="position: relative; top: 0.5rem" />
       Discord
     </a>
