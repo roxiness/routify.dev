@@ -2,17 +2,11 @@
 
 <script>
   import Note from '../../components/Note.svelte';
-  import posts from './posts.js';
   
+  // @todo how can we import everything from _posts automatically?
   import md from './_posts/2020-04-06-a-start.md';
   import md2 from './_posts/2020-04-10-post-2.md';
-
-  console.log( `${md.html}` );
-  console.log( `${md.metadata.title}` );
-  console.log( `${md.metadata.author}` );
-  console.log( `${md2.html}` );
-  console.log( `${md2.metadata.title}` );
-  console.log( `${md2.metadata.author}` );
+  const posts = [md, md2]
 
 </script>
 
@@ -26,10 +20,13 @@
       <li class="c-blogpost-list__item">
         <article class="c-blogpost">
           <header>
-            <h2><a href="/blog/detail">{post.title}</a></h2>
-            <p>Written by @{post.author}</p>
+            <!-- @todo link to /blog/2020-04-06/a-start - so without the .md file name -->
+            <h2><a href="/blog/{post.filename}">{post.metadata.title}</a></h2>
+            <p>Written by {post.metadata.author}</p>
+            <!-- @todo substring to the first characters containing the date -->
+            <p>{post.filename}</p>
           </header>
-          {@html post.text}
+          {@html post.html}
         </article>
       </li>
       {/each}
