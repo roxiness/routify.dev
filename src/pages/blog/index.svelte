@@ -3,6 +3,17 @@
 <script>
   import Note from '../../components/Note.svelte';
   import posts from './posts.js';
+  
+  import md from './_posts/2020-04-06-a-start.md';
+  import md2 from './_posts/2020-04-10-post-2.md';
+
+  console.log( `${md.html}` );
+  console.log( `${md.metadata.title}` );
+  console.log( `${md.metadata.author}` );
+  console.log( `${md2.html}` );
+  console.log( `${md2.metadata.title}` );
+  console.log( `${md2.metadata.author}` );
+
 </script>
 
 <div class="c-container-vertical">
