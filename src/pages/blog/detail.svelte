@@ -1,13 +1,12 @@
 <script>
   import Note from '../../components/Note.svelte';
 
-  // @todo make the post title the page <title>
-
   let post = 
     {
-      title: "I am a post",
+      title: "Welcome to the Routify blog",
       author: "wolfr_2",
-      text: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+      text: "<p>Welcome to the first post. We're starting to build out the blog functionality, so this first post is more like a test.</p><p>Real content is coming soon.</p>",
+      githubUrl: "https://github.com/sveltech/routify-site-2020/issues/86"
     }
 
 </script>
@@ -19,7 +18,14 @@
         <h1>{post.title}</h1>
         <p>Written by @{post.author}</p>
       </header>
-      {@html post.text}
+      <div class="c-content">
+        {@html post.text}
+      </div>
+      
+      <Note>
+          You can comment on <a href="#">Github</a>.
+        </Note>
     </article>
   </div>
 </div>
+
