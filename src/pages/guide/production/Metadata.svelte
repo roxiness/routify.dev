@@ -39,7 +39,7 @@
     <h3 class="c-h3">Templates</h3>
     <p>
       Templates can be set with
-      <code>$metatags.template(property, callback)</code> Ie.
+      <code>$metatags.template(property, callback)</code> ie.
       <code>$metatags.template("title", value => `My Site - ${`{value}`}`)</code>.
       If multiple layouts with templates are present, the template in the outer layout takes precedence.
     </p>
