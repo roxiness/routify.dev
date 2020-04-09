@@ -7,8 +7,8 @@
 
 {#each indexableItems as item}
   <li class="c-navigation-mobile__item ">
-    {#if item.children || (item.meta && item.meta.links)}
-      <Accordion title={item.prettyName}>
+    {#if item.children && item.children.length}
+      <Accordion title={item.title}>
         <ul>
           {#if item.children}
             <svelte:self items={item.children} bind:showMobileNav />
@@ -17,7 +17,7 @@
             {#each item.meta.links as item}
               <li class="c-navigation-mobile__item ">
                 <a on:click={() => (showMobileNav = false)} href="{item.href}">
-                  {item.name}
+                  {item.title}
                 </a>
               </li>
             {/each}
@@ -25,8 +25,8 @@
         </ul>
       </Accordion>
     {:else}
-      <a on:click={() => (showMobileNav = false)} href="{item.shortPath}">
-        {item.prettyName}
+      <a on:click={() => (showMobileNav = false)} href="{item.path}">
+        {item.title}
       </a>
     {/if}
   </li>

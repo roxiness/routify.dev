@@ -1,16 +1,16 @@
 <!-- routify:options index=10 -->
-<!-- routify:options links=[
-  {name: "url", href:"#url"},
-  {name: "isActive", href:"#is-active"},
-  {name: "goto", href:"#goto"},
-  {name: "params", href:"#params"},
-  {name: "context", href:"#context"},
-  {name: "leftover", href:"#leftover"},
-  {name: "beforeUrlChange", href:"#before-url-change"},
-  {name: "focus", href:"#focus"},
-  {name: "ready", href:"#ready"},
-  {name: "getConcestor", href:"#get-concestor"},
-  {name: "getDirection", href:"#get-direction"}
+<!-- routify:options children=[
+  {title: "url", path:"#url"},
+  {title: "isActive", path:"#is-active"},
+  {title: "goto", path:"#goto"},
+  {title: "params", path:"#params"},
+  {title: "context", path:"#context"},
+  {title: "leftover", path:"#leftover"},
+  {title: "beforeUrlChange", path:"#before-url-change"},
+  {title: "focus", path:"#focus"},
+  {title: "ready", path:"#ready"},
+  {title: "getConcestor", path:"#get-concestor"},
+  {title: "getDirection", path:"#get-direction"}
 ] -->
 
 <div data-routify="scroll-lock">
