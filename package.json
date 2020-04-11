@@ -11,6 +11,7 @@
     "dev:split": "routify --dynamic-imports",
     "build": "routify -b && rollup -c && routify -bD && rollup -c && routify export",
     "start": "sirv dist --single __app.html",
+    "serve": "spassr --serve-spa --serve-ssr",
     "preview-build": "cd scripts/server && node index",
     "deploy:now": "cd scripts/now && npm run deploy",
     "deploy:netlify": "cd scripts/netlify && npm run deploy",
@@ -36,6 +37,7 @@
     "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-terser": "^5.1.2",
     "sirv-cli": "^1.0.0-next.3",
+    "spassr": "^1.0.2",
     "svelte": "^3.16.7",
     "svelte-prism": "^1.1.2"
   },
