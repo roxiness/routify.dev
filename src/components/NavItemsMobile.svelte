@@ -1,21 +1,17 @@
 <script>
   import Accordion from "./Accordion.svelte";
-  import { isActive, url, context } from "@sveltech/routify";
+  import { layout } from "@sveltech/routify";
   import Fragment from "./NavItemsMobileFragment.svelte";
   export let showMobileNav
 
-  $: ({ component } = $context);
+
 
   $: items = [
     {
-      prettyName: "Home",
-      shortPath: "/"
+      title: "Home",
+      path: "/"
     },
-    ...component.parent.children,
-    {
-      prettyName: "Github",
-      shortPath: "https://github.com/sveltech/routify"
-    }
+    ...$layout.children,
   ];
 </script>
 

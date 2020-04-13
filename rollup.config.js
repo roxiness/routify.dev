@@ -86,7 +86,7 @@ function postScript(production) {
         started = true;
 
         if (!production)
-          require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {
+          require('child_process').spawn('npm', ['run', 'serve'], {
             stdio: ['ignore', 'inherit', 'inherit'],
             shell: true
           });
