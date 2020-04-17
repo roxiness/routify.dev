@@ -1,7 +1,8 @@
 <script>
+  // @ts-check
   import Note from "../../../components/Note.svelte";
   export let id;
-
+  import marked from "marked";
   import { fetcher } from "../_fetcher";
 
   let post = null;
@@ -16,7 +17,9 @@
           <h1>{post.title}</h1>
           <p>Written by {post.author.displayName}</p>
         </header>
-        <div class="c-content">{@html post.content}</div>
+        <div class="c-content">
+          {@html marked(post.content)}
+        </div>
 
         <!-- <Note>
           You can comment on
