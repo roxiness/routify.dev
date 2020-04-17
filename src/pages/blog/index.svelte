@@ -3,11 +3,11 @@
   // @ts-ignore
   import Note from "../../components/Note.svelte";
   import { fetcher } from "./_fetcher";
-  import { url } from "@sveltech/routify";
+  import { url, ready } from "@sveltech/routify";
 
   let posts = [];
 
-  fetcher("/posts").then(result => (posts = result.items));
+  fetcher("/posts").then(result => (posts = result.items)).then($ready);
   $: console.log(posts);
 </script>
 

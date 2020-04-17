@@ -38,7 +38,7 @@
 <div class="c-container-vertical--small">
   <div class="c-content">
     <h3 class="c-h3">How to build</h3>
-    <p>To build your app for production mode run</p>
+    <p>To build your app for production</p>
     <Prism>npm run build</Prism>
     <p>
       <strong>Dynamic imports</strong>

@@ -10,8 +10,8 @@
     <h1 class="c-h1">SSR</h1>
 
     <p>
-      SSR (Server Side Rendering) renders your HTML on the server instead of
-      sending an empty HTML template.
+      Our Starter template comes with SSR (Server Side Rendering) included. SSR
+      renders your HTML on the server instead of sending an empty HTML template.
     </p>
     <strong>Benefits vs SPA only</strong>
     <ul>
@@ -41,15 +41,15 @@
     <br />
     <strong>Limitations</strong>
     <ul>
-      <li>Requires a host with functions support (Now, Netlify, etc.) or a server.</li>
-      <li>Browser environment is headless, occasional consideration may be required.</li>
+      <li>
+        Requires a host with functions support (Now, Netlify, etc.) or a server.
+      </li>
+      <li>
+        Browser environment is headless, occasional consideration may be
+        required.
+      </li>
     </ul>
 
-
-
   </div>
-  <div class="c-container-vertical--small">
-    <h3 class="c-h3">Deploying</h3>
 
-  </div>
 </div>
