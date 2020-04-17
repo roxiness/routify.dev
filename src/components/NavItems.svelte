@@ -1,15 +1,17 @@
 <script>
   import { isActive, url, layout } from "@sveltech/routify";
+  console.log($layout.children)
 </script>
 <ul>
-  {#each $layout.children as {path, title}}
+  {#each $layout.children as {path, title, meta}}
     <li class:c-navigation__item--selected={$isActive(path)}>
-      {#if title == 'Github'}
+      {#if meta.icon}
+      <!-- todo change c-navigation__github-link to a generic class? -->
         <a href={path} class="c-navigation__github-link">
           <img
             class="c-navigation__github-logo"
-            src="/images/github.svg"
-            alt="Github logo" />
+            src="/images/{meta.icon}.svg"
+            alt="{title} logo" />
         </a>
       {:else}
         <a href={$url(path)}>{title}</a>
