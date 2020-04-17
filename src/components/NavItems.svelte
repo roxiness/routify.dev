@@ -1,6 +1,5 @@
 <script>
   import { isActive, url, layout } from "@sveltech/routify";
-  console.log($layout.children)
 </script>
 <ul>
   {#each $layout.children as {path, title, meta}}
