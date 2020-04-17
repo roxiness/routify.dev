@@ -4,13 +4,13 @@
   import { url } from "@sveltech/routify";
 
   const structure = [
-    ['src/', 'Source files'],
-    ['--pages/', 'Pages.'],
-    ['statics/', 'Static files - images etc.'],
-    ['--__index.html', 'Entry file.'],
-    ['dist/', 'Distributables. This is where your files are output.'],
-    ['script/', 'Scripts for deployments'],
-  ]
+    ["src/", "Source files"],
+    ["    pages/", "Pages."],
+    ["statics/", "Static files - images etc."],
+    ["    __index.html", "Entry file."],
+    ["dist/", "Distributables. This is where your files are output."],
+    ["script/", "Scripts for deployments"]
+  ];
 </script>
 
 <!-- routify:options index=10 -->
@@ -32,31 +32,29 @@
     </ul>
   </div>
   <div class="c-container-vertical--small">
-    <strong>Build and deploy</strong>
+
+    <h3 class="c-h3">Starter template structure</h3>
+
+    <table>
+      {#each structure as [path, text]}
+        <tr>
+          <td style="padding-right: 64px; font-weight: bold">
+            <pre>{path}</pre>
+          </td>
+          <td style="color: #999">{text}</td>
+        </tr>
+      {/each}
+    </table>
+  </div>
+  <div class="c-container-vertical--small">
+
+    <h3 class="c-h3">Build and deploy</h3>
     <Prism>
       {`
     npm run build
     npm run deploy:now
     `}
     </Prism>
-
-    <p>
-      <strong>Starter template structure</strong>
-    </p>
-    <table>
-    <tr>
-    <td>src/</td>
-    <td>Source files</td>
-    </tr>
-    </table>
-    <pre>
-      {`
-      pages/
-    statics/
-    dist/
-    scripts/
-    `}
-    </pre>
 
     <p>
       This is a great way to get started, but in the long run a CI approach
