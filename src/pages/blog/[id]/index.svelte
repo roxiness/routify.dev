@@ -19,11 +19,11 @@
         </header>
         <div class="c-content">{post.content}</div>
 
-        <Note>
+        <!-- <Note>
           You can comment on
           <a href={md.metadata.githubUrl}>Github</a>
           .
-        </Note>
+        </Note> -->
       </article>
     </div>
   </div>
