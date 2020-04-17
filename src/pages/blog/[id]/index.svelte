@@ -1,6 +1,5 @@
 <script>
   import Note from "../../../components/Note.svelte";
-  import md from "../_posts/2020-04-06-a-start.md";
   export let id;
 
   import { fetcher } from "../_fetcher";
