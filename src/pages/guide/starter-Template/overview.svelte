@@ -4,11 +4,11 @@
   import { url } from "@sveltech/routify";
 
   const structure = [
-    ["src/", "Source files"],
-    ["    pages/", "Pages."],
-    ["statics/", "Static files - images etc."],
+    ["src/", "Source. This is for all your handcrafted code."],
+    ["    pages/", "Files in this folder will be website pages."],
+    ["static/", "Files that don't change. Images, CSS, etc."],
     ["    __index.html", "Entry file."],
-    ["dist/", "Distributables. This is where your files are output."],
+    ["dist/", "Distributables. This is where your built files are output."],
     ["script/", "Scripts for deployments"]
   ];
 </script>
