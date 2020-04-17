@@ -8,7 +8,7 @@
 
   let posts = [];
 
-  fetcher("/posts").then(result => (posts = result.items)).then($ready);
+  fetcher(`/posts`, res => (posts = res.items)).then($ready);
 </script>
 
 <!-- routify:options $index=130 -->
@@ -23,7 +23,11 @@
           <article class="c-blogpost">
             <header>
               <h2>
-                <a href={$url('../:id', { id: post.id })}>{post.title}</a>
+                <a
+                  on:mouseenter={() => fetcher(`/posts/${post.id}`)}
+                  href={$url('../:id', { id: post.id })}>
+                  {post.title}
+                </a>
               </h2>
               <p>Written by {post.author.displayName}</p>
             </header>

@@ -1,12 +1,14 @@
 <script>
   // @ts-check
   import Note from "../../../components/Note.svelte";
+  import { fade } from "svelte/transition";
   export let id;
   import marked from "marked";
   import { fetcher } from "../_fetcher";
+  import { ready } from "@sveltech/routify";
 
   let post = null;
-  fetcher("/posts/" + id).then(result => (post = result));
+  fetcher(`/posts/${id}`, res => (post = res)).then($ready);
 </script>
 
 {#if post}
