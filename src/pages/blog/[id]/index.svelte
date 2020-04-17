@@ -16,7 +16,7 @@
           <h1>{post.title}</h1>
           <p>Written by @{post.author.displayName}</p>
         </header>
-        <div class="c-content">{post.content}</div>
+        <div class="c-content">{@html post.content}</div>
 
         <!-- <Note>
           You can comment on
