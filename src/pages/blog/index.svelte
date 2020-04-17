@@ -4,11 +4,11 @@
   import Note from "../../components/Note.svelte";
   import { fetcher } from "./_fetcher";
   import { url, ready } from "@sveltech/routify";
+  import marked from "marked";
 
   let posts = [];
 
   fetcher("/posts").then(result => (posts = result.items)).then($ready);
-  $: console.log(posts);
 </script>
 
 <!-- routify:options $index=130 -->
@@ -28,7 +28,7 @@
               <p>Written by {post.author.displayName}</p>
             </header>
             <div class="c-content">
-              {@html post.content}
+              {@html marked(post.content)}
             </div>
           </article>
         </li>
