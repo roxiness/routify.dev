@@ -7,7 +7,6 @@
   setContext("hashElements", new Map());
 
   self.addEventListener("app-loaded", async () => {
-    console.log("app is loaded, prefetching all pages");
     routes.forEach(route => {
       route.component();
       route.layouts.forEach(layout => layout.component());
