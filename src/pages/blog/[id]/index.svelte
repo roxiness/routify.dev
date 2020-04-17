@@ -14,7 +14,7 @@
       <article class="c-blogpost">
         <header>
           <h1>{post.title}</h1>
-          <p>Written by @{post.author.displayName}</p>
+          <p>Written by {post.author.displayName}</p>
         </header>
         <div class="c-content">{@html post.content}</div>
 
