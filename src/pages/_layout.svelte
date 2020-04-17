@@ -8,7 +8,11 @@
 
 </script>
 
-<!-- routify:options children=[{title: "Github", path: "https://github.com/sveltech/routify"}] -->
+<!-- routify:options children=[
+  {title: "Github", icon:"github", path: "https://github.com/sveltech/routify"},
+  {title: "Discord", icon:"github", path: "https://discord.gg/ntKJD5B"},
+  {title: "Twitter", icon:"github", path: "https://twitter.com/routifyjs"}
+  ] -->
 
 <div class="c-container-horizontal">
   <Header />
