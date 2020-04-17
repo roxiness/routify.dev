@@ -134,4 +134,42 @@
     background: #FFF6FF;
   }
 
+  table {
+    border: 0.1rem solid $g-table-border-color;
+    border-radius: 0.3rem;
+    border-collapse: separate;
+    width: 100%;
+    margin: 0 0 2.4rem;
+
+    th, td {
+      text-align: left;
+    }
+
+    td,
+    th {
+      text-align: left;
+      vertical-align: top;
+      position: relative;
+      padding: 1.6rem;
+      position: relative;
+    }
+    
+
+    th {
+      font-weight: 500;
+      border-bottom: 0.2rem solid $g-table-border-color;
+      vertical-align: top;
+    }
+
+    td {
+      border-bottom: 0.1rem solid $g-table-border-color;
+    }
+    
+    tr:last-child {
+      td {
+        border: none;
+      }
+    }
+  }
+
 }

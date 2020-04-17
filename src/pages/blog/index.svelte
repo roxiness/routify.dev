@@ -27,7 +27,9 @@
               </h2>
               <p>Written by {post.author.displayName}</p>
             </header>
-            {@html post.content}
+            <div class="c-content">
+              {@html post.content}
+            </div>
           </article>
         </li>
       {/each}
