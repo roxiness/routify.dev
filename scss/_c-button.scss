@@ -49,15 +49,15 @@ $c-button-link-color: $c-button-primary-color !default;
 .c-button--outline {
   padding: calc(0.6rem - 0.1rem) calc(1rem - 0.1rem);
   border: 0.1rem solid $g-gray-300;
-  color: $gray-700;
+  color: $g-gray-600;
   .svg-icon {
     * {
-      fill: $gray-700;
+      fill: $g-gray-600;
     }
     margin: 0.2rem 0.6rem 0 0;
   }
   &:hover {
-    border-color: $gray-700;
+    border-color: $g-gray-600;
   }
 }
 
