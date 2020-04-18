@@ -44,7 +44,7 @@
       <p>
         Unlike traditional links,
         <code>url</code>
-        is relational to the layout or page it is located in and not the current
+        is relative to the layout or page it is located in and not the current
         URL in the address bar.
       </p>
       <p>
