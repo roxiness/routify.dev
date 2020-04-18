@@ -4,18 +4,28 @@
   import { url } from "@sveltech/routify";
 
   const structure = [
-    ["src/", "Source. This is for all your handcrafted code."],
-    ["    pages/", "Files in this folder will be website pages."],
-    ["static/", "Files that don't change. Images, CSS, etc."],
-    ["    __index.html", "Entry file."],
-    ["dist/", "Distributables. This is where your built files are output."],
-    ["script/", "Scripts for deployments"]
+    [".", ""],
+    ["├─ src/", "Source. This is for all your handcrafted code."],
+    ["│  └─ pages/", "Layouts and pages."],
+    ["├─ static/", "Files that don't change. Images, CSS, etc."],
+    ["│  └─ __index.html", "Entry file. Edit to your needs."],
+    ["├─ dist/", "Distributables. This is where your built files are output."],
+    ["└─ script/", "Scripts for deployments"]
   ];
 </script>
 
+<style>
+  pre {
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 64px 0 12px;
+  }
+</style>
+
 <!-- routify:options index=10 -->
-<div class="c-content">
-  <div class="c-container-vertical--small">
+<div class="c-container-vertical--small">
+  <div class="c-content">
     <h1 class="c-h1">Overview</h1>
 
     <p>
@@ -31,23 +41,26 @@
       <li>Quick deployments</li>
     </ul>
   </div>
+</div>
+<div>
   <div class="c-container-vertical--small">
-
-    <h3 class="c-h3">Starter template structure</h3>
-
-    <table class="c-table c-table--horizontal">
+    <div class="c-content">
+      <h3 class="c-h3">Starter template structure</h3>
+    </div>
+    <table class="">
       {#each structure as [path, text]}
         <tr>
-          <th>
-            <code>{path}</code>
-          </th>
+          <td>
+            <pre>{path}</pre>
+          </td>
           <td>{text}</td>
         </tr>
       {/each}
     </table>
   </div>
-  <div class="c-container-vertical--small">
-
+</div>
+<div class="c-container-vertical--small">
+  <div class="c-content">
     <h3 class="c-h3">Build and deploy</h3>
     <Prism>
       {`
