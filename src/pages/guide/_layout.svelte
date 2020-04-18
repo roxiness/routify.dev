@@ -21,18 +21,20 @@
 
   <slot />
   <div class="c-pagination">
+    <!-- @todo we should change these to use the Button component, but I had a problem doing that -Wolfr -->
     {#if prev}
       <a class="c-button c-button--outline" href={$url(prev.path)}>
-
-        <Icon name="chevron-left" />
-        Previous: {prev.title}
+        <span class="c-button__icon-wrap"><Icon name="chevron-left" size="20"/></span>
+        <span class="c-button__label">Previous: {prev.title}</span>
       </a>
     {/if}
 
     {#if next}
       <a class="c-button c-button--outline" href={$url(next.path)}>
-        Next: {next.title}
-        <Icon name="chevron-right" />
+        <span  class="c-button__label">Next: {next.title}</span>
+        <span class="c-button__icon-wrap">
+          <Icon name="chevron-right" size="20" />
+        </span>
       </a>
     {/if}
   </div>

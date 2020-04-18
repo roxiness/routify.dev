@@ -1,6 +1,6 @@
 <script>
-    import NavItems from './NavItems.svelte';
-    import NavItemsMobile from './NavItemsMobile.svelte';
+    import NavItems from './nav/NavItems.svelte';
+    import NavItemsMobile from './nav/NavItemsMobile.svelte';
     let showMobileNav = false
     let bodyElement = document.querySelector('body');
     let htmlElement = document.querySelector('html');

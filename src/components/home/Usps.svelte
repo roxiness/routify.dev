@@ -2,7 +2,7 @@
     let usps = [
         {
             headline: "Hit the ground running",
-            text: "No need to configure a single route."
+            text: "No need to configure a single route. Routes are generated from file."
         },
         {
             headline: "Scoped everything",
@@ -22,7 +22,7 @@
         },
         {
             headline: "And more...",
-            text: "PWA ready, Code-splitting, Realtime route generation."
+            text: "SSR, meta tags, code-splitting, real-time route generation... and more!."
         }
     ]
 </script>

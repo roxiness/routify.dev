@@ -16,12 +16,14 @@
 
 // Components
 @import "_c-button";
+@import "_c-button-toolbar";
 @import "_c-blogpost";
 @import "_c-blogpost-list";
 @import "_c-container-horizontal";
 @import "_c-container-vertical";
 @import "_c-content";
 @import "_c-contributors";
+@import "_c-contributor";
 @import "_c-footer";
 @import "_c-function-doc";
 @import "_c-header";
@@ -49,4 +51,16 @@
 // External
 @import "_prism";
 
+// Styleguide specific
+@import "c-styleguide-color-swatch"; // might want to separate these styleguide components from the rest
+@import "c-styleguide-color-swatch-list"; // might want to separate these styleguide components from the rest
+
+
 html {scroll-behavior: smooth;} //todo do we have a place for globals?
+
+
+.c-styleguide__component-inner {
+  padding: 3.2rem;
+  border: 0.1rem solid $g-gray-100;
+  margin: 1.6rem 0;
+}

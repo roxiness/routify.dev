@@ -1,8 +1,8 @@
 <script>
-    import Usps from '@/components/Usps.svelte';
-    import Contributors from '@/components/Contributors.svelte';
-    import Contribute from '@/components/Contribute.svelte';
-    import Hero from '@/components/Hero.svelte';
+    import Usps from '@/components/home/Usps.svelte';
+    import Contributors from '@/components/home/Contributors.svelte';
+    import Contribute from '@/components/home/Contribute.svelte';
+    import Hero from '@/components/home/Hero.svelte';
 </script>
 <!-- routify:options index=false -->
 <!-- routify:options title="" -->

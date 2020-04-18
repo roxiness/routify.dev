@@ -8,12 +8,11 @@
   const toCamel = s => s.replace(/(\-\w)/g, m => m[1].toUpperCase());
 </script>
 
-{#if size == "24" }
-  <div class="o-svg-icon o-svg-icon--size-24">
-    {@html icon}
-  </div>
-{:else}
-  <div class="o-svg-icon">
-    {@html icon}
-  </div>
-{/if}
+<div
+    class="o-svg-icon"
+    class:o-svg-icon--size-24="{size == '24'}"
+    class:o-svg-icon--size-20="{size == '20'}"
+    class:o-svg-icon--size-16="{size == '16'}"
+  >
+  {@html icon}
+</div>
