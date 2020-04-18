@@ -10,12 +10,13 @@
 
 <div class="c-container-vertical--small">
   <h1 class="c-h1">Install to existing project</h1>
-  <p>
-    This is a guide for installing Routify in an existing project. If you wish
-    to create a new project instead. Please refer to our
-    <a href={$url('../../getting-started')}>getting started guide</a>
-
-  </p>
+  <div class="c-content">
+    <p>
+      This is a guide for installing Routify in an existing project. If you wish
+      to create a new project instead. Please refer to our
+      <a href={$url('../../getting-started')}>getting started guide</a>.
+    </p>
+  </div>
 </div>
 
 <Note>
