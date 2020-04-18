@@ -14,5 +14,9 @@
       {@html IconInfo}
     {/if}
   </div>
-  <div class="c-note__text"><slot></slot></div>
+  <div class="c-note__text">
+    <div class="c-content">
+      <slot></slot>
+    </div>
+  </div>
 </div>
