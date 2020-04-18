@@ -11,6 +11,7 @@
 <div
     class="o-svg-icon"
     class:o-svg-icon--size-24="{size == '24'}"
+    class:o-svg-icon--size-20="{size == '20'}"
     class:o-svg-icon--size-16="{size == '16'}"
   >
   {@html icon}
