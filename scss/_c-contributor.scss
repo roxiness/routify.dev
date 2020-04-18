@@ -1,0 +1,19 @@
+/* ==========================================================================
+  contributor
+   ========================================================================== */
+
+.c-contributor__img {
+  border-radius: 100%;
+  width: 3.2rem;
+  height: 3.2rem;
+  @media (min-width: $g-bp-2) {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+}
+
+.c-contributor__name {
+  display: block;
+  color: $g-text-color;
+  padding: 0.8rem 0 0;
+}
