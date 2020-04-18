@@ -2,16 +2,6 @@
    c-navigation
    ========================================================================== */
 
-.c-navigation__github-logo {
-  img {
-    display: block;
-  }
-}
-.c-navigation__github-link {
-  display: block;
-  margin-right: 1.6rem;
-}
-
 .c-navigation ul {
   display: flex;
   align-items: center;
@@ -22,27 +12,29 @@
 }
 
 .c-navigation {
-  li {
-    margin-right: 1.2rem;
-    &:last-child {
-      margin: 0;
-      margin-left: 1.2rem;
+  .o-svg-icon {
+    path, circle {
+      opacity: 0.5;
     }
   }
-  li:not(:last-child) {
-    a {
-      text-decoration: none;
-      color: #1D2C48;
-      padding: 1rem 1.2rem;
-      border-radius: .8rem;
-      display: block; /* need for pseudo selector ::first-letter */
-
-      &:hover,
-      &:focus {
-        color: $g-pink-700;
-        background: #FFF6FF;
+  li {
+    margin-right: 1.2rem;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    color: #1D2C48;
+    padding: 1rem 1.2rem;
+    border-radius: .8rem;
+    &:hover,
+    &:focus {
+      color: $g-pink-700;
+      background: #FFF6FF;
+      .o-svg-icon {
+        path, circle {
+          opacity: 1;
+        }
       }
-      &::first-letter { text-transform: capitalize }
     }
   }
 }
@@ -56,10 +48,6 @@
 @media (max-width: $g-bp-2) {
 
   .c-navigation {
-    display: none;
-  }
-
-  .c-navigation__github-logo {
     display: none;
   }
 
