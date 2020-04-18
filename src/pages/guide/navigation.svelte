@@ -25,19 +25,21 @@
     <p>
       The advantage of using
       <code>url</code>
-      is that it allows for your code to be modular. If you rename
-      <strong>blog</strong>
-      to
-      <strong>news</strong>
-      , the relational links inside the folder will still be fully working.
+      is that it allows for your code to be modular. If you rename your
+      <code>editor/</code>
+      folder to
+      <code>admin/</code>
+      , all the internal links inside that folder will still work.
     </p>
     <Code language="svelte">
       {`
-    <a href={$url('../blog')}>
-      Blog
+    <a href={$url('../introduction')}>
+      A test link to the introduction section
     </a>`}
     </Code>
-
+    <a href={$url('../introduction')}>
+      A test link to the introduction section
+    </a>
     <Note>
       <p>
         Unlike traditional links,
@@ -45,7 +47,12 @@
         is relational to the layout or page it is located in and not the current
         URL in the address bar.
       </p>
-      <p>You can read more about the <code>url</code> helper <a href="{$url('/docs/helpers#url')}">here</a></p>
+      <p>
+        You can read more about the
+        <code>url</code>
+        helper
+        <a href={$url('/docs/helpers#url')}>here</a>
+      </p>
     </Note>
   </div>
 
@@ -71,7 +78,12 @@
       </a>
     </div>  `}
     </Code>
-    <p>You can read more about the <code>isActive</code> helper <a href="{$url('/docs/helpers#is-active')}">here</a></p>
+    <p>
+      You can read more about the
+      <code>isActive</code>
+      helper
+      <a href={$url('/docs/helpers#is-active')}>here</a>
+    </p>
   </div>
 
   <div class="c-container-vertical--small">
