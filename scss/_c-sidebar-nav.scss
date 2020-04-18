@@ -39,7 +39,7 @@
   border-radius: .8rem;
   &:hover,
   &:focus {
-    color: $g-link-color;
+    color: $g-pink-700;
     background: #FFF6FF;
   }
   &::first-letter { text-transform: capitalize }
@@ -78,7 +78,7 @@
     text-decoration: none;
     display: block;
     color: $g-pink-700;
-    padding: 1rem 1.6rem;
+    padding: 0.8rem 1.6rem;
 
     &:hover,
     &:focus {

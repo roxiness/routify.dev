@@ -39,7 +39,7 @@
 
       &:hover,
       &:focus {
-        color: $g-link-color;
+        color: $g-pink-700;
         background: #FFF6FF;
       }
       &::first-letter { text-transform: capitalize }
@@ -49,7 +49,7 @@
 
 .c-navigation__item--selected a {
   background-color: #FFE3FF;
-  color: $g-link-color;
+  color: $g-pink-700;
 }
 
 
