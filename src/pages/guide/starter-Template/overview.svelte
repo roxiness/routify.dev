@@ -39,7 +39,7 @@
       {#each structure as [path, text]}
         <tr>
           <th>
-            <pre><code>{path}</code></pre>
+            <code>{path}</code>
           </th>
           <td>{text}</td>
         </tr>

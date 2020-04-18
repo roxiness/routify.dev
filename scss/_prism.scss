@@ -6,13 +6,10 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  * @author Lea Verou
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-
 /* Regular code blocks
    ========================================================================== */
 
 code {
-  font-size: 85%;
   padding: 0.2rem;
   color: #CE2F55;
   background: #FFF6FF;
@@ -21,19 +18,19 @@ code {
 
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #fff;
-  // text-shadow: 0 0.1rem white;
+  color: #FFF;
   background: none;
+  border-radius: 0.3rem;
 
   font-family: "Source Code Pro", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1.7;
+  line-height: 1.5;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -46,9 +43,6 @@ pre[class*="language-"] {
 
 }
 
-pre::selection {
-
-}
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
   text-shadow: none;
@@ -177,35 +171,35 @@ pre[class*="language-"] {
    ========================================================================== */
 
 .command-line-prompt {
-	border-right: 1px solid #999;
-	display: block;
-	float: left;
-	font-size: 100%;
-	letter-spacing: -1px;
-	margin-right: 1em;
-	pointer-events: none;
-
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+  border-right: 1px solid #999;
+  display: block;
+  float: left;
+  font-size: 100%;
+  letter-spacing: -1px;
+  margin-right: 1em;
+  pointer-events: none;
+  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .command-line-prompt > span:before {
-	color: #999;
-	content: ' ';
-	display: block;
-	padding-right: 0.8em;
+  color: #999;
+  content: ' ';
+  display: block;
+  padding-right: 0.8em;
 }
 
 .command-line-prompt > span[data-user]:before {
-	content: "[" attr(data-user) "@" attr(data-host) "] $";
+  content: "[" attr(data-user) "@" attr(data-host) "] $";
 }
 
 .command-line-prompt > span[data-user="root"]:before {
-	content: "[" attr(data-user) "@" attr(data-host) "] #";
+  content: "[" attr(data-user) "@" attr(data-host) "] #";
 }
 
 .command-line-prompt > span[data-prompt]:before {
-	content: attr(data-prompt);
+  content: attr(data-prompt);
 }
