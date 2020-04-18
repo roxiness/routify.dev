@@ -41,7 +41,7 @@
       Templates can be set with
       <code>$metatags.template(property, callback)</code> ie.
       <code>$metatags.template("title", value => `My Site - ${`{value}`}`)</code>.
-      If multiple layouts with templates are present, the template in the outer layout takes precedence.
+      If multiple layouts with templates are present, the layout nearest the root takes precedence.
     </p>
     <Note>
       Setting
