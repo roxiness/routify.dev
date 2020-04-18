@@ -19,6 +19,7 @@ $c-button-link-color: $c-button-primary-color !default;
   appearance: none;
   border-radius: 0.6rem;
   font-size: 1.6rem;
+  align-items: center;
   font-family: $g-text-font-family;
   @at-root a#{&} {
     text-decoration: none;
