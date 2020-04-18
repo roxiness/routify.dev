@@ -3,8 +3,8 @@
   import Button from '@/components/Button.svelte';
   import ButtonToolbar from '@/components/ButtonToolbar.svelte';
 </script>
-  
-  
+
+  <!-- routify:options index=false -->
 <h1 class="c-h1">Kitchen sink</h1>
 
 <div class="c-content">
