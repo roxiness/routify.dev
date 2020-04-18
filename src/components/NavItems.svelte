@@ -8,10 +8,7 @@
       {#if meta.icon}
       <!-- todo change c-navigation__github-link to a generic class? -->
         <a href={path} class="c-navigation__github-link">
-          <img
-            class="c-navigation__github-logo"
-            src="/images/{meta.icon}.svg"
-            alt="{title} logo" />
+            <Icon name={meta.icon} />
         </a>
       {:else}
         <a href={$url(path)}>{title}</a>

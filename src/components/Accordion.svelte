@@ -2,7 +2,7 @@
     export let navOpen = false;
     export let title = 'Default';
     import Icon from './Icon.svelte';
-    
+
     function handleClick() {
         navOpen = !navOpen
     }
@@ -11,9 +11,9 @@
 <button class="c-navigation-mobile__section-header" on:click="{handleClick}">
     <span>{title}</span>
     {#if navOpen}
-        <Icon icon="chevron-up" />
+        <Icon name="chevron-up" />
     {:else}
-        <Icon icon="chevron-down" />
+        <Icon name="chevron-down" />
     {/if}
 </button>
 
