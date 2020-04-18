@@ -21,6 +21,7 @@
 @import "_c-container-horizontal";
 @import "_c-container-vertical";
 @import "_c-content";
+@import "_c-stack";
 @import "_c-contributors";
 @import "_c-footer";
 @import "_c-function-doc";
@@ -50,3 +51,13 @@
 @import "_prism";
 
 html {scroll-behavior: smooth;} //todo do we have a place for globals?
+
+
+.c-styleguide__component-inner {
+    padding: 3.2rem;
+    border: 1px solid $g-gray-100;
+    margin: 1.6rem 0;
+
+    display: flex;
+    flex-wrap: wrap;
+}

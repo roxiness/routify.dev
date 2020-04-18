@@ -23,8 +23,7 @@
   <div class="c-pagination">
     {#if prev}
       <a class="c-button c-button--outline" href={$url(prev.path)}>
-
-        <Icon name="chevron-left" />
+        <Icon name="chevron-left" size="16"/>
         Previous: {prev.title}
       </a>
     {/if}
@@ -32,7 +31,7 @@
     {#if next}
       <a class="c-button c-button--outline" href={$url(next.path)}>
         Next: {next.title}
-        <Icon name="chevron-right" />
+        <Icon name="chevron-right" size="16" />
       </a>
     {/if}
   </div>

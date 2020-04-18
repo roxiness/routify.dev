@@ -1,0 +1,21 @@
+.c-stack {
+  width: 100%;
+}
+
+@for $i from 1 through 8 {
+  .c-stack--#{$i} > * {
+    margin: calc(.4rem * #{$i}) 0;
+
+    &:first-child {
+      margin: 0 0 calc(.4rem * #{$i});
+    }
+  }
+
+  .c-stack-horizontal--#{$i} > * {
+    margin: 0 calc(.4rem * #{$i});
+
+    &:first-child {
+      margin: 0 calc(.4rem * #{$i}) 0 0;
+    }
+  }
+}
