@@ -13,7 +13,24 @@
   </ButtonToolbar>
 </Component>
 
-<Component name="Icon + Text buttons" description="Buttons with an icon and text.">
+<Component
+  name="Icon + Text buttons"
+  description="Buttons with an icon and text."
+  code={`
+    <script>
+    import ButtonToolbar from '@/components/ButtonToolbar.svelte';
+    import Button from '@/components/Button.svelte';
+</script>
+      
+<ButtonToolbar>
+  <Button theme="primary" layout="icon-text" icon="chevron-left">Label</Button>
+  <Button theme="primary" layout="text-icon" icon="chevron-right">Label</Button>
+
+  <Button theme="outline" layout="icon-text" icon="chevron-left">Label</Button>
+  <Button theme="outline" layout="text-icon" icon="chevron-right">Label</Button>
+</ButtonToolbar>
+`}
+>  
   <ButtonToolbar>
     <Button theme="primary" layout="icon-text" icon="chevron-left">Label</Button>
     <Button theme="primary" layout="text-icon" icon="chevron-right">Label</Button>

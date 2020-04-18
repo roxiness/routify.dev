@@ -4,7 +4,15 @@
 
 <h1 class="c-h2">Rich text</h1>
 
-<Component name="Rich text" description="Rich text with simple base HTML tags.">
+<Component
+  name="Rich text"
+  description="Rich text with simple base HTML tags.
+
+Wrap your content with a `c-content` div.
+  "
+  code={`<div class="c-content"><!-- Simple HTML here... --></div>
+  `}
+>
   <div class="c-content">
     <h1>Hello world</h1>
     <h2>Hello world</h2>

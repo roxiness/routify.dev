@@ -46,7 +46,7 @@
 
 <h1 class="c-h2">Colors</h1>
 
-<Component name="Colors" description="The available colors in this project.">
+<Component name="Colors" description="The available colors in this project. Note that this is a manual list, please update this when you update the colors.">
   
   {#each colors as category}
     <h2 class="c-h3">{category.category}</h2>
