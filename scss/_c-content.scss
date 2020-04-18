@@ -2,6 +2,9 @@
   c-content
    ========================================================================== */
 
+/* Headings
+   ========================================================================== */
+
 .c-h1, .c-content h1 {
   font-weight: 600;
   color: $g-heading-color;
@@ -26,7 +29,6 @@
   @media (min-width: $g-bp-2) {
     font-size: 3.2rem;
   }
-  
 }
 
 .c-h3, .c-content h3 {
@@ -43,11 +45,34 @@
   margin: 0 0 1.6rem;
 }
 
+/* Regular text
+   ========================================================================== */
+
 .c-p, .c-content p {
   margin-bottom: 1.6rem;
+  // supposing body text is 1.6rem
 }
 
-.c-ul, .c-content ul {
+.c-p--small, .c-content p small {
+  font-size: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+
+/* Quotes
+   ========================================================================== */
+
+.c-blockquote, .c-content blockquote {
+  font-style: italic;
+  padding: 0 0 0 1.6rem;
+  margin: 0 0 1.6rem;
+  border-left: 0.4rem solid $g-gray-200;
+}
+
+/* Lists
+   ========================================================================== */
+
+.c-ul, .c-content ul,
+.c-ol, .c-content ol {
   margin: 0 0 1.6rem 2.4rem;
 }
 
@@ -56,20 +81,33 @@
   list-style: disc;
 }
 
+.c-ol > li,
+.c-content ol > li {
+  list-style: decimal;
+}
+
+.c-pre, .c-content pre {
+  background: #250032;
+  padding: 1.6rem;
+  margin: 0 0 1.6rem;
+  .c-code, code {
+    color: #FFF;
+    background: none;
+  }
+}
+
 .c-code,
 .c-content code {
 
-  code {
-    font-size: 85%;
-    padding: 0.3rem;
-    border-radius: 0.2rem;
-    font-family: Monaco, Menlo, monospace;
-    background: #FFF6FF;
-  }
+  font-size: 85%;
+  padding: 0.3rem;
+  border-radius: 0.2rem;
+  font-family: Monaco, Menlo, monospace;
+  background: #FFF6FF;
 
 }
 
-// for .c-table styles, refer to _c-table.scss
+// for more advanced  .c-table styles, refer to _c-table.scss
 .c-content table {
   border: 0.1rem solid $g-table-border-color;
   border-radius: 0.3rem;
@@ -89,7 +127,6 @@
     padding: 1.6rem;
     position: relative;
   }
-  
 
   th {
     font-weight: 500;
@@ -100,12 +137,13 @@
   td {
     border-bottom: 0.1rem solid $g-table-border-color;
   }
-  
+
   tr:last-child {
     td {
       border: none;
     }
   }
+
 }
 
 // link styles
