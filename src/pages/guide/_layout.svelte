@@ -24,7 +24,7 @@
     {#if prev}
       <a class="c-button c-button--outline" href={$url(prev.path)}>
 
-        <Icon icon="chevron-left" />
+        <Icon name="chevron-left" />
         Previous: {prev.title}
       </a>
     {/if}
@@ -32,7 +32,7 @@
     {#if next}
       <a class="c-button c-button--outline" href={$url(next.path)}>
         Next: {next.title}
-        <Icon icon="chevron-right" />
+        <Icon name="chevron-right" />
       </a>
     {/if}
   </div>
