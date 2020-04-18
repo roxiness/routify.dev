@@ -21,6 +21,7 @@
 
   <slot />
   <div class="c-pagination">
+    <!-- @todo we should change these to use the Button component, but I had a problem doing that -Wolfr -->
     {#if prev}
       <a class="c-button c-button--outline" href={$url(prev.path)}>
         <span class="c-button__icon-wrap"><Icon name="chevron-left" size="20"/></span>
