@@ -1,9 +1,165 @@
 <script>
-  import { meta } from "@sveltech/routify";
+  import { meta, url } from "@sveltech/routify";
+  import Note from "@/components/Note.svelte";
+  import Code from "@/components/Code.svelte";
   meta.title = "Navigation";
 </script>
 
 <!-- routify:options index=50 -->
-<!-- routify:options title="Navigation (coming)" -->
 
-<h1 class="c-h1">Navigation</h1>
+<div class="c-content">
+  <div class="c-container-vertical--small">
+    <h1 class="c-h1">Navigation</h1>
+    <p>
+      There's a million ways to handle navigation. Hopefully this page can save
+      you some time when creating the navigation for your next project.
+    </p>
+  </div>
+  <div class="c-container-vertical--small">
+    <h3 class="c-h3">The url helper</h3>
+    <p>
+      The
+      <code>url</code>
+      helper creates links from relative, absolute or named paths.
+    </p>
+    <p>
+      The advantage of using
+      <code>url</code>
+      is that it allows for your code to be modular. If you rename
+      <strong>blog</strong>
+      to
+      <strong>news</strong>
+      , the relational links inside the folder will still be fully working.
+    </p>
+    <Code language="svelte">
+      {`
+    <a href={$url('../blog')}>
+      Blog
+    </a>`}
+    </Code>
+
+    <Note>
+      <p>
+        Unlike traditional links,
+        <code>url</code>
+        is relational to the layout or page it is located in and not the current
+        URL in the address bar.
+      </p>
+      <p>You can read more about the <code>url</code> helper <a href="{$url('/docs/helpers#url')}">here</a></p>
+    </Note>
+  </div>
+
+  <div class="c-container-vertical--small">
+    <h3 class="c-h3">The isActive helper</h3>
+    <p>
+      The
+      <code>isActive</code>
+      helper tells you whether a path is active or not. It resolves the provided
+      path with the
+      <code>url</code>
+      helper.
+    </p>
+    <Code language="svelte">
+      {`
+    <sty`}{`le>
+      .active {font-weight: bold}
+    </sty`}{`le>
+
+    <div class:active={$isActive('./blog')}
+      <a href={$url('./blog')}>
+        Blog
+      </a>
+    </div>  `}
+    </Code>
+    <p>You can read more about the <code>isActive</code> helper <a href="{$url('/docs/helpers#is-active')}">here</a></p>
+  </div>
+
+  <div class="c-container-vertical--small">
+    <h3 class="c-h3">Handling multiple links</h3>
+    <p>
+      Links can be handled in an array of different ways. This might be the
+      easiest way.
+    </p>
+    <Code language="svelte">
+      {`
+    <sc`}{`ript>
+      import {isActive, url} from '@sveltech/routify'
+
+      const links =
+      [
+        ['./index', 'Home'], //add index to make sure that the link isn't constantly active
+        ['./blog', 'Blog'],
+        ['./about', 'About'],
+        ['./contact', 'Contact']
+      ]
+    </script>
+
+    <sty`}{`le>
+      .active {font-weight: bold}
+    </sty`}{`le>
+
+    <ul>
+      {#each links as [path, name]}
+        <!-- Svelte magic. If isActive is true, the "active" class is applied. -->
+        <li class:active={$isActive({path})}
+          <a href={$url({path})}>
+            {name}
+          </a>
+        </li>
+      {/each}
+    </ul>
+      `}
+    </Code>
+  </div>
+
+  <div class="c-container-vertical--small">
+    <h3 class="c-h3">Automatic navigation generation</h3>
+    <p>
+      It is also possible to generate navigation from your file structure. In
+      fact all navigation on this site is generated - even hash links, external
+      links and the previous/next buttons you see below.
+    </p>
+    <p>
+      To create links for files in a folder, create a
+      <code>_layout.svelte</code>
+      in the folder and import the layout helper.
+    </p>
+    <Code language="svelte">
+      {`
+      <!-- _layout.svelte -->
+      <sc`}{`ript>
+        import { isActive, url, layout } from "@sveltech/routify";
+      </script>
+
+      <ul>
+        {#each $layout.children as { path, title }}
+          <li class:active={$isActive(path)}>
+              <a href={$url(path)}>{title}</a>
+          </li>
+        {/each}
+      </ul>
+      `}
+    </Code>
+    <p>
+      Links are ordered by their file's index, which you can set with metadata.
+      <code>{`<!-- rou`}{`tify:options index=3 -->`}</code>
+      . To omit a file from navigation, set index to
+      <code>false</code>
+      .
+    </p>
+
+    <p>
+      External links and hash links can be added with the children metadata.
+    </p>
+    <Code language="svelte">
+      {`
+      <!-- rou`}{`tify:options children=[
+        {title: "Github", icon:"github", path: "//github.com/sveltech/routify"},
+        {title: "Discord", icon:"discord", path: "//discord.gg/ntKJD5B"},
+        {title: "Twitter", icon:"twitter", path: "//twitter.com/routifyjs"}
+      ] -->
+    `}
+    </Code>
+
+  </div>
+</div>
