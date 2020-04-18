@@ -1,7 +1,7 @@
 <script>
   import Component from '@/components/styleguide/Component.svelte';
   import Button from '@/components/Button.svelte';
-  import Stack from '@/components/Stack.svelte';
+  import ButtonToolbar from '@/components/ButtonToolbar.svelte';
 </script>
   
   
@@ -14,15 +14,18 @@
 <h2 class="c-h2">Buttons</h2>
 
 <Component name="Text Buttons">
-  <Stack horizontal space="2">
+  <ButtonToolbar>
     <Button theme="primary">Label</Button>
     <Button theme="outline">Label</Button>
-  </Stack>
+  </ButtonToolbar>
 </Component>
 
 <Component name="Icon + Text Buttons">
-  <Stack space="2">
-    <Button theme="primary" layout="icon-text" icon="chevron-right">Label</Button>
-    <Button theme="outline" layout="icon-text" icon="chevron-right">Label</Button>
-  </Stack>
+  <ButtonToolbar>
+    <Button theme="primary" layout="icon-text" icon="chevron-left">Label</Button>
+    <Button theme="primary" layout="text-icon" icon="chevron-right">Label</Button>
+
+    <Button theme="outline" layout="icon-text" icon="chevron-left">Label</Button>
+    <Button theme="outline" layout="text-icon" icon="chevron-right">Label</Button>
+  </ButtonToolbar>
 </Component>
