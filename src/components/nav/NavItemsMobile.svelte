@@ -1,7 +1,6 @@
 <script>
-  import Accordion from "./Accordion.svelte";
   import { layout } from "@sveltech/routify";
-  import Fragment from "./nav/NavItemsMobileFragment.svelte";
+  import Fragment from "@/components/nav/NavItemsMobileFragment.svelte";
   export let showMobileNav
 
   $: items = [

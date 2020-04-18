@@ -1,5 +1,5 @@
 <script>
-  import Accordion from "./Accordion.svelte";
+  import Accordion from "@/components/Accordion.svelte";
   export let items;
   export let showMobileNav;
   $: indexableItems = items.filter(i => !i.isNonIndexable);
