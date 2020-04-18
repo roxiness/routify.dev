@@ -24,7 +24,7 @@
   color: $g-heading-color;
   font-family: $g-headings-font-family;
   margin: 0 0 1.6rem;
-  
+
   font-size: 2.4rem;
   @media (min-width: $g-bp-2) {
     font-size: 3.2rem;
@@ -86,7 +86,7 @@
   list-style: decimal;
 }
 
-.c-pre, .c-content pre {
+.c-pre {
   background: #250032;
   padding: 1.6rem;
   margin: 0 0 1.6rem;
@@ -159,7 +159,7 @@
     color: #AD62BF;
     border-color: #E8BDF3;
   }
-  
+
 }
 
 .c-content {
@@ -167,7 +167,7 @@
   strong, b {
     font-weight: 600;
   }
-  
+
   em, i {
     font-style: italic;
   }
