@@ -2,12 +2,20 @@
   Object: svg icon
    ========================================================================== */
 
-.o-svg-icon--size-16 {
+.o-svg-icon--size-16,
+.o-svg-icon--size-16 svg {
   width: 1.6rem;
   height: 1.6rem;
 }
 
-.o-svg-icon--size-24 {
+.o-svg-icon--size-20,
+.o-svg-icon--size-20 svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.o-svg-icon--size-24,
+.o-svg-icon--size-24 svg {
   width: 2.4rem;
   height: 2.4rem;
 }
