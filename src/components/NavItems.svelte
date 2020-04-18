@@ -1,5 +1,6 @@
 <script>
   import { isActive, url, layout } from "@sveltech/routify";
+  import Icon from './Icon.svelte';
 </script>
 <ul>
   {#each $layout.children as {path, title, meta}}

@@ -9,6 +9,10 @@
     import IconInfo from './icons/info.svg';
     import IconWarning from './icons/warning.svg';
 
+    import IconDiscord from './icons/discord.svg';
+    import IconTwitter from './icons/twitter.svg';
+    import IconGithub from './icons/github.svg';
+
 </script>
 
 <style>
@@ -37,6 +41,15 @@
 {/if}
 {#if icon == 'warning'}
     {@html IconWarning}
+{/if}
+{#if icon == 'discord'}
+    {@html IconDiscord}
+{/if}
+{#if icon == 'twitter'}
+    {@html IconTwitter}
+{/if}
+{#if icon == 'github'}
+    {@html IconGithub}
 {/if}
 
 </div>
