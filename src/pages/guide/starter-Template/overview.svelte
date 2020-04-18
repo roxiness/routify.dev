@@ -35,13 +35,13 @@
 
     <h3 class="c-h3">Starter template structure</h3>
 
-    <table>
+    <table class="c-table c-table--horizontal">
       {#each structure as [path, text]}
         <tr>
-          <td style="padding-right: 64px; font-weight: bold">
-            <pre>{path}</pre>
-          </td>
-          <td style="color: #999">{text}</td>
+          <th>
+            <pre><code>{path}</code></pre>
+          </th>
+          <td>{text}</td>
         </tr>
       {/each}
     </table>

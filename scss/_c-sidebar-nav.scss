@@ -22,10 +22,13 @@
   a {
     text-decoration: none;
     display: block;
-    color: #1D2C48;
     padding: 1rem 1.6rem;
-
+    &:link,
+    &:visited {
+      color: #1D2C48;
+    }
     &:hover,
+    &:active,
     &:focus {
       color: $g-link-color;
     }
@@ -44,7 +47,10 @@
 
 .c-sidebar-nav .c-sidebar-nav__item--selected > a {
   background: #FFE3FF;
-  color: $g-link-color;
+  &:link,
+  &:visited {
+    color: $g-pink-700;
+  }
 }
 
 
@@ -71,12 +77,12 @@
   a {
     text-decoration: none;
     display: block;
-    color: #1D2C48;
+    color: $g-pink-700;
     padding: 1rem 1.6rem;
 
     &:hover,
     &:focus {
-      color: $g-link-color;
+      color: $g-pink-500;
     }
   }
 }
@@ -85,13 +91,13 @@
   border-radius: .8rem;
   &:hover,
   &:focus {
-    color: $g-link-color;
+    color: $g-pink-700;
     background: #FFF6FF;
   }
 }
 
 .c-sidebar-nav-child .c-sidebar-nav-child__item--selected > a {
   background: #FFF0FF;
-  color: $g-link-color;
+  color: $g-pink-700;
 }
 
