@@ -54,10 +54,10 @@ html {scroll-behavior: smooth;} //todo do we have a place for globals?
 
 
 .c-styleguide__component-inner {
-    padding: 3.2rem;
-    border: 1px solid $g-gray-100;
-    margin: 1.6rem 0;
-
-    display: flex;
-    flex-wrap: wrap;
+  padding: 3.2rem;
+  border: 0.1rem solid $g-gray-100;
+  margin: 1.6rem 0;
+  
+  display: flex;
+  flex-wrap: wrap;
 }
