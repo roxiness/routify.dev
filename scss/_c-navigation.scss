@@ -26,6 +26,7 @@
     color: #1D2C48;
     padding: 1rem 1.2rem;
     border-radius: .8rem;
+    &::first-letter { text-transform: capitalize }
     &:hover,
     &:focus {
       color: $g-pink-700;
