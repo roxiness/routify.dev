@@ -5,7 +5,7 @@
 
 <h1 class="c-h2">Tabs</h1>
 
-<Component name="Tabs" description="Tabs">
+<Component name="Tabs" description="Tabs are using the `@sveltech/bricks` project.">
   <Tabs>
     <div class="c-tabs">
       <TabsLink>Page 1</TabsLink>
