@@ -1,5 +1,6 @@
 <script>
   import { isActive, url, context, layout } from "@sveltech/routify";
+  import HelpRequest from '@/components/HelpRequest.svelte'
   import { getContext } from "svelte";
   $: ({ component } = $context);
   $: list = $layout.children;
@@ -64,5 +65,6 @@
   </div>
   <div class="c-sidebar-layout__main">
     <slot />
+    <HelpRequest />
   </div>
 </main>
