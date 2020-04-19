@@ -3,10 +3,11 @@
 Welcome to the all-new Routify blog. For our first post, we’re very happy to announce that 1.5 is finally ready. Among the highlights in this version are:
 
 - [Support for meta tags](#meta-tags-and-open-graph)
-- Dynamic basepaths
-- Node api
-- CLI enhancements
-- Improved starter template
+- [Dynamic basepaths](#dynamic-basepaths)
+- [Automatic navigation](#automatic-navigation-with-layout-and-page-helpers)
+- [CLI enhancements](#cli-enhancements)
+- [Query support](#query-support)
+- [Improved starter template](#improved-starter-template)
 
 
 ### Meta tags and Open Graph
@@ -22,10 +23,10 @@ will output the following:
 <meta name="title" content="My app - home" data-origin="routify">
 <meta property="og:title" content="My app - home" data-origin="routify">
 ```
-You can read more about meta tags here **TODO**
+Read more about [meta tags](/guide/metadata)
 
 
-### **Dynamic basepaths**
+### **Dynamic Basepaths**
 
 Basepaths have been a long requested feature. They are strings but will be converted to RegExp’s internally.
 ``` svelte
@@ -42,12 +43,10 @@ To prerender multiple basepaths add a basepath argument to your exporter.
 ```
     routify export --basepath mybase
 ```
+Read more about [basepaths](/docs/basepath)
 
-### **Updated CLI**
 
-The init command now accepts `--branch --no-example --no-install and --start-dev`. If you are already used to Routify, this way you can get a starter template with a minimal amount of files.
-
-### **Auto-generated navigation with Layout and Page helpers**
+### **Automatic Navigation with Layout and Page Helpers**
 
 With the new layout and page helpers you can read a file’s metadata or access its adjacent nodes.
 
@@ -77,9 +76,14 @@ Here’s an example from this website’s root layout, where we link to Github, 
 ```
 These meta children can be accessed in **$layout.children**.
 
-Read more about Automatic Navigation here **TODO**
+Read more about [Automatic Navigation](/guide/navigation)
 
-### **Query string support**
+
+### **CLI Enhancements**
+
+The init command now accepts `--branch --no-example --no-install and --start-dev`. If you are already used to Routify, this way you can get a starter template with a minimal amount of files.
+
+### **Query Support**
 
 **$params** now accepts query strings.
 
@@ -90,14 +94,16 @@ console.log($params) // **{id: 123, theme: ‘dark’}**
 ```
 
 
-### **Improved starter template**
+### Improved Starter Template
+The starter template has received a lot of love and here are some of the improvements.
 
-#### A unified **__index.html**
-No more __dynamic.html and __bundle.html. From here on there's only one template to keep track of.
+- **Faster first build** - Rollup and Routify are now run in parallel to improve performance on first dev build. Scripts in
 
-#### New Spassr server
-We've created our own server. It's intended for development, but should also work in production.
+- **Simplified scripts** - We have updated  **package.json** and the scripts should be both simpler and more flexible.
+
+- **A unified __index.html** -  No more __dynamic.html and __bundle.html. From here on there's only one template to keep track of.
+
+- **New Spassr server** - We've created our own server. It's intended for development, but should also work in production.
 In the Starter template it serves two versions of your app. SPA on port 5000 and SSR on 5005.
 
-- Spassr server
-- Netlify + Github integration
+- **Netlify + Github integration** - Go to your Netlify control panel and connect it to a Routify repo. You'll have continuous deployments in minutes, complete with SSR, prerended static pages and dynamic imports. When connecting your repo, remember to set root path to ``scripts/netlify`` and build script to ``npm run build``. That is all! :)
