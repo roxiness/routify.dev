@@ -45,9 +45,12 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
       alias({ entries: [{ find: '@', replacement: './src' },] }),
       svelte({
         // enable run-time checks when not in production
-        extensions: ['.svelte', '.svx'],
+        extensions: ['.svelte', '.md', '.svx'],
         preprocess: mdsvex({
           extension: '.svx',
+          layouts: {
+            // code: join(__dirname, "./src/components/Code.svelte")
+          }
         }),
         dev: !production,
         hydratable: true,
@@ -102,7 +105,9 @@ const dynamicConfig = {
     format: 'esm',
     dir: buildDir
   },
-  plugins: []
+  plugins: [
+    !production && livereload(distDir),
+  ]
 }
 
 
