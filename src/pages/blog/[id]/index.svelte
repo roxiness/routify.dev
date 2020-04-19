@@ -6,12 +6,10 @@
   import marked from "marked";
   import { fetcher } from "../_fetcher";
   import { ready } from "@sveltech/routify";
-  import moment from "moment";
-  
+  import {format, formatRelative, parseISO} from 'date-fns'
+
   let post = null;
   fetcher(`/posts/${id}`, res => (post = res)).then($ready);
-  
-  //$: post.published = moment().format("MMM Do YY");
 </script>
 
 {#if post}
@@ -21,7 +19,7 @@
         <header>
           <h1>{post.title}</h1>
           <!-- @todo format datetime as January 17th, 2020 -->
-          <p>Written by {post.author.displayName} at {post.published}</p>
+          <p>Written by {post.author.displayName} {formatRelative(parseISO(post.published), new Date())}</p>
         </header>
         <div class="c-content">
           {@html marked(post.content)}
