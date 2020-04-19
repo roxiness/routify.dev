@@ -17,7 +17,7 @@
     <div class="c-content">
       {@html marked(description)}
     </div>
-    <div class="c-styleguide__component-inner">
+    <div class="c-styleguide-component__inner">
         <slot></slot>
     </div>
 </div>

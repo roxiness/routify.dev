@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "mdsvex": "^0.4.0",
+    "moment": "^2.24.0",
     "prismjs": "^1.19.0"
   }
 }

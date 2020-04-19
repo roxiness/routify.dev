@@ -13,6 +13,7 @@ html, body {
 }
 
 html {
+  scroll-behavior: smooth;
   font-size: 50%;
   @media (min-width: $g-bp-2) {
     font-size: 62.5%;
