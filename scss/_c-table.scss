@@ -142,20 +142,6 @@ $c-table-row-odd-color: #EEE !default;
   }
 }
 
-/* Table column widths
-   ========================================================================== */
-
-$tableColCount: 16;
-$i: 1;
-
-@while $i < $tableColCount {
-  .o-table-col-#{$i} {
-    width: #{$i / $tableColCount * 100%};
-  }
-
-  $i: $i + 1;
-}
-
 /* Untable a table
    ========================================================================== */
 
