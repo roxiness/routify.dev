@@ -29,7 +29,8 @@
                   {post.title}
                 </a>
               </h2>
-              <p>Written by {post.author.displayName}</p>
+              <!-- @todo format datetime as January 17th, 2020 -->
+              <p>Written by {post.author.displayName} at {post.published}</p>
             </header>
             <div class="c-content">
               {@html marked(post.content)}
