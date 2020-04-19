@@ -57,11 +57,4 @@
 // Styleguide specific
 @import "c-styleguide-color-swatch"; // might want to separate these styleguide components from the rest
 @import "c-styleguide-color-swatch-list"; // might want to separate these styleguide components from the rest
-
-
-
-.c-styleguide__component-inner {
-  padding: 3.2rem;
-  border: 0.1rem solid $g-gray-100;
-  margin: 1.6rem 0;
-}
+@import "c-styleguide-component"; // might want to separate these styleguide components from the rest
