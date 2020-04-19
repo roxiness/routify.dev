@@ -23,7 +23,13 @@
         { name: "g-pink-700", hex: "#BD239B" },
       ]
     },
-
+    {
+      category: "Purples",
+      items: [
+        { name: "g-purple-400", hex: "#AD62BF" },
+        { name: "g-purple-600", hex: "#A60DCC" },
+      ]
+    },
     {
       category: "Blues",
       items: [
