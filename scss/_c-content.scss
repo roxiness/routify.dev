@@ -86,7 +86,7 @@
   list-style: decimal;
 }
 
-.c-pre {
+.c-content pre, .c-pre {
   background: #250032;
   padding: 1.6rem;
   margin: 0 0 1.6rem;
@@ -98,7 +98,6 @@
 
 .c-code,
 .c-content code {
-
   font-size: 85%;
   padding: 0.3rem;
   border-radius: 0.2rem;
