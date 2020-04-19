@@ -1,0 +1,44 @@
+# Announcing v1.5.0
+
+Welcome to the all-new Routify blog. For our first post, we’re very happy to announce that 1.5 is finally ready. Among the highlights in this version are:
+
+- support for meta tags
+- Dynamic basepaths
+- node api
+- CLI enhancements
+- A unified __index.html (starter template)
+- spassr server (starter template)
+- Netlify + Github integration (starter template)
+
+### **Meta tags and Open Graph**
+
+Set meta tags and Open Graph data directly from Routify, in a single line. For example this code...
+``` javascript
+import { metatags} from "@sveltech/routify";
+$: metatags.title = ‘My app - home’;
+```
+will output the following:
+``` html
+<title>My app - home</title>
+<meta name="title" content="My app - home" data-origin="routify">
+<meta property="og:title" content="My app - home" data-origin="routify">
+```
+You can read more about meta tags here **TODO**
+
+### **Dynamic basepaths**
+
+Basepaths can now be set from anywhere within your app. Basepaths are strings but will be converted to RegExp’s internally.
+``` svelte
+<script>
+  import { Router, basepath } from "@sveltech/routify";
+  import { routes } from "@sveltech/routify/tmp/routes";
+  $: $basepath = '/mybase'
+</script>
+
+<!-- src/App.svelte -->
+<Router {routes} />
+```
+To prerender multiple basepaths add a basepath argument to your exporter.
+
+    routify export --basepath mybase
+asd
