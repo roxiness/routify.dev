@@ -1,0 +1,19 @@
+  <div class="c-container-vertical">
+    <div class="c-container-horizontal c-container-horizontal--narrow">
+      <article class="c-blogpost">
+
+# Announcing v1.5.0
+
+Welcome to the all-new Routify blog. For our first post, we’re very happy to announce that 1.5 is finally ready. Among the highlights in this version are:
+
+- support for meta tags
+- Dynamic basepaths
+- node api
+- CLI enhancements
+- A unified __index.html (starter template)
+- spassr server (starter template)
+- Netlify + Github integration (starter template)
+
+</article>
+</div>
+</div>

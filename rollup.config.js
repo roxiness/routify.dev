@@ -8,6 +8,7 @@ import del from 'del'
 import svg from 'rollup-plugin-svg';
 import alias from '@rollup/plugin-alias'
 import markdown from '@jackfranklin/rollup-plugin-markdown'
+import { mdsvex } from 'mdsvex'
 
 
 
@@ -44,6 +45,10 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
       alias({ entries: [{ find: '@', replacement: './src' },] }),
       svelte({
         // enable run-time checks when not in production
+        extensions: ['.svelte', '.svx'],
+        preprocess: mdsvex({
+          extension: '.svx',
+        }),
         dev: !production,
         hydratable: true,
         // we'll extract any component CSS out into
