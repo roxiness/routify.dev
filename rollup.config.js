@@ -9,7 +9,7 @@ import svg from 'rollup-plugin-svg';
 import alias from '@rollup/plugin-alias'
 import markdown from '@jackfranklin/rollup-plugin-markdown'
 import { mdsvex } from 'mdsvex'
-
+import slug from 'remark-slug'
 
 
 const staticDir = 'static'
@@ -47,6 +47,9 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
         // enable run-time checks when not in production
         extensions: ['.svelte', '.md', '.svx'],
         preprocess: mdsvex({
+          markdownOptions: {},
+          parser: x=>x,
+          remarkPlugins: [slug],
           extension: '.svx',
           layouts: {
             // code: join(__dirname, "./src/components/Code.svelte")
