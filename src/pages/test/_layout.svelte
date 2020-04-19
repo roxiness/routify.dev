@@ -16,7 +16,7 @@
 
 <div class="c-container-vertical">
   <div class="c-container-horizontal c-container-horizontal--narrow">
-    <div class="c-content">
+    <div class="c-content c-markdown">
       <slot />
       <span />
     </div>
