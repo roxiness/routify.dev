@@ -8,3 +8,9 @@ export { default as IconWarning } from "./warning.svg";
 export { default as IconDiscord } from "./discord.svg";
 export { default as IconTwitter } from "./twitter.svg";
 export { default as IconGithub } from "./github.svg";
+
+
+export { default as IconResolve } from "./resolve.svg";
+export { default as IconFolder } from "./folder.svg";
+export { default as IconFile } from "./file.svg";
+export { default as IconUrl } from "./url.svg";

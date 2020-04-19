@@ -1,3 +1,45 @@
+<script>
+  import Walker from '@/components/Walker.svelte'
+  let children = [
+    {
+      name: "pages",
+      type: "folder",
+      children: [
+        {
+          name: "_layout.svelte",
+          type: "file"
+        },
+        {
+          name: "blog",
+          type: "folder",
+          children: [
+            {
+              name: "index.svelte",
+              type: "file",
+              correspondingUrl: "/blog"
+            },
+            {
+              name: "[post].svelte",
+              type: "file",
+              correspondingUrl: "/blog/my-post"
+            }
+          ]
+        },
+        {
+          name: "about.svelte",
+          type: "file",
+          correspondingUrl: "/about"
+        },
+        {
+          name: "_contact.svelte",
+          type: "file",
+          correspondingUrl: "/contact"
+        }
+      ]
+    }
+  ]
+</script>
+
 <style>
   .specific-btn-toolbar a:first-child {
     margin-right: 1.2rem;
@@ -16,7 +58,7 @@
         </div>
     </div>
     <div class="c-hero__illustration">
-        <img src="/images/illustration.png" alt="Image of file structure">
+      <Walker {children}></Walker>
     </div>
 </div>
 
