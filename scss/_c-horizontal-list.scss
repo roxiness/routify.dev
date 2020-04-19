@@ -1,0 +1,19 @@
+/* ==========================================================================
+  c-horizontal-list
+   ========================================================================== */
+
+.c-horizontal-list {
+  display: flex;
+  > li {
+    margin-right: 0.8rem;
+    @include link-styles(false);
+  }
+}
+
+.c-horizontal-list--bordered > li {
+  padding-right: 0.8rem;
+  border-right: 0.1rem solid $g-gray-300;
+  &:last-child {
+    border-right: none;
+  }
+}
