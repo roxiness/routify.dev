@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "run-p routify rollup",
     "dev-dynamic": "cross-env BUNDLING=dynamic npm run dev",
-    "build": "routify -bD && rollup -c",
+    "build": "npm run routify D -- -b && rollup -c",
     "serve": "spassr --serve-spa --serve-ssr",
     "export": "routify export",
     "deploy:now": "cd scripts/now && npm run deploy",
