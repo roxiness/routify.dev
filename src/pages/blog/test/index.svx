@@ -1,6 +1,3 @@
-  <div class="c-container-vertical">
-    <div class="c-container-horizontal c-container-horizontal--narrow">
-      <article class="c-blogpost">
 
 # Announcing v1.5.0
 
@@ -13,7 +10,3 @@ Welcome to the all-new Routify blog. For our first post, we’re very happy to a
 - A unified __index.html (starter template)
 - spassr server (starter template)
 - Netlify + Github integration (starter template)
-
-</article>
-</div>
-</div>
