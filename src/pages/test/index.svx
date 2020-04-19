@@ -2,15 +2,14 @@
 
 Welcome to the all-new Routify blog. For our first post, we’re very happy to announce that 1.5 is finally ready. Among the highlights in this version are:
 
-- support for meta tags
+- [Support for meta tags](#meta-tags-and-open-graph)
 - Dynamic basepaths
-- node api
+- Node api
 - CLI enhancements
-- A unified __index.html (starter template)
-- spassr server (starter template)
-- Netlify + Github integration (starter template)
+- Improved starter template
 
-### **Meta tags and Open Graph**
+
+### Meta tags and Open Graph
 
 Set meta tags and Open Graph data directly from Routify, in a single line. For example this code...
 ``` javascript
@@ -25,9 +24,10 @@ will output the following:
 ```
 You can read more about meta tags here **TODO**
 
+
 ### **Dynamic basepaths**
 
-Basepaths can now be set from anywhere within your app. Basepaths are strings but will be converted to RegExp’s internally.
+Basepaths have been a long requested feature. They are strings but will be converted to RegExp’s internally.
 ``` svelte
 <script>
   import { Router, basepath } from "@sveltech/routify";
@@ -39,6 +39,65 @@ Basepaths can now be set from anywhere within your app. Basepaths are strings bu
 <Router {routes} />
 ```
 To prerender multiple basepaths add a basepath argument to your exporter.
-
+```
     routify export --basepath mybase
-asd
+```
+
+### **Updated CLI**
+
+The init command now accepts `--branch --no-example --no-install and --start-dev`. If you are already used to Routify, this way you can get a starter template with a minimal amount of files.
+
+### **Auto-generated navigation with Layout and Page helpers**
+
+With the new layout and page helpers you can read a file’s metadata or access its adjacent nodes.
+
+Here’s an example of creating automatic navigation with a layout helper:
+```svelte
+<script>
+  import { isActive, url, layout } from "@sveltech/routify";
+</script>
+
+<ul>
+  {#each $layout.children as { path, title }}
+    <li class:active={$isActive(path)}>
+      <a href={$url(path)}>{title}</a>
+    </li>
+  {/each}
+</ul>
+```
+You can also add extra links to the navigation by adding meta children to a layout.
+
+Here’s an example from this website’s root layout, where we link to Github, Discord and Twitter.
+```html
+<!-- routify:options children=[
+  {title: "Github", icon:"github", path: "//github.com/sveltech/routify"},
+  {title: "Discord", icon:"discord", path: "//discord.gg/ntKJD5B"},
+  {title: "Twitter", icon:"twitter", path: "//twitter.com/routifyjs"}
+] -->
+```
+These meta children can be accessed in **$layout.children**.
+
+Read more about Automatic Navigation here **TODO**
+
+### **Query string support**
+
+**$params** now accepts query strings.
+
+```javascript
+$url('/blog/:id', {id: 123, theme: 'dark'} // blog/123?theme=dark
+
+console.log($params) // **{id: 123, theme: ‘dark’}**
+```
+
+
+### **Improved starter template**
+
+#### A unified **__index.html**
+No more __dynamic.html and __bundle.html. From here on there's only one template to keep track of.
+
+#### New Spassr server
+We've created our own server. It's intended for development, but should also work in production.
+In the Starter template it serves two versions of your app. SPA on port 5000 and SSR on 5005.
+
+- Spassr server
+- Netlify + Github integration
