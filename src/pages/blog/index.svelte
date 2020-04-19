@@ -18,6 +18,24 @@
     <h1 class="c-h1">Blog</h1>
 
     <ul class="c-blogpost-list">
+      <!-- hardcoded -->
+      <li class="c-blogpost-list__item">
+        <article class="c-blogpost">
+          <header>
+            <h2>
+              <a href={$url('../announcing-1.5')}>Announcing 1.5</a>
+            </h2>
+            <!-- @todo format datetime as January 17th, 2020 -->
+            <p>Written by Jakob Rosenberg last night</p>
+          </header>
+          <div class="c-content">
+            Welcome to the all-new Routify blog. For our first post, we’re very
+            happy to announce that 1.5 is finally ready. Among the highlights in
+            this version are:
+          </div>
+        </article>
+      </li>
+      <!-- hardcoded -->
       {#each posts as post}
         <li class="c-blogpost-list__item">
           <article class="c-blogpost">
