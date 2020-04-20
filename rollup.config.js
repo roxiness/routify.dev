@@ -47,16 +47,13 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
         // enable run-time checks when not in production
         extensions: ['.svelte', '.md', '.svx'],
         preprocess: mdsvex({
-          markdownOptions: {},
-          parser: x=>x,
           remarkPlugins: [slug],
           extension: '.svx',
-          layouts: {
-            // code: join(__dirname, "./src/components/Code.svelte")
+          layout: {
+            "blogpost": "./src/components/MarkdownBlogLayout.svelte"
           }
         }),
         dev: !production,
-        hydratable: true,
         // we'll extract any component CSS out into
         // a separate file — better for performance
         css: css => {
