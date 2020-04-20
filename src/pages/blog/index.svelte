@@ -2,57 +2,41 @@
   // @ts-check
   // @ts-ignore
   import Note from "../../components/Note.svelte";
-  import { fetcher } from "./_fetcher";
-  import { url, ready } from "@sveltech/routify";
-  import marked from "marked";
+  import { url, layout } from "@sveltech/routify";
+  import { format, formatRelative, parseISO } from "date-fns";
+  import marked from 'marked'
 
-  let posts = [];
-
-  fetcher(`/posts`, res => (posts = res.items)).then($ready);
+  const posts = $layout.parent.children
+    .filter(c => c.meta["blogpost"])
+    .sort((a, b) =>
+      b.meta["blogpost"].published.localeCompare(a.meta["blogpost"].published)
+    );
 </script>
 
-<!-- routify:options $index=130 -->
 <div class="c-container-vertical">
   <div class="c-container-horizontal c-container-horizontal--narrow">
 
     <h1 class="c-h1">Blog</h1>
 
     <ul class="c-blogpost-list">
-      <!-- hardcoded -->
-      <li class="c-blogpost-list__item">
-        <article class="c-blogpost">
-          <header>
-            <h2>
-              <a href={$url('../announcing-1.5')}>Announcing 1.5</a>
-            </h2>
-            <!-- @todo format datetime as January 17th, 2020 -->
-            <p>Written by Jakob Rosenberg last night</p>
-          </header>
-          <div class="c-content">
-            Welcome to the all-new Routify blog. For our first post, we’re very
-            happy to announce that 1.5 is finally ready. Among the highlights in
-            this version are:
-          </div>
-        </article>
-      </li>
-      <!-- hardcoded -->
-      {#each posts as post}
+      {#each posts as { path, title, meta }}
         <li class="c-blogpost-list__item">
           <article class="c-blogpost">
             <header>
               <h2>
-                <a
-                  on:mouseenter={() => fetcher(`/posts/${post.id}`)}
-                  href={$url('../:id', { id: post.id })}>
-                  {post.title}
-                </a>
+                <a href={$url(path)}>{meta.blogpost.title}</a>
               </h2>
-              <!-- @todo format datetime as January 17th, 2020 -->
-              <p>Written by {post.author.displayName} at {post.published}</p>
+              <p>
+                Written by {meta.blogpost.author}
+                <span class="published">
+                  {formatRelative(parseISO(meta.blogpost.published), new Date())}
+                </span>
+              </p>
             </header>
-            <div class="c-content">
-              {@html marked(post.content)}
-            </div>
+            <div class="c-content">{@html marked(meta.blogpost.summary)}</div>
+            <a href="{$url(path)}">read more</a>
+
+
           </article>
         </li>
       {/each}

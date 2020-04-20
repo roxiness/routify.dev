@@ -1,6 +1,22 @@
+
+<!-- routify:options blogpost={
+  "published": "2020-04-20T11:45:06.574Z",
+  "author": "jakedk",
+  "title": "Announcing 1.5",
+  "summary": `
+  Welcome to the brand-new Routify blog. This is not just the first post on Routify, but also my first ever blog post. Scary. For this cherry popping first post, we’re very happy to announce that 1.5 is finally ready. Among the highlights in this version are:
+
+  - Support for meta tags 
+  - Dynamic basepaths 
+  - Automatic navigation CLI enhancements 
+  - Query support 
+  - Improved starter template
+  `
+} -->
+
 # Announcing v1.5.0
 
-Welcome to the all-new Routify blog. For our first post, we’re very happy to announce that 1.5 is finally ready. Among the highlights in this version are:
+Welcome to the brand-new Routify blog. This is not just the first blog post on Routify, but also my first ever blog post. Scary. For this cherry popping first post, we’re very happy to announce that 1.5 is finally ready. Among the highlights in this version are:
 
 - [Support for meta tags](#meta-tags-and-open-graph)
 - [Dynamic basepaths](#dynamic-basepaths)
@@ -107,3 +123,18 @@ The starter template has received a lot of love and here are some of the improve
 In the Starter template it serves two versions of your app. SPA on port 5000 and SSR on 5005.
 
 - **Netlify + Github integration** - Go to your Netlify control panel and connect it to a Routify repo. You'll have continuous deployments in minutes, complete with SSR, prerended static pages and dynamic imports. When connecting your repo, remember to set root path to ``scripts/netlify`` and build script to ``npm run build``. That is all! :)
+
+
+### Overdue thanks
+
+It has only been about a month since we launched this website and you would not be reading this had it not been for [MONO](https://mono.company/) who did the design. Big thanks! Especially to @wolfr_ and @evajacobs who (I assume!) have not slept while working on this project. Visit them at [mono.company](https://mono.company/). You will not be disappointed.
+
+Thanks also to
+[@rixo](https://github.com/rixo)
+[@kev](https://github.com/kevmodrome)
+[@jitesh](https://github.com/jkdoshi)
+
+
+### So that's that?!
+
+No. Come join us on [Discord](https://discord.gg/ntKJD5B) where we fight, joke and cry together. Practice social distancing with people who did it before it became trendy.
