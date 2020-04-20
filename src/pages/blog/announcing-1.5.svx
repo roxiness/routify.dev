@@ -1,0 +1,195 @@
+<script>
+  import Author from '@/components/Author.svelte'
+</script>
+
+<!-- routify:options blogpost={
+  "published": "2020-04-20T11:45:06.574Z",
+  "author": "jakobrosenberg",
+  "title": "Announcing 1.5",
+  "summary": `
+  Welcome to the brand-new Routify blog. This is not just the first post on Routify,
+   but also my first ever blog post. Scary. For this cherry popping first post, we’re
+    very happy to announce that 1.5 is finally ready. Among the highlights in this version are:
+
+  - Support for meta tags
+  - Dynamic basepaths
+  - Automatic navigation CLI enhancements
+  - Query support
+  - Improved starter template
+  `
+} -->
+
+
+# Announcing v1.5.0
+
+Welcome to the brand-new Routify blog. This is not just the first blog post on Routify, but also my first ever blog post. Scary. For this cherry-popping first-post, we’re very happy to announce that 1.5 is finally ready. Among the highlights in this version are:
+
+- [Support for meta tags](#meta-tags-and-open-graph)
+- [Dynamic basepaths](#dynamic-basepaths)
+- [Automatic navigation](#automatic-navigation-with-layout-and-page-helpers)
+- [CLI enhancements](#cli-enhancements)
+- [Query support](#query-support)
+- [Improved starter template](#improved-starter-template)
+
+
+### Meta tags and Open Graph
+
+Set meta tags and Open Graph data directly from Routify, in a single line. For example this code...
+``` javascript
+// import metatags
+import { metatags} from "@sveltech/routify";
+
+// set a metatag
+$: metatags.title = "My app - home";
+```
+will output the following:
+``` html
+<title>My app - home</title>
+<meta name="title" content="My app - home" data-origin="routify">
+<meta property="og:title" content="My app - home" data-origin="routify">
+```
+That is all there is to it.
+
+Read more about [meta tags](/guide/metadata)
+
+
+### **Dynamic Basepaths**
+
+Basepaths have been a long requested feature. Basepaths are strings but will be converted to RegExp’s internally.
+``` svelte
+<script>
+  import { Router, basepath } from "@sveltech/routify";
+  import { routes } from "@sveltech/routify/tmp/routes";
+  $: $basepath = '/mybase'
+</script>
+
+<!-- src/App.svelte -->
+<Router {routes} />
+```
+To prerender a basepath add the basepath argument to your exporter.
+```
+    npx routify export --basepath mybase
+```
+Read more about [basepaths](/docs/basepath)
+
+
+### **Automatic Navigation with Layout and Page Helpers**
+
+With the new layout and page helpers you can read a file’s metadata (not to be confused with metatags) or access its adjacent nodes.
+
+Here’s an example of creating automatic navigation with a layout helper:
+```svelte
+<script>
+  //let's import what we need
+  import { isActive, url, layout } from "@sveltech/routify";
+</script>
+
+<ul>
+  <!-- iterate through each child of the current layout -->
+  {#each $layout.children as { path, title }}
+    <li class:active={$isActive(path)}>
+      <a href={$url(path)}>{title}</a>
+    </li>
+  {/each}
+</ul>
+```
+You can also add extra links to the navigation by adding meta children to a layout.
+
+Here’s an example from this website’s root layout, where we add links to Github, Discord and Twitter.
+```html
+<!-- routify:options children=[
+  {title: "Github", icon:"github", path: "//github.com/sveltech/routify"},
+  {title: "Discord", icon:"discord", path: "//discord.gg/ntKJD5B"},
+  {title: "Twitter", icon:"twitter", path: "//twitter.com/routifyjs"}
+] -->
+```
+These metadata children can be accessed in **$layout.children**.
+
+Read more about [Automatic Navigation](/guide/navigation)
+
+
+### **CLI Enhancements**
+
+The init command now accepts `--branch --no-example --no-install and --start-dev`. If you are already used to Routify, this way you can get a starter template with a minimal amount of files.
+
+```bash
+$ npx @sveltech/routify init --help
+  Usage: cli init [options]
+
+  Options:
+    -s, --start-dev      run "npm run dev" after install (default: false)
+    -e, --no-example     delete the example folder
+    -n, --no-install     don't auto install npm modules
+    -b, --branch [name]  branch to checkout (can also be commit hash or
+                        release tag) (default: "master")
+    -h, --help           display help for command
+```
+
+### **Query Support**
+
+**$params** now accepts query strings.
+
+```javascript
+$url('/blog/:id', {id: 123, theme: 'dark'} // blog/123?theme=dark
+
+console.log($params) // **{id: 123, theme: ‘dark’}**
+```
+
+
+### Improved Starter Template
+The starter template has received a lot of love and here are some of the improvements.
+
+- **Faster first build** - Rollup and Routify are now run in parallel to improve performance on first dev build.
+
+- **Simplified scripts** - We have updated  **package.json** and the scripts should be both simpler and more flexible.
+
+- **A unified __index.html** -  No more **__dynamic.html** and **__bundle.html**. From here on there's only one template to keep track of.
+
+- **New Spassr server** - We created our own server. It's intended for development, but should also work in production.
+In the Starter template it serves two versions of your app. SPA on port 5000 and SSR on 5005.
+```bash
+$ npx spassr --help
+  Usage: cli [options]
+
+  Options:
+    -d, --debug              extra debugging
+    -h, --host [path]        host (default: "localhost")
+    -d, --dist-dir [path]    path to distributables (default: "dist")
+    -a, --app [path]         path from publish dir to app (default:
+                            "build/bundle.js")
+    -e, --entrypoint [path]  path from publish dir to entrypoint
+                            (default: "__app.html")
+    -b, --serve-spa          serve spa (default: false)
+    -s, --serve-ssr          serve SSR (default: false)
+    -B, --spa-port [port]    port serving spa app (default: 5000)
+    -S, --ssr-port [port]    port serving SSR app (default: 5005)
+    -h, --help               display help for command
+```
+
+- **Netlify + Github integration** - Go to your Netlify control panel and connect it to a Routify repo. You'll have continuous deployments in minutes, complete with SSR, prerended static pages and dynamic imports. When connecting your repo, remember to set root path to ``scripts/netlify`` and build script to ``npm run build``. That is all! :)
+
+
+### Overdue thanks
+
+It has only been about a month since we launched this website and you would not be looking at it, had it not been for [MONO](https://mono.company/) who did the design. Big thanks! Especially to @wolfr_ and @evajacobs who (I assume!) have not slept while working on this project. Visit them at [mono.company](https://mono.company/). You will not be disappointed.
+
+Thanks also to
+[@rixo](https://github.com/rixo)
+[@kev](https://github.com/kevmodrome)
+[@jitesh](https://github.com/jkdoshi)
+
+
+### So that's that?!
+
+No. Come join us on [Discord](https://discord.gg/ntKJD5B) where we fight, joke and cry together. Practice social distancing with people who did it before it became trendy.
+
+
+
+<br>
+<br>
+
+---
+
+<br>
+
+<Author />

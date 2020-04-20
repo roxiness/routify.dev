@@ -34,22 +34,22 @@
     <Code language="svelte">
       {`
     <a href={$url('../introduction')}>
-      A test link to the introduction section
+      A link to the introduction section on your left
     </a>`}
     </Code>
     <a href={$url('../introduction')}>
-      A test link to the introduction section
+      A link to the introduction section on your left
     </a>
     <Note>
       <p>
         Unlike traditional links,
-        <code>url</code>
+        <code>$url</code>
         is relative to the layout or page it is located in and not the current
         URL in the address bar.
       </p>
       <p>
         You can read more about the
-        <code>url</code>
+        <code>$url</code>
         helper
         <a href={$url('/docs/helpers#url')}>here</a>
       </p>
@@ -63,7 +63,7 @@
       <code>isActive</code>
       helper tells you whether a path is active or not. It resolves the provided
       path with the
-      <code>url</code>
+      <code>$url</code>
       helper.
     </p>
     <Code language="svelte">
@@ -80,7 +80,7 @@
     </Code>
     <p>
       You can read more about the
-      <code>isActive</code>
+      <code>$isActive</code>
       helper
       <a href={$url('/docs/helpers#is-active')}>here</a>
     </p>
@@ -99,7 +99,7 @@
 
       const links =
       [
-        ['./index', 'Home'], //add index to make sure that the link isn't constantly active
+        ['./index', 'Home'], //add index if you don't want siblings to be considered children
         ['./blog', 'Blog'],
         ['./about', 'About'],
         ['./contact', 'Contact']
@@ -128,7 +128,7 @@
     <h3 class="c-h3">Automatic navigation generation</h3>
     <p>
       It is also possible to generate navigation from your file structure. In
-      fact all navigation on this site is generated - even hash links, external
+      fact all navigation on this site is generated. Even hash links, external
       links and the previous/next buttons you see below.
     </p>
     <p>

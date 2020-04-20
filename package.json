@@ -9,13 +9,13 @@
   "scripts": {
     "dev": "run-p routify rollup",
     "dev-dynamic": "cross-env BUNDLING=dynamic npm run dev",
-    "build": "routify -bD && rollup -c",
+    "build": "npm run routify D -- -b && rollup -c",
     "serve": "spassr --serve-spa --serve-ssr",
     "export": "routify export",
     "deploy:now": "cd scripts/now && npm run deploy",
     "deploy:netlify": "cd scripts/netlify && npm run deploy",
     "rollup": "rollup -cw",
-    "routify": "routify -D --extensions svelte,html,svx",
+    "routify": "routify -D --extensions svelte,html,svx,md",
     "build:sass": "node-sass --recursive --output dist/build --source-map true --source-map-contents scss",
     "watch:sass": "npm run build:sass && npm run build:sass -- --watch"
   },
@@ -25,14 +25,17 @@
     "@rollup/plugin-commonjs": "^11.1.0",
     "@rollup/plugin-node-resolve": "^7.1.3",
     "@sveltech/bricks": "^1.0.1-3",
-    "@sveltech/routify": "^1.5.2",
+    "@sveltech/routify": "^1.5.3",
     "concurrently": "^5.1.0",
+    "cross-env": "^7.0.2",
     "date-fns": "^2.12.0",
     "del": "^5.1.0",
     "js-yaml": "^3.13.1",
     "marked": "^0.8.2",
+    "mdsvex": "^0.5.1-beta.3",
     "npm-run-all": "^4.1.5",
     "ppid-changed": "^1.0.1",
+    "prism-svelte": "^0.4.6",
     "rollup": "^2.6.1",
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-livereload": "^1.2.0",
@@ -46,7 +49,7 @@
     "svelte-prism": "^1.1.2"
   },
   "dependencies": {
-    "mdsvex": "^0.4.0",
-    "prismjs": "^1.20.0"
+    "prismjs": "^1.20.0",
+    "remark-slug": "^6.0.0"
   }
 }

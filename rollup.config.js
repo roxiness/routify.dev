@@ -9,7 +9,7 @@ import svg from 'rollup-plugin-svg';
 import alias from '@rollup/plugin-alias'
 import markdown from '@jackfranklin/rollup-plugin-markdown'
 import { mdsvex } from 'mdsvex'
-
+import slug from 'remark-slug'
 
 
 const staticDir = 'static'
@@ -45,9 +45,15 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
       alias({ entries: [{ find: '@', replacement: './src' },] }),
       svelte({
         // enable run-time checks when not in production
-        extensions: ['.svelte', '.svx'],
+        extensions: ['.svelte', '.md', '.svx'],
         preprocess: mdsvex({
+          markdownOptions: {},
+          parser: x=>x,
+          remarkPlugins: [slug],
           extension: '.svx',
+          layouts: {
+            // code: join(__dirname, "./src/components/Code.svelte")
+          }
         }),
         dev: !production,
         hydratable: true,
@@ -102,7 +108,9 @@ const dynamicConfig = {
     format: 'esm',
     dir: buildDir
   },
-  plugins: []
+  plugins: [
+    !production && livereload(distDir),
+  ]
 }
 
 
@@ -115,14 +123,18 @@ export default configs
 
 function sass(production) {
   const sassTask = production ? 'build:sass' : 'watch:sass'
+  let started = false;
   return {
     writeBundle() {
-      require('child_process').spawn('npm', ['run', sassTask], {
-        stdio: ['ignore', 'inherit', 'inherit'],
-        shell: true
-      });
+      if (!started) {
+        started = true
+        require('child_process').spawn('npm', ['run', sassTask], {
+          stdio: ['ignore', 'inherit', 'inherit'],
+          shell: true
+        });
+      }
     }
-  };
+  }
 }
 
 function serve() {
