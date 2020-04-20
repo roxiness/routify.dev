@@ -1,31 +1,33 @@
-export default [
+const contributors = [
   {
     "name": "@jakedk",
     "github_url": "jakobrosenberg",
-    "imgpath": "jk"
+    "imgpath": "jakobrosenberg"
   },
   {
     "name": "@rixo",
     "github_url": "rixo",
-    "imgpath": "rx"
+    "imgpath": "rixo"
   },
   {
     "name": "@wolfr_",
     "github_url": "wolfr",
-    "imgpath": "jr"
+    "imgpath": "wolfr"
   },
   {
     "name": "@evajacobs",
     "github_url": "evajacobs",
-    "imgpath": "ej"
+    "imgpath": "evajacobs"
   },
   {
     "name": "@kev",
     "github_url": "kevmodrome",
-    "imgpath": "kev"
+    "imgpath": "kevmodrome"
   },
   {
     "name": "@jitesh",
     "github_url": "jkdoshi",
   }
 ]
+
+export { contributors }
