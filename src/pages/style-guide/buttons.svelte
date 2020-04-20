@@ -26,8 +26,8 @@
   <Button theme="primary" layout="icon-text" icon="chevron-left">Label</Button>
   <Button theme="primary" layout="text-icon" icon="chevron-right">Label</Button>
 
-  <Button theme="outline" layout="icon-text" icon="chevron-left">Label</Button>
-  <Button theme="outline" layout="text-icon" icon="chevron-right">Label</Button>
+  <Button layout="icon-text" icon="chevron-left">Label</Button>
+  <Button layout="text-icon" icon="chevron-right">Label</Button>
 </ButtonToolbar>
 `}
 >  
@@ -35,7 +35,7 @@
     <Button theme="primary" layout="icon-text" icon="chevron-left">Label</Button>
     <Button theme="primary" layout="text-icon" icon="chevron-right">Label</Button>
 
-    <Button theme="outline" layout="icon-text" icon="chevron-left">Label</Button>
-    <Button theme="outline" layout="text-icon" icon="chevron-right">Label</Button>
+    <Button layout="icon-text" icon="chevron-left">Label</Button>
+    <Button layout="text-icon" icon="chevron-right">Label</Button>
   </ButtonToolbar>
 </Component>

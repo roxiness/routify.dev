@@ -1,7 +1,9 @@
 <script>
   // @ts-check
   // @ts-ignore
-  import Note from "../../components/Note.svelte";
+  import Note from "@/components/Note.svelte";
+  import Button from '@/components/Button.svelte';
+
   import { url, layout } from "@sveltech/routify";
   import { format, formatRelative, parseISO } from "date-fns";
   import marked from 'marked'
@@ -34,8 +36,8 @@
               </p>
             </header>
             <div class="c-content">{@html marked(meta.blogpost.summary)}</div>
-            <a href="{$url(path)}">read more</a>
-
+            
+            <Button href="{$url(path)}">Read more</Button>
 
           </article>
         </li>
