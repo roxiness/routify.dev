@@ -53,7 +53,7 @@ That is all there is to it.
 Read more about [meta tags](/guide/metadata)
 
 
-### **Dynamic Basepaths**
+### Dynamic Basepaths
 
 Basepaths have been a long requested feature. Basepaths are strings but will be converted to RegExp’s internally.
 ``` svelte
@@ -73,7 +73,7 @@ To prerender a basepath add the basepath argument to your exporter.
 Read more about [basepaths](/docs/basepath)
 
 
-### **Automatic Navigation with Layout and Page Helpers**
+### Automatic Navigation with Layout and Page Helpers
 
 With the new layout and page helpers you can read a file’s metadata (not to be confused with metatags) or access its adjacent nodes.
 
@@ -108,7 +108,7 @@ These metadata children can be accessed in **$layout.children**.
 Read more about [Automatic Navigation](/guide/navigation)
 
 
-### **CLI Enhancements**
+### CLI Enhancements
 
 The init command now accepts `--branch --no-example --no-install and --start-dev`. If you are already used to Routify, this way you can get a starter template with a minimal amount of files.
 
@@ -125,7 +125,7 @@ $ npx @sveltech/routify init --help
     -h, --help           display help for command
 ```
 
-### **Query Support**
+### Query Support
 
 **$params** now accepts query strings.
 
@@ -137,6 +137,7 @@ console.log($params) // **{id: 123, theme: ‘dark’}**
 
 
 ### Improved Starter Template
+
 The starter template has received a lot of love and here are some of the improvements.
 
 - **Faster first build** - Rollup and Routify are now run in parallel to improve performance on first dev build.
