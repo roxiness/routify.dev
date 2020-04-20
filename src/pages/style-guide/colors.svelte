@@ -5,6 +5,7 @@
     {
       category: "Grays",
       items: [
+        { name: "$g-gray-50", hex: "#F3F6FA" },
         { name: "$g-gray-100", hex: "#DEE3EC" },
         { name: "$g-gray-200", hex: "#D1D7E2" },
         { name: "$g-gray-300", hex: "#B2BACC" },
