@@ -12,7 +12,7 @@
   }, 0);
 
   $: useMarkdown = !$isActive("./index");
-  $: _class = !$isActive("./index") ? "c-content c-markdown" : "";
+  $: _class = !$isActive("./index") ? "c-blogpost c-content" : "";
 </script>
 
 <div class="c-container-vertical">
