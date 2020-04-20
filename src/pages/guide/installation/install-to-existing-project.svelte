@@ -10,19 +10,20 @@
 
 <div class="c-container-vertical--small">
   <h1 class="c-h1">Install to existing project</h1>
-  <p>
-    This is a guide for installing Routify in an existing project. If you wish
-    to create a new project instead. Please refer to our
-    <a href={$url('../../getting-started')}>getting started guide</a>
-
-  </p>
+  <div class="c-content">
+    <p>
+      This is a guide for installing Routify in an existing project. If you wish
+      to create a new project instead. Please refer to our
+      <a href={$url('../../getting-started')}>getting started guide</a>.
+    </p>
+  </div>
 </div>
 
 <Note>
-  We recommend using the Starter Template for full functionality of Routify. If
+  <p>We recommend using the Starter Template for full functionality of Routify. If
   starting a new project isn't an option, we refer to our
   <a href="https://github.com/sveltech/routify-starter">Starter Template</a>
-  for implementation of features like SSR, prerendering and deployments.
+  for implementation of features like SSR, prerendering and deployments.</p>
 </Note>
 
 <div class="c-container-vertical--small">

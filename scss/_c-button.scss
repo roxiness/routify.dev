@@ -12,27 +12,37 @@ $c-button-link-color: $c-button-primary-color !default;
    ========================================================================== */
 
 .c-button {
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 1.2rem;
   display: inline-flex;
   border-radius: 0.2rem;
   border: none;
   appearance: none;
   border-radius: 0.6rem;
   font-size: 1.6rem;
+  align-items: center;
   font-family: $g-text-font-family;
   @at-root a#{&} {
     text-decoration: none;
   }
+  .o-svg-icon {
+    * {
+      fill: currentColor;
+    }
+  }
+  // Space between button and icon
+  .c-button__icon-wrap:first-child {
+    margin-right: 0.4rem;
+  }
+  .c-button__icon-wrap:last-child {
+    margin-left: 0.4rem;
+  }
+  
 }
-
 
 /* Skin variants
  ========================================================================== */
 
-.c-button--default {
-  background: #ddd;
-  color: #333;
-}
+// Primary
 
 .c-button--primary {
   background: $c-button-primary-color;
@@ -46,23 +56,21 @@ $c-button-link-color: $c-button-primary-color !default;
   }
 }
 
+// Outline
+
 .c-button--outline {
-  padding: calc(0.6rem - 0.1rem) calc(1rem - 0.1rem);
-  border: 0.1rem solid $gray-300;
-  color: $gray-700;
+  padding: calc(0.8rem - 0.1rem) calc(1.2rem - 0.1rem);
+  border: 0.1rem solid $g-gray-300;
+  color: $g-gray-600;
   .svg-icon {
     * {
-      fill: $gray-700;
+      fill: $g-gray-600;
     }
     margin: 0.2rem 0.6rem 0 0;
   }
   &:hover {
-    border-color: $gray-700;
+    border-color: $g-gray-600;
   }
-}
-
-.c-button--link {
-  color: $c-button-link-color;
 }
 
 /* Size variants
@@ -70,4 +78,9 @@ $c-button-link-color: $c-button-primary-color !default;
 
 .c-button--large {
   padding: 1.2rem 2.4rem;
+}
+
+.c-button--small {
+  font-size: 1.4rem;
+  padding: 0.6rem 1rem;
 }

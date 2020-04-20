@@ -8,7 +8,6 @@
    ========================================================================== */
 
 $c-table-background-color: #FFF !default;
-$c-table-border-color: #DDD !default;
 $c-table-row-odd-color: #EEE !default;
 
 /* Component
@@ -48,12 +47,12 @@ $c-table-row-odd-color: #EEE !default;
   }
 
   th {
-    border-bottom: 0.2rem solid $c-table-border-color;
+    border-bottom: 0.2rem solid $g-table-border-color;
     vertical-align: top;
   }
 
   td {
-    border-bottom: 0.1rem solid $c-table-border-color;
+    border-bottom: 0.1rem solid $g-table-border-color;
   }
 
   tr:last-child {
@@ -81,7 +80,7 @@ $c-table-row-odd-color: #EEE !default;
 }
 
 .c-table--bordered {
-  border: 0.1rem solid $c-table-border-color;
+  border: 0.1rem solid $g-table-border-color;
   border-radius: 0.3rem;
   border-collapse: separate;
 }
@@ -115,7 +114,7 @@ $c-table-row-odd-color: #EEE !default;
   }
 }
 
-.c-table--horizontal {
+.c-table.c-table--horizontal {
   th {
     width: 18rem;
     border-width: 0.1rem;
@@ -141,20 +140,6 @@ $c-table-row-odd-color: #EEE !default;
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
   }
-}
-
-/* Table column widths
-   ========================================================================== */
-
-$tableColCount: 16;
-$i: 1;
-
-@while $i < $tableColCount {
-  .o-table-col-#{$i} {
-    width: #{$i / $tableColCount * 100%};
-  }
-
-  $i: $i + 1;
 }
 
 /* Untable a table

@@ -3,16 +3,54 @@
    Prefixed with $g-
    ========================================================================== */
 
-/* Colors
+// Grays
+$g-gray-50: #F3F6FA;
+$g-gray-100: #DEE3EC;
+$g-gray-200: #D1D7E2;
+$g-gray-300: #B2BACC;
+$g-gray-400: #8D97AA;
+$g-gray-500: #636C7E;
+$g-gray-600: #4C5567;
+$g-gray-800: #1D2C48;
+
+// Pinks
+$g-pink-50: #FFF6FF;
+$g-pink-100: #FBE4FD;
+$g-pink-500: #E938C2;
+$g-pink-700: #BD239B;
+
+// Purples
+$g-purple-400: #AD62BF;
+$g-purple-600: #A60DCC;
+
+// Aqua
+$g-aqua-100: #D7F7FF;
+$g-aqua-500: #0DA5CC;
+
+// Blues
+$g-blue-200: #B6C8F5;
+$g-blue-400: #87A1E3;
+$g-blue-500: #5979CC;
+
+/* Semantic links to colors
    ========================================================================== */
 
-$g-heading-color: #000000;
-$g-text-color: #4C5567;
-$g-divider-color: #C9CDD4;
-$g-primary-color: #E938C2;
-$g-link-color: #BD239B;
-$gray-300: #B2BACC;
-$gray-700: #4C5567;
+$g-heading-color: $g-gray-800;
+$g-text-color: $g-gray-600;
+$g-divider-color: $g-gray-200;
+$g-primary-color: $g-pink-500;
+$g-link-color: $g-blue-500;
+
+/* Spacer unit
+   <1 to 6>
+   ========================================================================== */
+
+$g-spacer-1: 0.8rem;
+$g-spacer-2: 1.6rem;
+$g-spacer-3: 2.4rem;
+$g-spacer-4: 3.2rem;
+$g-spacer-5: 4.8rem;
+$g-spacer-6: 9.6rem;
 
 /* Type
    ========================================================================== */
@@ -25,3 +63,8 @@ $g-text-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Rob
 
 $g-bp-1: 500px;
 $g-bp-2: 900px;
+
+/* Components
+   =========================================================================== */
+
+$g-table-border-color: $g-gray-200;
