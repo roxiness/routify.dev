@@ -20,6 +20,13 @@
   li {
     margin-right: 1.2rem;
   }
+  li:nth-last-child(4) {
+    margin-right: 2.4rem;
+  }
+  li:nth-last-child(2),
+  li:nth-last-child(3) {
+    margin-right: 0.2rem;
+  }
   a {
     display: block;
     text-decoration: none;
