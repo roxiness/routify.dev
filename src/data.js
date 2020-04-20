@@ -1,32 +1,36 @@
 const contributors = [
   {
     "name": "@jakedk",
-    "github_url": "jakobrosenberg",
-    "imgpath": "jakobrosenberg"
+    "imgpath": "jakobrosenberg",
+    "realname": "Jakob Rosenberg",
+    "description": "Author of Routify and pathological routing enthusiast.",
+    "github": "jakobrosenberg",
+    "discord": "jakedk",
+    "twitter": "jakob_rosenberg"
   },
   {
     "name": "@rixo",
-    "github_url": "rixo",
+    "github": "rixo",
     "imgpath": "rixo"
   },
   {
     "name": "@wolfr_",
-    "github_url": "wolfr",
+    "github": "wolfr",
     "imgpath": "wolfr"
   },
   {
     "name": "@evajacobs",
-    "github_url": "evajacobs",
+    "github": "evajacobs",
     "imgpath": "evajacobs"
   },
   {
     "name": "@kev",
-    "github_url": "kevmodrome",
+    "github": "kevmodrome",
     "imgpath": "kevmodrome"
   },
   {
     "name": "@jitesh",
-    "github_url": "jkdoshi",
+    "github": "jkdoshi",
   }
 ]
 
