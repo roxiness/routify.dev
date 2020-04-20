@@ -7,7 +7,7 @@
 
 {#each indexableItems as item}
   <li class="c-navigation-mobile__item ">
-    {#if item.children && item.children.length}
+    {#if item.children && item.children.length && !item.meta["no-tree"]}
       <Accordion title={item.title}>
         <ul>
           {#if item.children}
