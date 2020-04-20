@@ -2,6 +2,7 @@
   //update your profile in src/data.js if something is missing or incorrect
   import { contributors } from "@/data.js";
   import { page } from "@sveltech/routify";
+  import Icon from "@/components/Icon.svelte";
   export let id = "";
   $: id = id || $page.meta.blogpost.author;
   $: contributor = contributors.find(c => c.github === id);
@@ -14,12 +15,22 @@
   <div>
     <h3 class="c-blogpost-author__name">{name}</h3>
     <p>{contributor.description}</p>
-    <ul class="c-horizontal-list c-horizontal-list--bordered">
+    <ul class="c-horizontal-list c-horizontal-list--bordered c-horizontal-list--icons">
       {#if contributor.github}
-        <li><a href="https://github.com/{contributor.github}">Github</a></li>
+        <li>
+          <a href="https://github.com/{contributor.github}">
+            <Icon name="github" size="20" />
+            Github
+          </a>
+        </li>
       {/if}
       {#if contributor.twitter}
-        <li><a href="https://twitter.com/{contributor.twitter}">Twitter</a></li>
+        <li>
+          <a href="https://twitter.com/{contributor.twitter}">
+            <Icon name="twitter" size="20" />
+            Twitter
+          </a>
+        </li>
       {/if}
     </ul>
   </div>

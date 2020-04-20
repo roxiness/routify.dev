@@ -4,7 +4,7 @@
   export let name = "";
   export let size = null;
 
-  const acceptedSizes = [null, "16", "20", "24"];
+  const acceptedSizes = [null, "16", "18", "20", "24"];
 
   $: if (!acceptedSizes.includes(size))
     console.error("size must be in", JSON.stringify(acceptedSizes));
