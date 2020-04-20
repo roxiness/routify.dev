@@ -8,32 +8,19 @@
   $: name = contributor.realname || contributor.name;
 </script>
 
-<style>
-  img {
-    border-radius: 100%;
-    width: 10rem;
-    height: 10rem;
-    margin-right: 1rem;
-  }
-  .author {
-    display:flex ;
-    align-items: center;
-  }
-  .name, p {
-    margin: 0;
-  }
-</style>
 
-<div class="author">
-  <img src="/images/collaborators/{contributor.imgpath}.jpg" alt="" />
+<div class="c-blogpost-author">
+  <img class="c-blogpost-author__img" src="/images/collaborators/{contributor.imgpath}.jpg" alt="" />
   <div>
-    <h3 class="name">{name}</h3>
+    <h3 class="c-blogpost-author__name">{name}</h3>
     <p>{contributor.description}</p>
-    {#if contributor.github}
-    <a href="https://github.com/{contributor.github}">Github</a>
-    {/if}
-    {#if contributor.twitter}
-      <a href="https://twitter.com/{contributor.twitter}">Twitter</a>
-    {/if}
+    <ul class="c-horizontal-list c-horizontal-list--bordered">
+      {#if contributor.github}
+        <li><a href="https://github.com/{contributor.github}">Github</a></li>
+      {/if}
+      {#if contributor.twitter}
+        <li><a href="https://twitter.com/{contributor.twitter}">Twitter</a></li>
+      {/if}
+    </ul>
   </div>
 </div>

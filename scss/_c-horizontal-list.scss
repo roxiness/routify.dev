@@ -5,6 +5,7 @@
 .c-horizontal-list {
   display: flex;
   > li {
+    list-style: none;
     margin-right: 0.8rem;
     @include link-styles(false);
   }
