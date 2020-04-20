@@ -162,3 +162,17 @@
   }
 
 }
+
+
+// Horizontal rule
+.c-hr, .c-content hr {
+  margin: 1.6rem 0;
+  border: none;
+  padding: 1.6rem 0;
+  border-bottom: 0.1rem solid $g-gray-300;
+}
+
+.c-hr--big {
+  margin: 3.2rem 0;
+  padding: 3.2rem 0;
+}
