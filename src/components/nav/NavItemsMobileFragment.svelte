@@ -3,29 +3,22 @@
   export let items;
   export let showMobileNav;
   $: indexableItems = items.filter(i => !i.isNonIndexable);
+
+  function getHref(item) {
+    return item.parent && item.parent.path + item.path
+  }
 </script>
 
 {#each indexableItems as item}
   <li class="c-navigation-mobile__item ">
-    {#if item.children && item.children.length && !item.meta["no-tree"]}
+    {#if item.children && item.children.length && !item.meta['no-tree']}
       <Accordion title={item.title}>
         <ul>
-          {#if item.children}
-            <svelte:self items={item.children} bind:showMobileNav />
-          {/if}
-          {#if item.meta && item.meta.links}
-            {#each item.meta.links as item}
-              <li class="c-navigation-mobile__item ">
-                <a on:click={() => (showMobileNav = false)} href="{item.href}">
-                  {item.title}
-                </a>
-              </li>
-            {/each}
-          {/if}
+          <svelte:self items={item.children} bind:showMobileNav />
         </ul>
       </Accordion>
     {:else}
-      <a on:click={() => (showMobileNav = false)} href="{item.path}">
+      <a on:click={() => (showMobileNav = false)} href={getHref(item)}>
         {item.title}
       </a>
     {/if}
