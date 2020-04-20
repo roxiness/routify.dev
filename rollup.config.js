@@ -123,14 +123,18 @@ export default configs
 
 function sass(production) {
   const sassTask = production ? 'build:sass' : 'watch:sass'
+  let started = false;
   return {
     writeBundle() {
-      require('child_process').spawn('npm', ['run', sassTask], {
-        stdio: ['ignore', 'inherit', 'inherit'],
-        shell: true
-      });
+      if (!started) {
+        started = true
+        require('child_process').spawn('npm', ['run', sassTask], {
+          stdio: ['ignore', 'inherit', 'inherit'],
+          shell: true
+        });
+      }
     }
-  };
+  }
 }
 
 function serve() {
