@@ -1,6 +1,6 @@
 <script>
-    import NavItems from './NavItems.svelte';
-    import NavItemsMobile from './NavItemsMobile.svelte';
+    import NavItems from './nav/NavItems.svelte';
+    import NavItemsMobile from './nav/NavItemsMobile.svelte';
     let showMobileNav = false
     let bodyElement = document.querySelector('body');
     let htmlElement = document.querySelector('html');
@@ -25,7 +25,7 @@
         <img src="/images/logo.svg" alt="Routify">
     </a>
 
-    <nav role="navigation" class="c-navigation">
+    <nav class="c-navigation">
         <NavItems />
     </nav>
 
@@ -44,7 +44,7 @@
 </header>
 
 <div class="c-navigation-mobile-holder" class:c-navigation-mobile-holder--active={showMobileNav}>
-    <nav role="navigation">
+    <nav>
         <NavItemsMobile bind:showMobileNav />
     </nav>
 </div>

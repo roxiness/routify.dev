@@ -5,6 +5,9 @@
    ========================================================================== */
 
 .c-navigation-mobile-holder {
+  @media (min-width: $g-bp-2) {
+    display: none !important;
+  }
   display: none;
   background: #FFF;
   bottom: 0;

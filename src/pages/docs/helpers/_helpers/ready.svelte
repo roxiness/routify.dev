@@ -18,30 +18,50 @@
     (instantly).
   </p>
 
-  <Code language="svelte">
+  <Code language="svelte" title="Promise example">
+    {`
+      <`}{`script>
+        import { ready } from '@sveltech/routify'
+          let data = {};
+
+          fetch("https://jsonplaceholder.typicode.com/todos/1")
+            .then(response => response.json())
+            .then(json => {data = json})
+            .then($ready)
+        </script>
+
+        <h1>{data.id} - {data.title}</h1>
+
+    `}
+  </Code>
+
+  <br />
+  <Code language="svelte" title="Await example">
+    <div slot="title">test</div>
     {`
       <`}{`script>
         import { ready } from '@sveltech/routify'
         let data = {};
+        getData()
 
         async function getData() {
-          const res = await fetch('//api.github.com/repos/sveltech/routify');
+          const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
           data = await res.json()
           $ready()
         }
 
-        getData()
       </script>
 
-      <h1>{data.name}</h1>
+      <h1>{data.id} - {data.title}</h1>
+
     `}
   </Code>
 
   <Note type="warning">
     If
     <code>$ready</code>
-    is present in your code, but never called, your app will never be
-    considered loaded. This could cause issues like hanging SSR.
+    is present in your code, but never called, your app will never be considered
+    loaded. This could cause issues like hanging SSR.
   </Note>
 
 </FunctionDoc>

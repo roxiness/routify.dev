@@ -1,0 +1,29 @@
+.c-blogpost > header {
+  h1, h2  {
+    font-size: 3.2rem;
+    font-weight: 700;
+    font-family: "Overpass", sans-serif;
+    a {
+      text-decoration: none;
+      color: $g-gray-800;
+    }
+  }
+}
+
+.c-blogpost > header p {
+  color: $g-gray-400;
+}
+
+.c-blogpost > header {
+  margin-bottom: 2.4rem;
+}
+
+// More spacing in heading structure
+.c-blogpost.c-content {
+  h1, h2, h3 {
+    margin-top: 4.8rem
+  }
+  h4 {
+    margin-top: 3.2rem
+  }
+}

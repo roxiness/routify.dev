@@ -5,24 +5,33 @@
 @import "_reset";
 
 // Settings
-@import "_s-colors";
 @import "_s-fonts";
 @import "_s-variables";
+@import "_s-mixins";
 
 // Elements
 @import "_e-base";
 
+// Objects
+@import "_o-svg-icon";
+
 // Components
 @import "_c-button";
+@import "_c-button-toolbar";
+@import "_c-blogpost";
+@import "_c-blogpost-list";
+@import "_c-blogpost-author";
 @import "_c-container-horizontal";
 @import "_c-container-vertical";
 @import "_c-content";
 @import "_c-contributors";
+@import "_c-contributor";
 @import "_c-footer";
+@import "_c-file-tree";
 @import "_c-function-doc";
 @import "_c-header";
-@import "_c-hr";
 @import "_c-hero";
+@import "_c-horizontal-list";
 @import "_c-logo";
 @import "_c-navigation";
 @import "_c-navigation-mobile";
@@ -39,9 +48,15 @@
 
 // Utilities
 @import "_u-flex";
+@import "_u-generic";
 @import "_u-spacer";
 
 // External
 @import "_prism";
 
-html {scroll-behavior: smooth;} //todo do we have a place for globals?
+// Styleguide specific
+@import "c-styleguide-color-swatch"; // might want to separate these styleguide components from the rest
+@import "c-styleguide-color-swatch-list"; // might want to separate these styleguide components from the rest
+@import "c-styleguide-icon-list"; // might want to separate these styleguide components from the rest
+@import "c-styleguide-icon"; // might want to separate these styleguide components from the rest
+@import "c-styleguide-component"; // might want to separate these styleguide components from the rest

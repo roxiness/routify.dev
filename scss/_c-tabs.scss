@@ -2,14 +2,20 @@
   c-tabs
    ========================================================================== */
 
+.c-tabs {
+  border-bottom: 0.1rem solid $g-gray-200;
+}
+
 .c-tabs button {
-  padding: .8rem;
+  padding: .8rem 1.6rem;
   background: #FFF;
   color: $g-primary-color;
   border: none;
   font-family: $g-text-font-family;
   font-size: 1.6rem;
   font-weight: 500;
+  position: relative;
+  top: 0.1rem;
 
   &:hover,
   &:focus {

@@ -1,0 +1,14 @@
+.c-blogpost-list {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.c-blogpost-list__item {
+  margin-bottom: $g-spacer-5;
+  padding-bottom: $g-spacer-5;
+  border-bottom: 0.1rem solid $g-divider-color;
+  &:last-child {
+    margin: 0;
+    border: none;
+  }
+}

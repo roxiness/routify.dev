@@ -2,16 +2,6 @@
    c-navigation
    ========================================================================== */
 
-.c-navigation__github-logo {
-  img {
-    display: block;
-  }
-}
-.c-navigation__github-link {
-  display: block;
-  margin-right: 1.6rem;
-}
-
 .c-navigation ul {
   display: flex;
   align-items: center;
@@ -22,44 +12,50 @@
 }
 
 .c-navigation {
-  li {
-    margin-right: 1.2rem;
-    &:last-child {
-      margin: 0;
-      margin-left: 1.2rem;
+  .o-svg-icon {
+    path, circle {
+      opacity: 0.5;
     }
   }
-  li:not(:last-child) {
-    a {
-      text-decoration: none;
-      color: #1D2C48;
-      padding: 1rem 1.2rem;
-      border-radius: .8rem;
-      display: block; /* need for pseudo selector ::first-letter */
-
-      &:hover,
-      &:focus {
-        color: $g-link-color;
-        background: #FFF6FF;
+  li {
+    margin-right: 0.8rem;
+  }
+  li:nth-last-child(4) {
+    margin-right: 2.4rem;
+  }
+  li:nth-last-child(2),
+  li:nth-last-child(3) {
+    margin-right: 0.2rem;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    color: #1D2C48;
+    padding: 1rem 1.2rem;
+    border-radius: .8rem;
+    &::first-letter { text-transform: capitalize }
+    &:hover,
+    &:focus {
+      color: $g-pink-700;
+      background: #FFF6FF;
+      .o-svg-icon {
+        path, circle {
+          opacity: 1;
+        }
       }
-      &::first-letter { text-transform: capitalize }
     }
   }
 }
 
 .c-navigation__item--selected a {
   background-color: #FFE3FF;
-  color: $g-link-color;
+  color: $g-pink-700;
 }
 
 
 @media (max-width: $g-bp-2) {
 
   .c-navigation {
-    display: none;
-  }
-
-  .c-navigation__github-logo {
     display: none;
   }
 

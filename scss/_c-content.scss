@@ -2,7 +2,10 @@
   c-content
    ========================================================================== */
 
-.c-h1 {
+/* Headings
+   ========================================================================== */
+
+.c-h1, .c-content h1 {
   font-weight: 600;
   color: $g-heading-color;
   line-height: 1.25;
@@ -15,123 +18,161 @@
   }
 }
 
-.c-h2 {
+.c-h2, .c-content h2 {
   font-weight: 600;
   line-height: 1.25;
   color: $g-heading-color;
   font-family: $g-headings-font-family;
   margin: 0 0 1.6rem;
-  
+
   font-size: 2.4rem;
   @media (min-width: $g-bp-2) {
     font-size: 3.2rem;
   }
-  
 }
 
-.c-h3 {
+.c-h3, .c-content h3 {
   font-size: 1.8rem;
   font-weight: 600;
   color: $g-heading-color;
   margin: 0 0 1.6rem;
 }
 
-.c-h4 {
+.c-h4, .c-content h4 {
   font-size: 1.6rem;
   font-weight: 600;
   color: $g-heading-color;
   margin: 0 0 1.6rem;
 }
 
-.c-p {
+/* Regular text
+   ========================================================================== */
+
+.c-p, .c-content p {
   margin-bottom: 1.6rem;
+  // supposing body text is 1.6rem
 }
 
-.c-ul {
+.c-p--small, .c-content p small {
+  font-size: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+
+/* Quotes
+   ========================================================================== */
+
+.c-blockquote, .c-content blockquote {
+  font-style: italic;
+  padding: 0 0 0 1.6rem;
+  margin: 0 0 1.6rem;
+  border-left: 0.4rem solid $g-gray-200;
+}
+
+/* Lists
+   ========================================================================== */
+
+.c-ul, .c-content ul,
+.c-ol, .c-content ol {
   margin: 0 0 1.6rem 2.4rem;
 }
 
-.c-ul > li {
+.c-ul > li,
+.c-content ul > li {
   list-style: disc;
+}
+
+.c-ol > li,
+.c-content ol > li {
+  list-style: decimal;
+}
+
+.c-content pre, .c-pre {
+  background: #250032;
+  padding: 1.6rem;
+  margin: 0 0 1.6rem;
+  .c-code, code {
+    color: #FFF;
+    background: none;
+  }
+}
+
+.c-code,
+.c-content code {
+  font-size: 85%;
+  padding: 0.3rem;
+  border-radius: 0.2rem;
+  font-family: Monaco, Menlo, monospace;
+  background: #FFF6FF;
+
+}
+
+// for more advanced  .c-table styles, refer to _c-table.scss
+.c-content table {
+  border: 0.1rem solid $g-table-border-color;
+  border-radius: 0.3rem;
+  border-collapse: separate;
+  width: 100%;
+  margin: 0 0 2.4rem;
+
+  th, td {
+    text-align: left;
+  }
+
+  td,
+  th {
+    text-align: left;
+    vertical-align: top;
+    position: relative;
+    padding: 1.6rem;
+    position: relative;
+  }
+
+  th {
+    font-weight: 500;
+    border-bottom: 0.2rem solid $g-table-border-color;
+    vertical-align: top;
+  }
+
+  td {
+    border-bottom: 0.1rem solid $g-table-border-color;
+  }
+
+  tr:last-child {
+    td {
+      border: none;
+    }
+  }
+
+}
+
+// Proper link styles
+.c-content {
+  @include link-styles(true);
 }
 
 .c-content {
 
-  a {
-    color: #597CD7;
-    text-decoration: none;
-    border-bottom: 1px solid #B6C8F5;
-  }
-
-  a:visited {
-    color: #AD62BF;
-    border-color: #E8BDF3;
-  }
-
-  h1 {
+  strong, b {
     font-weight: 600;
-    color: $g-heading-color;
-    font-family: $g-headings-font-family;
-    margin: 0 0 1.6rem;
-    
-    font-size: 3.2rem;
-    @media (min-width: $g-bp-2) {
-      font-size: 4rem;
-    }
+    color: $g-gray-800;
   }
 
-  h2 {
-    font-weight: 600;
-    color: $g-heading-color;
-    font-family: $g-headings-font-family;
-    margin: 0 0 1.6rem;
-    
-    font-size: 2.4rem;
-    @media (min-width: $g-bp-2) {
-      font-size: 3.2rem;
-    }
-  }
-
-  h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: $g-heading-color;
-    margin: 0 0 1.6rem;
-  }
-
-  h4 {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: $g-heading-color;
-    margin: 0 0 1.6rem;
-  }
-
-  p {
-    margin-bottom: 1.6rem;
-  }
-
-  ul {
-    margin: 0 0 1.6rem 2.4rem;
-  }
-  
-  strong {
-    font-weight: 600;
-  }
-  
-  em {
+  em, i {
     font-style: italic;
   }
 
-  li {
-    list-style: disc;
-  }
+}
 
-  code {
-    font-size: 85%;
-    padding: 0.3rem;
-    border-radius: 0.2rem;
-    font-family: Monaco, Menlo, monospace;
-    background: #FFF6FF;
-  }
 
+// Horizontal rule
+.c-hr, .c-content hr {
+  margin: 1.6rem 0;
+  border: none;
+  padding: 1.6rem 0;
+  border-bottom: 0.1rem solid $g-gray-300;
+}
+
+.c-hr--big {
+  margin: 3.2rem 0;
+  padding: 3.2rem 0;
 }

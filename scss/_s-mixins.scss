@@ -1,0 +1,26 @@
+@mixin link-styles($border) {
+
+  a:link {
+    color: $g-blue-500;
+    text-decoration: none;
+    @if $border {
+      border-bottom: 0.1rem solid rgba($g-blue-500, 0.33);
+    }
+  }
+
+  a:visited {
+    color: $g-purple-400;
+    border-color: rgba($g-purple-400,0.33);
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    color: $g-pink-700;
+    text-decoration: none;
+    @if $border {
+      border-bottom: 0.1rem solid rgba($g-pink-700,0.33);
+    }
+  }
+
+}
