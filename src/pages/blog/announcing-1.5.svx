@@ -1,11 +1,13 @@
 <script>
   import Author from '@/components/Author.svelte'
+  import Title from './_title.svelte'
+  import { page } from '@sveltech/routify'
 </script>
 
 <!-- routify:options blogpost={
   "published": "2020-04-20T11:45:06.574Z",
   "author": "jakobrosenberg",
-  "title": "Announcing 1.5",
+  "title": "Announcing v1.5",
   "summary": `
   Welcome to the brand-new Routify blog. This is not just the first post on Routify,
    but also my first ever blog post. Scary. For this cherry popping first post, we’re
@@ -19,8 +21,7 @@
   `
 } -->
 
-
-# Announcing v1.5.0
+<Title node = { $page } />
 
 Welcome to the brand-new Routify blog. This is not just the first blog post on Routify, but also my first ever blog post. Scary. For this cherry-popping first-post, we’re very happy to announce that 1.5 is finally ready. Among the highlights in this version are:
 
@@ -172,12 +173,13 @@ $ npx spassr --help
 
 ### Overdue thanks
 
-It has only been about a month since we launched this website and you would not be looking at it, had it not been for [MONO](https://mono.company/) who did the design. Big thanks! Especially to @wolfr_ and @evajacobs who (I assume!) have not slept while working on this project. Visit them at [mono.company](https://mono.company/). You will not be disappointed.
+It has only been about a month since we launched this website and you would not be looking at it, had it not been for [Mono](https://mono.company/) who did the design. Big thanks! Especially to @wolfr_ and @evajacobs who (I assume!) have not slept while working on this project. Visit them at [mono.company](https://mono.company/). You will not be disappointed.
 
 Thanks also to
 [@rixo](https://github.com/rixo)
 [@kev](https://github.com/kevmodrome)
 [@jitesh](https://github.com/jkdoshi)
+and everyone whose embiggening efforts have kept Routify cromulent.
 
 
 ### So that's that?!

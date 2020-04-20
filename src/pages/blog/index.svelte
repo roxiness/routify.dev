@@ -3,6 +3,7 @@
   // @ts-ignore
   import Note from "@/components/Note.svelte";
   import Button from '@/components/Button.svelte';
+  import Title from './_title.svelte'
 
   import { url, layout } from "@sveltech/routify";
   import { format, formatRelative, parseISO } from "date-fns";
@@ -21,23 +22,13 @@
     <h1 class="c-h1">Blog</h1>
 
     <ul class="c-blogpost-list">
-      {#each posts as { path, title, meta }}
+      {#each posts as node}
         <li class="c-blogpost-list__item">
           <article class="c-blogpost">
-            <header>
-              <h2>
-                <a href={$url(path)}>{meta.blogpost.title}</a>
-              </h2>
-              <p>
-                Written by {meta.blogpost.author}
-                <span class="published">
-                  {formatRelative(parseISO(meta.blogpost.published), new Date())}
-                </span>
-              </p>
-            </header>
-            <div class="c-content">{@html marked(meta.blogpost.summary)}</div>
-            
-            <Button href="{$url(path)}">Read more</Button>
+            <Title {node} />
+            <div class="c-content">{@html marked(node.meta.blogpost.summary)}</div>
+
+            <Button href="{$url(node.path)}">Read more</Button>
 
           </article>
         </li>
