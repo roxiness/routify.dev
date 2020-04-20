@@ -41,8 +41,8 @@
     etc.
     <p>
       When prerendering basepaths, make sure to specify each basepath to be
-      rendered
+      rendered.
     </p>
-    <Code>routify export --basepath "en,fr,de"</Code>
+    <Code>npx routify export --basepath "en,fr,de"</Code>
   </div>
 </div>
