@@ -5,7 +5,9 @@
   $: indexableItems = items.filter(i => !i.isNonIndexable);
 
   function getHref(item) {
-    return item.parent && item.parent.path + item.path
+    // if link is an anchor, we need to prefix it with the parent path
+    const prefix = item.path.match(/^#/) ? item.parent && item.parent.path : "";
+    return prefix + item.path;
   }
 </script>
 
