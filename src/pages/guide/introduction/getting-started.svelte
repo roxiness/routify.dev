@@ -9,7 +9,7 @@
 <!-- routify:options index=10 -->
 
 <div class="c-content">
-  <div class="c-container-vertical--small">
+  <div class="c-container-vertical c-container-vertical--small">
     <h1 class="c-h1">Getting started</h1>
     <p>
       The easiest way to try Routify is to visit our
@@ -33,7 +33,7 @@
   </div>
 </div>
 
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
   <h3 class="h3">Installation</h3>
     <p>

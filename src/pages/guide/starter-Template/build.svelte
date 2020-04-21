@@ -4,7 +4,7 @@
 </script>
 
 <!-- routify:options index=30 -->
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h1 class="c-h1">Build</h1>
     <h3 class="c-h3">What's in the default build?</h3>
@@ -35,7 +35,7 @@
     </ul>
   </div>
 </div>
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h3 class="c-h3">How to build</h3>
     <p>To build your app for production</p>
@@ -50,7 +50,7 @@
 
   </div>
 </div>
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <Note>
       <h3 class="c-h5">If you're rolling your own</h3>

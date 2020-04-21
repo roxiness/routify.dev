@@ -6,7 +6,7 @@
 
 <!-- routify:options index=20 -->
 <div class="c-content">
-  <div class="c-container-vertical--small">
+  <div class="c-container-vertical c-container-vertical--small">
     <h1 class="c-h1">SSR</h1>
 
     <p>

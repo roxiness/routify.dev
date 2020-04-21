@@ -17,7 +17,7 @@
   </p>
 </div>
 
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h2>Authentication guards</h2>
     <p>
@@ -89,7 +89,7 @@
   </div>
 </div>
 
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h2>Authorization Guards</h2>
     <p>
@@ -201,7 +201,7 @@
     </Tabs>
   </div>
 </div>
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h3>Realtime guards</h3>
     <p>

@@ -8,7 +8,7 @@
 
 <!-- routify:options index=10 -->
 
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h1 class="c-h1">Creating an app</h1>
     <p>To create your first Routify app, open an empty folder and type</p>
@@ -26,7 +26,7 @@
 
 </div>
 
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h3>Bundled examples</h3>
     <p>
