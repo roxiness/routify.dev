@@ -17,9 +17,9 @@
 <style>
   pre {
     font-family: monospace;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: bold;
-    margin: 0 64px 0 12px;
+    margin: 0 6.4rem 0 1.2rem;
   }
 </style>
 
