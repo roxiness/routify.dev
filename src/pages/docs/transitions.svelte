@@ -7,7 +7,7 @@
 
 
 <h1 class="c-h1">Transitions</h1>
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h3>TabsTransition</h3>
     <p>
@@ -45,7 +45,7 @@
     </Prism>
   </div>
 </div>
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h3>BaseTransition</h3>
     <p>Template for creating your own decorations.</p>

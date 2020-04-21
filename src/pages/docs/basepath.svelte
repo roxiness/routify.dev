@@ -4,7 +4,7 @@
 
 <!-- routify:options index=50 -->
 <div class="c-content">
-  <div class="c-container-vertical--small">
+  <div class="c-container-vertical c-container-vertical--small">
     <h1 class="c-h1">Basepath</h1>
 
     <p>
@@ -26,7 +26,7 @@
     `}
     </Code>
   </div>
-  <div class="c-container-vertical--small">
+  <div class="c-container-vertical c-container-vertical--small">
     <p>
       Since strings are converted to regular expressions you can also use
       dynamic basepaths.

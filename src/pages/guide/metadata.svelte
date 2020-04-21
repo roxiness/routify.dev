@@ -5,7 +5,7 @@
 
 <!-- routify:options index=40 -->
 <div class="c-content">
-  <div class="c-container-vertical--small">
+  <div class="c-container-vertical c-container-vertical--small">
     <h1 class="c-h1">Metadata and OpenGraph</h1>
 
     <p>
@@ -35,7 +35,7 @@
       will not generate OG data.
     </p>
   </div>
-  <div class="c-container-vertical--small">
+  <div class="c-container-vertical c-container-vertical--small">
     <h3 class="c-h3">Templates</h3>
     <p>
       Templates can be set with

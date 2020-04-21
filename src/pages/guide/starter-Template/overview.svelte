@@ -17,14 +17,14 @@
 <style>
   pre {
     font-family: monospace;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: bold;
-    margin: 0 64px 0 12px;
+    margin: 0 6.4rem 0 1.2rem;
   }
 </style>
 
 <!-- routify:options index=10 -->
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h1 class="c-h1">Overview</h1>
 
@@ -43,7 +43,7 @@
   </div>
 </div>
 <div>
-  <div class="c-container-vertical--small">
+  <div class="c-container-vertical c-container-vertical--small">
     <div class="c-content">
       <h3 class="c-h3">Starter template structure</h3>
     </div>
@@ -59,7 +59,7 @@
     </table>
   </div>
 </div>
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h3 class="c-h3">Build and deploy</h3>
     <Prism>

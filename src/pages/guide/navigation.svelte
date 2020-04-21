@@ -8,14 +8,14 @@
 <!-- routify:options index=50 -->
 
 <div class="c-content">
-  <div class="c-container-vertical--small">
+  <div class="c-container-vertical c-container-vertical--small">
     <h1 class="c-h1">Navigation</h1>
     <p>
       There's a million ways to handle navigation. Hopefully this page can save
       you some time when creating the navigation for your next project.
     </p>
   </div>
-  <div class="c-container-vertical--small">
+  <div class="c-container-vertical c-container-vertical--small">
     <h3 class="c-h3">The url helper</h3>
     <p>
       The
@@ -56,7 +56,7 @@
     </Note>
   </div>
 
-  <div class="c-container-vertical--small">
+  <div class="c-container-vertical c-container-vertical--small">
     <h3 class="c-h3">The isActive helper</h3>
     <p>
       The
@@ -86,7 +86,7 @@
     </p>
   </div>
 
-  <div class="c-container-vertical--small">
+  <div class="c-container-vertical c-container-vertical--small">
     <h3 class="c-h3">Handling multiple links</h3>
     <p>
       Links can be handled in an array of different ways. This might be the
@@ -124,7 +124,7 @@
     </Code>
   </div>
 
-  <div class="c-container-vertical--small">
+  <div class="c-container-vertical c-container-vertical--small">
     <h3 class="c-h3">Automatic navigation generation</h3>
     <p>
       It is also possible to generate navigation from your file structure. In

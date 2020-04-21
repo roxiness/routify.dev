@@ -6,11 +6,11 @@
 
 <!-- routify:options index=40 -->
 <div class="c-content">
-  <div class="c-container-vertical--small">
+  <div class="c-container-vertical c-container-vertical--small">
     <h1 class="c-h1">Overview</h1>
     <p>Deployments can be done in a few different ways.</p>
   </div>
-  <div class="c-container-vertical--small">
+  <div class="c-container-vertical c-container-vertical--small">
     <h3 class="c-h3">Netlify</h3>
     <ul>
       <li>
@@ -62,7 +62,7 @@
     </ul>
 
   </div>
-  <div class="c-container-vertical--small">
+  <div class="c-container-vertical c-container-vertical--small">
     <h3 class="c-h3">Now</h3>
     <ul>
       <li>
@@ -90,7 +90,7 @@
       </li>
     </ul>
   </div>
-  <div class="c-container-vertical--small">
+  <div class="c-container-vertical c-container-vertical--small">
     <h3 class="c-h3">Custom</h3>
     <p>
       It's possible to host Routify on your own server. We recommend
