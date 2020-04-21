@@ -41,7 +41,7 @@ Set meta tags and Open Graph data directly from Routify, in a single line. For e
 import { metatags} from "@sveltech/routify";
 
 // set a metatag
-$: metatags.title = "My app - home";
+$: $metatags.title = "My app - home";
 ```
 will output the following:
 ``` html
