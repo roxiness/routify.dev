@@ -38,7 +38,7 @@ Welcome to the brand-new Routify blog. This is not just the first blog post on R
 Set meta tags and Open Graph data directly from Routify, in a single line. For example this code...
 ``` javascript
 // import metatags
-import { metatags} from "@sveltech/routify";
+import { metatags } from "@sveltech/routify";
 
 // set a metatag
 $: metatags.title = "My app - home";
@@ -57,7 +57,7 @@ Read more about [meta tags](/guide/metadata)
 ### Dynamic Basepaths
 
 Basepaths have been a long requested feature. Basepaths are strings but will be converted to RegExp’s internally.
-``` svelte
+``` html
 <script>
   import { Router, basepath } from "@sveltech/routify";
   import { routes } from "@sveltech/routify/tmp/routes";
@@ -79,7 +79,7 @@ Read more about [basepaths](/docs/basepath)
 With the new layout and page helpers you can read a file’s metadata (not to be confused with metatags) or access its adjacent nodes.
 
 Here’s an example of creating automatic navigation with a layout helper:
-```svelte
+```html
 <script>
   //let's import what we need
   import { isActive, url, layout } from "@sveltech/routify";

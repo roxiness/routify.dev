@@ -6,6 +6,7 @@
   import "prismjs/components/prism-shell-session";
   import "prismjs/components/prism-json";
   import "prismjs/components/prism-javascript";
+  import 'prism-svelte'
 
   setTimeout(() => {
     Prism.highlightAll();
@@ -25,3 +26,4 @@
   </div>
 </div>
 <!-- routify:options index=50 -->
+<!-- routify:options no-tree=true -->
