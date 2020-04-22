@@ -47,7 +47,7 @@
   </Prism>
 
   <br />
-  <h3 class="c-h3">Synchronisity</h3>
+  <h3 class="c-h3">Synchronicity</h3>
   <p>
     Local parameters are directly synchronized with the address bar whereas
     global parameters are first propagated through the layout component chain.
