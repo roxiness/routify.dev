@@ -20,7 +20,6 @@
     "watch:sass": "npm run build:sass && npm run build:sass -- --watch"
   },
   "devDependencies": {
-    "@jackfranklin/rollup-plugin-markdown": "^0.2.0",
     "@rollup/plugin-alias": "^3.1.0",
     "@rollup/plugin-commonjs": "^11.1.0",
     "@rollup/plugin-node-resolve": "^7.1.3",
