@@ -44,7 +44,6 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
       svg(), //todo are we using this?
       alias({ entries: [{ find: '@', replacement: './src' },] }),
       svelte({
-        // enable run-time checks when not in production
         extensions: ['.svelte', '.md', '.svx'],
         preprocess: mdsvex({
           remarkPlugins: [slug],
@@ -53,6 +52,7 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
             "blogpost": "./src/components/MarkdownBlogLayout.svelte"
           }
         }),
+        // enable run-time checks when not in production
         dev: !production,
         // we'll extract any component CSS out into
         // a separate file — better for performance
