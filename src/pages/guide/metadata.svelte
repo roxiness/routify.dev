@@ -10,13 +10,13 @@
 
     <p>
       Metatags and OG can be set with the
-      <code>$metatags</code>
+      <code>metatags</code>
       helper.
     </p>
     <Prism>
       {`
-        import { @metatags } from '@sveltech/Routify'
-        $metatags.description = 'Routes for Svelte'
+        import { metatags } from '@sveltech/Routify'
+        metatags.description = 'Routes for Svelte'
     `}
     </Prism>
     <p>Would render the following HTML</p>
@@ -39,13 +39,13 @@
     <h3 class="c-h3">Templates</h3>
     <p>
       Templates can be set with
-      <code>$metatags.template(property, callback)</code> ie.
-      <code>$metatags.template("title", value => `My Site - ${`{value}`}`)</code>.
+      <code>metatags.template(property, callback)</code> ie.
+      <code>metatags.template("title", value => `My Site - ${`{value}`}`)</code>.
       If multiple layouts with templates are present, the layout nearest the root takes precedence.
     </p>
     <Note>
       Setting
-      <code>$metatags.title = "Routify"</code>
+      <code>metatags.title = "Routify"</code>
       also generates
       <code>{`<title>Routify</title>`}</code>
     </Note>
