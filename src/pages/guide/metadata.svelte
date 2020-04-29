@@ -15,7 +15,7 @@
     </p>
     <Prism>
       {`
-        import { metatags } from '@sveltech/Routify'
+        import { metatags } from '@sveltech/routify'
         metatags.description = 'Routes for Svelte'
     `}
     </Prism>
