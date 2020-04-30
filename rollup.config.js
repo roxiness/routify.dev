@@ -7,7 +7,6 @@ import copy from 'rollup-plugin-copy'
 import del from 'del'
 import svg from 'rollup-plugin-svg';
 import alias from '@rollup/plugin-alias'
-import markdown from '@jackfranklin/rollup-plugin-markdown'
 import { mdsvex } from 'mdsvex'
 import slug from 'remark-slug'
 
@@ -40,7 +39,6 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
           { src: `${staticDir}/__index.html`, dest: distDir, rename: '__app.html', transform },
         ], copyOnce: true
       }),
-      markdown(),
       svg(), //todo are we using this?
       alias({ entries: [{ find: '@', replacement: './src' },] }),
       svelte({
