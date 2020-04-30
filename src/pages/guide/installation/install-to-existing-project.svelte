@@ -14,7 +14,7 @@
     <p>
       This is a guide for installing Routify in an existing project. If you wish
       to create a new project instead. Please refer to our
-      <a href={$url('../../getting-started')}>getting started guide</a>.
+      <a href={$url('/guide/introduction/getting-started')}>getting started guide</a>.
     </p>
   </div>
 </div>
