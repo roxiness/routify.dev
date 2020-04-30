@@ -2,7 +2,7 @@
     let usps = [
         {
             headline: "Hit the ground running",
-            text: "No need to configure a single route. Routes are generated from file."
+            text: "No need to configure a single route. Routes are generated from file structure."
         },
         {
             headline: "Scoped everything",
