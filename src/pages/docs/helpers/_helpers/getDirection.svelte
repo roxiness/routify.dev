@@ -23,7 +23,7 @@
   <Code language="svelte">
     {`
       <`}{`script>
-        import { route } from '@sveltech/routify'
+        import { route, getDirection } from '@sveltech/routify'
         $: lastRoute = $route.last
         $: direction = getDirection($route, lastRoute)
       </script>
