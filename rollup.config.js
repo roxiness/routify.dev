@@ -39,7 +39,7 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
           { src: `${staticDir}/__index.html`, dest: distDir, rename: '__app.html', transform },
         ], copyOnce: true
       }),
-      svg(), //todo are we using this?
+      svg(),
       alias({ entries: [{ find: '@', replacement: './src' },] }),
       svelte({
         extensions: ['.svelte', '.md', '.svx'],
