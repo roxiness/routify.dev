@@ -16,7 +16,7 @@
   ];
 </script>
 
-<FunctionDoc name="$getDirection" {params}>
+<FunctionDoc name="getDirection" {params}>
   <p>
     Takes two components and returns returns the difference between their siblings ancestors <code>meta.$index</code>.
   </p>
@@ -25,7 +25,7 @@
       <`}{`script>
         import { route } from '@sveltech/routify'
         $: lastRoute = $route.last
-        $: direction = $getDirection($route, lastRoute)
+        $: direction = getDirection($route, lastRoute)
       </script>
     `}
   </Code>
