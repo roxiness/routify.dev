@@ -35,9 +35,9 @@
   </Code>
 
   <Note type="info">
-      <code>$getConcestor</code>
+      <code>getConcestor</code>
       is used by
-      <code>$getDirection</code>
+      <code>getDirection</code>
       to determine the direction when navigating.
   </Note>
 
