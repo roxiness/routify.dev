@@ -17,7 +17,7 @@
   ];
 </script>
 
-<FunctionDoc name="$getConcestor" {params}>
+<FunctionDoc name="getConcestor" {params}>
   <p>
     Takes two components and returns their closest shared layout and their
     sibling ancestors.
@@ -28,7 +28,7 @@
       <`}{`script>
         import { route } from '@sveltech/routify'
         $: lastRoute = $route.last
-        $: ([concestor, ancestor, oldAncestor] = $getConcestor($route, lastRoute))
+        $: ([concestor, ancestor, oldAncestor] = getConcestor($route, lastRoute))
         $: direction = ancestor.meta.$index - oldAncestor.meta.$index
       </script>
     `}
