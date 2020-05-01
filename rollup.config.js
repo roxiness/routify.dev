@@ -7,7 +7,6 @@ import copy from 'rollup-plugin-copy'
 import del from 'del'
 import svg from 'rollup-plugin-svg';
 import alias from '@rollup/plugin-alias'
-import markdown from '@jackfranklin/rollup-plugin-markdown'
 import { mdsvex } from 'mdsvex'
 import slug from 'remark-slug'
 
@@ -40,11 +39,9 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
           { src: `${staticDir}/__index.html`, dest: distDir, rename: '__app.html', transform },
         ], copyOnce: true
       }),
-      markdown(),
       svg(),
       alias({ entries: [{ find: '@', replacement: './src' },] }),
       svelte({
-        // enable run-time checks when not in production
         extensions: ['.svelte', '.md', '.svx'],
         preprocess: mdsvex({
           remarkPlugins: [slug],
@@ -53,6 +50,7 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
             "blogpost": "./src/components/MarkdownBlogLayout.svelte"
           }
         }),
+        // enable run-time checks when not in production
         dev: !production,
         // we'll extract any component CSS out into
         // a separate file — better for performance
@@ -164,13 +162,13 @@ function prerender() {
 
 function bundledTransform(contents) {
   return contents.toString().replace('__SCRIPT__', `
-		<script defer src="/build/bundle.js" ></script>
-	`)
+    <script defer src="/build/bundle.js" ></script>
+  `)
 }
 
 function dynamicTransform(contents) {
   return contents.toString().replace('__SCRIPT__', `
-		<script type="module" defer src="https://unpkg.com/dimport@1.0.0/dist/index.mjs?module" data-main="/build/main.js"></script>
-		<script nomodule defer src="https://unpkg.com/dimport/nomodule" data-main="/build/main.js"></script>
-	`)
+    <script type="module" defer src="https://unpkg.com/dimport@1.0.0/dist/index.mjs?module" data-main="/build/main.js"></script>
+    <script nomodule defer src="https://unpkg.com/dimport/nomodule" data-main="/build/main.js"></script>
+  `)
 }

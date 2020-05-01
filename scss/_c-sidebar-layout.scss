@@ -27,6 +27,9 @@
   }
 
   .c-sidebar-layout__main {
+    > .c-container-vertical:first-child {
+      padding: 0;
+    }
     flex: 1 1 auto;
     overflow-x: auto;
   }

@@ -8,13 +8,13 @@
 
 <!-- routify:options index=20 -->
 
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
   <h1 class="c-h1">Install to existing project</h1>
   <div class="c-content">
     <p>
       This is a guide for installing Routify in an existing project. If you wish
       to create a new project instead. Please refer to our
-      <a href={$url('../../getting-started')}>getting started guide</a>.
+      <a href={$url('/guide/introduction/getting-started')}>getting started guide</a>.
     </p>
   </div>
 </div>
@@ -26,7 +26,7 @@
   for implementation of features like SSR, prerendering and deployments.</p>
 </Note>
 
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h2>1. Install module</h2>
     <p>Run in project folder</p>
@@ -34,7 +34,7 @@
   </div>
 </div>
 
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h2>2. Update package.json</h2>
   </div>
@@ -59,7 +59,7 @@
   </p>
 </div>
 
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h2>3. Add router to your app</h2>
   </div>
@@ -78,7 +78,7 @@
   </div>
 </div>
 
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h2>4. Enable SPA</h2>
     <p>

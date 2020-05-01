@@ -1,3 +1,5 @@
 <footer class="c-footer">
-  <p>Routify is MIT Licensed.</p>
+  <div class="c-container-horizontal">
+    <p>Routify is MIT Licensed.</p>
+  </div>
 </footer>

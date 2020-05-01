@@ -5,18 +5,18 @@
 
 <!-- routify:options index=40 -->
 <div class="c-content">
-  <div class="c-container-vertical--small">
+  <div class="c-container-vertical c-container-vertical--small">
     <h1 class="c-h1">Metadata and OpenGraph</h1>
 
     <p>
       Metatags and OG can be set with the
-      <code>$metatags</code>
+      <code>metatags</code>
       helper.
     </p>
     <Prism>
       {`
-        import { @metatags } from '@sveltech/Routify'
-        $metatags.description = 'Routes for Svelte'
+        import { metatags } from '@sveltech/routify'
+        metatags.description = 'Routes for Svelte'
     `}
     </Prism>
     <p>Would render the following HTML</p>
@@ -35,17 +35,17 @@
       will not generate OG data.
     </p>
   </div>
-  <div class="c-container-vertical--small">
+  <div class="c-container-vertical c-container-vertical--small">
     <h3 class="c-h3">Templates</h3>
     <p>
       Templates can be set with
-      <code>$metatags.template(property, callback)</code> ie.
-      <code>$metatags.template("title", value => `My Site - ${`{value}`}`)</code>.
+      <code>metatags.template(property, callback)</code> ie.
+      <code>metatags.template("title", value => `My Site - ${`{value}`}`)</code>.
       If multiple layouts with templates are present, the layout nearest the root takes precedence.
     </p>
     <Note>
       Setting
-      <code>$metatags.title = "Routify"</code>
+      <code>metatags.title = "Routify"</code>
       also generates
       <code>{`<title>Routify</title>`}</code>
     </Note>

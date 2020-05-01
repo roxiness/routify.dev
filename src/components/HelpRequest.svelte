@@ -2,7 +2,7 @@
   import { page } from "@sveltech/routify";
 </script>
 
-<div style="padding-top: 6.4rem">
+<div class="c-help-request">
   <hr class="c-hr" />
   <div class="u-text-muted">
     <p class="c-p">

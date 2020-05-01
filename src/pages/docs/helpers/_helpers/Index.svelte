@@ -33,7 +33,7 @@
     isActive: '#is-active'
 } -->
 
-<div class="c-container-vertical--small">
+<div class="c-container-vertical c-container-vertical--small">
 
   {#each helpers as helper, index}
     {#if index}
