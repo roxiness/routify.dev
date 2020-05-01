@@ -5,8 +5,10 @@
    ========================================================================== */
 
 .c-header {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
   padding: 2.4rem 0;
+  > .c-container-horizontal {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
 }

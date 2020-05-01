@@ -38,7 +38,7 @@ Welcome to the brand-new Routify blog. This is not just the first blog post on R
 Set meta tags and Open Graph data directly from Routify, in a single line. For example this code...
 ``` javascript
 // import metatags
-import { metatags} from "@sveltech/routify";
+import { metatags } from "@sveltech/routify";
 
 // set a metatag
 $: metatags.title = "My app - home";

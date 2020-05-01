@@ -17,13 +17,12 @@
   $: _class = !$isActive("./index") ? "c-blogpost c-content" : "";
 </script>
 
-<div class="c-container-vertical">
-  <div class="c-container-horizontal c-container-horizontal--narrow">
-    <div class={_class}>
-      <slot />
-    </div>
-    <Help />
+<div class="c-blogpost-layout">
+  <div class={_class}>
+    <slot />
   </div>
+  <Help />
 </div>
+
 <!-- routify:options index=50 -->
 <!-- routify:options no-tree=true -->

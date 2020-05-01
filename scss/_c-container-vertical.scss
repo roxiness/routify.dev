@@ -3,17 +3,16 @@
    ========================================================================== */
 
 .c-container-vertical {
-  padding: $g-spacer-2 0;
+  padding: 2.4rem 0;
 
   @media (min-width: $g-bp-2) {
-    padding: $g-spacer-4 0;
+    padding: 3.2rem 0;
   }
 }
 
 .c-container-vertical--small {
-  padding: $g-spacer-2 0;
-
+  padding: 1.6rem;
   @media (min-width: $g-bp-2) {
-    padding: $g-spacer-3 0;
+    padding: 2.4rem 0;
   }
 }
