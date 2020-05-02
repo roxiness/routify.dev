@@ -1,3 +1,15 @@
+/*
+
+  The rollup config for Routify site 2020.
+  If you are looking here, you might be looking how to create a website with Routify. 
+  We use a few packages that are different from a base Svelte setup. Some of these include:
+
+    * rollup-plugin-svg: to import SVGs for icons
+    * mdsvex: markdown parsing for the blog
+    * rollup/plugin-alias: to set up an alias for easier component imports
+
+*/
+
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
