@@ -33,6 +33,12 @@ const contributors = [
   {
     "name": "@jitesh",
     "github": "jkdoshi",
+  },
+  {
+    "name": "@legionofone",
+    "github": "lpshanley",
+    "twitter": "CitadelOfLukes",
+    "imgpath": "luke"
   }
 ]
 
