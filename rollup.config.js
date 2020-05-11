@@ -1,7 +1,7 @@
 /*
 
   The rollup config for Routify site 2020.
-  If you are looking here, you might be looking how to create a website with Routify. 
+  If you are looking here, you might be looking how to create a website with Routify.
   We use a few packages that are different from a base Svelte setup. Some of these include:
 
     * rollup-plugin-svg: to import SVGs for icons
@@ -78,7 +78,7 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
       // https://github.com/rollup/rollup-plugin-commonjs
       resolve({
         browser: true,
-        dedupe: importee => importee === 'svelte' || importee.startsWith('svelte/')
+        dedupe: importee => importee.match(/^(svelte|routify-helper)($|\/)/)
       }),
       commonjs(),
 
@@ -90,7 +90,9 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
       ...plugins
     ],
     watch: {
-      clearScreen: false
+      clearScreen: false,
+      buildDelay: 100,
+      // chokidar: { ignored: "**/tmp/routes.js" }
     }
   }
 }
@@ -119,7 +121,6 @@ const dynamicConfig = {
     !production && livereload(distDir),
   ]
 }
-
 
 const configs = [createConfig(bundledConfig)]
 if (bundling === 'dynamic')

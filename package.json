@@ -33,7 +33,7 @@
     "mdsvex": "^0.5.1-beta.3",
     "npm-run-all": "^4.1.5",
     "prism-svelte": "^0.4.6",
-    "rollup": "^2.6.1",
+    "rollup": "^2.9.0",
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-livereload": "^1.2.0",
     "rollup-plugin-scss": "^2.4.0",
@@ -47,5 +47,12 @@
   "dependencies": {
     "prismjs": "^1.20.0",
     "remark-slug": "^6.0.0"
+  },
+  "routify": {
+    "plugins": [
+      {
+        "routify-helper": {}
+      }
+    ]
   }
 }
