@@ -20,7 +20,7 @@ We want working on Routify to be a friendly and welcome environment, and we will
 
 # Branch logic
 
-* Pleae branch out from staging
+* Please branch out from staging
 * Create a pull request with branch base of staging
 
 ## Info

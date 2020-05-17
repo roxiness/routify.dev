@@ -23,7 +23,7 @@ meta.title = 'Structure'
 
     <h3>Layouts and resets</h3>
     <p>Layout files are named <code>_layout.svelte</code> and apply to all adjacent and nested Svelte files. A file can have multiple layouts if multiple layouts are recursively present in parent folders.</p>
-    <p>Reset files are named <code>_reset.svelte</code>. They function like layout files, but do no inherit the parent scope (layouts, props, etc.).</p>
+    <p>Reset files are named <code>_reset.svelte</code>. They function like layout files, but do not inherit the parent scope (layouts, props, etc.).</p>
 
     <h3>404 and fallbacks</h3>
     <p>404s can be caught with <code>_fallback.svelte</code>. The first <code>_fallback.svelte</code> that's found while traversing back through parent folders will be used.</p>
