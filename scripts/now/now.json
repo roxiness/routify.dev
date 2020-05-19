@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "scope": "Sveltaforce",
+    "scope": "sveltaforce",
     "routes": [
         {
             "handle": "filesystem"
