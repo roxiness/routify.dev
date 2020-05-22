@@ -6,8 +6,7 @@
   <hr class="c-hr" />
   <div class="u-text-muted">
     <p class="c-p">
-      These files are WIP and may be chock-full of errors and bad English. Only
-      you can save us!
+      Writing good documentation that is up-to-date is difficult. If you notice a mistake, help us out.
     </p>
     <ul class="c-horizontal-list c-horizontal-list--bordered">
       <li>
