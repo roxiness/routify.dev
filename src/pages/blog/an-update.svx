@@ -31,7 +31,7 @@ We've also gotten some excellent bug reports, with pull requests and ideas comin
 * LegionOfOne created a [Routify starter that works with Firebase](https://github.com/lpshanley/routify-starter-firebase)
 * We added a new [generated navigation](https://routify.dev/examples/generated-navigation) example. I also made a [video](https://www.youtube.com/watch?v=5j0zYxsZ-7I) that explains how to work with the generated navigation.
 * Jakob did a presentation at [Svelte Society Day](https://sveltesociety.dev/) around Routify and its feature set. You can watch the presentation on [YouTube](https://www.youtube.com/watch?v=3RXqJGZUxy4).
-* Documentation on the site has been updated with [Starter Template](http://localhost:5000/guide/starter-Template) and [Navigation](http://localhost:5000/guide/navigation) both being added to the guide.
+* Documentation on the site has been updated with [Starter Template](/guide/starter-Template) and [Navigation](/guide/navigation) both being added to the guide.
 
 There's also some questions. The biggest question we get is how Routify compares to Sapper. The answer is a bit complicated, in the sense that it's still being defined. On our Discord channel, we have been talking about a new project named **Roxi**. If you'd like to jump in on the conversation, make sure to check the #roxi channel.
 
