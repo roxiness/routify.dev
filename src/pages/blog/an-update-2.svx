@@ -1,0 +1,31 @@
+<script>
+  import Author from '@/components/Author.svelte'
+  import Title from './_title.svelte'
+  import { page } from '@sveltech/routify'
+</script>
+
+<!-- routify:options blogpost={
+  "published": "2020-05-22T10:15:00.574Z",
+  "author": "wolfr",
+  "title": "An update (2)",
+  "summary": `The past few weeks we've seen three new Routify <a href="https://github.com/sveltech/routify/releases">releases</a>:
+
+* 1.8: Support for service workers
+* 1.7: Better support for configs through package.json and environment variables
+* 1.6: Added afterPageLoad hook
+`
+} -->
+
+<Title node = { $page } />
+
+The past few weeks we've seen three new Routify <a href="https://github.com/sveltech/routify/releases">releases</a>:
+
+* 1.8: Support for service workers
+* 1.7: Better support for configs through package.json and environment variables
+* 1.6: Added afterPageLoad hook
+
+We are continuing to maintain Routify.
+
+---
+
+<Author />
