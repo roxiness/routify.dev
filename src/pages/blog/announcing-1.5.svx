@@ -1,25 +1,24 @@
-<script>
-  import Author from '@/components/Author.svelte'
-  import Title from './_title.svelte'
-  import { page } from '@sveltech/routify'
-</script>
-
-<!-- routify:options blogpost={
-  "published": "2020-04-20T11:45:06.574Z",
-  "author": "jakobrosenberg",
-  "title": "Announcing v1.5",
-  "summary": `
+---
+title: Announcing v1.5
+author: jakobrosenberg
+published: 2020-04-20T11:45:06.574Z
+summary: |
   Welcome to the brand-new Routify blog. This is not just the first post on Routify,
-   but also my first ever blog post. Scary. For this cherry popping first post, we’re
-    very happy to announce that 1.5 is finally ready. Among the highlights in this version are:
+  but also my first ever blog post. Scary. For this cherry popping first post, we’re
+  very happy to announce that 1.5 is finally ready. Among the highlights in this version are:
 
   - Support for meta tags
   - Dynamic basepaths
   - Automatic navigation CLI enhancements
   - Query support
   - Improved starter template
-  `
-} -->
+---
+
+<script>
+  import Author from '@/components/Author.svelte'
+  import Title from './_title.svelte'
+  import { page } from '@sveltech/routify'
+</script>
 
 <Title node = { $page } />
 
