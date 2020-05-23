@@ -22,13 +22,13 @@ The past few weeks we've seen three new Routify <a href="https://github.com/svel
 
 * 1.8: Support for prefetching and plugins
 * 1.7: Better support for configs through package.json and environment variables (.env)
-* 1.6: Added afterPageLoad hook (see <a href="#">documentation</a>)
+* 1.6: Added afterPageLoad hook (see <a href="/docs/helpers#after-page-load">documentation</a>)
 
-We are continuing to maintain Routify. Below, we list some points that are the result of questions in our #support channel on Discord.
+We are continuing to maintain Routify. Below, we list some points that are the result of questions in our #support channel on Discord (<a href="https://discord.gg/ntKJD5B">join us!</a>).
 
 Some of these will eventually be added to the docs when deemed relevant for everyone.
 
-* $redirect() functions the same as $goto(), but uses `replacestate` instead of `pushstate` (the original page doesn't get added to browser history)
+* `$redirect()` functions the same as `$goto()`, but uses `replacestate` instead of `pushstate` (the original page doesn't get added to browser history)
 * You can change the directory Routify uses for its files with a flag: `routify --routify-dir routify-files`. This is useful when using Electron.
 
 ---
