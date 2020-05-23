@@ -46,7 +46,7 @@
 <div style="display: table; table-layout: fixed; width: 100%">
   <Prism language="shell-session">
     {`
-        $ npx @sveltech/routify --help
+        $ npx @sveltech/routify run --help
           Usage: cli [options] [command]
 
           Options:
