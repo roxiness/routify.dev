@@ -34,6 +34,15 @@
       <code>twitter:card</code>
       will not generate OG data.
     </p>
+     <p>
+      You can set any kind of tag you want, it just has to follow the above convention.
+      For example, a <code>twitter:card</code> metatag can be created by doing the following
+       <Prism language="html">
+      {`
+        metatags["twitter:card"] = `summary_large_image`;
+    `}
+    </Prism>
+    </p>
   </div>
   <div class="c-container-vertical c-container-vertical--small">
     <h3 class="c-h3">Templates</h3>
