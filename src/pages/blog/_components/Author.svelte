@@ -4,7 +4,7 @@
   import { page } from "@sveltech/routify";
   import Icon from "@/components/Icon.svelte";
   export let id = "";
-  $: id = id || $page.meta.blogpost.author;
+  $: id = id || $page.meta.frontmatter.author;
   $: contributor = contributors.find(c => c.github === id);
   $: name = contributor.realname || contributor.name;
 </script>

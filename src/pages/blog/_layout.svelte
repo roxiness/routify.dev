@@ -1,26 +1,14 @@
 <script>
-  import { isActive } from "@sveltech/routify";
   import Prism from "prismjs";
   import Help from "@/components/HelpRequest.svelte";
   import "prismjs/plugins/command-line/prism-command-line.js";
   import "prismjs/components/prism-shell-session";
   import "prismjs/components/prism-json";
   import "prismjs/components/prism-javascript";
-  import 'prism-svelte'
-
-  setTimeout(() => {
-    Prism.highlightAll();
-    // $ready()
-  }, 0);
-
-  $: useMarkdown = !$isActive("./index");
-  $: _class = !$isActive("./index") ? "c-blogpost c-content" : "";
 </script>
 
 <div class="c-blogpost-layout">
-  <div class={_class}>
-    <slot />
-  </div>
+  <slot />
   <Help />
 </div>
 
