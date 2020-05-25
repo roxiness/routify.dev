@@ -40,7 +40,7 @@
     </p>
     <Prism language="html">
       {`
-        metatags["twitter:card"] = `summary_large_image`;
+        metatags["twitter:card"] = 'summary_large_image';
       `}
     </Prism>
   </div>
