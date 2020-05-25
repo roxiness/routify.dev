@@ -10,8 +10,10 @@
   let y = 0;
   let navEl;
 
-  $: handleScroll(y);
-  function handleScroll(y) {
+  $: handleScroll() && y;
+  setTimeout(handleScroll)
+
+  function handleScroll() {
     if (navEl)
       navEl.style["max-height"] = `calc(100vh - ${
         navEl.getBoundingClientRect().top
