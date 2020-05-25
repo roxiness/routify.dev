@@ -19,7 +19,7 @@
         metatags.description = 'Routes for Svelte'
     `}
     </Prism>
-    <p>Would render the following HTML</p>
+    <p>Would render the following HTML:</p>
     <Prism language="html">
       {`
         <meta name="description" content="Routes for Svelte">
@@ -34,14 +34,46 @@
       <code>twitter:card</code>
       will not generate OG data.
     </p>
-     <p>
-      You can set any kind of tag you want, it just has to follow the above convention.
-      For example, a <code>twitter:card</code> metatag can be created by doing the following
+  </div>
+  <div class="c-container-vertical c-container-vertical--small">
+    <h3 class="c-h3">Title</h3>
+    <p>
+      Setting 
+      <code>metatags.title = "Routify"</code>
+      also generates 
+      <code>{`<title>Routify</title>`}</code>
     </p>
+    <Prism>
+      {`
+        import { metatags } from '@sveltech/routify'
+        metatags.title = 'Routify'
+    `}
+    </Prism>
+    <p>Would render the following HTML:</p>
     <Prism language="html">
       {`
-        metatags["twitter:card"] = 'summary_large_image';
-      `}
+      <title>Routify</title>
+    <meta name="title" content="Routes for Svelte">
+    <meta property="og:title" content="Routes for Svelte">
+    `}
+    </Prism>
+  </div>
+  <div class="c-container-vertical c-container-vertical--small">
+    <h3 class="c-h3">Non-OpenGraph Metadata</h3>
+    <p>
+      You can set any kind of tag you want. For example, a <code>twitter:card</code> metatag can be created by doing the following
+    </p>
+    <Prism>
+      {`
+        import { metatags } from '@sveltech/routify'
+        metatags['twitter:card'] = 'summary_large_image'
+    `}
+    </Prism>
+    <p>Would render the following HTML:</p>
+    <Prism language="html">
+      {`
+        <meta name="twitter:card" content="summary_large_image">
+    `}
     </Prism>
   </div>
   <div class="c-container-vertical c-container-vertical--small">
@@ -52,12 +84,6 @@
       <code>metatags.template("title", value => `My Site - ${`{value}`}`)</code>.
       If multiple layouts with templates are present, the layout nearest the root takes precedence.
     </p>
-    <Note>
-      Setting
-      <code>metatags.title = "Routify"</code>
-      also generates
-      <code>{`<title>Routify</title>`}</code>
-    </Note>
   </div>
 </div>
 
