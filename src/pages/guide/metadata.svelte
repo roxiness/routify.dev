@@ -19,7 +19,7 @@
         metatags.description = 'Routes for Svelte'
     `}
     </Prism>
-    <p>Would render the following HTML</p>
+    <p>Would render the following HTML:</p>
     <Prism language="html">
       {`
         <meta name="description" content="Routes for Svelte">
@@ -29,11 +29,52 @@
     <p>
       Tags without a colon, like
       <code>description</code>
-      will render a metatag and an OG metatag with the same name/property. Tags
+      will render a metatag and an OG metatag with the same name/property. 
+    </p>
+  </div>
+  <div class="c-container-vertical c-container-vertical--small">
+    <h3 class="c-h3">Non-OpenGraph Metadata</h3>
+    <p>
+      Tags
       with a colon like
       <code>twitter:card</code>
       will not generate OG data.
     </p>
+    <Prism>
+      {`
+        import { metatags } from '@sveltech/routify'
+        metatags['twitter:card'] = 'Routes for Svelte'
+    `}
+    </Prism>
+    <p>Would render the following HTML:</p>
+    <Prism language="html">
+      {`
+        <meta name="twitter:card" content="Routes for Svelte">
+    `}
+    </Prism>
+  </div>
+  <div class="c-container-vertical c-container-vertical--small">
+    <h3 class="c-h3">Title</h3>
+    <p>
+      Setting 
+      <code>metatags.title = "Routify"</code>
+      also generates 
+      <code><title>Routify</title></code>
+    </p>
+    <Prism>
+      {`
+        import { metatags } from '@sveltech/routify'
+        metatags.title = 'Routify'
+    `}
+    </Prism>
+    <p>Would render the following HTML:</p>
+    <Prism language="html">
+      {`
+      <title>Routify</title>
+    <meta name="title" content="Routes for Svelte">
+    <meta property="og:title" content="Routes for Svelte">
+    `}
+    </Prism>
   </div>
   <div class="c-container-vertical c-container-vertical--small">
     <h3 class="c-h3">Templates</h3>
@@ -43,12 +84,6 @@
       <code>metatags.template("title", value => `My Site - ${`{value}`}`)</code>.
       If multiple layouts with templates are present, the layout nearest the root takes precedence.
     </p>
-    <Note>
-      Setting
-      <code>metatags.title = "Routify"</code>
-      also generates
-      <code>{`<title>Routify</title>`}</code>
-    </Note>
   </div>
 </div>
 
