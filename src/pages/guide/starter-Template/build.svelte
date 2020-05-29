@@ -56,7 +56,7 @@
       <h3 class="c-h5">If you're rolling your own</h3>
       <p>
         You can build the routes for your app by running
-        <code>npx routify --singleBuild</code>
+        <code>npx routify --single-build</code>
       </p>
       <p>
         Dynamic imports can be added with
