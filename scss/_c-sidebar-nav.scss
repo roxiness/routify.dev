@@ -2,12 +2,13 @@
    c-sidebar-nav
    ========================================================================== */
 
+.c-sidebar-nav .c-sidebar-nav {
+  margin-left: 2rem;
+}
+
 .c-sidebar-nav li {
   list-style: none;
-  margin: 0 0 0.6rem;
-  &:last-child {
-    margin: 0;
-  }
+
 }
 
 .c-sidebar-layout__side nav {
@@ -18,11 +19,12 @@
 }
 
 .c-sidebar-nav {
-
+  border-left: 0.2rem solid transparent;
   a {
     text-decoration: none;
     display: block;
-    padding: 1rem 1.6rem;
+    padding: 0.6rem 1.2rem;
+    margin: 0 0 0.7rem;
     &:link,
     &:visited {
       color: #1D2C48;
@@ -36,23 +38,27 @@
 }
 
 .c-sidebar-nav__item a {
-  border-radius: .8rem;
   &:hover,
   &:focus {
     color: $g-pink-700;
-    background: #FFF6FF;
   }
   &::first-letter { text-transform: capitalize }
 }
 
 .c-sidebar-nav .c-sidebar-nav__item--selected > a {
-  background: #FFE3FF;
+  border-left: 0.2rem solid $g-pink-700;
   &:link,
   &:visited {
     color: $g-pink-700;
   }
 }
 
+.c-sidebar-nav__item--icon a {
+  display: flex;
+  .o-svg-icon {
+    margin-right: 1.4rem;
+  }
+}
 
 /* ==========================================================================
    c-sidebar-nav-child
@@ -88,7 +94,6 @@
 }
 
 .c-sidebar-nav-child__item a {
-  border-radius: .8rem;
   &:hover,
   &:focus {
     color: $g-pink-700;
@@ -101,3 +106,22 @@
   color: $g-pink-700;
 }
 
+
+
+.c-sidebar-nav {
+  .o-svg-icon {
+    path, circle {
+      opacity: 0.5;
+    }
+  }
+  a {
+    &:hover,
+    &:focus {
+      .o-svg-icon {
+        path, circle {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

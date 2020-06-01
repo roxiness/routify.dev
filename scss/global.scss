@@ -16,33 +16,33 @@
 @import "_o-svg-icon";
 
 // Components
-@import "_c-button";
-@import "_c-button-toolbar";
 @import "_c-blogpost";
+@import "_c-blogpost-author";
 @import "_c-blogpost-layout";
 @import "_c-blogpost-list";
-@import "_c-blogpost-author";
+@import "_c-button";
+@import "_c-button-toolbar";
 @import "_c-container-horizontal";
 @import "_c-container-vertical";
 @import "_c-content";
-@import "_c-contributors";
 @import "_c-contributor";
-@import "_c-footer";
+@import "_c-contributors";
 @import "_c-file-tree";
+@import "_c-footer";
 @import "_c-function-doc";
-@import "_c-header";
-@import "_c-hero";
+@import "_c-header-mobile";
 @import "_c-help-request";
+@import "_c-hero";
 @import "_c-horizontal-list";
 @import "_c-logo";
+@import "_c-main-layout";
 @import "_c-navigation";
 @import "_c-navigation-mobile";
 @import "_c-navigation-mobile-holder";
 @import "_c-navigation-toggle";
 @import "_c-note";
-@import "_c-sidebar-layout";
-@import "_c-sidebar-nav";
 @import "_c-pagination";
+@import "_c-sidebar-nav";
 @import "_c-table";
 @import "_c-tabs";
 @import "_c-tabs-pages";
@@ -62,3 +62,5 @@
 @import "c-styleguide-icon-list"; // might want to separate these styleguide components from the rest
 @import "c-styleguide-icon"; // might want to separate these styleguide components from the rest
 @import "c-styleguide-component"; // might want to separate these styleguide components from the rest
+
+

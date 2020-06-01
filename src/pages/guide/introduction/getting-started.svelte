@@ -8,9 +8,9 @@
 
 <!-- routify:options index=10 -->
 
-<div class="c-content">
-  <div class="c-container-vertical c-container-vertical--small">
-    <h1 class="c-h1">Getting started</h1>
+<div class="c-container-vertical c-container-vertical--small">
+  <h1 class="c-h1">Getting started</h1>
+  <div class="c-content">
     <p>
       The easiest way to try Routify is to visit our
       <a
@@ -29,9 +29,9 @@
       - each of which can be imported, using Codesandbox's "Import from Github"
       feature. In fact, any Routify project can be imported to Codesandbox.
     </p>
-
   </div>
 </div>
+
 
 <div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
