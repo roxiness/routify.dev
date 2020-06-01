@@ -22,13 +22,13 @@ jobs:
         npm run build
         cd scripts/now
         node build
-    - uses: amondnet/now-deployment@v2
-      id: now
+    - uses: amondnet/vercel-action@v19.0.1+1
+      id: vercel
       with:
-        zeit-token: ${{ secrets.NOW_TOKEN }} # Required
-        now-args: '--prod' #Optional
-        now-org-id: ${{ secrets.NOW_ORG_ID}}  #Required
-        now-project-id: ${{ secrets.NOW_PROJECT_ID}} #Required 
+        vercel-token: ${{ secrets.NOW_TOKEN }} # Required
+        vercel-args: '--prod' #Optional
+        vercel-org-id: ${{ secrets.NOW_ORG_ID}}  #Required
+        vercel-project-id: ${{ secrets.NOW_PROJECT_ID}} #Required 
         working-directory: ./scripts/now    
     - run: |
         echo ${{ steps.now.outputs.preview-url }}

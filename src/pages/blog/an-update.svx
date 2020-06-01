@@ -1,0 +1,42 @@
+<script>
+  import Author from '@/components/Author.svelte'
+  import Title from './_title.svelte'
+  import { page } from '@sveltech/routify'
+</script>
+
+<!-- routify:options blogpost={
+  "published": "2020-05-02T12:19:06.574Z",
+  "author": "wolfr",
+  "title": "An update",
+  "summary": `
+  It's been about two weeks since we released the 1.5 version of Routify. You can read all about that in our previous blog post [here](https://routify.dev/blog/announcing-1.5).
+
+  Our release was met with a positive reception. We've had lots of people make the jump and give Routify a try, as evidenced by Github's dependency graph which shows over 100 repos using Routify now.
+  `
+} -->
+
+<Title node = { $page } />
+
+Hi everyone. It's wolfr here. I am helping with Routify's community.
+
+It's been about two weeks since we released the 1.5 version of Routify. You can read all about that in our previous blog post [here](https://routify.dev/blog/announcing-1.5).
+
+Our release was met with a positive reception. We've had lots of people make the jump and give Routify a try, as evidenced by Github's dependency graph which shows over 100 repos using Routify now.
+
+We've also gotten some excellent bug reports, with pull requests and ideas coming in. Open source as it should be! In this post I would like to summarize what happened. Here's some highlights:
+
+* The latest version of Routify is **1.6.4**. You can check out all the releases [here](https://github.com/sveltech/routify/releases).
+  * Overall, several bugs have been fixed
+  * The 1.6 release added a new feature: an `afterPageLoad` hook.
+* LegionOfOne created a [Routify starter that works with Firebase](https://github.com/lpshanley/routify-starter-firebase)
+* We added a new [generated navigation](https://routify.dev/examples/generated-navigation) example. I also made a [video](https://www.youtube.com/watch?v=5j0zYxsZ-7I) that explains how to work with the generated navigation.
+* Jakob did a presentation at [Svelte Society Day](https://sveltesociety.dev/) around Routify and its feature set. You can watch the presentation on [YouTube](https://www.youtube.com/watch?v=3RXqJGZUxy4).
+* Documentation on the site has been updated with [Starter Template](/guide/starter-Template) and [Navigation](/guide/navigation) both being added to the guide.
+
+There's also some questions. The biggest question we get is how Routify compares to Sapper. The answer is a bit complicated, in the sense that it's still being defined. On our Discord channel, we have been talking about a new project named **Roxi**. If you'd like to jump in on the conversation, make sure to check the #roxi channel.
+
+For the latest and greatest, please follow us on Twitter: [@routifyjs](https://twitter.com/routifyjs).
+
+---
+
+<Author />

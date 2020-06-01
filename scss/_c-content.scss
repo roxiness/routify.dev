@@ -76,6 +76,11 @@
   margin: 0 0 1.6rem 2.4rem;
 }
 
+.c-ul, .c-content ul ul,
+.c-ol, .c-content ol ol {
+  margin: 0 0 0 2.4rem;
+}
+
 .c-ul > li,
 .c-content ul > li {
   list-style: disc;

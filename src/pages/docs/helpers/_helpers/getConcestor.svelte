@@ -17,7 +17,7 @@
   ];
 </script>
 
-<FunctionDoc name="$getConcestor" {params}>
+<FunctionDoc name="getConcestor" {params}>
   <p>
     Takes two components and returns their closest shared layout and their
     sibling ancestors.
@@ -26,18 +26,18 @@
   <Code language="svelte">
     {`
       <`}{`script>
-        import { route } from '@sveltech/routify'
+        import { route, getConcestor } from '@sveltech/routify'
         $: lastRoute = $route.last
-        $: ([concestor, ancestor, oldAncestor] = $getConcestor($route, lastRoute))
+        $: ([concestor, ancestor, oldAncestor] = getConcestor($route, lastRoute))
         $: direction = ancestor.meta.$index - oldAncestor.meta.$index
       </script>
     `}
   </Code>
 
   <Note type="info">
-      <code>$getConcestor</code>
+      <code>getConcestor</code>
       is used by
-      <code>$getDirection</code>
+      <code>getDirection</code>
       to determine the direction when navigating.
   </Note>
 

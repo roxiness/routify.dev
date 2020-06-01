@@ -20,7 +20,7 @@
         const [language, ...fragments] = $leftover.split('/')
 
         /** After popping the language from the url we, piece it back together **/
-        const path = fragments('/')
+        const path = fragments.join('/')
 
         /** $redirect to "en/i18n/intro" **/
         $goto(`+'`/docs/en/${path}`'+`)
