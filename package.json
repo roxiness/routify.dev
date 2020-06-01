@@ -24,7 +24,7 @@
     "@rollup/plugin-commonjs": "^11.1.0",
     "@rollup/plugin-node-resolve": "^7.1.3",
     "@sveltech/bricks": "^1.0.1-3",
-    "@sveltech/routify": "^1.8.0-beta.9",
+    "@sveltech/routify": "^1.8.0-beta.18",
     "concurrently": "^5.1.0",
     "cross-env": "^7.0.2",
     "date-fns": "^2.12.0",
