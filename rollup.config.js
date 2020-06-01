@@ -59,7 +59,8 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
           remarkPlugins: [slug],
           extension: '.svx',
           layout: {
-            "blogpost": "./src/pages/blog/_components/Layout.svelte"
+            "blogpost": "./src/pages/blog/_components/Layout.svelte",
+            "default": "./src/components/md-layouts/Default.svelte"
           }
         }),
         // enable run-time checks when not in production
