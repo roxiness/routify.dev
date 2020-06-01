@@ -1,19 +1,44 @@
 <script>
-  import { isActive, url, layout } from "@sveltech/routify";
+
+  import { isActive, url, context, layout } from "@sveltech/routify";
   import Icon from '@/components/Icon.svelte';
 
+  $: list = $layout.children;
+
 </script>
-<ul>
-  {#each $layout.children as {path, title, meta}}
-    <li class:c-navigation__item--selected={$isActive(path)}>
-      {#if meta.icon}
-        <a href={path}>
-            <Icon name={meta.icon} size="24" />
-            <span class="u-sr-only">{title}</span>
-        </a>
-      {:else}
-        <a href={$url(path)}>{title}</a>
-      {/if}
-    </li>
-  {/each}
-</ul>
+
+<nav>
+  <ul class="c-sidebar-nav">
+    {#each list as { path, title, children, meta }}
+      <li
+        class="c-sidebar-nav__item"
+        class:c-sidebar-nav__item--selected={$isActive(path)}
+        class:c-sidebar-nav__item--icon={meta.icon}
+      >
+        {#if meta.icon}
+          <a href={path}>
+              <Icon name={meta.icon} size="24" />
+              {title}
+          </a>
+        {:else}
+          <a href={$url(path)}>{title}</a>
+        {/if}
+        <ul class="c-sidebar-nav-child">
+          {#if children && children.length && $isActive(path)}
+            {#each children as child}
+              {#if child.isMeta}
+                <li class="c-sidebar-nav-child__item">
+                  <a href={$url(child.path)}>{child.title}</a>
+                </li>
+              {:else}
+                <li class="c-sidebar-nav-child__item">
+                  <a href={$url(child.path)}>{child.title}</a>
+                </li>
+              {/if}
+            {/each}
+          {/if}
+        </ul>
+      </li>
+    {/each}
+  </ul>
+</nav>

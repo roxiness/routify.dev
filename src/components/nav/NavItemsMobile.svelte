@@ -13,7 +13,6 @@
 </script>
 
 <div class="c-navigation-mobile-holder c-navigation-mobile-holder--active">
-
   <nav role="navigation">
     <ul class="c-navigation-mobile">
       <Fragment bind:showMobileNav {items} />

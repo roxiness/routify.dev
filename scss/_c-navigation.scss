@@ -3,7 +3,6 @@
    ========================================================================== */
 
 .c-navigation ul {
-  display: flex;
   align-items: center;
 }
 
@@ -18,14 +17,7 @@
     }
   }
   li {
-    margin-right: 0.8rem;
-  }
-  li:nth-last-child(4) {
-    margin-right: 2.4rem;
-  }
-  li:nth-last-child(2),
-  li:nth-last-child(3) {
-    margin-right: 0.2rem;
+    margin-bottom: 0.8rem;
   }
   a {
     display: block;
@@ -44,6 +36,13 @@
         }
       }
     }
+  }
+}
+
+.c-navigation__item--icon a {
+  display: flex;
+  .o-svg-icon {
+    margin-right: 1.4rem;
   }
 }
 

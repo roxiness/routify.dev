@@ -53,6 +53,12 @@
   }
 }
 
+.c-sidebar-nav__item--icon a {
+  display: flex;
+  .o-svg-icon {
+    margin-right: 1.4rem;
+  }
+}
 
 /* ==========================================================================
    c-sidebar-nav-child
@@ -100,4 +106,3 @@
   background: #FFF0FF;
   color: $g-pink-700;
 }
-

@@ -1,0 +1,28 @@
+/* ==========================================================================
+  c-main-layout
+   ========================================================================== */
+
+.c-main-layout {
+  display: flex;
+}
+
+.c-main-layout__sidebar {
+  display: none;
+  @media (min-width: $g-bp-2) {
+    display: block;
+  }
+}
+
+.c-main-layout__sidebar {
+  min-width: 32rem;
+  max-width: 32rem;
+  padding: 4.8rem 2.4rem;
+  overflow: scroll;
+  flex: 0 0 32rem;
+  border-right: 0.1rem solid $g-gray-100;
+}
+
+.c-main-layout__content {
+  flex: 1 1 auto;
+  padding: 2.4rem 4.8rem;
+}

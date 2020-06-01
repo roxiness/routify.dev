@@ -1,0 +1,16 @@
+/* ==========================================================================
+  c-header-mobile
+   ========================================================================== */
+
+.c-header-mobile {
+  display: flex;
+  padding: 2.4rem;
+  justify-content: space-between;
+  @media (min-width: $g-bp-2) {
+    display: none;
+  }
+}
+
+.c-header-mobile__logo img {
+  width: 16rem;
+}

@@ -4,13 +4,11 @@
 
 .c-logo {
   display: flex;
-  width: 12rem;
+  width: 15rem;
+  margin: 0 0 4rem;
 
   img {
     width: 100%;
   }
 
-  @media (min-width: $g-bp-2) {
-    width: 17.2rem;
-  }
 }
