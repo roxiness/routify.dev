@@ -19,7 +19,7 @@
 }
 
 .c-sidebar-nav {
-
+  border-left: 0.2rem solid transparent;
   a {
     text-decoration: none;
     display: block;
@@ -38,17 +38,15 @@
 }
 
 .c-sidebar-nav__item a {
-  border-radius: .8rem;
   &:hover,
   &:focus {
     color: $g-pink-700;
-    background: #FFF6FF;
   }
   &::first-letter { text-transform: capitalize }
 }
 
 .c-sidebar-nav .c-sidebar-nav__item--selected > a {
-  background: #FFE3FF;
+  border-left: 0.2rem solid $g-pink-700;
   &:link,
   &:visited {
     color: $g-pink-700;
@@ -96,7 +94,6 @@
 }
 
 .c-sidebar-nav-child__item a {
-  border-radius: .8rem;
   &:hover,
   &:focus {
     color: $g-pink-700;
@@ -107,4 +104,24 @@
 .c-sidebar-nav-child .c-sidebar-nav-child__item--selected > a {
   background: #FFF0FF;
   color: $g-pink-700;
+}
+
+
+
+.c-sidebar-nav {
+  .o-svg-icon {
+    path, circle {
+      opacity: 0.5;
+    }
+  }
+  a {
+    &:hover,
+    &:focus {
+      .o-svg-icon {
+        path, circle {
+          opacity: 1;
+        }
+      }
+    }
+  }
 }

@@ -2,55 +2,6 @@
    c-navigation
    ========================================================================== */
 
-.c-navigation ul {
-  align-items: center;
-}
-
-.c-navigation ul li {
-  list-style: none;
-}
-
-.c-navigation {
-  .o-svg-icon {
-    path, circle {
-      opacity: 0.5;
-    }
-  }
-  li {
-    margin-bottom: 0.8rem;
-  }
-  a {
-    display: block;
-    text-decoration: none;
-    color: #1D2C48;
-    padding: 1rem 1.2rem;
-    border-radius: .8rem;
-    &::first-letter { text-transform: capitalize }
-    &:hover,
-    &:focus {
-      color: $g-pink-700;
-      background: #FFF6FF;
-      .o-svg-icon {
-        path, circle {
-          opacity: 1;
-        }
-      }
-    }
-  }
-}
-
-.c-navigation__item--icon a {
-  display: flex;
-  .o-svg-icon {
-    margin-right: 1.4rem;
-  }
-}
-
-.c-navigation__item--selected a {
-  background-color: #FFE3FF;
-  color: $g-pink-700;
-}
-
 
 @media (max-width: $g-bp-2) {
 
