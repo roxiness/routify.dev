@@ -1,27 +1,21 @@
-<script>
-  import Author from '@/components/Author.svelte'
-  import Title from './_title.svelte'
-  import { page } from '@sveltech/routify'
-</script>
-
-<!-- routify:options blogpost={
-  "published": "2020-04-20T11:45:06.574Z",
-  "author": "jakobrosenberg",
-  "title": "Announcing v1.5",
-  "summary": `
+---
+title: Announcing v1.5
+author: jakobrosenberg
+published: 2020-04-20T11:45:06.574Z
+summary: |
   Welcome to the brand-new Routify blog. This is not just the first post on Routify,
-   but also my first ever blog post. Scary. For this cherry popping first post, we’re
-    very happy to announce that 1.5 is finally ready. Among the highlights in this version are:
+  but also my first ever blog post. Scary. For this cherry popping first post, we’re
+  very happy to announce that 1.5 is finally ready. Among the highlights in this version are:
 
   - Support for meta tags
   - Dynamic basepaths
   - Automatic navigation CLI enhancements
   - Query support
   - Improved starter template
-  `
-} -->
+layout: blogpost
+---
 
-<Title node = { $page } />
+<!-- routify:extract -->
 
 Welcome to the brand-new Routify blog. This is not just the first blog post on Routify, but also my first ever blog post. Scary. For this cherry-popping first-post, we’re very happy to announce that 1.5 is finally ready. Among the highlights in this version are:
 
@@ -31,6 +25,7 @@ Welcome to the brand-new Routify blog. This is not just the first blog post on R
 - [CLI enhancements](#cli-enhancements)
 - [Query support](#query-support)
 - [Improved starter template](#improved-starter-template)
+<!-- routify:extract summary -->
 
 
 ### Meta tags and Open Graph
@@ -187,5 +182,3 @@ and everyone whose embiggening efforts have kept Routify cromulent.
 No. Come join us on [Discord](https://discord.gg/ntKJD5B) where we fight, joke and cry together. Practice social distancing with people who did it before it became trendy.
 
 ---
-
-<Author />

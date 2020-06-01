@@ -1,0 +1,85 @@
+---
+layout: default
+---
+## Caching
+
+By default, components of a Routify starter template app are fully cached and available offline.
+
+External assets are automatically cached when requested. External assets can be precached in advance by prefetching their respective page(s).
+
+## External assets
+
+To tweak caching of external assets, parameters can be passed
+
+```javascript
+fetch('//myapi.com/data', { 'x-routify-valid-for': 3600})
+```
+
+O*ptions are written as kebab-case and prefixed with `x-routify-`. See options for more options.*
+
+## Prefetching
+
+Fetches and caches external data of a given page.
+
+```javascript
+import { prefetch } from '@sveltech/routify'
+
+prefetch(path, prefetchOptions)
+```
+
+*path: string (absolute path) or `HTMLElement` with a `href` attribute*
+
+*prefetchOptions: see options*
+
+## Options
+
+- **validFor:** number *seconds for which an external request is considered fresh and will be served from cache. (After this duration requests will be used according to your strategy. Ie. NetworkFirst will only use cache if network fails.)*
+- **strategy*:** string *The strategy to use for non-fresh assets. Defaults to NetworkFirst.*
+- **writeHeaders:** boolean *Write runtime specifics to headers. Mainly for debugging.*
+- **preserveHeaders*:** boolean *Leave Routify headers on outgoing requests.*
+
+    **Prefetch-only options:**
+
+    - **gracePeriod**: number *milliseconds to wait before fetching next page in queue*
+    - **timeout**: number *milliseconds to wait before killing hanging fetch*
+
+******Not yet implemented*
+
+# How it works
+
+### Caching of app components
+
+Caching is handled by the service worker found in `src/sw.js`. By default all app components are fully cached in the background after the app has loaded. Caching can also be handled programmatically in the app by disabling `precacheAndRoute(files)` in the service worker. To programmatically cache a file call ``$layout.load``. Routify then dynamically imports the component. This import generates a request which is then intercepted by the service worker which caches the response.
+
+### Caching of external files
+
+When prefetch is called, the requested URL is rewritten from `/original/path` to `/__app.html?__routify_path=/original/path&...[prefetching options]` and then opened in a hidden iframe. This ensures that we use the SPA entrypoint file which is already present in the app. The requests made on this page are intercepted by the service worker which caches the responses. Once the network is idle and the `gracePeriod` has expired, the iframe is closed. Since all instances of the same app share the same serviceworker, all cached responses are available in the main app.
+
+# Examples
+
+### Caching all siblings of a layout or page
+
+```javascript
+$layout.parent.children.forEach(sibling => sibling.load())
+```
+
+### Precaching files based on custom metatags
+
+```javascript
+<script>
+  import { Router } from "@sveltech/routify";
+  import { routes } from "@sveltech/routify/tmp/routes";
+
+	routes
+    .filter(route => route.api.meta.precacheMePlz === true)
+    .forEach(route => route.api.load())
+</script>
+
+<!-- src/App.svelte -->
+<Router {routes} />
+```
+
+### Live example
+https://example.routify.dev/example
+
+When visiting the API page, the individual tv-show pages are prefetched in the background. This means that all TV-show pages are instantly available, even if network connection is lost before clicking a show.

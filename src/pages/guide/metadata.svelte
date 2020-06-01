@@ -19,7 +19,7 @@
         metatags.description = 'Routes for Svelte'
     `}
     </Prism>
-    <p>Would render the following HTML</p>
+    <p>Would render the following HTML:</p>
     <Prism language="html">
       {`
         <meta name="description" content="Routes for Svelte">
@@ -36,6 +36,47 @@
     </p>
   </div>
   <div class="c-container-vertical c-container-vertical--small">
+    <h3 class="c-h3">Title</h3>
+    <p>
+      Setting 
+      <code>metatags.title = "Routify"</code>
+      also generates 
+      <code>{`<title>Routify</title>`}</code>
+    </p>
+    <Prism>
+      {`
+        import { metatags } from '@sveltech/routify'
+        metatags.title = 'Routify'
+    `}
+    </Prism>
+    <p>Would render the following HTML:</p>
+    <Prism language="html">
+      {`
+      <title>Routify</title>
+    <meta name="title" content="Routes for Svelte">
+    <meta property="og:title" content="Routes for Svelte">
+    `}
+    </Prism>
+  </div>
+  <div class="c-container-vertical c-container-vertical--small">
+    <h3 class="c-h3">Non-OpenGraph Metadata</h3>
+    <p>
+      You can set any kind of tag you want. For example, a <code>twitter:card</code> metatag can be created by doing the following
+    </p>
+    <Prism>
+      {`
+        import { metatags } from '@sveltech/routify'
+        metatags['twitter:card'] = 'summary_large_image'
+    `}
+    </Prism>
+    <p>Would render the following HTML:</p>
+    <Prism language="html">
+      {`
+        <meta name="twitter:card" content="summary_large_image">
+    `}
+    </Prism>
+  </div>
+  <div class="c-container-vertical c-container-vertical--small">
     <h3 class="c-h3">Templates</h3>
     <p>
       Templates can be set with
@@ -43,12 +84,6 @@
       <code>metatags.template("title", value => `My Site - ${`{value}`}`)</code>.
       If multiple layouts with templates are present, the layout nearest the root takes precedence.
     </p>
-    <Note>
-      Setting
-      <code>metatags.title = "Routify"</code>
-      also generates
-      <code>{`<title>Routify</title>`}</code>
-    </Note>
   </div>
 </div>
 
