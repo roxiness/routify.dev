@@ -1,7 +1,7 @@
 <script>
   import { isActive, url, context, layout } from "@sveltech/routify";
   import HelpRequest from '@/components/HelpRequest.svelte'
-  import { getContext } from "svelte";
+  import { getContext, tick } from "svelte";
   $: ({ component } = $context);
   $: list = $layout.children;
 
@@ -11,7 +11,7 @@
   let navEl;
 
   $: handleScroll() && y;
-  setTimeout(handleScroll)
+  setTimeout(handleScroll, 50)
 
   function handleScroll() {
     if (navEl)
