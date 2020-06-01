@@ -27,11 +27,17 @@
           {#if children && children.length && $isActive(path)}
             {#each children as child}
               {#if child.isMeta}
-                <li class="c-sidebar-nav-child__item">
+                <li
+                  class="c-sidebar-nav-child__item"
+                  class:c-sidebar-nav-child__item--selected={child.path === currentId}
+                >
                   <a href={$url(child.path)}>{child.title}</a>
                 </li>
               {:else}
-                <li class="c-sidebar-nav-child__item">
+                <li
+                  class="c-sidebar-nav-child__item"
+                  class:c-sidebar-nav-child__item--selected={$isActive(child.path)}
+                >
                   <a href={$url(child.path)}>{child.title}</a>
                 </li>
               {/if}
@@ -42,3 +48,5 @@
     {/each}
   </ul>
 </nav>
+
+
