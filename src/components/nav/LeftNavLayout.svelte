@@ -1,26 +1,27 @@
 <script>
   import { isActive, url, context, layout } from "@sveltech/routify";
-  import HelpRequest from '@/components/HelpRequest.svelte'
+  import HelpRequest from "@/components/HelpRequest.svelte";
   import { getContext, tick } from "svelte";
   $: ({ component } = $context);
   $: list = $layout.children;
 
   const elements = getContext("hashElements");
-  let currentId = false;
-  let y = 0;
+  let currentId = null;
+  let y = null;
   let navEl;
 
-  $: handleScroll() && y;
-  setTimeout(handleScroll, 50)
+  $: navEl && y !== null && handleScroll();
+  setTimeout(handleScroll, 100);
+  setTimeout(handleScroll, 300);
+  setTimeout(handleScroll, 1000);
 
   function handleScroll() {
-    if (navEl)
-      navEl.style["max-height"] = `calc(100vh - ${
-        navEl.getBoundingClientRect().top
-      }px)`;
+    navEl.style["max-height"] = `calc(100vh - ${
+      navEl.getBoundingClientRect().top
+    }px)`;
 
     let smallest = false;
-    elements.forEach(he => {
+    elements.forEach((he) => {
       const top = he.getBoundingClientRect().top;
       if (!smallest || (50 > top && top > smallest)) {
         smallest = top;
