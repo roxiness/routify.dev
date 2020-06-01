@@ -2,8 +2,14 @@
   c-main-layout
    ========================================================================== */
 
+#routify-app {
+  height: 100%;
+}
+
 .c-main-layout {
   display: flex;
+  height: 100%;
+  overflow: hidden;
 }
 
 .c-main-layout__sidebar {
@@ -14,6 +20,7 @@
 }
 
 .c-main-layout__sidebar {
+  height: 100%;
   min-width: 32rem;
   max-width: 32rem;
   padding: 4.8rem 2.4rem;
@@ -25,4 +32,8 @@
 .c-main-layout__content {
   flex: 1 1 auto;
   padding: 2.4rem 4.8rem;
+  overflow: scroll;
+  .c-container-horizontal {
+    margin: 0 auto;
+  }
 }

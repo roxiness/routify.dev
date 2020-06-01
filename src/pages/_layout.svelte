@@ -69,7 +69,7 @@
      <Sidebar />
   </div>
   <div class="c-main-layout__content">
-    <main>
+    <main class="c-container-horizontal">
       <slot />
     </main>
     <Footer />
