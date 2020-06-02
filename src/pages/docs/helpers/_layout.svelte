@@ -4,7 +4,7 @@
   {title: "isActive", path:"#is-active"},
   {title: "goto", path:"#goto"},
   {title: "params", path:"#params"},
-  {title: "context", path:"#context"},
+  {title: "metatags", path:"#metatags"},
   {title: "leftover", path:"#leftover"},
   {title: "beforeUrlChange", path:"#before-url-change"},
   {title: "focus", path:"#focus"},

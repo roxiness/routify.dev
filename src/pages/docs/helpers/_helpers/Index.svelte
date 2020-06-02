@@ -8,14 +8,14 @@
   import GetConcestor from "./getConcestor.svelte";
   import GetDirection from "./getDirection.svelte";
   import Ready from "./ready.svelte";
-  import Context from "./context.svelte";
   import Focus from "./focus.svelte";
+  import Metatags from "./metatags.svelte";
   const helpers = [
     Url,
     IsActive,
     Goto,
     Params,
-    Context,
+    Metatags,
     Leftover,
     BeforeUrlChange,
     Focus,
