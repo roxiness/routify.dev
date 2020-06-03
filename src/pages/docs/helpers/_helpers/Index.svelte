@@ -5,6 +5,7 @@
   import Params from "./params.svelte";
   import Leftover from "./leftover.svelte";
   import BeforeUrlChange from "./beforeUrlChange.svelte";
+  import AfterPageLoad from "./afterPageLoad.svelte";
   import GetConcestor from "./getConcestor.svelte";
   import GetDirection from "./getDirection.svelte";
   import Ready from "./ready.svelte";
@@ -18,6 +19,7 @@
     Metatags,
     Leftover,
     BeforeUrlChange,
+    AfterPageLoad,
     Focus,
     Ready,
     GetConcestor,

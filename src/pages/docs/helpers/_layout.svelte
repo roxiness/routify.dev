@@ -7,6 +7,7 @@
   {title: "metatags", path:"#metatags"},
   {title: "leftover", path:"#leftover"},
   {title: "beforeUrlChange", path:"#before-url-change"},
+  {title: "afterPageLoad", path:"#after-page-load"},
   {title: "focus", path:"#focus"},
   {title: "ready", path:"#ready"},
   {title: "getConcestor", path:"#get-concestor"},
