@@ -82,8 +82,7 @@
   <div class="c-content">
     <h2>4. Enable SPA</h2>
     <p>
-      If you're using history based navigation, make sure that your server
-      redirects all requests to your app's path. Usually "/index.html" or just
+      Make sure that your server redirects all 404s to your app's path. Usually "/index.html" or just
       "/".
     </p>
   </div>
