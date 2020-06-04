@@ -1,0 +1,13 @@
+### How do I use Routify with Electron
+Electron doesn't detect changes in node_modules. To get around that, we can export the generated files to a folder in the project. ``routify --routify-dir routify``. Remember to import your ``routes.js`` from this folder.
+@kevmodrome might have more info
+
+### Why does my app disappear when I refresh
+Your server isn't forwarding requests to Routify. Make sure that you redirect 404s to your entrypoint. Usually ``/index.html`` or ``/__app.html``.
+
+### Can I use Routify without SSR, dynamic imports, static exports, etc.
+Yes. If you're using the starter template, these features are enabled by default, but can be disabled. Please note that these features are not mutually exclusive and you still get a fullfledged SPA when they're enabled.
+
+### What's the difference between SSR and prerender/static export
+SSR (Server side Rendering) is done in realtime and is useful for pages with dynamic content, like a news feed. Prerendering/static export is done when building the app. Prerendered pages are great for pages that don't rely on APIs.
+
