@@ -1,23 +1,57 @@
 ---
 published: 2020-05-22T10:15:00.574Z
 author: wolfr
-title: An update (2)
+title: Routify updates + Frequently asked questions
 summary: |
 
 layout: blogpost
 ---
 
-The past few weeks we've seen three new Routify <a href="https://github.com/sveltech/routify/releases">releases</a>:
+The past month we've seen three new Routify feature <a href="https://github.com/sveltech/routify/releases">releases</a>:
 
-* 1.8: Support for prefetching and plugins
+* 1.8 (beta)
+    * Support for service workers
+    * Support for prefetching
+    * Support disabling prerendering with `prerender=false`
+    * Support plugins
+        * Example plugin: [FrontMatter](https://github.com/jakobrosenberg/routify-plugin-frontmatter)
+    * Added new `$isChangingPage` helper
+    * Various bug fixes
 * 1.7: Better support for configs through package.json and environment variables (.env)
 * 1.6: Added afterPageLoad hook (see <a href="/docs/helpers#after-page-load">documentation</a>)
 
-We are continuing to maintain Routify. Below, we list some points that are the result of questions in our #support channel on Discord (<a href="https://discord.gg/ntKJD5B">join us!</a>).
+Next to this, we are continuing to improve the documentation.
 
-Some of these will eventually be added to the docs when deemed relevant for everyone.
+As the framework gets more popular, we get more and more questions on our <a href="https://discord.gg/ntKJD5B">Discord</a> channel (join us!).
+
+This is why we have added a <a href="/faq">FAQ</a> page to bundle common questions.
+
+### What is the difference between Routify and Sapper?
+
+This is a tough one to answer. Routify is a router. Routify starter is a template that provides much more than routing.
+
+The Routify website - the very website you're looking at - talks about much more than routing alone. It is clear our ambitions are bigger than being a simple file-based router. These ambitions are coming to fruition in a project called Roxi. If you are eager to learn, join the discussion in the #roxi channel on Discord.
+
+### I looked at the helpers but I am missing [specific helper question]?
+
+There are a few helper functions that were added in 1.7 and 1.8 that need some better documentation. In lieu of finished docs, we provide some information here.
 
 * `$redirect()` functions the same as `$goto()`, but uses `replacestate` instead of `pushstate` (the original page doesn't get added to browser history)
-* You can change the directory Routify uses for its files with a flag: `routify --routify-dir routify-files`. This is useful when using Electron.
+* $isChangingPage` ...
 
----
+### How do I use Routify with Electron?
+
+* Try the <a href="https://github.com/lpshanley/svelte-app-electron">svelte-app-electron</a> template from  @legionofone
+* Electron doesn't detect changes in node_modules. To get around that, we can export the generated files to a folder in the project. The command ``routify --routify-dir routify`` will change the directory Routify uses for its files. Remember to import your ``routes.js`` from this folder.
+
+### Why does my app disappear when I refresh?
+
+Your server isn't forwarding requests to Routify. Make sure that you redirect 404s to your entrypoint. Usually ``/index.html`` or ``/__app.html``.
+
+### Can I use Routify without SSR, dynamic imports, static exports, etc.?
+
+Yes. If you're using the starter template, these features are enabled by default, but can be disabled. Please note that these features are not mutually exclusive and you still get a full-fledged SPA when they're enabled.
+
+### What's the difference between SSR and prerender/static export?
+
+SSR (Server side Rendering) is done in realtime and is useful for pages with dynamic content, like a news feed. Prerendering/static export is done when building the app. Prerendered pages are great for pages that don't rely on APIs.
