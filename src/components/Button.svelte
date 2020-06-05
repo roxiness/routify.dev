@@ -22,6 +22,7 @@
 {:else}
     <button
         type="button"
+        class="c-button"
         class:c-button--primary={theme=="primary"}
         class:c-button--outline={theme=="outline"||!theme}
         on:submit|preventDefault on:click
