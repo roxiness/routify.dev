@@ -59,7 +59,8 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
           remarkPlugins: [slug],
           extension: '.svx',
           layout: {
-            "blogpost": "./src/components/MarkdownBlogLayout.svelte"
+            "blogpost": "./src/pages/blog/_components/Layout.svelte",
+            "default": "./src/components/md-layouts/Default.svelte"
           }
         }),
         // enable run-time checks when not in production
@@ -78,7 +79,7 @@ function createConfig({ output, inlineDynamicImports, plugins = [] }) {
       // https://github.com/rollup/rollup-plugin-commonjs
       resolve({
         browser: true,
-        dedupe: importee => importee.match(/^(svelte|routify-helper)($|\/)/)
+        dedupe: importee => importee.match(/^(svelte|routify-dev-ui)($|\/)/)
       }),
       commonjs(),
 

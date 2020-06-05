@@ -1,19 +1,20 @@
 <script>
-  // import { default as Prism, highlight } from "svelte-prism";
-  // import {ready} from '@sveltech/routify'
-  import Prism from "prismjs";
+  // @ts-check
   import "prismjs/plugins/command-line/prism-command-line.js";
   import "prismjs/components/prism-shell-session";
   import "prismjs/components/prism-json";
   import "prismjs/components/prism-javascript";
+  import "prism-svelte";
+  // @ts-ignore
+  import { format, formatRelative, parseISO } from "date-fns";
+  import Prism from "prismjs";
 
-  // console.log(Prism)
+
   setTimeout(() => {
     Prism.highlightAll();
-    // $ready()
   }, 0);
 </script>
 
-<div class="c-content c-markdown">
+<div class="c-blogpost c-content">
   <slot />
 </div>

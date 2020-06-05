@@ -82,8 +82,7 @@
   <div class="c-content">
     <h2>4. Enable SPA</h2>
     <p>
-      If you're using history based navigation, make sure that your server
-      redirects all requests to your app's path. Usually "/index.html" or just
+      Make sure that your server redirects all 404s to your app's path. Usually "/index.html" or just
       "/".
     </p>
   </div>
@@ -93,6 +92,7 @@
       <div class="c-tabs">
         <TabsLink>Sirv</TabsLink>
         <TabsLink>Apache</TabsLink>
+        <TabsLink>Nginx</TabsLink>
         <TabsLink>Other</TabsLink>
 
       </div>
@@ -121,6 +121,25 @@
               RewriteRule . /index.html [L]
             `}
           </Prism>
+        </TabsPage>
+        <TabsPage>
+
+          <Prism>
+            {`
+              server {
+                listen 80;
+                root /usr/share/nginx/html;
+                gzip on;
+                gzip_types text/css application/javascript application/json image/svg+xml;
+                gzip_comp_level 9;
+                etag on;
+                location / {
+                  try_files $uri $uri/ /index.html;
+                }
+              }
+            `}
+          </Prism>
+          <a href="https://gist.github.com/johngrimes/3a833e23a7db998594c38871e7d3c38e">source</a>
         </TabsPage>
         <TabsPage>
           <p>

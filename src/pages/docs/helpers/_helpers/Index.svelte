@@ -5,19 +5,21 @@
   import Params from "./params.svelte";
   import Leftover from "./leftover.svelte";
   import BeforeUrlChange from "./beforeUrlChange.svelte";
+  import AfterPageLoad from "./afterPageLoad.svelte";
   import GetConcestor from "./getConcestor.svelte";
   import GetDirection from "./getDirection.svelte";
   import Ready from "./ready.svelte";
-  import Context from "./context.svelte";
   import Focus from "./focus.svelte";
+  import Metatags from "./metatags.svelte";
   const helpers = [
     Url,
     IsActive,
     Goto,
     Params,
-    Context,
+    Metatags,
     Leftover,
     BeforeUrlChange,
+    AfterPageLoad,
     Focus,
     Ready,
     GetConcestor,
