@@ -21,10 +21,13 @@
 
 // More spacing in heading structure
 .c-blogpost.c-content {
-  h1, h2, h3 {
+  h1, h2 {
     margin-top: 4.8rem
   }
-  h4 {
+  h3 {
     margin-top: 3.2rem
+  }
+  h4 {
+    margin-top: 2.4rem
   }
 }

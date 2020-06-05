@@ -1,29 +1,29 @@
-## What is the difference between Routify and Sapper?
+### What is the difference between Routify and Sapper?
 
 This is a tough one to answer. Routify is a router. Routify starter is a template that provides much more than routing.
 
 The Routify website - the very website you're looking at - talks about much more than routing alone. It is clear our ambitions are bigger than being a simple file-based router. These ambitions are coming to fruition in a project called Roxi. If you are eager to learn, join the discussion in the #roxi channel on Discord.
 
-## I looked at the helpers but I am missing [specific helper question]?
+### I looked at the helpers but I am missing [specific helper question]?
 
 There are a few helper functions that were added in 1.7 and 1.8 that need some better documentation. In lieu of finished docs, we provide some information here.
 
 * `$redirect()` functions the same as `$goto()`, but uses `replacestate` instead of `pushstate` (the original page doesn't get added to browser history)
 * $isChangingPage` ...
 
-## How do I use Routify with Electron?
+### How do I use Routify with Electron?
 
 * Try the <a href="https://github.com/lpshanley/svelte-app-electron">svelte-app-electron</a> template from  @legionofone
 * Electron doesn't detect changes in node_modules. To get around that, we can export the generated files to a folder in the project. The command ``routify --routify-dir routify`` will change the directory Routify uses for its files. Remember to import your ``routes.js`` from this folder.
 
-## Why does my app disappear when I refresh?
+### Why does my app disappear when I refresh?
 
 Your server isn't forwarding requests to Routify. Make sure that you redirect 404s to your entrypoint. Usually ``/index.html`` or ``/__app.html``.
 
-## Can I use Routify without SSR, dynamic imports, static exports, etc.?
+### Can I use Routify without SSR, dynamic imports, static exports, etc.?
 
 Yes. If you're using the starter template, these features are enabled by default, but can be disabled. Please note that these features are not mutually exclusive and you still get a full-fledged SPA when they're enabled.
 
-## What's the difference between SSR and prerender/static export?
+### What's the difference between SSR and prerender/static export?
 
 SSR (Server side Rendering) is done in realtime and is useful for pages with dynamic content, like a news feed. Prerendering/static export is done when building the app. Prerendered pages are great for pages that don't rely on APIs.

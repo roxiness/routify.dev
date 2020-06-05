@@ -1,9 +1,9 @@
 ---
 published: 2020-05-22T10:15:00.574Z
 author: wolfr
-title: Routify updates + Frequently asked questions
+title: Routify updates + FAQ
 summary: |
-    The past month we've seen three new Routify feature <a href="https://github.com/sveltech/routify/releases">releases</a>. Next to this we've added a FAQ to bundle the answers to common questions in one location.
+    The past month we've seen three new Routify feature <a href="https://github.com/sveltech/routify/releases">releases</a>. Next to this we've added a FAQ to bundle answers to common questions, and there's efforts on the documentation and new features.
 layout: blogpost
 ---
 
@@ -20,9 +20,16 @@ The past month we've seen three new Routify feature <a href="https://github.com/
 * 1.7: Better support for configs through package.json and environment variables (.env)
 * 1.6: Added afterPageLoad hook (see <a href="/docs/helpers#after-page-load">documentation</a>)
 
-Next to this, we are continuing to improve the documentation.
+### Frequently asked questions
 
-As the framework gets more popular, we get more and more questions on our <a href="https://discord.gg/ntKJD5B">Discord</a> channel (join us!).
+As the framework gets more popular, we get more and more questions on our <a href="https://discord.gg/ntKJD5B">Discord</a> channel (join us!). This is why we have added a <a href="/faq">FAQ</a> page to bundle common questions.
 
-This is why we have added a <a href="/faq">FAQ</a> page to bundle common questions.
+### Documentation updates
+
+Next to this, we are continuing to improve the documentation. This <a href="https://github.com/sveltech/routify-site-2020/issues/129">issue</a> is currently used to track the work.
+
+### Roadmap
+
+Routify's current roadmap can be found <a href="https://github.com/sveltech/routify/issues/191">here</a>.
+
 
