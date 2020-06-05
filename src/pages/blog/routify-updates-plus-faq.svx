@@ -1,5 +1,5 @@
 ---
-published: 2020-05-22T10:15:00.574Z
+published: 2020-06-05T21:15:00.574Z
 author: wolfr
 title: Routify updates + FAQ
 summary: |
