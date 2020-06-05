@@ -6,10 +6,10 @@ The Routify website - the very website you're looking at - talks about much more
 
 ### I looked at the helpers but I am missing [specific helper question]?
 
-There are a few helper functions that were added in 1.7 and 1.8 that need some better documentation. In lieu of finished docs, we provide some information here.
+There are a few helper functions that were added in 1.7 and 1.8 that need some better documentation.
 
 * `$redirect()` functions the same as `$goto()`, but uses `replacestate` instead of `pushstate` (the original page doesn't get added to browser history)
-* $isChangingPage` ...
+* $isChangingPage` (no docs yet)
 
 ### How do I use Routify with Electron?
 
