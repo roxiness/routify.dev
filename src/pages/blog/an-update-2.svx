@@ -1,22 +1,11 @@
-<script>
-  import Author from '@/components/Author.svelte'
-  import Title from './_title.svelte'
-  import { page } from '@sveltech/routify'
-</script>
+---
+published: 2020-05-22T10:15:00.574Z
+author: wolfr
+title: An update (2)
+summary: |
 
-<!-- routify:options blogpost={
-  "published": "2020-05-22T10:15:00.574Z",
-  "author": "wolfr",
-  "title": "An update (2)",
-  "summary": `The past few weeks we've seen three new Routify <a href="https://github.com/sveltech/routify/releases">releases</a>:
-
-* 1.8: Support for prefetching and plugins
-* 1.7: Better support for configs through package.json and environment variables
-* 1.6: Added afterPageLoad hook
-`
-} -->
-
-<Title node = { $page } />
+layout: blogpost
+---
 
 The past few weeks we've seen three new Routify <a href="https://github.com/sveltech/routify/releases">releases</a>:
 
@@ -32,5 +21,3 @@ Some of these will eventually be added to the docs when deemed relevant for ever
 * You can change the directory Routify uses for its files with a flag: `routify --routify-dir routify-files`. This is useful when using Electron.
 
 ---
-
-<Author />
