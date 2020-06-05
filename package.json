@@ -47,12 +47,10 @@
   "dependencies": {
     "prismjs": "^1.20.0",
     "remark-slug": "^6.0.0",
-    "routify-dev-ui": "0.0.2",
     "routify-plugin-frontmatter": "^1.0.1"
   },
   "routify": {
     "plugins": {
-      "routify-dev-ui": {},
       "routify-plugin-frontmatter": {}
     }
   }
