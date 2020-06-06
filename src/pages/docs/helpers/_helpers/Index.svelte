@@ -4,8 +4,11 @@
   import Goto from "./goto.svelte";
   import Params from "./params.svelte";
   import Leftover from "./leftover.svelte";
+  import Page from "./page.svelte";
+  import Layout from "./layout.svelte";
   import BeforeUrlChange from "./beforeUrlChange.svelte";
   import AfterPageLoad from "./afterPageLoad.svelte";
+  import IsChangingPage from "./isChangingPage.svelte";
   import GetConcestor from "./getConcestor.svelte";
   import GetDirection from "./getDirection.svelte";
   import Ready from "./ready.svelte";
@@ -17,9 +20,12 @@
     Goto,
     Params,
     Metatags,
+    Page,
+    Layout,
     Leftover,
     BeforeUrlChange,
     AfterPageLoad,
+    IsChangingPage,
     Focus,
     Ready,
     GetConcestor,
