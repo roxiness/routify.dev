@@ -10,10 +10,11 @@
   {title: "leftover", path:"#leftover"},
   {title: "beforeUrlChange", path:"#before-url-change"},
   {title: "afterPageLoad", path:"#after-page-load"},
-  {title: "isChangingPage", path:"#is-changing-page"},
+  {title: "isChangingPage", path:"#is-changing-page", tag: "1.8 beta"},
+  {title: "prefetch", path:"#prefetch", tag: "1.8 beta"},
   {title: "focus", path:"#focus"},
   {title: "ready", path:"#ready"},
-  {title: "getConcestor", path:"#get-concestor"},
+  {title: "getConcestorgetConcestor", path:"#get-concestor"},
   {title: "getDirection", path:"#get-direction"}
 ] -->
 

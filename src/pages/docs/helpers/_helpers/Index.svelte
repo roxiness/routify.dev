@@ -12,6 +12,7 @@
   import GetConcestor from "./getConcestor.svelte";
   import GetDirection from "./getDirection.svelte";
   import Ready from "./ready.svelte";
+  import Prefetch from "./prefetch.svelte";
   import Focus from "./focus.svelte";
   import Metatags from "./metatags.svelte";
   const helpers = [
@@ -26,6 +27,7 @@
     BeforeUrlChange,
     AfterPageLoad,
     IsChangingPage,
+    Prefetch,
     Focus,
     Ready,
     GetConcestor,
