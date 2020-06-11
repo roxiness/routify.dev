@@ -7,10 +7,7 @@
   setContext("hashElements", new Map());
 
   self.addEventListener("app-loaded", async () => {
-    routes.forEach(route => {
-      route.component();
-      route.layouts.forEach(layout => layout.component());
-    });
+    setTimeout(() => routes.forEach((route) => route.preload()), 3000);
   });
 </script>
 
