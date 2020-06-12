@@ -32,12 +32,17 @@
     ensures consistent URLs which are unaffected by the current browser address
     (unlike normal relative URLs).
   </p>
+  <p>
+    You can also call the function <code>$url()</code> on any page to get the current path.
 
   <Code language="svelte">
     {`
       <!-- src/pages/recipes/cakes/cupcakes.svelte -->
       <`}{`script>
         import { url } from '@sveltech/routify'
+        
+      //get current path
+      console.log($url()) //'recipes/cakes/cupcakes'
       </script>
 
       <!-- relative -->
