@@ -83,6 +83,7 @@ $font-location: "../fonts/" !default;
   font-family: 'Overpass';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url('../fonts/overpass-v4-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Overpass Regular'), local('Overpass-Regular'),
        url('../fonts/overpass-v4-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -96,6 +97,7 @@ $font-location: "../fonts/" !default;
   font-family: 'Overpass';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url('../fonts/overpass-v4-latin-700.eot'); /* IE9 Compat Modes */
   src: local('Overpass Bold'), local('Overpass-Bold'),
        url('../fonts/overpass-v4-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
