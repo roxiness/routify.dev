@@ -14,7 +14,7 @@
   {title: "prefetch", path:"#prefetch", tag: "1.8 beta"},
   {title: "focus", path:"#focus"},
   {title: "ready", path:"#ready"},
-  {title: "getConcestorgetConcestor", path:"#get-concestor"},
+  {title: "getConcestor", path:"#get-concestor"},
   {title: "getDirection", path:"#get-direction"}
 ] -->
 
