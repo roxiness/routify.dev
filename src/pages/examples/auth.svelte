@@ -6,7 +6,7 @@
 </script>
 
 <div class="c-content">
-  <h1 class="c-h1">Helpers - Auth</h1>
+  <h1 class="c-h1">Auth</h1>
   <p>
     With Routify, you don't need any router included functions to authenticate
     users and protect your app.
