@@ -1,12 +1,10 @@
 ---
-published: 2020-06-21T11:45:06.574Z
+published: 2020-06-21T21:36:59.459Z
 author: jakobrosenberg
 title: 1.8 beta - dev & production enhancements
 summary: |
 layout: blogpost
 ---
-
-<!-- routify:options index=false -->
 
 - [PWA & offline availability](#pwa-offline-availability)
 - [Prefetching](#prefetching)
@@ -19,7 +17,7 @@ layout: blogpost
 
 
 ### Apologies
-This post should have published last month, but was delayed by the fact that it was only written today.
+This post should have been delayed last month, but was delayed by the fact that it was only written today.
 
 The 1.8 beta was released a month ago and is finally stable, AFAWK. If we don't receive any critical bug reports in the next two days, it will be released as stable. After 1.8, the next goals are Routify 2 and Roxi, our new framework.
 
