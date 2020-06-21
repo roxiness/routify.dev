@@ -30,7 +30,8 @@
       <NavItems />
     </nav>
 
-    <a href="#nav"
+<!-- todo should be a button -->
+    <div href="#nav"
       class="c-navigation-toggle"
       class:c-navigation-toggle--active={showMobileNav === !showMobileNav}
       on:click|preventDefault={handleToggleClick}
@@ -40,7 +41,7 @@
         <rect fill="#000" width="18" height="2" x="11" y="19" class="c-navigation-toggle__line2"></rect>
         <rect fill="#000" width="18" height="2" x="11" y="19" class="c-navigation-toggle__line3"></rect>
       </svg>
-    </a>
+    </div>
   </div>
 </header>
 
