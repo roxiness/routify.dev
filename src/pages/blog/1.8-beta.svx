@@ -12,7 +12,7 @@ summary: |
   - Roxi
   
   ### Apologies
-  This post should have been delayed last month, but was delayed by the fact that it was only written today.
+  This post should have been published last month, but was delayed by the fact that it was only written today.
 
 layout: blogpost
 ---
