@@ -42,7 +42,7 @@ const liveUpdate = () => useHmr
   : livereload(distDir) // refresh entire window when code is updated
 
 del.sync(distDir + '/**') // clear previous builds
-!production && spassr({
+!production && !isNollup && spassr({
   serveSpa: true, // serve app
   serveSsr: !isNollup, // Nollup doesn't need SSR
   silent: isNollup // Nollup needs Spassr internally
@@ -74,6 +74,15 @@ const baseConfig = () => ({
         { find: '@', replacement: path.resolve(process.cwd(), 'src') }
       ]
     }),
+    {
+      transform(code, id) {
+        if (id.match(/(\.svx|\.svelte)$/))
+          return code
+            .replace('_outify:option_', 'routify:options')
+            .replace('_crip_', 'script')
+
+      }
+    },
     svelte({
 
       preprocess: mdsvex({
