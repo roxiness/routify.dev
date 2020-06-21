@@ -28,7 +28,7 @@ layout: blogpost
 
 
 ### Apologies
-This post should have been delayed last month, but was delayed by the fact that it was only written today.
+This post should have been published last month, but was delayed by the fact that it was only written today.
 
 The 1.8 beta was released a month ago and is finally stable, AFAWK. If we don't receive any critical bug reports in the next week, it will be released as stable. After 1.8, the next goals are Routify 2 and Roxi, our new framework.
 
