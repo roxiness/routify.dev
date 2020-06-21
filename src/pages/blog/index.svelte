@@ -9,7 +9,7 @@
   import { format, formatRelative, parseISO } from "date-fns";
   import marked from "marked";
   const posts = $layout.parent.children
-    .filter((c) => c.meta["frontmatter"])
+    .filter(c => c.meta["frontmatter"])
     .sort((a, b) =>
       b.meta["frontmatter"].published.localeCompare(
         a.meta["frontmatter"].published
