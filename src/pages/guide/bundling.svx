@@ -13,7 +13,7 @@ Fine grained bundling, makes it possible to quickly strike a balance between blo
 `_layout.svelte` of the folder to be bundled.
 
 ### What does it do?
-Bundling a folder compiles everything in the folder recursively into a single .js file.
+Bundling a folder compiles all pages and layouts in the folder recursively into a single .js file.
 
 ### Why fine grained bundling?
 **Request water falls** -
@@ -30,7 +30,7 @@ To solve this Routify provides the `bundle` meta option which lets you take cont
 ### Can I bundle within a bundle?
 Yes. You can also disable bundling altogether for specific files and folders.
 
-### Example of bundling
+### Use case
 Imagine you have the following `src/pages` structure.
 ```
 .
