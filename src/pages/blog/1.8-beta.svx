@@ -1,8 +1,19 @@
 ---
 published: 2020-06-21T21:36:59.459Z
 author: jakobrosenberg
-title: 1.8 beta - dev & production enhancements
+title: 1.8 beta - New dev & production features
 summary: |
+  - Prefetching
+  - Preloading
+  - Bundling
+  - Plugins
+  - Nollup
+  - New documentation
+  - Roxi
+  
+  ### Apologies
+  This post should have been delayed last month, but was delayed by the fact that it was only written today.
+
 layout: blogpost
 ---
 
@@ -19,7 +30,7 @@ layout: blogpost
 ### Apologies
 This post should have been delayed last month, but was delayed by the fact that it was only written today.
 
-The 1.8 beta was released a month ago and is finally stable, AFAWK. If we don't receive any critical bug reports in the next two days, it will be released as stable. After 1.8, the next goals are Routify 2 and Roxi, our new framework.
+The 1.8 beta was released a month ago and is finally stable, AFAWK. If we don't receive any critical bug reports in the next week, it will be released as stable. After 1.8, the next goals are Routify 2 and Roxi, our new framework.
 
 To try the 1.8 beta, open your terminal and type:
 ```bash
@@ -95,7 +106,7 @@ routes
 ```
 
 ### Bundling
-This is an old pre 1,8 feature, but was only recently documented.
+This is an old pre-1,8 feature, but was only recently documented.
 
 By default pages and layouts are imported dynamically and individually. Bundling allows folders to be bundled into a single file to avoid request waterfalls.
 
