@@ -143,3 +143,12 @@ The documentation has been updated with new entries:
 
 ### Roxi
 Development has finally begun on Roxi. Roxi will initially handle the responsibilities of the current starter template. From there, who knows...
+
+---
+
+
+  #### That's it for now
+  To play myself out I'll leave you with a freshly recorded gif.
+<div style="text-align: center">
+  <img src="/images/examples/lighthouse-test.gif" alt="example" style="max-width: 100%">
+</div>
