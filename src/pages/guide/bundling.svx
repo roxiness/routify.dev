@@ -1,0 +1,58 @@
+---
+layout: default
+---
+# Bundling
+
+Fine grained bundling, makes it possible to quickly strike a balance between bloated apps and request waterfalls.
+
+
+**Bundling a folder recursively**
+```html
+<!-- _outify:option_ bundle=true -->
+```
+`_layout.svelte` of the folder to be bundled.
+
+### What does it do?
+Bundling a folder compiles everything in the folder recursively into a single .js file.
+
+### Why fine grained bundling?
+**Request water falls** -
+When you visit a page in Routify with dynamic imports, each layout and page is a separate file. This ensures that the client doesn't have to wait for the entire app to load, just to visit a single page.
+
+Hovever, there's a point of diminishing returns, where the amount of requests outweighs the gains of serving smaller bundles. An excessive amount of requests is commonly referred to as a request waterfall.
+
+To solve this Routify provides the `bundle` meta option which lets you take control of how your app is bundled.
+
+**Transitions** - When using transitions you want the requested page to be available to avoid glitches as the page loads. This can be done by either **A)** bundling modules that contain page transitions or **B)** ensuring that requested pages are preloaded.
+
+**Large files** - can increase the bundle size significantly. If the file is rarely visited, it makes even more sense to exclude the file from a bundle with `bundle=false`. This is especially useful if you're inlining large assets in your `.svelte` files.
+
+### Can I bundle within a bundle?
+Yes. You can also disable bundling altogether for specific files and folders.
+
+### Example of bundling
+Imagine you have the following `src/pages` structure.
+```
+.
+├─ products
+├─ blog
+├─ about
+└─ admin
+   └─ crud
+```
+
+Your app is suffering from request waterfalls, but you do not wish to disable dynamic imports as that would require users to load the entire app, including the admin module.
+
+By enabling bundling in `_layout.svelte` and `admin/_layout.svelte`, we get two bundles:
+
+**`_-<hash>.js`** and **`_admin-<hash>.js`**.
+
+All pages and layouts are now contained within these two non-overlapping bundles.
+
+### Live example
+[Transitions on example app](https://example.routify.dev/example/transitions/tabs/home)
+
+The transitions folder is bundled to avoid glitches from pages loading individually on page change. Opening the Network tab in your developer tools, will show that no components are lazy loaded on page change.
+
+
+<!-- routify:options index=60 -->
