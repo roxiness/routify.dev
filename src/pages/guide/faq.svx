@@ -22,7 +22,7 @@ Pages are written to HTML when a page and its layouts have rendered. To wait for
 Prerendering happens when the site is built. SSR, or server side rendering, is performed in realtime.
 
 ### Can prerendered pages have dynamic content
-Yes and no. The saved HTML remainds static, but once the app has loaded on the client, the dynamic content will be seamlessly updated.
+Yes and no. The saved HTML remains static, but once the app has loaded on the client, the dynamic content will be seamlessly updated.
 
 ### Can I have SSR without a server
 Yes. SSR can be performed in serverless functions. Please refer to the script folder of the starter template for serverless functions.
