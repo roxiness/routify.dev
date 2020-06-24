@@ -87,7 +87,7 @@ Read more about prefetching here
 - [How it works - wip](/wip/prefetch-and-cache)
 
 ### Preloading
-Preloads pages, but unlike prefetching, it does not prefetch external assets. If you want to manually handle how your app is cached, disable ``precacheAndRoute(files)`` in the service worker and instead use the preload helper to cache the components your want cached in the order you want them cached.
+Preloads pages, but unlike prefetching, it does not prefetch external assets. If you want to manually handle how your app is cached, disable ``precacheAndRoute(files)`` in the service worker and instead use the preload helper to cache the components you want cached in the order you want them cached.
 
 Preloading has no effect if the service worker is configured to cache the whole app.
 
