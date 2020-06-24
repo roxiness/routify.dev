@@ -36,7 +36,7 @@
   <p>
     To access all parameters, including query parameters, from any component use the
     <code>$params</code>
-    helper. The `$params` helper can be called either from a page or a component nested within that page without having to pass the property down to the component.
+    helper. The `$params` helper can be called from a page, layout, or component nested within the page without having to pass the property down.
   </p>
 
   <Prism>
