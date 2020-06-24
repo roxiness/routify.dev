@@ -34,9 +34,9 @@
   <br />
   <h3 class="c-h3">Global parameters</h3>
   <p>
-    To access all parameters from anywhere, use the
+    To access all parameters, including query parameters, from any component use the
     <code>$params</code>
-    helper.
+    helper. The `$params` helper can be called either from a page or a component nested within that page without having to pass the property down to the component.
   </p>
 
   <Prism>
