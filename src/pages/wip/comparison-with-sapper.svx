@@ -1,0 +1,215 @@
+---
+layout: default
+---
+
+# Comparison with Sapper
+
+Sapper is a brilliant backend framework with a router and a view layer. It does what it was designed to do and it does it extremely well.
+
+Routify is a frontend router with an optional starter template. The starter template provides features like SSR and 1-click deployments.
+
+While they share the same file mapping convention, they approach most challenges differently.
+
+
+## Developer experience
+**Rebuild time**, when I used Sapper, would increase and reach 10 seconds before I would have to kill the dev-server. This may have only affected a small number of people and it may have been fixed. At the time however, it didn't work for me.  Routify  doesn't have any measurable impact on rebuilds and the provided starter template includes Nollup which rebuilds a medium sized project like `routify.dev` in 50~100 ms.
+
+**SSR** in Routify is optional, easy to reason about and flexible. For Sapper it's hardwired, requires special attention and doesn't work with browser code/libraries, ie. Prism.
+
+**Deploying** in Routify can be done in one line: `npm run deploy:<service>` or by linking a service like Netlify to your Github repo. With Sapper you need a server with Node environment.
+
+**Upgrading** Routify is easy. Upgrading its starter template, less so. While a starter template isn't intended to be upgraded, some prefer to keep their base inline with the official template... Guilty as charged. Roxi, our upcoming framework, aims to solve this.
+
+**Conventions.** Routify by default keeps program generated/managed code out of the `src` folder. Sapper doesn't.
+
+**Community.** while both have great communities, Sapper's is bigger.
+
+---
+
+# In depth
+## SSR
+SSR compiles javascript to HTML, which can be served directly to the client or saved to a local HTML file (static export). Since it is not possible for a server to know which async calls to wait for, it doesn't wait for any. Sapper and Routify both provide ways to handle this.
+
+Sapper uses Svelte's built in SSR, which is faster, but restricted to node code/libraries. Routify uses JSDOM.
+
+#### Example client call
+```html
+<script>
+  let article
+
+  fetch('example.com')
+    .then(res => res.json())
+    .then(res => (article = res.html))
+</script>
+```
+
+The above call works on the client, but during SSR the page would be rendered before the async call was resolved. In other words, the article would be missing.
+
+#### SSR handling in Routify
+
+In Routify this can be handled with a single addition:
+1. Call `$ready()` at the end of the async call.
+```html
+<script>
+  import { ready } from '@sveltech/routify'
+  let article
+
+  fetch('example.com')
+    .then(res => res.json())
+    .then(res => (article = res.html))
+    .then($ready)
+</script>
+```
+
+#### SSR handling in Sapper
+
+For Sapper you have four requirements:
+1. Replace browser functions with node compatible functions, like `this.fetch`.
+2. Run the async code inside a `preload` function.
+3. Run the preload function in a separate script with context set to module.
+4. Return the fetched data to the primary script.
+
+```html
+<script context="module">
+	export function preload(page, session) {
+      const promise = this.fetch(`blog/${slug}.json`)
+        .then(res => res.json())
+        .then(res => res.article)
+      return { article: promise };
+	}
+</script>
+<script>
+	export let article;
+</script>
+```
+
+
+
+---
+
+
+## Parameters and Queries
+Routify's parameters are inspired by Sapper, hence both use the `[param].svelte` convention. There are however a few differences in capability and implementation.
+
+### Reactive parameters
+Routify's parameters are reactive. Sappers aren't. (TODO - Is this correct?)
+
+### Multiple parameters
+Sapper allows multiple parameters in a single bracket: `blog/[...slug].svelte`. Routify doesn't.
+
+### Overloading parameters
+Routify allows overloading parameters:
+```javascript
+$url('/blog/:slug', {slug: 'first-post', theme: 'dark', page: 2})
+// /blog/first-post?theme=dark&page2
+```
+
+## Accessing parameters
+#### Routify uses `$params` to access parameters.
+```javascript
+import { params } from '@sveltech/routify'
+
+$: console.log($params) // { slug: "first-post", theme: "dark", page: "2"}
+```
+
+#### Sapper uses `preload` to access parameters.
+```html
+<script context="module">
+  export async function preload({params, query}, session) {
+    return {...params, ...query}
+  }
+</script>
+<script>
+  export let slug
+  export let theme
+  export let page
+</script>
+```
+
+
+---
+
+
+
+---
+
+
+## Hosting and deployment
+
+Not requing a Node backend allows Routify to be "one-click" deployed to free tier providers like Vercel and Netlify - while still providing features like static esports SSR.
+
+Sapper on the other hand requires a Node server.
+
+---
+
+## Prefetching
+
+Sapper uses `<a rel=prefetch ...` data on unvisited pages. Pages are prefetched on hover.
+
+Routify uses the `prefetch` helper which can be used programmatically or added to a link: `<a use:prefetch ...`. Routify doesn't prefetch on hover by default, but when the prefetch function is called. For hover functionality, use `on:hover`. For  optimal browsing, Routify prefetches all resources (data, images, etc.) and not just data.
+
+---
+
+## Unique Routify features
+### SPA
+
+Routify builds SPAs. SSR is handled by servers/serverless functions.
+
+
+### Metadata
+
+Routify allows files to contain metadata:
+```html
+<!-- routify:options my-meta-data="Hello world" -->
+```
+
+Metadata allows custom or Routify specific data to be attached to a page. This data is available without having to load the page and can be used for built-in/custom logic.
+
+### Tree/nodes and link generation
+
+Routify provides access to nodes, which can be used to access metadata and/or generating links:
+```html
+<script>
+  import { layout } from '@sveltech/routify'
+</script>
+
+{#each $layout.children as node}
+  <a href={node.path} >{node.title}</a>
+{/each}
+```
+
+### Bundle management
+
+Routify let's you bundle individual folders recursively to reduce request waterfalls.
+```html
+<!-- _outify:option_ bundle=true -->
+```
+
+
+### Decorators
+
+Routify provides decorators, which are components that wrap around every descendending node:
+```html
+<script>
+  import MyDecorator from './_MyDecorator.svelte'
+</script>
+
+<slot decorator={MyDecorator} />
+```
+Every descending layout or page will be wrapped in `MyDecorator`.
+
+---
+
+## Unique Sapper features
+
+### Backend & server routes
+
+Sapper comes bundled with its own backend.
+
+### rel=external
+
+Sapper requires `rel=external` on outgoing links.
+
+### Tests
+
+Sapper comes bundled with Cypress for tests.
