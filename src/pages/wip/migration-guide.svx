@@ -2,7 +2,36 @@
 layout: default
 ---
 
-## How to migrate your Sapper project to Routify
+# Migrating from svelte-template
+
+Did you start your project using svelte-template but have decided you need a router? No worries. It's easy to transfer over your project to use Routify instead.
+
+1. Copy over the dependencies and the npm tasks from [package.json](https://github.com/sveltech/routify-starter/blob/master/package.json).
+2. Copy over the full content from [rollup.config.js](https://github.com/sveltech/routify-starter/blob/master/rollup.config.js)
+3. Put whatever static assets you had in the `public` folder into a new folder called `static`
+
+4. Within your `src` folder, make sure the contents of App.svelte are the following:
+
+```
+<script>
+  import { Router } from "@sveltech/routify";
+  import { routes } from "@sveltech/routify/tmp/routes";
+</script>
+
+<Router {routes} />
+```
+
+4. Within your src folder, create a folder called `pages`
+5. Within `pages`, create a file called `index.svelte`. This will correspond to `/`.
+6. Now run `npm i` to install the necessary dependencies; and run `npm run dev` to run Routify's dev server.
+
+#### Optional
+
+If you are looking to deploy your project to Now or Netlify, look in the [scripts folder](https://github.com/sveltech/routify-starter/tree/master/scripts) and copy the files you need.
+
+---
+
+# Migrating from Sapper
 
 Assuming you started from [sapper-template](https://github.com/sveltejs/sapper-template), do the following.
 
