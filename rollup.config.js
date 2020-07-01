@@ -71,7 +71,7 @@ const baseConfig = () => ({
     svg(),
     alias({
       entries: [
-        { find: '@', replacement: path.resolve(process.cwd(), 'src') }
+        { find: '@', replacement: path.resolve('src') }
       ]
     }),
     {
