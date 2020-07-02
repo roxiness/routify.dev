@@ -129,7 +129,7 @@
                   import { authorize } from 'my-auth-service'
                 </script>
 
-                {#await authenticate()}
+                {#await authorize()}
                   Checking permissions...
                 {:then}
                   <slot />
