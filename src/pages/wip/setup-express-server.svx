@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+
+# Setting up an Express server example
+
+```javascript
+const express = require('express')
+const { ssr } = require('@sveltech/ssr')
+const app = express()
+
+const ENTRYPOINT = 'dist/__app.html'
+const APP = 'dist/build/bundle.js'
+
+// serve files first, if they exist
+app.use(express.static('dist'))
+
+// for all other requests, send prerendered HTML
+app.get('*', async (req, res) => {
+  const html = await ssr(ENTRYPOINT, APP, req.url)
+  res.send(html)
+})
+```
