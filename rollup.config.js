@@ -32,7 +32,6 @@ const staticDir = 'static'
 const distDir = 'dist'
 const buildDir = `${distDir}/build`
 const production = !process.env.ROLLUP_WATCH;
-const buildStaticExports = process.env.PRERENDER === "true" || !!production
 const isNollup = !!process.env.NOLLUP
 const useDynamicImports = process.env.BUNDLING === 'dynamic' || isNollup || !!production
 const useHmr = isNollup
@@ -111,8 +110,7 @@ const baseConfig = () => ({
     commonjs(),
 
     production && terser(), // minify
-    !production && liveUpdate(),
-    buildStaticExports && prerender()
+    !production && liveUpdate()
   ],
   watch: {
     clearScreen: false,
@@ -174,17 +172,6 @@ export default configs
 /**
  * Config helper functions
  */
-
-function prerender() {
-  return {
-    writeBundle() {
-      require('child_process').spawn('npm', ['run', 'export'], {
-        stdio: ['ignore', 'inherit', 'inherit'],
-        shell: true
-      });
-    }
-  }
-}
 
 function transform(contents) {
   return contents.toString().replace('__SCRIPT__', useDynamicImports
