@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+<!-- routify:options index=50 -->
+
+# Basepath
+
+
+Basepaths can be set by importing the ``basepath`` helper.
+Basepaths must be strings but will be converted to a RegExp.
+
+
+```svelte
+<script>
+  import { Router, basepath } from "@sveltech/routify";
+  import { routes } from "@sveltech/routify/tmp/routes";
+  $basepath =  '/mybase'
+</script>
+
+<!-- src/App.svelte -->
+<Router {routes} />
+
+```
+
+  Since strings are converted to regular expressions you can also use
+  dynamic basepaths.
+
+``$basepath = "/.."``
+would match
+``en``
+,
+``fr``
+,
+``de``
+etc.
+
+
+  When prerendering basepaths, make sure to specify each basepath to be
+  rendered.
+
+``npx routify export --basepath "en,fr,de"``
+
+
+
+  ### Using basepaths with subfolders
+
+  Sometimes you have to deploy to a subfolder, like `/myapp`. In this case you do no want to export static pages from `/myapp` as that would ultimately give you the address `/myapp/myapp` once your app is deployed.
+
+  To handle this, you can make the basepath optional: `@basepath = "(/myapp)?"`.
+
+  ### Using basepaths with dynamic subfolders
+
+  If you don't know the path of your apps location, you can use wildcards in your basepath
+
+  ```javascript
+  @basepath = "(myapp-\\\\w{4})?"
+  ```
+  The above example would match `/myapp-abcd/about` and `/about`.
