@@ -54,6 +54,6 @@ etc.
   If you don't know the path of your apps location, you can use wildcards in your basepath
 
   ```javascript
-  @basepath = "(myapp-\\\\w{4})?"
+  $basepath = "(myapp-\\\\w{4})?"
   ```
   The above example would match `/myapp-abcd/about` and `/about`.
