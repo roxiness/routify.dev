@@ -47,7 +47,7 @@ etc.
 
   Sometimes you have to deploy to a subfolder, like `/myapp`. In this case you do no want to export static pages from `/myapp` as that would ultimately give you the address `/myapp/myapp` once your app is deployed.
 
-  To handle this, you can make the basepath optional: `@basepath = "(/myapp)?"`.
+  To handle this, you can make the basepath optional: `$basepath = "(/myapp)?"`.
 
   ### Using basepaths with dynamic subfolders
 
