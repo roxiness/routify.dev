@@ -4,6 +4,7 @@ layout: default
 
 
 # Setting up an Express server example
+To use Routify with a backend, redirect all unresolved requests to Routify.
 
 ```javascript
 const express = require('express')
@@ -13,12 +14,18 @@ const app = express()
 const ENTRYPOINT = 'dist/__app.html'
 const APP = 'dist/build/bundle.js'
 
-// serve files first, if they exist
+// serve assets, if they exist
 app.use(express.static('dist'))
 
-// for all other requests, send prerendered HTML
+// otherwise use Routify
 app.get('*', async (req, res) => {
   const html = await ssr(ENTRYPOINT, APP, req.url)
   res.send(html)
 })
+```
+
+##### Disabling SSR
+
+```javascript
+res.sendFile(ENTRYPOINT)
 ```
