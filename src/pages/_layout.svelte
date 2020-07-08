@@ -5,6 +5,8 @@
   const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
   metatags.template("title", title => `${title ? ` ${title} - ` : ""}Routify`);
   $: metatags.title = capitalize($page.title);
+  $: metatags['twitter:image'] = 'https://routify.dev/images/touch-icons/routify-800.png'
+  $: metatags['twitter:image:alt'] = 'Routify logo'
 </script>
 
 <!-- routify:options children=[
