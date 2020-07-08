@@ -3,28 +3,46 @@ layout: default
 ---
 
 
-# Setting up an Express server example
-To use Routify with a backend, redirect all unresolved requests to Routify.
+# Express example
 
+#### 1. install express and ssr
+```
+npm i express @sveltech/ssr
+```
+
+#### 2. create server.js
 ```javascript
-const express = require('express')
 const { ssr } = require('@sveltech/ssr')
+const express = require('express')
 const app = express()
 
 const ENTRYPOINT = 'dist/__app.html'
 const APP = 'dist/build/bundle.js'
+const PORT = 5000
 
 // serve assets, if they exist
 app.use(express.static('dist'))
 
-// otherwise use Routify
+// otherwise serve Routify
 app.get('*', async (req, res) => {
   const html = await ssr(ENTRYPOINT, APP, req.url)
   res.send(html)
 })
+
+// start server
+app.listen(PORT)
+console.log('serving on port', PORT)
 ```
 
-##### Disabling SSR
+#### 3. Run server
+```
+node server
+```
+
+---
+
+### SPA only
+If you wish to disable SSR, you can send the SPA unrendered.
 
 ```javascript
 res.sendFile(ENTRYPOINT)
