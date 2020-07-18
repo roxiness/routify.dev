@@ -34,8 +34,9 @@
     <Prism language="svelte">
       {`
         <script>
-          import { TabsTransition } from "@sveltech/routify/decorators"
-          const width = writable();
+          import { writable } from 'svelte/store'
+          import { TabsTransition } from '@sveltech/routify/decorators'
+          const width = writable()
         <${''}/script>
 
         <div bind:offsetWidth={$width}>
@@ -52,7 +53,7 @@
     <Prism language="svelte">
       {`
         <script>
-          import { BaseTransition } from "@sveltech/routify/decorators"
+          import { BaseTransition } from '@sveltech/routify/decorators'
           import { fade } from 'svelte/transition'
 
           const configs = [
