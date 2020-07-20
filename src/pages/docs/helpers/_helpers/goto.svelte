@@ -1,6 +1,7 @@
 <script>
   import FunctionDoc from "@/components/FunctionDoc.svelte";
   import Code from "@/components/Code.svelte";
+  import Note from "@/components/Note.svelte";
 
   const params = [
     {
@@ -32,18 +33,18 @@
 
 <FunctionDoc name="$goto" {params}>
   <p>
-    Use <code>$goto</code>
-    to navigate programatically.
+    Navigate programatically.
   </p>
 
   <Code language="svelte">
     {`
-      <!-- src/pages/redirect.svelte -->
       <`}{`script>
         import { goto } from '@sveltech/routify'
-        $goto('../redirect/me')
+        $goto('../go/here')
       </script>
   `}
   </Code>
-
+  <Note>
+    For redirects, use the alias <code>$redirect</code>. This will omit the redirecting page from browser history.
+  </Note>
 </FunctionDoc>

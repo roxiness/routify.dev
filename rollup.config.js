@@ -10,7 +10,9 @@
 
 */
 
-import svelte from 'rollup-plugin-svelte';
+import * as path from 'path'
+import svelte from 'rollup-plugin-svelte-hot';
+import Hmr from 'rollup-plugin-hot'
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
@@ -21,119 +23,179 @@ import svg from 'rollup-plugin-svg';
 import alias from '@rollup/plugin-alias'
 import { mdsvex } from 'mdsvex'
 import slug from 'remark-slug'
+import replace from '@rollup/plugin-replace';
+import { injectManifest } from 'rollup-plugin-workbox'
+import { spassr } from 'spassr'
 
 
 const staticDir = 'static'
 const distDir = 'dist'
 const buildDir = `${distDir}/build`
 const production = !process.env.ROLLUP_WATCH;
-const bundling = process.env.BUNDLING || production ? 'dynamic' : 'bundle'
-const shouldPrerender = (typeof process.env.PRERENDER !== 'undefined') ? process.env.PRERENDER : !!production
+const isNollup = !!process.env.NOLLUP
+const useDynamicImports = process.env.BUNDLING === 'dynamic' || isNollup || !!production
+const useHmr = isNollup
+
+const liveUpdate = () => useHmr
+  ? Hmr({ inMemory: true, public: staticDir, }) // refresh only updated code
+  : livereload(distDir) // refresh entire window when code is updated
+
+del.sync(distDir + '/**') // clear previous builds
+!production && !isNollup && spassr({
+  serveSpa: true, // serve app
+  serveSsr: !isNollup, // Nollup doesn't need SSR
+  silent: isNollup // Nollup needs Spassr internally
+})
 
 
-del.sync(distDir + '/**')
+/**
+ * Base config extended by dynamicConfig and baseConfig
+ */
+const baseConfig = () => ({
+  input: `src/main.js`,
+  output: {
+    name: 'routify_app',
+    sourcemap: true,
+  },
+  plugins: [
+    sass(production),
+    copy({
+      targets: [
+        { src: [`${staticDir}/*`, "!*/(__index.html)"], dest: distDir },
+        { src: [`${staticDir}/__index.html`], dest: distDir, rename: '__app.html', transform },
+      ],
+      copyOnce: true,
+      flatten: false
+    }),
+    svg(),
+    alias({
+      entries: [
+        { find: '@', replacement: path.resolve('src') }
+      ]
+    }),
+    {
+      transform(code, id) {
+        if (id.match(/(\.svx|\.svelte)$/))
+          return code
+            .replace('_outify:option_', 'routify:options')
+            .replace('_crip_', 'script')
 
-function createConfig({ output, inlineDynamicImports, plugins = [] }) {
-  const transform = inlineDynamicImports ? bundledTransform : dynamicTransform
-
-  return {
-    inlineDynamicImports,
-    input: `src/main.js`,
-    output: {
-      name: 'app',
-      sourcemap: true,
-      ...output
+      }
     },
-    plugins: [
-      copy({
-        targets: [
-          { src: staticDir + '/**/!(__index.html)', dest: distDir },
-          { src: `${staticDir}/__index.html`, dest: distDir, rename: '__app.html', transform },
-        ], copyOnce: true
-      }),
-      svg(),
-      alias({ entries: [{ find: '@', replacement: './src' },] }),
-      svelte({
-        extensions: ['.svelte', '.md', '.svx'],
-        preprocess: mdsvex({
-          remarkPlugins: [slug],
-          extension: '.svx',
-          layout: {
-            "blogpost": "./src/components/MarkdownBlogLayout.svelte"
-          }
-        }),
-        // enable run-time checks when not in production
-        dev: !production,
-        // we'll extract any component CSS out into
-        // a separate file — better for performance
-        css: css => {
-          css.write(`${buildDir}/bundle.css`);
+    svelte({
+
+      preprocess: mdsvex({
+        remarkPlugins: [slug],
+        extension: '.svx',
+        layout: {
+          "blogpost": "./src/pages/blog/_components/Layout.svelte",
+          "default": "./src/components/md-layouts/Default.svelte"
         }
       }),
 
-      // If you have external dependencies installed from
-      // npm, you'll most likely need these plugins. In
-      // some cases you'll need additional configuration —
-      // consult the documentation for details:
-      // https://github.com/rollup/rollup-plugin-commonjs
-      resolve({
-        browser: true,
-        dedupe: importee => importee.match(/^(svelte|routify-helper)($|\/)/)
-      }),
-      commonjs(),
+      extensions: ['.svelte', '.md', '.svx'],
+      dev: !production, // run-time checks
+      // Extract component CSS — better performance
+      css: css => {
+        css.write(`${buildDir}/bundle.css`);
+      },
+      hot: useHmr,
+    }),
 
+    // resolve matching modules from current working directory
+    resolve({
+      browser: true,
+      dedupe: importee => !!importee.match(/^(svelte|routify-dev-ui)($|\/)/)
+    }),
+    commonjs(),
 
-      // If we're building for production (npm run build
-      // instead of npm run dev), minify
-      production && terser(),
-
-      ...plugins
-    ],
-    watch: {
-      clearScreen: false,
-      buildDelay: 100,
-      // chokidar: { ignored: "**/tmp/routes.js" }
-    }
+    production && terser(), // minify
+    !production && liveUpdate()
+  ],
+  watch: {
+    clearScreen: false,
+    buildDelay: 100,
   }
-}
+})
 
-
-const bundledConfig = {
+// extends baseConfig
+const bundledConfig = extendBase({
   inlineDynamicImports: true,
+  output: { format: 'iife', file: `${buildDir}/bundle.js` },
+})
+
+// extends baseConfig
+const dynamicConfig = extendBase({ output: { format: 'esm', dir: buildDir } })
+
+
+/**
+ * Can be deleted if service workers aren't used
+ */
+const serviceWorkerConfig = {
+  input: `src/sw.js`,
   output: {
+    name: 'service_worker',
+    sourcemap: true,
     format: 'iife',
-    file: `${buildDir}/bundle.js`
+    file: `${distDir}/sw.js`
   },
   plugins: [
-    !production && serve(),
-    !production && livereload(distDir),
-    sass(production)
+    {
+      name: 'watch-app',
+      buildStart() { this.addWatchFile("dist/build") }
+    },
+    commonjs(),
+    resolve({ browser: true }),
+    injectManifest({
+      swSrc: `${distDir}/sw.js`,
+      swDest: `${distDir}/sw.js`,
+      globDirectory: distDir,
+      globPatterns: ['**/*.{js,css,svg}', '__app.html'],
+      maximumFileSizeToCacheInBytes: 10000000, // 10 MB
+    }),
+    replace({ 'process.env.NODE_ENV': JSON.stringify('production'), }),
+    production && terser(),
   ]
 }
 
-const dynamicConfig = {
-  inlineDynamicImports: false,
-  output: {
-    format: 'esm',
-    dir: buildDir
-  },
-  plugins: [
-    !production && livereload(distDir),
-  ]
-}
 
-const configs = [createConfig(bundledConfig)]
-if (bundling === 'dynamic')
-  configs.push(createConfig(dynamicConfig))
-if (shouldPrerender) [...configs].pop().plugins.push(prerender())
+// Combine configs as needed
+const configs = [
+  useDynamicImports && dynamicConfig,
+  !isNollup && bundledConfig,
+  !isNollup && serviceWorkerConfig
+].filter(Boolean)
+
 export default configs
+
+
+/**
+ * Config helper functions
+ */
+
+function transform(contents) {
+  return contents.toString().replace('__SCRIPT__', useDynamicImports
+    ? '<script type="module" defer src="/build/main.js"></script>'
+    : '<script defer src="/build/bundle.js"></script>')
+}
+
+function extendBase(extend) { return mergeRollupConfigs(baseConfig(), extend) }
+
+function mergeRollupConfigs(base, extend) {
+  Object.entries(extend).forEach(([key, value]) => {
+    if (Array.isArray(value)) base[key].push(...value)
+    else if (typeof value === 'object') Object.assign(base[key], value)
+    else base[key] = value
+  })
+  return base
+}
 
 
 function sass(production) {
   const sassTask = production ? 'build:sass' : 'watch:sass'
   let started = false;
   return {
-    writeBundle() {
+    generateBundle() {
       if (!started) {
         started = true
         require('child_process').spawn('npm', ['run', sassTask], {
@@ -143,45 +205,4 @@ function sass(production) {
       }
     }
   }
-}
-
-function serve() {
-  let started = false;
-  return {
-    writeBundle() {
-      if (!started) {
-        started = true;
-        require('child_process').spawn('npm', ['run', 'serve'], {
-          stdio: ['ignore', 'inherit', 'inherit'],
-          shell: true
-        });
-      }
-    }
-  };
-}
-
-function prerender() {
-  return {
-    writeBundle() {
-      if (shouldPrerender) {
-        require('child_process').spawn('npm', ['run', 'export'], {
-          stdio: ['ignore', 'inherit', 'inherit'],
-          shell: true
-        });
-      }
-    }
-  }
-}
-
-function bundledTransform(contents) {
-  return contents.toString().replace('__SCRIPT__', `
-    <script defer src="/build/bundle.js" ></script>
-  `)
-}
-
-function dynamicTransform(contents) {
-  return contents.toString().replace('__SCRIPT__', `
-    <script type="module" defer src="https://unpkg.com/dimport@1.0.0/dist/index.mjs?module" data-main="/build/main.js"></script>
-    <script nomodule defer src="https://unpkg.com/dimport/nomodule" data-main="/build/main.js"></script>
-  `)
 }

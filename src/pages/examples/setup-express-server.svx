@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+
+# Express example
+
+#### 1. install express and ssr
+```
+npm i express @sveltech/ssr
+```
+
+#### 2. create server.js
+```javascript
+const { ssr } = require('@sveltech/ssr')
+const express = require('express')
+const app = express()
+
+const ENTRYPOINT = 'dist/__app.html'
+const APP = 'dist/build/bundle.js'
+const PORT = 5000
+
+// serve assets, if they exist
+app.use(express.static('dist'))
+
+// otherwise serve Routify
+app.get('*', async (req, res) => {
+  const html = await ssr(ENTRYPOINT, APP, req.url)
+  res.send(html)
+})
+
+// start server
+app.listen(PORT)
+console.log('serving on port', PORT)
+```
+
+#### 3. Run server
+```
+node server
+```
+
+---
+
+### SPA only
+If you wish to disable SSR, you can send the SPA unrendered.
+
+```javascript
+res.sendFile(ENTRYPOINT)
+```

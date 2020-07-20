@@ -1,21 +1,13 @@
-<script>
-  import Author from '@/components/Author.svelte'
-  import Title from './_title.svelte'
-  import { page } from '@sveltech/routify'
-</script>
-
-<!-- routify:options blogpost={
-  "published": "2020-05-02T12:19:06.574Z",
-  "author": "wolfr",
-  "title": "An update",
-  "summary": `
+---
+published: 2020-05-02T12:19:06.574Z
+author: wolfr
+title: An update
+summary: |
   It's been about two weeks since we released the 1.5 version of Routify. You can read all about that in our previous blog post [here](https://routify.dev/blog/announcing-1.5).
 
   Our release was met with a positive reception. We've had lots of people make the jump and give Routify a try, as evidenced by Github's dependency graph which shows over 100 repos using Routify now.
-  `
-} -->
-
-<Title node = { $page } />
+layout: blogpost
+---
 
 Hi everyone. It's wolfr here. I am helping with Routify's community.
 
@@ -38,5 +30,3 @@ There's also some questions. The biggest question we get is how Routify compares
 For the latest and greatest, please follow us on Twitter: [@routifyjs](https://twitter.com/routifyjs).
 
 ---
-
-<Author />

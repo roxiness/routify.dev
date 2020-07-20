@@ -6,7 +6,7 @@
 </script>
 
 <div class="c-content">
-  <h1 class="c-h1">Helpers - Auth</h1>
+  <h1 class="c-h1">Auth</h1>
   <p>
     With Routify, you don't need any router included functions to authenticate
     users and protect your app.
@@ -177,11 +177,11 @@
             {`
                 <!-- src/pages/_layout.svelte -->
                 <scr`}{`ipt>
-                  import { goto, context } from '@sveltech/routify'
+                  import { goto, layout } from '@sveltech/routify'
                   import { authorize } from 'my-auth-service'
 
                   /** show if the current page is "/login" **/
-                  let show = $context.component.path === '/login'
+                  let show = $layout.path === '/login'
 
                   /** else only show if user is authorized. Otherwise, redirect to login. **/
                   if(!show)

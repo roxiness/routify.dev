@@ -2,9 +2,10 @@
   import FunctionDoc from "@/components/FunctionDoc.svelte";
   import Code from "@/components/Code.svelte";
 
+
   const params = [
     {
-      type: "Function",
+      type: "Function(event):boolean",
       name: "callback",
       description: "Function to be called before URL is changed."
     }

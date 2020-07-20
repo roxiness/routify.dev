@@ -3,6 +3,7 @@
     import Contributors from '@/components/home/Contributors.svelte';
     import Contribute from '@/components/home/Contribute.svelte';
     import Hero from '@/components/home/Hero.svelte';
+    import Sponsors from '@/components/home/Sponsors.svelte';
 </script>
 <!-- routify:options index=false -->
 <!-- routify:options title="Home" -->
@@ -22,4 +23,8 @@
 
 <div class="c-container-vertical">
     <Contribute />
+</div>
+
+<div class="c-container-vertical">
+    <Sponsors />
 </div>
