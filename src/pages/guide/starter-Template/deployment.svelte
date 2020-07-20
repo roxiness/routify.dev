@@ -42,7 +42,35 @@
             </td>
           </tr>
         </table>
-
+      </li>
+      <li>
+        <strong>Bitbucket connection</strong>
+        <p>
+          Connect the repository to Netlify and go to
+          <code>Site settings</code>
+          ->
+          <code>Build & deploy</code>
+          .
+        </p>
+        <p>Then update the settings to</p>
+        <table>
+          <tr>
+            <td>
+              <strong>Base directory</strong>
+            </td>
+            <td>
+              <code>scripts/netlify</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Build command</strong>
+            </td>
+            <td>
+              <code>npm run build</code>
+            </td>
+          </tr>
+        </table>
       </li>
       <li>
         <strong>Command line</strong>
