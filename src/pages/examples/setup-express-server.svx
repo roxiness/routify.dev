@@ -29,6 +29,11 @@ app.get('*', async (req, res) => {
   res.send(html)
 })
 
+// You can also serve in SPA mode without SSR (uncomment below)
+// app.get('*', async (req, res) => {
+//    res.sendFile(ENTRYPOINT, { root: __dirname })
+// })
+
 // start server
 app.listen(PORT)
 console.log('serving on port', PORT)
@@ -41,9 +46,3 @@ node server
 
 ---
 
-### SPA only
-If you wish to disable SSR, you can send the SPA unrendered.
-
-```javascript
-res.sendFile(ENTRYPOINT)
-```
