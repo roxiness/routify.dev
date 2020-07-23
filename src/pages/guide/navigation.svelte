@@ -172,6 +172,18 @@
       ] -->
     `}
     </Code>
-
+  </div>
+  <div class="c-container-vertical c-container-vertical--small">
+    <h3 class="c-h3">&lt;a&gt; default Navigation</h3>
+    <p>
+      If you want to use anchor's default navigation behaviour you can do so by adding the
+      <code>target</code> attribute.
+    </p>
+    <p>Routify will ignore all anchors with <code>target</code> attribute.</p>
+    <Code language="svelte">
+      {`
+      <a href="/non-routify-page" target="_self">Legacy Navigation</a>
+      `}
+    </Code>
   </div>
 </div>
