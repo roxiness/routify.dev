@@ -125,7 +125,10 @@ const bundledConfig = extendBase({
 })
 
 // extends baseConfig
-const dynamicConfig = extendBase({ output: { format: 'esm', dir: buildDir } })
+const dynamicConfig = extendBase({
+  preserveEntrySignatures: false,
+  output: { format: 'esm', dir: buildDir }
+})
 
 
 /**
