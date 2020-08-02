@@ -1,0 +1,94 @@
+---
+layout: default
+---
+
+
+# Use Tailwind CSS
+
+#### 1. Install the devDependencies
+- Tailwind CSS
+- Autoprefixer - a PostCSS plugin which parses your CSS and adds vendor prefixes
+- PostCSS Purgecss - PostCSS plugin for PurgeCSS (a tool to remove unused CSS)
+- cssnano - to ensure that the final CSS files is as small as possible for a production environment
+- postcss-load-config - to make sure svelte-preprocess can find the postcss.config.js
+```
+npm i -D tailwindcss autoprefixer @fullhuman/postcss-purgecss cssnano postcss-load-config
+```
+
+#### 2. Create the tailwind.config.js at the root of your project
+```
+npx tailwindcss init
+```
+
+#### 3. Create postcss.config.js at the root of your project
+```javascript
+// postcss.config.js
+
+const cssnano = require('cssnano')({preset: 'default'})
+
+const purgecss = require('@fullhuman/postcss-purgecss')({
+    content: [
+      './**/**/*.html',
+      './**/**/*.svelte',
+    ],
+  
+    whitelistPatterns: [/svelte-/],
+  
+    defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+  });
+  
+const production = !process.env.ROLLUP_WATCH
+
+module.exports = {
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+    ...(production ? [purgecss, cssnano] : [])
+  ]
+};
+```
+
+#### 4. Import Tailwind CSS to `src/App.svelte`
+```svelte
+<script>
+  import { Router } from "@sveltech/routify";
+  import { routes } from "../.routify/routes";
+</script>
+
+<style  global>
+  /* purgecss start ignore */
+  @import 'tailwindcss/base';
+
+  @import 'tailwindcss/components';
+  /* purgecss end ignore */
+
+  @import 'tailwindcss/utilities';
+
+  /* Don't forget to remove unused styles in global.css */
+  @import "../static/global.css";
+</style>
+
+<Router {routes} />
+```
+
+#### 5. Edit `rollup.config.js` to make `svelte-preprocess` load `postcss.config.js`
+Change the value of `postcss` property to `true` like the snippet below.
+```javascript
+//...
+svelteWrapper: svelte => {
+    svelte.preprocess = [
+      autoPreprocess({
+        postcss: true, /////// HERE ///////
+        defaults: { style: 'postcss' }
+      })]
+},
+//...
+```
+---
+#### Testing by using Tailwind CSS classes in `src/pages/index.svelte`
+For Example:
+```svelte
+<h1 class="text-red-900">This heading is styled by Tailwind CSS</h1>
+```
+Run the script `npm run dev:nollup`, then visit http://localhost:5000.
+If you see the text in red color, Tailwind CSS works.
