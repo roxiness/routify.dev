@@ -50,15 +50,15 @@
           Usage: cli [options] [command]
 
           Options:
-            -d, --debug                    extra debugging
-            -p, --pages <location>         path/to/pages (default: "src/pages")
+            -d, --debug                    Extra debugging
+            -p, --pages <location>         Path/to/pages (default: "src/pages")
             -i, --ignore <list>            Files and dirs. Can be string or array. Interpreted as regular expression (default: [])
-            -D, --dynamic-imports          Code splitting) (default: false)
+            -D, --dynamic-imports          Code splitting (default: false)
             -b, --single-build             Don't watch for file changes (default: false)
             -e, --extensions <names>       Included file extensions (comma separated) (default: ["html","svelte","md"])
             -c, --child-process <command>  Run npm task when Routify is ready
                 --no-hash-scroll           Disable automatic scroll to hash
-            -h, --help                     output usage information
+            -h, --help                     Output usage information
 
           Commands:
           init
