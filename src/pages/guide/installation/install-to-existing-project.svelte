@@ -45,6 +45,7 @@
       "scripts": {
           "dev": "routify -c my-server",
           "my-server": "rollup -c -w",
+          "build": "routify -b && rollup -c",
           ...
       }
     `}
