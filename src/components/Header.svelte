@@ -1,6 +1,7 @@
 <script>
     import NavItems from './nav/NavItems.svelte';
     import NavItemsMobile from './nav/NavItemsMobile.svelte';
+
     let showMobileNav = false
     let bodyElement = document.querySelector('body');
     let htmlElement = document.querySelector('html');
@@ -9,15 +10,17 @@
       showMobileNav = !showMobileNav
     }
 
-    if (showMobileNav) {
-        bodyElement.classList.add('c-mobile-nav-active');
-        htmlElement.classList.add('u-no-scroll');
-    } else {
-        bodyElement.classList.remove('c-mobile-nav-active');
-        htmlElement.classList.remove('u-no-scroll');
-    }
-
 </script>
+
+<svelte:head>
+   {#if showMobileNav}
+      <style>
+         html {
+            overflow: hidden;
+         }
+      </style>
+   {/if}
+</svelte:head>
 
 <header class="c-header">
   <div class="c-container-horizontal">
@@ -30,10 +33,10 @@
       <NavItems />
     </nav>
 
-<!-- todo should be a button -->
-    <div href="#nav"
+    <!-- @todo should be a button for accessibility reasons -->
+    <button
       class="c-navigation-toggle"
-      class:c-navigation-toggle--active={showMobileNav === !showMobileNav}
+      class:c-navigation-toggle--active={showMobileNav}
       on:click|preventDefault={handleToggleClick}
     >
       <svg width="40" height="40" viewBox="0 0 40 40">
@@ -41,7 +44,8 @@
         <rect fill="#000" width="18" height="2" x="11" y="19" class="c-navigation-toggle__line2"></rect>
         <rect fill="#000" width="18" height="2" x="11" y="19" class="c-navigation-toggle__line3"></rect>
       </svg>
-    </div>
+      <span class="u-sr-only">Toggle navigation</span>
+    </button>
   </div>
 </header>
 
