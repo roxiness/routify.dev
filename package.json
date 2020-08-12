@@ -56,7 +56,6 @@
     "remark-slug": "^6.0.0",
     "rollup": "^2.17.1",
     "routify-dev-ui": "^0.0.3",
-    "routify-docs-2020": "link:",
     "routify-plugin-frontmatter": "^1.0.1"
   },
   "routify": {
