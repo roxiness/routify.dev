@@ -22,7 +22,7 @@ jobs:
         npm run build
         cd scripts/now
         node build
-    - uses: amondnet/vercel-action@v19.0.1+1
+    - uses: amondnet/vercel-action@v19.0.1+3
       id: vercel
       with:
         vercel-token: ${{ secrets.NOW_TOKEN }} # Required
