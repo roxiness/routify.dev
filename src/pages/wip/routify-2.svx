@@ -1,0 +1,101 @@
+---
+title: Announcing v1.5
+author: jakobrosenberg
+published: 2020-04-20T11:45:06.574Z
+summary: |
+  Our new hash based routing support required a breaking change - and when you have one breaking change, you might as well break everything. So we did. Gone are all the pet peeves.
+layout: default
+---
+
+
+# Routify 2 - Pet Peeve Edition
+
+---
+- [Why Routify 2](#why-routify-2)
+- [Getting Started](#getting-started)
+- [What's new](#whats-new)
+  - [Hash based routing](#hash-based-routing)
+  - [New `use` directive for url helper](#new-use-directive-for-url-helper)
+  - [urlTransform](#urlTransform)
+  - [_folder.svelte alias](#folder-svelte-alias)
+- [Breaking Changes](#breaking-changes)
+- [Migration Guide](#migration-guide)
+
+## Why Routify 2?
+
+In short, our new `hash based routing` support required a breaking change - and when you have one breaking change, you might as well break everything. So we did. Gone are all the pet peeves.
+
+Path resolvement of `$url` was never quite right and as much as I hate to admit it, `rixo` was right from day one. From now on
+`$url` paths are resolved as traditional file paths and `./` refers to the folder and not the file.
+
+`basepath` was another pet peeve. It should have been an `urlTransform` function but by the time I realized, `basepath` had already been added.
+
+Almost lastly, `_layout.svelte` makes very little semnatic sense. It handles guards, scopes, redirects, folder node etc. In short, the file represents the folder and folder-scope. Therefore a `_folder.svelte` alias has been added.
+
+Lastly, `@sveltech` was a pain to type so we moved everything to `@roxi` which just happens to be the home for our upcoming framework, [Roxi](//roxi.dev) 🤫
+
+
+## Getting Started
+
+To try the new Routify 2 beta, open a terminal and type
+```
+npx routify init --branch 2.x
+```
+
+
+_To migrate an existing project, refer to the [migration guide](#migration-guide) below_
+
+## What's new
+
+### New package scope
+Routify has moved from `@sveltech/routify` to `@roxi/routify`. This is both easier to type and aligns with our upcoming Routify-powered framework Roxi.
+
+### Hash based routing
+Hash based routing has been on of the most requested features for Routify and now it's finally here.
+
+To enable, set `useHash` to true in the runtime config.
+
+```html
+<Router config={{useHash: true}}>
+```
+_The runtime config is passed to the Router component, typically found in `App.svelte`_
+
+### New `use` directive for `$url` helper
+The `$url` helper can now be used as both a function and a `use` directive.
+
+
+```javascript
+/**function*/
+<a href={$url('./movies')}>Movies</a>
+
+/**directive*/
+<a href="./movies" use:$url>Movies</a>
+
+/**function with parameters*/
+<a href={$url('./movies/:id', {id: 123})}>Some movie</a>
+
+/**directive with parameters*/
+<a href="./movies/:id" use:$url={{id: 123}}>Some movie</a>
+```
+
+### urlTransform
+`urlTransform` replaces `basepath`. It requires a little more code, but provides much more control and versatility.
+
+**basepath example**
+```javascript
+    config.urlTransform = {
+      apply: url => `/my-base${url}`,
+      remove: url => url.replace('/my-base', ''),
+    }
+```
+
+### _folder.svelte
+An alias for `_layout.svelte`.
+
+
+## Migration Guide
+
+1. Search and replace `@sveltech/routify` with `@roxi/routify`
+2. `$url()` no longer treats non-layout files as folders. If you're using relative paths replace the first `../` in `$url()` with `./`.
+3. `$basepath` was deprecated in favor of `urlTransform`. Please refer to  `urlTransform`'s basepath example.
+4. The Routify rollup plugin, now has to be imported from `@roxi/routify/plugins/rollup`
