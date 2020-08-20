@@ -1,16 +1,13 @@
 ---
-title: Announcing v1.5
+title: Routify 2 - Pet Peeve Edition
 author: jakobrosenberg
-published: 2020-04-20T11:45:06.574Z
+published: 2020-08-20T12:42:06.574Z
 summary: |
   Our new hash based routing support required a breaking change - and when you have one breaking change, you might as well break everything. So we did. Gone are all the pet peeves.
-layout: default
+layout: blogpost
 ---
 
 
-# Routify 2 - Pet Peeve Edition
-
----
 - [Why Routify 2](#why-routify-2)
 - [Getting Started](#getting-started)
 - [What's new](#whats-new)
@@ -30,7 +27,7 @@ Path resolvement of `$url` was never quite right and as much as I hate to admit 
 
 `basepath` was another pet peeve. It should have been an `urlTransform` function but by the time I realized, `basepath` had already been added.
 
-Almost lastly, `_layout.svelte` makes very little semnatic sense. It handles guards, scopes, redirects, folder node etc. In short, the file represents the folder and folder-scope. Therefore a `_folder.svelte` alias has been added.
+Almost lastly, `_layout.svelte` makes very little semantic sense. It handles guards, scopes, redirects, folder node etc. In short, the file represents the folder and folder-scope. Therefore a `_folder.svelte` alias has been added.
 
 Lastly, `@sveltech` was a pain to type so we moved everything to `@roxi` which just happens to be the home for our upcoming framework, [Roxi](//roxi.dev) 🤫
 
