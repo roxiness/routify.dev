@@ -1,12 +1,17 @@
 
 .c-blogpost > header {
   h1, h2  {
-    font-size: 3.2rem;
+    font-size: 4.8rem;
     font-weight: 700;
     font-family: "Overpass", sans-serif;
     a {
       text-decoration: none;
       color: $g-gray-800;
+    }
+  }
+  .c-blogpost-list & {
+    h1, h2 {
+      font-size: 3.2rem;
     }
   }
 }
