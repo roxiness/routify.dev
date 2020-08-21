@@ -36,7 +36,7 @@ Lastly, `@sveltech` was a pain to type so we moved everything to `@roxi` which j
 
 To try the new Routify 2 beta, open a terminal and type
 ```
-npx routify init --branch 2.x
+npx @roxi/routify init --branch 2.x
 ```
 
 
