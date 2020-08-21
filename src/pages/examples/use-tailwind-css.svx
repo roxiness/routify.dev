@@ -88,7 +88,15 @@ svelteWrapper: svelte => {
 #### Testing by using Tailwind CSS classes in `src/pages/index.svelte`
 For Example:
 ```svelte
-<h1 class="text-red-900">This heading is styled by Tailwind CSS</h1>
+<h1 class="text-red-900 font-bold">This heading is styled by Tailwind CSS</h1>
 ```
+
+Within a <style> tag, make sure to add the proper lang attribute:
+```<style lang="postcss">
+  h1 {
+    @apply text-red-900 font-bold; // lang attribute allows for multiple classes per @apply line 
+  }
+<style>```
+
 Run the script `npm run dev:nollup`, then visit http://localhost:5000.
 If you see the text in red color, Tailwind CSS works.
