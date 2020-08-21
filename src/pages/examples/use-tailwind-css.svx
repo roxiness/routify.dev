@@ -93,7 +93,9 @@ For Example:
 
 Within a <style> tag, make sure to add the proper lang attribute:
 ```<style lang="postcss">
-  @apply text-red-900 font-bold; // lang attribute allows for multiple classes per @apply line 
+  h1 {
+    @apply text-red-900 font-bold; // lang attribute allows for multiple classes per @apply line 
+  }
 <style>```
 
 Run the script `npm run dev:nollup`, then visit http://localhost:5000.
