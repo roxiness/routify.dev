@@ -1,5 +1,5 @@
 <script>
   import { goto } from "@sveltech/routify";
-  $goto('../basics')
+  $goto('../build')
 </script>
 <!-- routify:options index=false -->
