@@ -31,12 +31,12 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
       './**/**/*.html',
       './**/**/*.svelte',
     ],
-  
+
     whitelistPatterns: [/svelte-/],
-  
+
     defaultExtractor: content => content.match(/[\\w-/:]+(?<!:)/g) || []
   });
-  
+
 const production = !process.env.ROLLUP_WATCH
 
 module.exports = {
@@ -91,12 +91,14 @@ For Example:
 <h1 class="text-red-900 font-bold">This heading is styled by Tailwind CSS</h1>
 ```
 
-Within a <style> tag, make sure to add the proper lang attribute:
-```<style lang="postcss">
+Within a `<style>` tag, make sure to add the proper lang attribute:
+```html
+<style lang="postcss">
   h1 {
-    @apply text-red-900 font-bold; // lang attribute allows for multiple classes per @apply line 
+    @apply text-red-900 font-bold; // lang attribute allows for multiple classes per @apply line
   }
-<style>```
+</style>
+```
 
 Run the script `npm run dev:nollup`, then visit http://localhost:5000.
 If you see the text in red color, Tailwind CSS works.
