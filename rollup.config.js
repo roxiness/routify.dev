@@ -77,8 +77,8 @@ const baseConfig = () => ({
       transform(code, id) {
         if (id.match(/(\.svx|\.svelte)$/))
           return code
-            .replace('_outify:option_', 'routify:options')
-            .replace('_crip_', 'script')
+            .replace(/_outify:option_/g, 'routify:options')
+            .replace(/_crip_/g, 'script')
 
       }
     },
