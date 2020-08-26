@@ -2,6 +2,20 @@
   import Prism from "svelte-prism";
   import { meta } from "@sveltech/routify";
   meta.title = "Metadata";
+
+  const reservedNames = [
+    [
+      "title",
+      "string",
+      "Sets the name accessed through <code>$page.title</code>.",
+    ],
+    ["index", "number", "By default nodes are sorted by index, then filename."],
+    [
+      "bundle",
+      "boolean",
+      "Bundles everything in the current folder into one .js file.",
+    ],
+  ];
 </script>
 
 <!-- routify:options index=40 -->
@@ -38,6 +52,19 @@
             $layout.meta //meta from the closest layout
         `}
   </Prism>
+</div>
+
+<div class="c-content c-container-vertical">
+  <h3>Reserved names</h3>
+  <table>
+    {#each reservedNames as [name, type, text]}
+      <tr>
+        <td style="font-weight: bold">{name}</td>
+        <td style="font-style: italic">{type}</td>
+        <td>{@html text}</td>
+      </tr>
+    {/each}
+  </table>
 </div>
 
 <div class="c-content c-container-vertical">
