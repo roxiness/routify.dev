@@ -13,9 +13,8 @@ layout: blogpost
 - [What's new](#whats-new)
   - [Hash based routing](#hash-based-routing)
   - [New `use` directive for url helper](#new-use-directive-for-url-helper)
-  - [urlTransform](#urlTransform)
-  - [_folder.svelte alias](#folder-svelte-alias)
-- [Breaking Changes](#breaking-changes)
+  - [urlTransform](#urltransform)
+  - [_folder.svelte alias](#_foldersvelte)
 - [Migration Guide](#migration-guide)
 
 ## Why Routify 2?
@@ -96,3 +95,4 @@ An alias for `_layout.svelte`.
 2. `$url()` no longer treats non-layout files as folders. If you're using relative paths replace the first `../` in `$url()` with `./`.
 3. `$basepath` was deprecated in favor of `urlTransform`. Please refer to  `urlTransform`'s basepath example.
 4. The Routify rollup plugin, now has to be imported from `@roxi/routify/plugins/rollup`
+5. `routifyDir` has been defaulted to `.routify`. Update to `import { routes } from '../.routify/routes'` in `App.svelte` or set `routifyDir` to `node_modules/@roxi/routify/tmp/routes`. (Thanks @flayks)
