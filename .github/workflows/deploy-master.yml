@@ -20,7 +20,7 @@ jobs:
       run: | 
         npm install
         npm run build
-        cd scripts/now
+        cd scripts/vercel
         node build
     - uses: amondnet/vercel-action@v19.0.1+3
       id: vercel
@@ -30,6 +30,6 @@ jobs:
         vercel-project-id: ${{ secrets.NOW_PROJECT_ID}} #Required 
         scope: ${{ secrets.VERCEL_SCOPE }} #Required
         vercel-args: '--prod' #Optional
-        working-directory: ./scripts/now    
+        working-directory: ./scripts/vercel    
     - run: |
-        echo ${{ steps.now.outputs.preview-url }}
+        echo ${{ steps.vercel.outputs.preview-url }}
