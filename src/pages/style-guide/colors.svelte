@@ -36,7 +36,7 @@
       items: [
       { name: "g-blue-200", hex: "#B6C8F5" },
       { name: "g-blue-400", hex: "#87A1E3" },
-      { name: "g-blue-500", hex: "#3f5eaa" },
+      { name: "g-blue-500", hex: "#3F5EAA" },
       ]
     },
     {
