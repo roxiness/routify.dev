@@ -63,7 +63,6 @@
     "routifyDir": ".routify",
     "dynamicImports": true,
     "plugins": {
-
       "routify-plugin-frontmatter": {}
     }
   }
