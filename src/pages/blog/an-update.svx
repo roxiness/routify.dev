@@ -17,7 +17,7 @@ Our release was met with a positive reception. We've had lots of people make the
 
 We've also gotten some excellent bug reports, with pull requests and ideas coming in. Open source as it should be! In this post I would like to summarize what happened. Here's some highlights:
 
-* The latest version of Routify is **1.6.4**. You can check out all the releases [here](https://github.com/sveltech/routify/releases).
+* The latest version of Routify is **1.6.4**. You can check out all the releases [here](https://github.com/roxiness/routify/releases).
   * Overall, several bugs have been fixed
   * The 1.6 release added a new feature: an `afterPageLoad` hook.
 * LegionOfOne created a [Routify starter that works with Firebase](https://github.com/lpshanley/routify-starter-firebase)

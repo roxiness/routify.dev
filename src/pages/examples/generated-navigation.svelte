@@ -69,7 +69,7 @@
       <a href={$url($page.prev)}>{$page.prev.title}</a>
       `}
     </Code>
-    For recursive <code>next</code> and <code>prev</code>, have a look at <a href="https://github.com/sveltech/routify-site-2020/blob/master/src/pages/guide/_layout.svelte">routify.dev's implementation.</a>
+    For recursive <code>next</code> and <code>prev</code>, have a look at <a href="https://github.com/roxiness/routify-site-2020/blob/master/src/pages/guide/_layout.svelte">routify.dev's implementation.</a>
 
   </div>
 </div>

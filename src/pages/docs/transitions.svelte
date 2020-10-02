@@ -19,7 +19,7 @@
       </a>
       (
       <a
-        href="https://github.com/sveltech/routify/blob/master/runtime/decorators/TabsTransition.svelte">
+        href="https://github.com/roxiness/routify/blob/master/runtime/decorators/TabsTransition.svelte">
         source
       </a>
       ).

@@ -17,7 +17,7 @@
 
     <p>
       This will install the
-      <a href="https://github.com/sveltech/routify-starter">
+      <a href="https://github.com/roxiness/routify-starter">
         Routify starter template
       </a>
       .
