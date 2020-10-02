@@ -37,7 +37,7 @@
         ]
       </script>
 
-      {#each links as [path, name]}}
+      {#each links as [path, name]}
         <a href={$url(path)} class:active={$isActive(path)}>
           {name}
         </a>

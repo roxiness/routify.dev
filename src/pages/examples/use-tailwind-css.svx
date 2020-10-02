@@ -5,100 +5,203 @@ layout: default
 
 # Use Tailwind CSS
 
+**TLDR:**
+If you want to start the brand new Routify2 Starter Template with Tailwindcss,
+just run this command in an empty directory.
+
+`npx @roxi/routify init --branch 2.x && npx routify-tailwindcss`
+
+This will do all the work below for you, so you can just run `npm run dev:nollup` and enjoy blazing fast dev exp.
+
 #### 1. Install the devDependencies
-- Tailwind CSS
-- Autoprefixer - a PostCSS plugin which parses your CSS and adds vendor prefixes
-- PostCSS Purgecss - PostCSS plugin for PurgeCSS (a tool to remove unused CSS)
-- cssnano - to ensure that the final CSS files is as small as possible for a production environment
-- postcss-load-config - to make sure svelte-preprocess can find the postcss.config.js
+- **tailwindcss**
+- **autoprefixer@9** - a PostCSS plugin which parses your CSS and adds vendor prefixes (version10 does not work with the current rollup-plugin-postcss)
+- **cssnano** - to ensure that the final CSS files is as small as possible for a production environment
+- **rollup-plugin-postcss** - so we can import css directly in the script tag
 ```
-npm i -D tailwindcss autoprefixer @fullhuman/postcss-purgecss cssnano postcss-load-config
-```
-
-#### 2. Create the tailwind.config.js at the root of your project
-```
-npx tailwindcss init
+npm i -D tailwindcss autoprefixer@9 cssnano rollup-plugin-postcss
 ```
 
-#### 3. Create postcss.config.js at the root of your project
+#### 2. Create `tailwind.config.js` at the root of your project
+and put this content in it.
+
+```javascript
+// tailwind.config.js
+const defaultTheme = require("tailwindcss/defaultTheme");
+
+module.exports = {
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
+  purge: ["./src/**/*.svelte"],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: [...defaultTheme.fontFamily.sans],
+      },
+    },
+  },
+  variants: {},
+  plugins: [],
+};
+```
+
+To add new font, just copy the font link tag to the head section of the './static/__index.html'.
+
+```html
+  <!-- ./static/__index.html -->
+  <head>
+      <!-- ... -->
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+      __SCRIPT__
+  </head>
+```
+
+Then add the font name to the fontFamily property in `tailwind.config.js`
+
+Example:
+```javascript
+// tailwind.config.js
+  // ...
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Roboto', ...defaultTheme.fontFamily.sans],
+        },
+      },
+    },
+  // ...
+```
+
+#### 3. Create `postcss.config.js` at the root of your project
 ```javascript
 // postcss.config.js
 
-const cssnano = require('cssnano')({preset: 'default'})
+const cssnano = require('cssnano')({ preset: 'default' });
 
-const purgecss = require('@fullhuman/postcss-purgecss')({
-    content: [
-      './**/**/*.html',
-      './**/**/*.svelte',
-    ],
-
-    whitelistPatterns: [/svelte-/],
-
-    defaultExtractor: content => content.match(/[\\w-/:]+(?<!:)/g) || []
-  });
-
-const production = !process.env.ROLLUP_WATCH
+const production = process.env.NODE_ENV === 'production';
 
 module.exports = {
   plugins: [
     require('tailwindcss'),
     require('autoprefixer'),
-    ...(production ? [purgecss, cssnano] : [])
-  ]
+    ...(production ? [cssnano] : []),
+  ],
 };
+
 ```
 
-#### 4. Import Tailwind CSS to `src/App.svelte`
+#### 4. Create `./src/tailwind.css` and import it to `./src/App.svelte`
+Create tailwind.css under the src directory and add the content below.
+```css
+/* ./src/tailwind.css */
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
+```
+
+After that add `import './tailwind.css'` to the ./src/App.svelte
 ```svelte
+<!-- ./src/App.svelte -->
 <script>
   import { Router } from "@sveltech/routify";
   import { routes } from "../.routify/routes";
+  import './tailwind.css';
 </script>
 
 <style  global>
-  /* purgecss start ignore */
-  @import 'tailwindcss/base';
-
-  @import 'tailwindcss/components';
-  /* purgecss end ignore */
-
-  @import 'tailwindcss/utilities';
-
-  /* Don't forget to remove unused styles in global.css */
   @import "../static/global.css";
 </style>
 
 <Router {routes} />
 ```
+Don't forget to remove all css codes in `'./static/global.css'` in case you don't use the style in it.
 
-#### 5. Edit `rollup.config.js` to make `svelte-preprocess` load `postcss.config.js`
-Change the value of `postcss` property to `true` like the snippet below.
+
+#### 5. Edit `rollup.config.js` to make rollup use postcss and make tailwindcss purgecss in build time.
+
+Add the code below to the rollup.config.js file.
 ```javascript
-//...
-svelteWrapper: svelte => {
+// rollup.config.js
+
+import postcss from 'rollup-plugin-postcss';
+
+const production = !process.env.ROLLUP_WATCH;
+// This will make Tailwind CSS purgecss work in build time.
+process.env.NODE_ENV = production ? 'production' : 'development';
+
+// under config object, add postcss plugin to the rollupWrapper property like this:
+rollupWrapper: (rollup) => {
+    rollup.plugins = [
+      ...rollup.plugins,
+      postcss({ plugins: [postcssImport()] }),
+    ];
+    return rollup;
+  },
+
+```
+
+So, your `rollup.config.js` should look like this:
+
+```javascript
+// rollup.config.js
+import { createRollupConfigs } from './scripts/base.config.js';
+import autoPreprocess from 'svelte-preprocess';
+import postcssImport from 'postcss-import';
+import postcss from 'rollup-plugin-postcss';
+
+const production = !process.env.ROLLUP_WATCH;
+process.env.NODE_ENV = production ? 'production' : 'development';
+
+export const config = {
+  staticDir: 'static',
+  distDir: 'dist',
+  buildDir: 'dist/build',
+  serve: !production,
+  production,
+  rollupWrapper: (rollup) => {
+    rollup.plugins = [
+      ...rollup.plugins,
+      postcss({ plugins: [postcssImport()] }),
+    ];
+    return rollup;
+  },
+  svelteWrapper: (svelte) => {
     svelte.preprocess = [
       autoPreprocess({
-        postcss: true, /////// HERE ///////
-        defaults: { style: 'postcss' }
-      })]
-},
-//...
+        postcss: { plugins: [postcssImport()] },
+        defaults: { style: 'postcss' },
+      }),
+    ];
+  },
+  swWrapper: (worker) => worker,
+};
+
+const configs = createRollupConfigs(config);
+
+export default configs;
+
 ```
+
+
 ---
 #### Testing by using Tailwind CSS classes in `src/pages/index.svelte`
 For Example:
 ```svelte
-<h1 class="text-red-900 font-bold">This heading is styled by Tailwind CSS</h1>
+<!-- ./src/pages/index.svelte -->
+<script>
+  import { metatags } from '@sveltech/routify';
+  metatags.title = 'My Routify app';
+  metatags.description = 'Description coming soon...';
+</script>
+
+<h1 class="text-red-500">Hello World</h1>
+
 ```
 
-Within a `<style>` tag, make sure to add the proper lang attribute:
-```html
-<style lang="postcss">
-  h1 {
-    @apply text-red-900 font-bold; // lang attribute allows for multiple classes per @apply line
-  }
-</style>
-```
-
-Run the script `npm run dev:nollup`, then visit http://localhost:5000.
+Run the dev script `npm run dev:nollup`, then visit http://localhost:5000.
 If you see the text in red color, Tailwind CSS works.

@@ -84,7 +84,7 @@
     <tr>
       <td>routify.config.js</td>
       <td>
-        <code>{"modules.export = { routifyDir: '.routify'}"}</code>
+        <code>{"module.exports = { routifyDir: '.routify'}"}</code>
       </td>
       <td>camelCase</td>
     </tr>
