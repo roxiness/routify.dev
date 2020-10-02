@@ -1,10 +1,10 @@
 @mixin link-styles($border) {
 
   a:link {
-    color: $g-blue-500;
+    color: $g-blue-600;
     text-decoration: none;
     @if $border {
-      border-bottom: 0.1rem solid rgba($g-blue-500, 0.33);
+      border-bottom: 0.1rem solid rgba($g-blue-600, 0.33);
     }
   }
 
