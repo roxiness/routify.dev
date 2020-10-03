@@ -18,7 +18,7 @@
 
 <FunctionDoc name="getDirection" {params}>
   <p>
-    Takes two components and returns the difference between their siblings ancestors <code>meta.$index</code>.
+    Takes two components and returns the difference between their sibling's ancestors <code>meta.$index</code>.
   </p>
   <Code language="svelte">
     {`

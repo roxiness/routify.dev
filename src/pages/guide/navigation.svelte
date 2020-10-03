@@ -11,8 +11,7 @@
   <div class="c-container-vertical c-container-vertical--small">
     <h1 class="c-h1">Navigation</h1>
     <p>
-      There's a million ways to handle navigation. Hopefully this page can save
-      you some time when creating the navigation for your next project.
+      There are a million ways to handle navigation. Hopefully, this page can save you some time when creating navigation for your next project.
     </p>
   </div>
   <div class="c-container-vertical c-container-vertical--small">
@@ -20,7 +19,7 @@
     <p>
       The
       <code>url</code>
-      helper creates links from relative, absolute or named paths.
+      helper creates links from relative, absolute or, named paths.
     </p>
     <p>
       The advantage of using
@@ -28,8 +27,8 @@
       is that it allows for your code to be modular. If you rename your
       <code>editor/</code>
       folder to
-      <code>admin/</code>
-      , all the internal links inside that folder will still work.
+      <code>admin/</code>, 
+      all the internal links inside that folder will still work.
     </p>
     <Code language="svelte">
       {`
@@ -128,8 +127,8 @@
     <h3 class="c-h3">Automatic navigation generation</h3>
     <p>
       It is also possible to generate navigation from your file structure. In
-      fact all navigation on this site is generated. Even hash links, external
-      links and the previous/next buttons you see below.
+      fact, all navigation on this site is generated. Even hash links, external
+      links, and the previous/next buttons you see below.
     </p>
     <p>
       To create links for files in a folder, create a
@@ -156,8 +155,7 @@
       Links are ordered by their file's index, which you can set with metadata.
       <code>{`<!-- rou`}{`tify:options index=3 -->`}</code>
       . To omit a file from navigation, set index to
-      <code>false</code>
-      .
+      <code>false</code>.
     </p>
 
     <p>

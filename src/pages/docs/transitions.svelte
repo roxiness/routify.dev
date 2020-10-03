@@ -17,12 +17,10 @@
         target="_blank">
         Example
       </a>
-      (
-      <a
+      (<a
         href="https://github.com/roxiness/routify/blob/master/runtime/decorators/TabsTransition.svelte">
         source
-      </a>
-      ).
+      </a>).
     </p>
     <ul>
       <li>Zooms in when traversing towards the leaves</li>

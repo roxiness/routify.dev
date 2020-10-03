@@ -30,7 +30,7 @@
 
     <p>
       Going from development to production can be quite a task. To help overcome
-      those tasks, we've created a <a href="https://github.com/roxiness/routify-starter" target="_blank" rel="noreferrer noopener">starter template</a> which should help you go
+      those tasks, we've created a <a href="https://github.com/roxiness/routify-starter" target="_blank" rel="noreferrer noopener">starter template</a> that should help you go
       from prototyping to deployment in 5.3 seconds.
     </p>
     <p>The starter template features the following - all are optional.</p>
@@ -70,7 +70,7 @@
     </Prism>
 
     <p>
-      This is a great way to get started, but in the long run a CI approach
+      This is a great way to get started, but in the long run, a CI approach
       might be better suited and we recommend having a look at the
       <a href={$url('../deployment')}>deployment section.</a>
     </p>

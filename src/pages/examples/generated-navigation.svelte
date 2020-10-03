@@ -15,7 +15,7 @@
     <h1>Generated Navigation</h1>
     <p>
       Navigation can be generated automatically by traversing the node tree or
-      using the next/prev methods. A node is a page, a fallback or a folder
+      using the next/prev methods. A node is a page, a fallback, or a folder
       (layout).
     </p>
   </div>
@@ -58,7 +58,7 @@
 <div class="c-container-vertical--small">
   <div class="c-content">
     <h2>Next and previous links</h2>
-    <p>Remember to check if next and prev routes exists.</p>
+    <p>Remember to check if next and prev routes exist.</p>
     <Code language="svelte">
       {`
       <scr`}{`ipt>

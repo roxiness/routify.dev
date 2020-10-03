@@ -16,7 +16,7 @@
     <strong>Benefits vs SPA only</strong>
     <ul>
       <li>
-        First visit shows a rendered page without having to wait for javascript
+        The first visit shows a rendered page without having to wait for javascript
         to load.
       </li>
       <li>Better SEO - search engines can crawl your page.</li>
@@ -31,8 +31,8 @@
     <ul>
       <li>Serverless.</li>
       <li>Optional and enabled by default.</li>
-      <li>No need to write separate SSR code.</li>
-      <li>Code isn't limited to a Node environment.</li>
+      <li>No need to write a separate SSR codes.</li>
+      <li>The code isn't limited to a Node environment.</li>
       <li>No tight coupling with arbitrary framework paradigms.</li>
       <li>Painless async handling.</li>
       <li>Easy build & deployments.</li>

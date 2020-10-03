@@ -19,7 +19,7 @@
       <li>
         <strong>Prerenders</strong>
         <p>
-          Prerenders are static pages which have been rendered to HTML in
+          Prerenders are static pages that have been rendered to HTML in
           advance. This ensures that the rendered page is sent to the browser
           and visible while the actual app is loading in the background.
         </p>
@@ -28,7 +28,7 @@
         <strong>SSR (Server side rendering)</strong>
         <p>
           SSR works like prerendering, except it's performed in realtime. Both
-          SSR and prerending are important for SEO, Opengraph and other areas
+          SSR and prerending are important for SEO, OpenGraph and, other areas
           where only the prerendered content matters.
         </p>
       </li>
@@ -44,7 +44,7 @@
       <strong>Dynamic imports</strong>
       and
       <strong>prerenders</strong>
-      are enabled by default, but can be disabled in
+      are enabled by default but can be disabled in
       <code>package.json</code>
     </p>
 

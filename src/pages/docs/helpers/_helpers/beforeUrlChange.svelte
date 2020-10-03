@@ -7,7 +7,7 @@
     {
       type: "Function(event):boolean",
       name: "callback",
-      description: "Function to be called before URL is changed."
+      description: "Function to be called before the URL is changed."
     }
   ];
 </script>
