@@ -8,7 +8,7 @@
   <h3>Community</h3>
   <p>
     Want to help? Need help? Use Routify,
-    <a href="https://github.com/sveltech/routify/issues">
+    <a href="https://github.com/roxiness/routify/issues">
       check issues on Github
     </a>
     , or talk to us on

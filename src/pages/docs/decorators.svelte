@@ -10,8 +10,8 @@
 <h1 class="c-h1">Decorators</h1>
 <div class="c-content">
   <p>
-    Decorators are components which are automatically wrapped around each
-    descendant layout and page individually.
+    Decorators are components that are automatically wrapped around each
+    descendant's layout and page individually.
   </p>
   <p>Any component with a default slot can be a decorator.</p>
   <h3>Usage</h3>

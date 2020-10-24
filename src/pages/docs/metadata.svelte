@@ -9,7 +9,7 @@
       "string",
       "Sets the name accessed through <code>$page.title</code>.",
     ],
-    ["index", "number", "By default nodes are sorted by index, then filename."],
+    ["index", "number", "By default nodes are sorted by index, then the filename."],
     [
       "bundle",
       "boolean",
@@ -37,8 +37,7 @@
 
   <p>
     The metadata can then be accessed through
-    <code>$route</code>
-    ,
+    <code>$route</code>,
     <code>$layout</code>
     and
     <code>$page</code>

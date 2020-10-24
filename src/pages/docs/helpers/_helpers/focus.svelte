@@ -13,7 +13,7 @@
 
 <FunctionDoc name="$focus" {params}>
   <p>
-    Focuses an element. If multiple focuses are called at once, the one closest to the root takes precedence.
+    Focuses on an element. If multiple focuses are called at once, the one closest to the root takes precedence.
   </p>
   <Code language="svelte">
     {`

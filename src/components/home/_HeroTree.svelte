@@ -27,11 +27,6 @@
     align-items: center;
     grid-template-columns: auto 1fr auto;
   }
-
-  .c-hero__illustration {
-    padding: 2.778% 3.473%;
-
-  }
 </style>
 
 <div class="hero-tree-container">

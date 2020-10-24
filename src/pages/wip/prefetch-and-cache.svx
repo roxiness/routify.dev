@@ -33,14 +33,14 @@ prefetch(path, prefetchOptions)
 
 ## Options
 
-- **validFor:** number *seconds for which an external request is considered fresh and will be served from cache. (After this duration requests will be used according to your strategy. Ie. NetworkFirst will only use cache if network fails.)*
+- **validFor:** number *seconds for which an external request is considered fresh and will be served from cache. (After this duration requests will be used according to your strategy. Ie. NetworkFirst will only use the cache if the network fails.)*
 - **strategy*:** string *The strategy to use for non-fresh assets. Defaults to NetworkFirst.*
 - **writeHeaders:** boolean *Write runtime specifics to headers. Mainly for debugging.*
 - **preserveHeaders*:** boolean *Leave Routify headers on outgoing requests.*
 
     **Prefetch-only options:**
 
-    - **gracePeriod**: number *milliseconds to wait before fetching next page in queue*
+    - **gracePeriod**: number *milliseconds to wait before fetching the next page in the queue*
     - **timeout**: number *milliseconds to wait before killing hanging fetch*
 
 ******Not yet implemented*
@@ -49,7 +49,7 @@ prefetch(path, prefetchOptions)
 
 ### Caching of app components
 
-Caching is handled by the service worker found in `src/sw.js`. By default all app components are fully cached in the background after the app has loaded. Caching can also be handled programmatically in the app by disabling `precacheAndRoute(files)` in the service worker. To programmatically cache a file call ``$layout.load``. Routify then dynamically imports the component. This import generates a request which is then intercepted by the service worker which caches the response.
+Caching is handled by the service worker found in `src/sw.js`. By default, all app components are fully cached in the background after the app has loaded. Caching can also be handled programmatically in the app by disabling `precacheAndRoute(files)` in the service worker. To programmatically cache a file call ``$layout.load``. Routify then dynamically imports the component. This import generates a request which is then intercepted by the service worker which caches the response.
 
 ### Caching of external files
 
@@ -82,4 +82,4 @@ $layout.parent.children.forEach(sibling => sibling.load())
 ### Live example
 https://example.routify.dev/example
 
-When visiting the API page, the individual tv-show pages are prefetched in the background. This means that all TV-show pages are instantly available, even if network connection is lost before clicking a show.
+When visiting the API page, the individual tv-show pages are prefetched in the background. This means that all TV-show pages are instantly available, even if the network connection is lost before clicking a show.

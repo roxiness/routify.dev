@@ -6,7 +6,7 @@
 
 <FunctionDoc name="$page" type="object">
   <p>
-    Returns the node of current page
+    Returns the node of the current page
   </p>
 
   <Code language="svelte">

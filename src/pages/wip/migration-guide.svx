@@ -6,9 +6,9 @@ layout: default
 
 Did you start your project using svelte-template but have decided you need a router? No worries. It's easy to transfer over your project to use Routify instead.
 
-1. Copy over the dependencies and the npm tasks from [package.json](https://github.com/sveltech/routify-starter/blob/master/package.json).
+1. Copy over the dependencies and the npm tasks from [package.json](https://github.com/roxiness/routify-starter/blob/master/package.json).
 
-2. Copy over the full content from [rollup.config.js](https://github.com/sveltech/routify-starter/blob/master/rollup.config.js)
+2. Copy over the full content from [rollup.config.js](https://github.com/roxiness/routify-starter/blob/master/rollup.config.js)
 
 3. Put whatever static assets you had in the `public` folder into a new folder called `static`
 
@@ -31,7 +31,7 @@ Did you start your project using svelte-template but have decided you need a rou
 
 #### Optional
 
-If you are looking to deploy your project to Now or Netlify, look in the [scripts folder](https://github.com/sveltech/routify-starter/tree/master/scripts) and copy the files you need.
+If you are looking to deploy your project to Now or Netlify, look in the [scripts folder](https://github.com/roxiness/routify-starter/tree/master/scripts) and copy the files you need.
 
 ---
 
@@ -39,15 +39,15 @@ If you are looking to deploy your project to Now or Netlify, look in the [script
 
 Assuming you started from [sapper-template](https://github.com/sveltejs/sapper-template), do the following.
 
-1. Copy over the dependencies and the npm tasks from routify-starter's [package.json](https://github.com/sveltech/routify-starter/blob/master/package.json).
+1. Copy over the dependencies and the npm tasks from routify-starter's [package.json](https://github.com/roxiness/routify-starter/blob/master/package.json).
 
-2. Copy over the full content from routify-starter's  [rollup.config.js](https://github.com/sveltech/routify-starter/blob/master/rollup.config.js)
+2. Copy over the full content from routify-starter's  [rollup.config.js](https://github.com/roxiness/routify-starter/blob/master/rollup.config.js)
 
 3. Delete the following files in `src`: `client.js`, `server.js`
 
 4. Rename the `routes` folder to `pages`
 
-5. Move `template.html` to `static/__index.html`. You will have to remove the specific things like marked with `%sapper%`. Make any changes you feel necessary to correspond as much as possible to [this file](https://github.com/sveltech/routify-starter/blob/master/static/__index.html) - most notably add the `__SCRIPT__` marker somewhere in your `<head>` section.
+5. Move `template.html` to `static/__index.html`. You will have to remove the specific things like marked with `%sapper%`. Make any changes you feel necessary to correspond as much as possible to [this file](https://github.com/roxiness/routify-starter/blob/master/static/__index.html) - most notably add the `__SCRIPT__` marker somewhere in your `<head>` section.
 
 ### Main layout and navigation
 
@@ -55,7 +55,7 @@ Remove any references to the `segment` prop as it does not exist in Routify. Ref
 
 ### 404 page
 
-Remove `_error.svelte` and replace it with [`_fallback.svelte`](https://github.com/sveltech/routify-starter/blob/master/src/pages/_fallback.svelte).
+Remove `_error.svelte` and replace it with [`_fallback.svelte`](https://github.com/roxiness/routify-starter/blob/master/src/pages/_fallback.svelte).
 
 ### Remove files related to Cypress
 

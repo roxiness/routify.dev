@@ -12,7 +12,7 @@
     users and protect your app.
   </p>
   <p>
-    Since everything in Routify is scoped, protecting a layout, automatically
+    Since everything in Routify is scoped, protecting a layout automatically
     protects all nested components recursively.
   </p>
 </div>
@@ -164,7 +164,7 @@
                   <slot scoped={{user}} />
                   <!-- wait in case there's a session that we need to verify -->
                 {:else if sessionVerified}
-                  <!-- User is a guest. Show a login widget instead of the current page. -->
+                  <!-- user is a guest. Show a login widget instead of the current page. -->
                   <Login let:user={user}>
                 {/if}
             `}

@@ -28,11 +28,11 @@
         },
         timeout: {
           type: "number",
-          description: "Miliseconds to leave a hanging prefetch",
+          description: "Milliseconds to leave a hanging prefetch",
         },
         gracePeriod: {
           type: "number",
-          description: `Miliseconds to wait before closing a succesful prefetch.
+          description: `Milliseconds to wait before closing a succesful prefetch.
             This time allows async resources like images to load`,
         },
       },
@@ -49,7 +49,7 @@
         prefetch('/some/path')
       </script>
   `}
-    <div slot="caption">Prefetching with Javascript</div>
+    <div slot="caption">Prefetching with JavaScript</div>
   </Code>
   <br>
   <Code language="svelte">

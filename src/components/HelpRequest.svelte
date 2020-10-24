@@ -11,7 +11,7 @@
     <ul class="c-horizontal-list c-horizontal-list--bordered">
       <li>
         <a
-          href="https://github.com/sveltech/routify-site-2020/tree/master/src/pages{$page.path}.{$page.__file.ext}">
+          href="https://github.com/roxiness/routify-site-2020/tree/master/src/pages{$page.path}.{$page.__file.ext}">
           Open a PR for this file
         </a>
       </li>
@@ -23,7 +23,7 @@
         </a>
       </li>
       <li>
-        <a href="https://github.com/sveltech/routify-site-2020/issues">
+        <a href="https://github.com/roxiness/routify-site-2020/issues">
           Create an issue here
         </a>
       </li>

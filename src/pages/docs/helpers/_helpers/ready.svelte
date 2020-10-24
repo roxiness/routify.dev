@@ -11,7 +11,7 @@
     Call
     <code>$ready()</code>
     to let Routify know that your app is ready to be rendered. This is mainly
-    used for server side rendering (SSR) where you want the server to wait for
+    used for server-side rendering (SSR) where you want the server to wait for
     async data. If
     <code>$ready</code>
     is not present in your component, it will be rendered synchronously

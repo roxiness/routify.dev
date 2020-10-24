@@ -78,7 +78,7 @@
         <p>
           Example of Github action can be seen
           <a
-            href="https://github.com/sveltech/routify-site-2020/blob/434c3510455f5b1e255a41e18e324b046b95cf44/.github/workflows/deploy-master.yml">
+            href="https://github.com/roxiness/routify-site-2020/blob/434c3510455f5b1e255a41e18e324b046b95cf44/.github/workflows/deploy-master.yml">
             here.
           </a>
           The Vercel tokens can be found in the

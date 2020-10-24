@@ -6,7 +6,7 @@
 
 <FunctionDoc name="$leftover" type="object">
   <p>
-    <code>$leftover</code> is the part of the URL that's unconsumed by Routify. Useful in wigets redirect. Often handled in <code>_fallback.svelte</code>.
+    <code>$leftover</code> is the part of the URL that's unconsumed by Routify. Useful in widgets redirect. Often handled in <code>_fallback.svelte</code>.
   </p>
 
   <Code language="svelte">

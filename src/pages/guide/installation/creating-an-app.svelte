@@ -17,7 +17,7 @@
 
     <p>
       This will install the
-      <a href="https://github.com/sveltech/routify-starter">
+      <a href="https://github.com/roxiness/routify-starter">
         Routify starter template
       </a>
       .
@@ -38,12 +38,11 @@
       You can experiment with these examples or just keep them as references.
     </p>
     <p>
-      When you're ready to get started on your app, simple delete the contents
+      When you're ready to get started on your app, simply delete the contents
       of
       <code>src/pages/index.svelte</code>
-      and add your own. You will still be able to access the examples on
-      <code>http://localhost:5000/examples</code>
-      .
+      and add your own. You will still be able to access the examples at
+      <code>http://localhost:5000/examples</code>.
     </p>
 
     <p>

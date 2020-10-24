@@ -45,6 +45,6 @@
   `}
   </Code>
   <Note>
-    For redirects, use the alias <code>$redirect</code>. This will omit the redirecting page from browser history.
+    For redirects, use the alias <code>$redirect</code>. This will omit the redirecting page from the browser history.
   </Note>
 </FunctionDoc>

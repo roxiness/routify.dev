@@ -28,13 +28,13 @@ meta.title = 'Structure'
 
   <div class="c-container-vertical c-container-vertical--small">
     <h3>Excluding files</h3>
-    <p>Files and directories prefixed with underscore will <strong>not</strong> be picked up by Routify. (except for <code>_layout.svelte</code> and <code>_reset.svelte</code>)</p>
+    <p>Files and directories prefixed with an underscore will <strong>not</strong> be picked up by Routify. (except for <code>_layout.svelte</code> and <code>_reset.svelte</code>)</p>
   </div>
 
   <div class="c-container-vertical c-container-vertical--small">
     <h3>Layouts and resets</h3>
     <p>Layout files are named <code>_layout.svelte</code> and apply to all adjacent and nested Svelte files. A file can have multiple layouts if multiple layouts are recursively present in parent folders.</p>
-    <p>Reset files are named <code>_reset.svelte</code>. They function like layout files, but do not inherit the parent scope (layouts, props, etc.).</p>
+    <p>Reset files are named <code>_reset.svelte</code>. They function like layout files but do not inherit the parent scope (layouts, props, etc.).</p>
   </div>
 
   <div class="c-container-vertical c-container-vertical--small">

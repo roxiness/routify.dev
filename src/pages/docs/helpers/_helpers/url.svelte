@@ -29,7 +29,7 @@
   <p>
     <code>$url</code>
     resolves paths relative to the page/layout file in which it is used. This
-    ensures consistent URLs which are unaffected by the current browser address
+    ensures consistent URLs that are unaffected by the current browser address
     (unlike normal relative URLs).
   </p>
   <p>

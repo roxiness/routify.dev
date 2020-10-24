@@ -20,8 +20,8 @@
         rgba(233, 56, 194, 1);">
         Get started
       </a>
-      <a href="https://github.com/sveltech/routify">
-        <img alt="GitHub stars" src="https://badgen.net/github/stars/sveltech/routify" />
+      <a href="https://github.com/roxiness/routify">
+        <img alt="GitHub stars" src="https://badgen.net/github/stars/roxiness/routify" />
       </a>
     </div>
   </div>

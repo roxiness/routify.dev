@@ -45,13 +45,13 @@ etc.
 
   ### Using basepaths with subfolders
 
-  Sometimes you have to deploy to a subfolder, like `/myapp`. In this case you do no want to export static pages from `/myapp` as that would ultimately give you the address `/myapp/myapp` once your app is deployed.
+  Sometimes you have to deploy to a subfolder, like `/myapp`. In this case, you do not want to export static pages from `/myapp` as that would ultimately give you the address `/myapp/myapp` once your app is deployed.
 
   To handle this, you can make the basepath optional: `$basepath = "(/myapp)?"`.
 
   ### Using basepaths with dynamic subfolders
 
-  If you don't know the path of your apps location, you can use wildcards in your basepath
+  If you don't know the path of your app's location, you can use wildcards in your basepath
 
   ```javascript
   $basepath = "(myapp-\\\\w{4})?"
