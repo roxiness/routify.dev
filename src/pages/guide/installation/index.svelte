@@ -1,5 +1,5 @@
 <script>
-  import { goto } from "@sveltech/routify";
+  import { goto } from "@roxi/routify";
   $goto("../creating-an-app", false, true);
 </script>
 

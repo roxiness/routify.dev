@@ -1,7 +1,7 @@
 <script>
   import Prism from "svelte-prism";
   import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
-  import { meta } from "@sveltech/routify";
+  import { meta } from "@roxi/routify";
   meta.title = "Auth";
 </script>
 
@@ -125,7 +125,7 @@
             {`
                 <!-- src/pages/admin/_layout.svelte -->
                 <scr`}{`ipt>
-                  import { goto } from '@sveltech/routify'
+                  import { goto } from '@roxi/routify'
                   import { authorize } from 'my-auth-service'
                 </script>
 
@@ -146,7 +146,7 @@
             {`
                 <!-- src/pages/_layout.svelte -->
                 <scr`}{`ipt>
-                  import { goto } from '@sveltech/routify'
+                  import { goto } from '@roxi/routify'
                   import { authenticate } from 'my-auth-service'
                   import Login from '../components/Login.svelte'
 
@@ -177,7 +177,7 @@
             {`
                 <!-- src/pages/_layout.svelte -->
                 <scr`}{`ipt>
-                  import { goto, layout } from '@sveltech/routify'
+                  import { goto, layout } from '@roxi/routify'
                   import { authorize } from 'my-auth-service'
 
                   /** show if the current page is "/login" **/

@@ -5,7 +5,7 @@ import { CacheFirst, NetworkFirst, StaleWhileRevalidate } from 'workbox-strategi
 import { skipWaiting, clientsClaim } from 'workbox-core';
 import { precacheAndRoute, matchPrecache } from 'workbox-precaching';
 import { ExpirationPlugin } from 'workbox-expiration';
-import { RoutifyPlugin, freshCacheData } from '@sveltech/routify/workbox-plugin'
+import { RoutifyPlugin, freshCacheData } from '@roxi/routify/workbox-plugin'
 
 
 
@@ -51,7 +51,7 @@ precacheAndRoute(files)
 skipWaiting() // auto update service workers across all tabs when new release is available
 clientsClaim() // take control of client without having to wait for refresh
 
-/** 
+/**
  * manually upgrade service worker by sending a SKIP_WAITING message.
  * (remember to disable skipWaiting() above)
  */

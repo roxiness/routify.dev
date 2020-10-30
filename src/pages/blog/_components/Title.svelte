@@ -2,7 +2,7 @@
   // @ts-check
   // @ts-ignore
   import { format, formatRelative, parseISO } from "date-fns";
-  import { url, page } from "@sveltech/routify";
+  import { url, page } from "@roxi/routify";
   export let node = $page;
   const { path, meta } = node;
   const isCurrentPage = $page === node;

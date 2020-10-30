@@ -1,7 +1,7 @@
 <script>
   import Prism from "svelte-prism";
   import Note from "@/components/Note.svelte";
-  import { url } from "@sveltech/routify";
+  import { url } from "@roxi/routify";
 </script>
 
 <style>

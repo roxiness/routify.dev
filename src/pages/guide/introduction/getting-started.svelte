@@ -1,5 +1,5 @@
 <script>
-  import { url, meta } from "@sveltech/routify";
+  import { url, meta } from "@roxi/routify";
   import Prism from "svelte-prism";
   import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
   meta.title = "Getting started";

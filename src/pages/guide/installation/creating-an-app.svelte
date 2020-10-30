@@ -1,5 +1,5 @@
 <script>
-  import { url, meta } from "@sveltech/routify";
+  import { url, meta } from "@roxi/routify";
   import Prism from "svelte-prism";
   import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
   meta.title = "Getting started";
@@ -13,7 +13,7 @@
     <h1 class="c-h1">Creating an app</h1>
     <p>To create your first Routify app, open an empty folder and type</p>
 
-    <Prism>{`npx @sveltech/routify init`}</Prism>
+    <Prism>{`npx @roxi/routify init`}</Prism>
 
     <p>
       This will install the

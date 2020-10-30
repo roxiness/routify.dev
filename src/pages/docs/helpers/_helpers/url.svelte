@@ -39,8 +39,8 @@
     {`
       <!-- src/pages/recipes/cakes/cupcakes.svelte -->
       <`}{`script>
-        import { url } from '@sveltech/routify'
-        
+        import { url } from '@roxi/routify'
+
       //get current path
       console.log($url()) //'recipes/cakes/cupcakes'
       </script>

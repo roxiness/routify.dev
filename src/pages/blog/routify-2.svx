@@ -44,7 +44,7 @@ _To migrate an existing project, refer to the [migration guide](#migration-guide
 ## What's new
 
 ### New package scope
-Routify has moved from `@sveltech/routify` to `@roxi/routify`. This is both easier to type and aligns with our upcoming Routify-powered framework Roxi.
+Routify has moved from `@roxi/routify` to `@roxi/routify`. This is both easier to type and aligns with our upcoming Routify-powered framework Roxi.
 
 ### Hash based routing
 Hash based routing has been on of the most requested features for Routify and now it's finally here.
@@ -91,7 +91,7 @@ An alias for `_layout.svelte`.
 
 ## Migration Guide
 
-1. Search and replace `@sveltech/routify` with `@roxi/routify`
+1. Search and replace `@roxi/routify` with `@roxi/routify`
 2. `$url()` no longer treats non-layout files as folders. If you're using relative paths replace the first `../` in `$url()` with `./`.
 3. `$basepath` was deprecated in favor of `urlTransform`. Please refer to  `urlTransform`'s basepath example.
 4. The Routify rollup plugin, now has to be imported from `@roxi/routify/plugins/rollup`

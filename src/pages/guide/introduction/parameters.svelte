@@ -1,6 +1,6 @@
 <script>
   import Prism from "svelte-prism";
-  import { meta } from "@sveltech/routify";
+  import { meta } from "@roxi/routify";
   meta.title = "URL parameters";
 </script>
 <!-- routify:options index=30 -->
@@ -41,7 +41,7 @@
 
   <Prism>
     {`
-        import { params } from '@sveltech/routify'
+        import { params } from '@roxi/routify'
         $: slug = $params.slug
     `}
   </Prism>

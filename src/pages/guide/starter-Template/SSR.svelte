@@ -1,7 +1,7 @@
 <script>
   import Code from "@/components/Code.svelte";
   import Note from "@/components/Note.svelte";
-  import { ready } from "@sveltech/routify";
+  import { ready } from "@roxi/routify";
 </script>
 
 <!-- routify:options index=20 -->

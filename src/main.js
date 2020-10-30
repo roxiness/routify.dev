@@ -1,4 +1,4 @@
-import HMR from '@sveltech/routify/hmr'
+import HMR from '@roxi/routify/hmr'
 import App from './App.svelte';
 import { globalConfig } from 'svelte-prism'
 import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace'

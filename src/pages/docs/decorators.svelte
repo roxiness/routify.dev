@@ -1,6 +1,6 @@
 <script>
   import Prism from "svelte-prism";
-  import { meta } from "@sveltech/routify";
+  import { meta } from "@roxi/routify";
   import Note from "@/components/Note.svelte";
   meta.title = "Decorators";
 </script>

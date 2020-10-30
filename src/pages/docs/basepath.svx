@@ -13,8 +13,8 @@ Basepaths must be strings but will be converted to a RegExp.
 
 ```svelte
 <script>
-  import { Router, basepath } from "@sveltech/routify";
-  import { routes } from "@sveltech/routify/tmp/routes";
+  import { Router, basepath } from "@roxi/routify";
+  import { routes } from "@roxi/routify/tmp/routes";
   $basepath =  '/mybase'
 </script>
 

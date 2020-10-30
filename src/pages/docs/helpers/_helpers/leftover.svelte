@@ -14,7 +14,7 @@
       <!-- http://myapp.com/docs/de/i18n/intro -->
       <!-- src/pages/docs/_fallback.svelte -->
       <script>
-        import { leftover, goto } from '@sveltech/routify'
+        import { leftover, goto } from '@roxi/routify'
 
         /** $leftover would be "de/i18n/intro" **/
         const [language, ...fragments] = $leftover.split('/')

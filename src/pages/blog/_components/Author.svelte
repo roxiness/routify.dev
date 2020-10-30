@@ -1,7 +1,7 @@
 <script>
   //update your profile in src/data.js if something is missing or incorrect
   import { contributors } from "@/data.js";
-  import { page } from "@sveltech/routify";
+  import { page } from "@roxi/routify";
   import Icon from "@/components/Icon.svelte";
   export let id = "";
   $: id = id || $page.meta.frontmatter.author;

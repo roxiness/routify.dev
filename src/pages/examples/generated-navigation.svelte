@@ -27,7 +27,7 @@
     <Code language="svelte">
       {`
       <scr`}{`ipt>
-        import { layout, url } from "@sveltech/routify";
+        import { layout, url } from "@roxi/routify";
       </script>
 
       {#each $layout.children as node}
@@ -62,7 +62,7 @@
     <Code language="svelte">
       {`
       <scr`}{`ipt>
-        import { page, url } from "@sveltech/routify";
+        import { page, url } from "@roxi/routify";
       </script>
 
       <a href={$url($page.next)}>{$page.next.title}</a>

@@ -1,5 +1,5 @@
 <script>
-  import { goto } from "@sveltech/routify";
+  import { goto } from "@roxi/routify";
   $goto("../overview", false, true);
 </script>
 

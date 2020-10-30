@@ -1,6 +1,6 @@
 <script>
   import { tick, onMount } from "svelte";
-  import { meta } from "@sveltech/routify";
+  import { meta } from "@roxi/routify";
   import { default as Prism, highlight } from "svelte-prism";
   import "prismjs/plugins/command-line/prism-command-line.js";
   import "prismjs/components/prism-shell-session";
@@ -19,7 +19,7 @@
     [
       "routifyDir",
       "string",
-      "node_modules/@sveltech/routify/tmp",
+      "node_modules/@roxi/routify/tmp",
       "Output folder for routify temp files",
     ],
   ];
@@ -109,6 +109,6 @@
   <h3>CLI Usage</h3>
   <p>
     For a list of CLI commands, run
-    <code>npx @sveltech/routify --help</code>
+    <code>npx @roxi/routify --help</code>
   </p>
 </div>

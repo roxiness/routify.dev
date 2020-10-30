@@ -37,7 +37,7 @@ In Routify this can be handled with a single addition:
 1. Call `$ready()` at the end of the async call.
 ```html
 <script>
-  import { ready } from '@sveltech/routify'
+  import { ready } from '@roxi/routify'
   let article
 
   fetch('example.com')
@@ -93,7 +93,7 @@ $url('/blog/:slug', {slug: 'first-post', theme: 'dark', page: 2})
 ## Accessing parameters
 #### Routify uses `$params` to access parameters.
 ```javascript
-import { params } from '@sveltech/routify'
+import { params } from '@roxi/routify'
 
 $: console.log($params) // { slug: "first-post", theme: "dark", page: "2"}
 ```
@@ -152,7 +152,7 @@ Metadata allows custom or Routify specific data to be attached to a page. This d
 Routify provides access to nodes, which can be used to access metadata and/or generating links:
 ```html
 <script>
-  import { layout } from '@sveltech/routify'
+  import { layout } from '@roxi/routify'
 </script>
 
 {#each $layout.children as node}

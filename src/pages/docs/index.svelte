@@ -1,5 +1,5 @@
 <script>
-  import { redirect } from "@sveltech/routify";
+  import { redirect } from "@roxi/routify";
   $redirect("../helpers");
 </script>
 

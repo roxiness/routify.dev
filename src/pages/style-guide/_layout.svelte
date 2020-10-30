@@ -1,5 +1,5 @@
 <script>
-  import { url, isActive, route, layout, page } from "@sveltech/routify";
+  import { url, isActive, route, layout, page } from "@roxi/routify";
   import LeftNavLayout from "@/components/nav/LeftNavLayout.svelte";
 
   let next, prev;

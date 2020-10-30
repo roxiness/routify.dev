@@ -33,7 +33,7 @@ Welcome to the brand-new Routify blog. This is not just the first blog post on R
 Set meta tags and Open Graph data directly from Routify, in a single line. For example this code...
 ``` javascript
 // import metatags
-import { metatags } from "@sveltech/routify";
+import { metatags } from "@roxi/routify";
 
 // set a metatag
 $: metatags.title = "My app - home";
@@ -54,8 +54,8 @@ Read more about [meta tags](/guide/metadata)
 Basepaths have been a long requested feature. Basepaths are strings but will be converted to RegExp’s internally.
 ``` html
 <script>
-  import { Router, basepath } from "@sveltech/routify";
-  import { routes } from "@sveltech/routify/tmp/routes";
+  import { Router, basepath } from "@roxi/routify";
+  import { routes } from "@roxi/routify/tmp/routes";
   $: $basepath = '/mybase'
 </script>
 
@@ -77,7 +77,7 @@ Here’s an example of creating automatic navigation with a layout helper:
 ```html
 <script>
   //let's import what we need
-  import { isActive, url, layout } from "@sveltech/routify";
+  import { isActive, url, layout } from "@roxi/routify";
 </script>
 
 <ul>
@@ -109,7 +109,7 @@ Read more about [Automatic Navigation](/guide/navigation)
 The init command now accepts `--branch --no-example --no-install and --start-dev`. If you are already used to Routify, this way you can get a starter template with a minimal amount of files.
 
 ```bash
-$ npx @sveltech/routify init --help
+$ npx @roxi/routify init --help
   Usage: cli init [options]
 
   Options:

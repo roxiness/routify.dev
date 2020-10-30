@@ -1,5 +1,5 @@
 <script>
-  import { url, meta } from "@sveltech/routify";
+  import { url, meta } from "@roxi/routify";
   import Prism from "svelte-prism";
   import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
   import Note from "@/components/Note.svelte";
@@ -30,7 +30,7 @@
   <div class="c-content">
     <h2>1. Install module</h2>
     <p>Run in project folder</p>
-    <Prism>npm i -D @sveltech/routify</Prism>
+    <Prism>npm i -D @roxi/routify</Prism>
   </div>
 </div>
 
@@ -69,8 +69,8 @@
       {`
         <!-- src/App.svelte -->
         <scrip`}{`t>
-          import { Router } from "@sveltech/routify";
-          import { routes } from "@sveltech/routify/tmp/routes";
+          import { Router } from "@roxi/routify";
+          import { routes } from "@roxi/routify/tmp/routes";
         </script>
 
         <Router {routes} />

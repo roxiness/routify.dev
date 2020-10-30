@@ -1,5 +1,5 @@
 <script>
-import { meta, url } from '@sveltech/routify'
+import { meta, url } from '@roxi/routify'
 import Tree from '@/components/home/_HeroTree.svelte'
 import Note from '@/components/Note.svelte'
 

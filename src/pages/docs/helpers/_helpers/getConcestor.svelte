@@ -26,7 +26,7 @@
   <Code language="svelte">
     {`
       <`}{`script>
-        import { route, getConcestor } from '@sveltech/routify'
+        import { route, getConcestor } from '@roxi/routify'
         $: lastRoute = $route.last
         $: ([concestor, ancestor, oldAncestor] = getConcestor($route, lastRoute))
         $: direction = ancestor.meta.$index - oldAncestor.meta.$index

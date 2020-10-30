@@ -1,5 +1,5 @@
 <script>
-  import { page, url } from "@sveltech/routify";
+  import { page, url } from "@roxi/routify";
 </script>
 
 <!-- routify:options index=false -->

@@ -21,7 +21,7 @@
   <Code language="svelte" title="Promise example">
     {`
       <`}{`script>
-        import { ready } from '@sveltech/routify'
+        import { ready } from '@roxi/routify'
           let data = {};
 
           fetch("https://jsonplaceholder.typicode.com/todos/1")
@@ -40,7 +40,7 @@
     <div slot="title">test</div>
     {`
       <`}{`script>
-        import { ready } from '@sveltech/routify'
+        import { ready } from '@roxi/routify'
         let data = {};
         getData()
 

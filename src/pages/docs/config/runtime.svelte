@@ -1,6 +1,6 @@
 <script>
   import { tick, onMount } from "svelte";
-  import { meta } from "@sveltech/routify";
+  import { meta } from "@roxi/routify";
   import { default as Prism, highlight } from "svelte-prism";
   import "prismjs/plugins/command-line/prism-command-line.js";
   import "prismjs/components/prism-shell-session";
@@ -32,7 +32,7 @@
 <Prism>
   {`
     <scri`}{`pt>
-      import { Router } from '@sveltech/routify'
+      import { Router } from '@roxi/routify'
 
       const config = {
         queryHandler: {

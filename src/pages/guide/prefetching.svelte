@@ -1,5 +1,5 @@
 <script>
-  import { meta, url } from "@sveltech/routify";
+  import { meta, url } from "@roxi/routify";
   import Note from "@/components/Note.svelte";
   import Code from "@/components/Code.svelte";
   meta.title = "Navigation";
@@ -26,7 +26,7 @@
     <Code language="svelte">
       {`
     <s`}{`cript>
-      import { prefetch } from '@sveltech/routify'
+      import { prefetch } from '@roxi/routify'
       prefetch('/some/path')
     </script>`}
     </Code>
@@ -65,8 +65,8 @@
     <Code language="svelte">
       {`
     <scrip`}{`t>
-      import { prefetch } from '@sveltech/routify'
-      import { routes } from '@sveltech/routify/tmp/routes'
+      import { prefetch } from '@roxi/routify'
+      import { routes } from '@roxi/routify/tmp/routes'
       routes
         .map(route => route.api)
         .filter(node => node.meta.iWantTheseFetched) //optional filtering
@@ -80,7 +80,7 @@
     <Code language="svelte">
       {`
     <scrip`}{`t>
-      import { layout } from '@sveltech/routify'
+      import { layout } from '@roxi/routify'
 
       $: nodes = $layout.children
 

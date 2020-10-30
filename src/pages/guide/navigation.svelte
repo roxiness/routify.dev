@@ -1,5 +1,5 @@
 <script>
-  import { meta, url } from "@sveltech/routify";
+  import { meta, url } from "@roxi/routify";
   import Note from "@/components/Note.svelte";
   import Code from "@/components/Code.svelte";
   meta.title = "Navigation";
@@ -27,7 +27,7 @@
       is that it allows for your code to be modular. If you rename your
       <code>editor/</code>
       folder to
-      <code>admin/</code>, 
+      <code>admin/</code>,
       all the internal links inside that folder will still work.
     </p>
     <Code language="svelte">
@@ -94,7 +94,7 @@
     <Code language="svelte">
       {`
     <sc`}{`ript>
-      import {isActive, url} from '@sveltech/routify'
+      import {isActive, url} from '@roxi/routify'
 
       const links =
       [
@@ -139,7 +139,7 @@
       {`
       <!-- _layout.svelte -->
       <sc`}{`ript>
-        import { isActive, url, layout } from "@sveltech/routify";
+        import { isActive, url, layout } from "@roxi/routify";
       </script>
 
       <ul>
