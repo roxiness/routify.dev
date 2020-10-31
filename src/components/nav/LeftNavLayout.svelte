@@ -50,7 +50,7 @@
                     <li
                       class="c-sidebar-nav-child__item"
                       class:c-sidebar-nav-child__item--selected={child.path === currentId}>
-                      <a href={$url(child.path)}>{child.title}</a>
+                      <a href={$url(child.path)}>{child.title} <New date={child.meta.new} /></a>
                     </li>
                   {:else}
                     <li
