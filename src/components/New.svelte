@@ -15,7 +15,8 @@
     font-size: 10px;
     padding: 0 4px;
     border-radius: 4px;
+    margin-left: 4px;
   }
 </style>
 
-{#if isNew}<span {title}>new</span>{/if}
+{#if isNew}<span {title}> new</span>{/if}
