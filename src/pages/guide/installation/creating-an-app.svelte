@@ -53,6 +53,6 @@
 </div>
 <Note>
   We recommend reading the
-  <a href={$url('../../introduction')}>Introduction</a>
+  <a href={$url('../introduction')}>Introduction</a>
   before creating your first app.
 </Note>

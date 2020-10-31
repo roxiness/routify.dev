@@ -42,7 +42,7 @@
       help you put your app into production much faster.
     </p>
   </div>
-    <a class="c-button c-button--primary" href={$url('../../installation')}>
+    <a class="c-button c-button--primary" href={$url('../installation')}>
       Install
     </a>
 </div>

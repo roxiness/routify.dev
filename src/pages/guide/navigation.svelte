@@ -32,11 +32,11 @@
     </p>
     <Code language="svelte">
       {`
-    <a href={$url('../introduction')}>
+    <a href={$url('./introduction')}>
       A link to the introduction section on your left
     </a>`}
     </Code>
-    <a href={$url('../introduction')}>
+    <a href={$url('./introduction')}>
       A link to the introduction section on your left
     </a>
     <Note>
