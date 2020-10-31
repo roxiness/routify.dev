@@ -9,7 +9,18 @@
   meta.title = "Basics";
 
   const config = [
-    ["queryHandler", "object", "shown in example", "Parses overloaded params to and from the URL query"]
+    [
+      "queryHandler",
+      "object",
+      "shown in example",
+      "Parses overloaded params to and from the URL query",
+    ],
+    [
+      "urlTransform ",
+      "object",
+      "{ apply: x => x, remove: x => x }",
+      "Transforms URL to internal/external",
+    ],
   ];
 </script>
 
@@ -22,6 +33,7 @@
   }
 </style>
 
+<!-- routify:options new='2020-10-31T16:53:49.319Z' -->
 <h1 class="c-h1">Client configuration</h1>
 
 <div class="c-content">
@@ -38,6 +50,10 @@
         queryHandler: {
           parse: search => fromEntries(new URLSearchParams(search)),
           stringify: params => '?' + (new URLSearchParams(params)).toString()
+        },
+        urlTransform = {
+          apply: url => \`/my-base\${url}\`, //external URL
+          remove: url => url.replace('/my-base', ''), //internal URL
         }
       }
     </script>
@@ -69,4 +85,3 @@
     {/each}
   </table>
 </div>
-
