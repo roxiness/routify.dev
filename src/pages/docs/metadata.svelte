@@ -1,6 +1,7 @@
 <script>
   import Prism from "svelte-prism";
   import { meta } from "@roxi/routify";
+  import New from "../../components/New.svelte";
   meta.title = "Metadata";
 
   const reservedNames = [
@@ -9,16 +10,35 @@
       "string",
       "Sets the name accessed through <code>$page.title</code>.",
     ],
-    ["index", "number", "By default nodes are sorted by index, then the filename."],
+    [
+      "index",
+      "number",
+      "By default nodes are sorted by index, then the filename.",
+    ],
     [
       "bundle",
       "boolean",
       "Bundles everything in the current folder into one .js file.",
     ],
+    [
+      "preload",
+      "boolean <br/>| string",
+      `<div><code>true:</code> Include the component in the main .js bundle.</div>\n
+      <div><code>'proximity':</code> Preload the page when it's referenced in an active url helper.</div>`,
+      '2020-10-31T16:53:49.319Z'
+    ],
+    [
+      "param-is-page",
+      "boolean",
+      "For dynamic pages/layouts. Recreates component if parameter changes.",
+      "2020-08-31T16:53:49.319Z",
+    ],
+    ["preload", "boolean", "Include component in the main .js bundle"],
   ];
 </script>
 
 <!-- routify:options index=40 -->
+<!-- routify:options new='2020-10-31T16:53:49.319Z' -->
 
 <div class="c-content c-container-vertical">
   <h1>Metadata</h1>
@@ -28,10 +48,7 @@
     data to any route. This data can then be accessed without loading the
     component.
   </p>
-  <p>
-    To add metadata, insert a comment with
-    <code>routify:options</code>
-  </p>
+  <p>To add metadata, insert a comment with <code>routify:options</code></p>
 
   <Prism language="html">{`<!-- routify:opt`}{`ions index=1 -->`}</Prism>
 
@@ -56,11 +73,16 @@
 <div class="c-content c-container-vertical">
   <h3>Reserved names</h3>
   <table>
-    {#each reservedNames as [name, type, text]}
+    {#each reservedNames as [name, type, text, date]}
       <tr>
-        <td style="font-weight: bold">{name}</td>
-        <td style="font-style: italic">{type}</td>
-        <td>{@html text}</td>
+        <td style="font-weight: bold">
+          <code>{name}</code>
+          <New {date} />
+        </td>
+        <td style="font-style: italic">{@html type}</td>
+        <td>
+          {@html text}
+        </td>
       </tr>
     {/each}
   </table>
