@@ -1,5 +1,5 @@
 <script>
-  import { tick, onMount } from "svelte";
+  import New from "../../../components/New.svelte";
   import { meta } from "@roxi/routify";
   import { default as Prism, highlight } from "svelte-prism";
   import "prismjs/plugins/command-line/prism-command-line.js";
@@ -20,7 +20,15 @@
       "object",
       "{ apply: x => x, remove: x => x }",
       "Transforms URL to internal/external",
+      '2020-10-31T16:53:49.319Z'
     ],
+    [
+      'useHash',
+      'boolean',
+      'false',
+      'Enable hash based navigation',
+      '2020-10-31T16:53:49.319Z'
+    ]
   ];
 </script>
 
@@ -54,7 +62,8 @@
         urlTransform = {
           apply: url => \`/my-base\${url}\`, //external URL
           remove: url => url.replace('/my-base', ''), //internal URL
-        }
+        },
+        useHash: true
       }
     </script>
 
@@ -73,9 +82,9 @@
       <th>Type</th>
       <th>Default value</th>
     </tr>
-    {#each config as [name, type, value, text]}
+    {#each config as [name, type, value, text, date]}
       <tr>
-        <td>{name}</td>
+        <td>{name}<New {date} /></td>
         <td>{type}</td>
         <td>{value}</td>
       </tr>
