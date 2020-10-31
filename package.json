@@ -46,7 +46,7 @@
     "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-workbox": "^5.0.1",
     "spassr": "^1.1.2",
-    "svelte": "^3.23.2",
+    "svelte": "^3.28.0",
     "svelte-prism": "^1.1.3"
   },
   "dependencies": {
@@ -60,9 +60,8 @@
   },
   "routify": {
     "extensions": "svelte,html,svx,md",
-    "routifyDir": ".routify",
     "dynamicImports": true,
-    "plugins": {
+    "@plugins": {
       "routify-plugin-frontmatter": {}
     }
   }
