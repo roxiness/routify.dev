@@ -28,7 +28,7 @@
     "@rollup/plugin-commonjs": "^13.0.0",
     "@rollup/plugin-node-resolve": "^8.0.1",
     "@rollup/plugin-replace": "^2.3.3",
-    "@roxi/routify": "^2.2.0-next-major",
+    "@roxi/routify": "^2.3.1",
     "@sveltech/bricks": "^1.0.0",
     "concurrently": "^5.2.0",
     "cross-env": "^7.0.2",
@@ -47,6 +47,7 @@
     "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-workbox": "^5.0.1",
+    "routify-plugin-frontmatter": "^1.0.1",
     "spank": "^1.4.0",
     "spassr": "^1.1.2",
     "svelte": "^3.28.0",
@@ -58,13 +59,12 @@
     "prismjs": "^1.20.0",
     "remark-slug": "^6.0.0",
     "rollup": "^2.17.1",
-    "routify-dev-ui": "^0.0.3",
-    "routify-plugin-frontmatter": "^1.0.1"
+    "routify-dev-ui": "^0.0.3"
   },
   "routify": {
     "extensions": "svelte,html,svx,md",
     "dynamicImports": true,
-    "@plugins": {
+    "plugins": {
       "routify-plugin-frontmatter": {}
     }
   }
