@@ -1,8 +1,4 @@
-<script>
-  import { url, isActive } from "@roxi/routify";
-  import LeftNavLayout from "@/components/nav/LeftNavLayout.svelte";
-</script>
-
 <!-- routify:options index=50 -->
+<!-- routify:options new='2020-10-31T16:53:49.319Z' -->
 
 <slot />
