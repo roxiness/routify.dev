@@ -2,6 +2,7 @@
   import { isActive, url, context, layout } from "@roxi/routify";
   import HelpRequest from "@/components/HelpRequest.svelte";
   import { getContext, tick } from "svelte";
+  import New from '../New.svelte'
   $: ({ component } = $context);
   $: list = $layout.children;
 
@@ -41,7 +42,7 @@
           <li
             class="c-sidebar-nav__item "
             class:c-sidebar-nav__item--selected={$isActive(path)}>
-            <a href={$url(path)}>{title}</a>
+            <a href={$url(path)}>{title} <New date={meta.new} /></a>
             <ul class="c-sidebar-nav-child">
               {#if children && children.length && $isActive(path)}
                 {#each children as child}
@@ -55,7 +56,8 @@
                     <li
                       class="c-sidebar-nav-child__item"
                       class:c-sidebar-nav-child__item--selected={$isActive(child.path)}>
-                      <a href={$url(child.path)}>{child.title}</a>
+                      <a href={$url(child.path)}>{child.title} <New date={child.meta.new} /></a>
+
                     </li>
                   {/if}
                 {/each}
