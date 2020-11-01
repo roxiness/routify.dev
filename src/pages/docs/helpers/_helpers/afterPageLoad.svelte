@@ -1,10 +1,6 @@
 <script>
   import FunctionDoc from "@/components/FunctionDoc.svelte";
   import Code from "@/components/Code.svelte";
-  import {afterPageLoad} from '@roxi/routify'
-  $afterPageLoad(event => {
-    console.log(event)
-  })
   const params = [
     {
       type: "Function(page):void",
