@@ -1,8 +1,5 @@
 import HMR from '@roxi/routify/hmr'
 import App from './App.svelte';
-import { globalConfig } from 'svelte-prism'
-import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace'
-globalConfig.transform = code => Prism.plugins.NormalizeWhitespace.normalize(code)
 
 const app = HMR(App, { target: document.body }, 'routify-app')
 
