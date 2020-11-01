@@ -1,5 +1,5 @@
 <script context="module">
-  import Prism from "svelte-prism";
+  import PrismCmp, { globalConfig } from "svelte-prism";
   import Normalizer from "prismjs/plugins/normalize-whitespace/prism-normalize-whitespace";
   const nw = new Normalizer({
     "remove-trailing": true,
@@ -8,7 +8,7 @@
     "right-trim": true,
   });
 
-  const transform = (code) => nw.normalize(code);
+  globalConfig.transform = (code) => nw.normalize(code);
 </script>
 
 <script>
@@ -20,8 +20,8 @@
   {#if title}
     <h5>{title}</h5>
   {/if}
-  <Prism {language} {transform}>
+  <PrismCmp {language}>
     <slot />
-  </Prism>
+  </PrismCmp>
   <slot name="caption" />
 </div>
