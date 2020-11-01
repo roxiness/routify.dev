@@ -8,34 +8,54 @@
     [
       "title",
       "string",
+      "pages",
       "Sets the name accessed through <code>$page.title</code>.",
     ],
     [
       "index",
       "number",
+      "pages | layouts",
       "By default nodes are sorted by index, then the filename.",
     ],
     [
       "bundle",
       "boolean",
+      "layouts",
       "Bundles everything in the current folder into one .js file.",
     ],
     [
       "preload",
       "boolean <br/>| string",
+      "pages | layouts",
       `<div><code>true:</code> Include the component in the main .js bundle.</div>\n
       <div><code>'proximity':</code> Preload the page when it's referenced in an active url helper.</div>`,
-      '2020-10-31T16:53:49.319Z'
+      "2020-10-31T16:53:49.319Z",
     ],
     [
       "param-is-page",
       "boolean",
-      "For dynamic pages/layouts. Recreates component if parameter changes.",
+      "pages | layouts",
+      "For dynamic pages/layouts. Recreates component if its parameter changes.",
       "2020-08-31T16:53:49.319Z",
     ],
-    ["preload", "boolean", "Include component in the main .js bundle"],
+    [
+      "query-params-is-page",
+      "boolean",
+      "pages | layouts",
+      "For all pages/layouts. Recreates component if query parameters change.",
+      "2020-08-31T16:53:49.319Z",
+    ]
   ];
 </script>
+
+<style>
+  tr:not(.c-table__row--alt) td:first-of-type {
+    font-weight: bold;
+  }
+  tr.c-table__row--alt {
+    font-style: italic;
+  }
+</style>
 
 <!-- routify:options index=40 -->
 <!-- routify:options new='2020-10-31T16:53:49.319Z' -->
@@ -72,15 +92,27 @@
 
 <div class="c-content c-container-vertical">
   <h3>Reserved names</h3>
-  <table>
-    {#each reservedNames as [name, type, text, date]}
+  <table class="c-table c-table--styled">
+    <tr>
+      <th>name</th>
+      <th>type</th>
+      <th>target</th>
+    </tr>
+    {#each reservedNames as [name, type, target, text, date]}
       <tr>
         <td style="font-weight: bold">
-          <code>{name}</code>
+          {name}
           <New {date} />
         </td>
-        <td style="font-style: italic">{@html type}</td>
         <td>
+          {@html type}
+        </td>
+        <td>
+          {@html target}
+        </td>
+      </tr>
+      <tr class="c-table__row--alt">
+        <td colspan="99">
           {@html text}
         </td>
       </tr>
