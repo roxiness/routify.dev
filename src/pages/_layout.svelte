@@ -10,9 +10,9 @@
 </script>
 
 <!-- routify:options children=[
-  {title: "Github", icon:"github", path: "https://github.com/roxiness/routify"},
-  {title: "Discord", icon:"discord", path: "https://discord.gg/ntKJD5B"},
-  {title: "Twitter", icon:"twitter", path: "https://twitter.com/routifyjs"}
+  {"title": "Github", "icon":"github", "path": "https://github.com/roxiness/routify"},
+  {"title": "Discord", "icon":"discord", "path": "https://discord.gg/ntKJD5B"},
+  {"title": "Twitter", "icon":"twitter", "path": "https://twitter.com/routifyjs"}
 ] -->
 <Header />
 <main>

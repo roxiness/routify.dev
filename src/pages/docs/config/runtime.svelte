@@ -41,7 +41,7 @@
   }
 </style>
 
-<!-- routify:options new='2020-10-31T16:53:49.319Z' -->
+<!-- routify:options new="2020-10-31T16:53:49.319Z" -->
 <h1 class="c-h1">Client configuration</h1>
 
 <div class="c-content">

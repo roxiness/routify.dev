@@ -94,9 +94,9 @@ You can also add extra links to the navigation by adding meta children to a layo
 Here’s an example from this website’s root layout, where we add links to Github, Discord and Twitter.
 ```html
 <!-- routify:options children=[
-  {title: "Github", icon:"github", path: "//github.com/sveltech/routify"},
-  {title: "Discord", icon:"discord", path: "//discord.gg/ntKJD5B"},
-  {title: "Twitter", icon:"twitter", path: "//twitter.com/routifyjs"}
+  {"title": "Github", "icon":"github", "path": "//github.com/sveltech/routify"},
+  {"title": "Discord", "icon":"discord", "path": "//discord.gg/ntKJD5B"},
+  {"title": "Twitter", "icon":"twitter", "path": "//twitter.com/routifyjs"}
 ] -->
 ```
 These metadata children can be accessed in **$layout.children**.
