@@ -25,7 +25,7 @@
     ],
     [
       "preload",
-      "boolean <br/>| string",
+      "boolean | string",
       "pages | layouts",
       `<div><code>true:</code> Include the component in the main .js bundle.</div>\n
       <div><code>'proximity':</code> Preload the page when it's referenced in an active url helper.</div>`,
