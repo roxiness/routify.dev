@@ -1,0 +1,116 @@
+---
+title: Routify 2 - Released
+author: jakobrosenberg
+published: 2020-11-10T11:45:06.574Z
+summary: |
+  Welcome to the brand-new Routify blog. This is not just the first post on Routify,
+  but also my first ever blog post. Scary. For this cherry popping first post, we’re
+  very happy to announce that 1.5 is finally ready. Among the highlights in this version are:
+
+  - Support for meta tags
+  - Dynamic basepaths
+  - Automatic navigation CLI enhancements
+  - Query support
+  - Improved starter template
+layout: blogpost
+---
+
+## It's here!
+After two months of trialing, fixing bugs and adding last minute features, Routify 2 is finally here. Big thanks to all who've contributed in one way or another.
+
+- [Improvements](#improvements)
+- [New Features](#new-features)
+  - [Accessible components](#accessible-components)
+  - [Metadata flags](#metadata-flags)
+  - [Metadata options](#metadata-options)
+  - [Hash based routing](#hash-based-routing)
+  - [New `use` directive for url helper](#new-use-directive-for-url-helper)
+  - [urlTransform](#urltransform)
+  - [_folder.svelte alias](#_foldersvelte)
+- [Changes & Migration Guide](#changes)
+
+## Improvements
+- TabTransitions now detects width of parent element. This gets rid of the previously required boilerplate.
+- Page and layouts are now loaded in parallel to avoid waterfalls.
+- The routes index, `routes.js` has been reduced 50-75% in size. For routify.dev with 60+ pages and a lot of custom metadata, `routes.js` clocks in at about 3 kb in production.
+
+---
+
+## New features
+### Accessible components
+Page and layout components can now be accessed through the API. This allows for inlining pages on a single page.
+
+```html
+<!-- Inline all pages in a single page -->
+<ul>
+  {#each $layout.children as node}
+    <li>
+      <h3>{node.title}</h3>
+      {#await node.component then cmp}
+        <svelte:component this={cmp} />
+      {/await}
+    </li>
+  {/each}
+</ul>
+```
+### Metadata flags
+ `<!-- routify:options someOption -->` now translates to `<!-- routify:options someOption=true -->`. Before you had to specify a value manually.
+
+### Metadata options
+  - `query-params-is-page` reload the component if a query parameter changes
+  - `param-is-page` reload the component if the slug changes
+  - `preload="proximity"` setting preload to proximity will preload the component if it's referenced in a `$url` helper. The preload setting is recursive.
+
+
+### Hash based routing
+_(copy/pasted from the Routify 2 preview post)_
+
+Hash based routing has been on of the most requested features for Routify and now it's finally here.
+
+To enable, set `useHash` to true in the runtime config.
+
+```html
+<Router config={{useHash: true}}>
+```
+_The runtime config is passed to the Router component, typically found in `App.svelte`_
+
+### New `use` directive for `$url` helper
+_(copy/pasted from the Routify 2 preview post)_
+
+The `$url` helper can now be used as both a function and a `use` directive.
+
+
+```javascript
+/**function*/
+<a href={$url('./movies')}>Movies</a>
+
+/**directive*/
+<a href="./movies" use:$url>Movies</a>
+
+/**function with parameters*/
+<a href={$url('./movies/:id', {id: 123})}>Some movie</a>
+
+/**directive with parameters*/
+<a href="./movies/:id" use:$url={{id: 123}}>Some movie</a>
+```
+
+### urlTransform
+_(copy/pasted from the Routify 2 preview post)_
+
+`urlTransform` replaces `basepath`. It requires a little more code, but provides much more control and versatility. For more information, see [runtime config](/docs/config/runtime).
+
+### _folder.svelte
+an alias for _layout.svelte. Will become the default.
+
+---
+## Changes
+- Metadata is now parsed as JSON instead of evaluated as JS
+- Npm namespace has changed from `@sveltech/routify` to `@roxi/routify`
+- `basepath` replaced by `urltransform`
+- `$layout` now refers to closest layout, not current component
+
+Please refer to the [migration guide](/guide/migrating-from-1x) for upgrading a project.
+
+
+## starter template
+The starter template got an overhaul and `rollup.config.js` has been unified and simplified. To handle static exports, Routify's built-in export function has been replaced with our own [spank](https://github.com/roxiness/spank).
