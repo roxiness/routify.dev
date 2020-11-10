@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<script>
+  import { url } from '@roxi/routify'
+</script>
+<!-- routify:options index=80 -->
+<!-- routify:options new="2020-10-31T16:53:49.319Z" -->
+
+# Migration guide
+Migrating from 1x to 2x should be straight forward. If you experience any issues, please give us a shout on Discord or Github. (Links in navigation)
+
+- `@sveltech/routify` is now `@roxi/routify`
+- `routifyDir` has been defaulted to `.routify`.
+  - Option A) Update to `import { routes } from '../.routify/routes'` in `App.svelte`
+  - Option B) Set `routifyDir` to `node_modules/@roxi/routify/tmp/routes`.
+
+### Feature migration
+Your project may be affected by the changes below if you're using the corresponding features.
+- `$url()` no longer treats pages as folders. If you're using relative paths in a page replace the first `../` in `$url()` with `./`.
+- `$basepath` was deprecated in favor of <a href="/docs/config/runtime">urlTransform</a>.
+- `$layout` now strictly refers to the nearest layout and not the current component. In non-layout files `$layout.parent` should be `$layout`
+- Metadata is now evaluated as JSON and not JS.
+- The Routify rollup plugin, now has to be imported from `@roxi/routify/plugins/rollup`
+
