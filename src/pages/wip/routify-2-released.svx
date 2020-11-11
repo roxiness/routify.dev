@@ -3,20 +3,12 @@ title: Routify 2 - Released
 author: jakobrosenberg
 published: 2020-11-10T11:45:06.574Z
 summary: |
-  Welcome to the brand-new Routify blog. This is not just the first post on Routify,
-  but also my first ever blog post. Scary. For this cherry popping first post, we’re
-  very happy to announce that 1.5 is finally ready. Among the highlights in this version are:
-
-  - Support for meta tags
-  - Dynamic basepaths
-  - Automatic navigation CLI enhancements
-  - Query support
-  - Improved starter template
+  After a few months of trialing, fixing bugs and adding many requested features, it's finally here. Big thanks to all who've shared the love for Routify. 💗
 layout: blogpost
 ---
 
 ## It's here!
-After two months of trialing, fixing bugs and adding last minute features, Routify 2 is finally here. Big thanks to all who've contributed in one way or another.
+After a few months of trialing, fixing bugs and adding many requested features, it's finally here. Big thanks to all who've shared the love for Routify. 💗
 
 - [Improvements](#improvements)
 - [New Features](#new-features)
@@ -28,17 +20,19 @@ After two months of trialing, fixing bugs and adding last minute features, Routi
   - [urlTransform](#urltransform)
   - [_folder.svelte alias](#_foldersvelte)
 - [Changes & Migration Guide](#changes)
+- [Starter template](#starter-template)
 
 ## Improvements
-- TabTransitions now detects width of parent element. This gets rid of the previously required boilerplate.
+- TabTransitions now automatically detects width of parent element. This gets rid of the previously required boilerplate.
 - Page and layouts are now loaded in parallel to avoid waterfalls.
 - The routes index, `routes.js` has been reduced 50-75% in size. For routify.dev with 60+ pages and a lot of custom metadata, `routes.js` clocks in at about 3 kb in production.
+- To simplify navigation generation, node iteration now automatically skips dynamic pages and `index.svelte` files. To override automatic skipping, a metadata index can be assigned.
 
 ---
 
 ## New features
 ### Accessible components
-Page and layout components can now be accessed through the API. This allows for inlining pages on a single page.
+Page and layout components can be accessed through the API. This allows for inlining pages on a single page.
 
 ```html
 <!-- Inline all pages in a single page -->
@@ -59,11 +53,10 @@ Page and layout components can now be accessed through the API. This allows for 
 ### Metadata options
   - `query-params-is-page` reload the component if a query parameter changes
   - `param-is-page` reload the component if the slug changes
-  - `preload="proximity"` setting preload to proximity will preload the component if it's referenced in a `$url` helper. The preload setting is recursive.
+  - `preload="proximity"` setting preload to proximity will preload the component if it's referenced in a `$url` helper. The preload setting is recursive, so enabling proximity preloading in the root layout will enable it on all pages.
 
 
 ### Hash based routing
-_(copy/pasted from the Routify 2 preview post)_
 
 Hash based routing has been on of the most requested features for Routify and now it's finally here.
 
@@ -75,7 +68,6 @@ To enable, set `useHash` to true in the runtime config.
 _The runtime config is passed to the Router component, typically found in `App.svelte`_
 
 ### New `use` directive for `$url` helper
-_(copy/pasted from the Routify 2 preview post)_
 
 The `$url` helper can now be used as both a function and a `use` directive.
 
@@ -95,7 +87,6 @@ The `$url` helper can now be used as both a function and a `use` directive.
 ```
 
 ### urlTransform
-_(copy/pasted from the Routify 2 preview post)_
 
 `urlTransform` replaces `basepath`. It requires a little more code, but provides much more control and versatility. For more information, see [runtime config](/docs/config/runtime).
 
@@ -111,6 +102,8 @@ an alias for _layout.svelte. Will become the default.
 
 Please refer to the [migration guide](/guide/migrating-from-1x) for upgrading a project.
 
-
-## starter template
+---
+## Starter template
 The starter template got an overhaul and `rollup.config.js` has been unified and simplified. To handle static exports, Routify's built-in export function has been replaced with our own [spank](https://github.com/roxiness/spank).
+
+The `scripts` folder has been replaced by an `api` folder which for now only handles SSR for Vercel. The folder can safely be deleted if you're not using Vercel or SSR.
