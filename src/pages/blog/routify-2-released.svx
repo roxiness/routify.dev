@@ -106,4 +106,4 @@ Please refer to the [migration guide](/guide/migrating-from-1x) for upgrading a 
 ## Starter template
 The starter template got an overhaul and `rollup.config.js` has been unified and simplified. To handle static exports, Routify's built-in export function has been replaced with our own [spank](https://github.com/roxiness/spank).
 
-The `scripts` folder has been replaced by an `api` folder which for now only handles SSR for Vercel. The folder can safely be deleted if you're not using Vercel or SSR.
+The `scripts` folder has been replaced by an `api` folder which for now only handles SSR for Vercel. The folder can safely be deleted if you're not using Vercel with SSR.
