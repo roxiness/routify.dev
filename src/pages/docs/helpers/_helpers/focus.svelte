@@ -18,7 +18,7 @@
   <Code language="svelte">
     {`
       <`}{`script>
-        import { focus } from '@sveltech/routify'
+        import { focus } from '@roxi/routify'
       </script>
 
       <h1 use:focus>Look at me</h1>

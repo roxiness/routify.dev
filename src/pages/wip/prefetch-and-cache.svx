@@ -22,7 +22,7 @@ O*ptions are written as kebab-case and prefixed with `x-routify-`. See options f
 Fetches and caches external data of a given page.
 
 ```javascript
-import { prefetch } from '@sveltech/routify'
+import { prefetch } from '@roxi/routify'
 
 prefetch(path, prefetchOptions)
 ```
@@ -67,8 +67,8 @@ $layout.parent.children.forEach(sibling => sibling.load())
 
 ```javascript
 <script>
-  import { Router } from "@sveltech/routify";
-  import { routes } from "@sveltech/routify/tmp/routes";
+  import { Router } from "@roxi/routify";
+  import { routes } from "@roxi/routify/tmp/routes";
 
 	routes
     .filter(route => route.api.meta.precacheMePlz === true)

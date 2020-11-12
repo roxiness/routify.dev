@@ -1,5 +1,5 @@
 <script>
-  import { redirect } from "@sveltech/routify";
+  import { redirect } from "@roxi/routify";
   $redirect('/docs/metatags')
   // todo remove this file. Maybe create a redirect table
 </script>

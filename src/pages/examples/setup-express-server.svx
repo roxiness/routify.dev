@@ -7,12 +7,12 @@ layout: default
 
 #### 1. install express and ssr
 ```
-npm i express @sveltech/ssr
+npm i express @roxi/ssr
 ```
 
 #### 2. create server.js
 ```javascript
-const { ssr } = require('@sveltech/ssr')
+const { ssr } = require('@roxi/ssr')
 const express = require('express')
 const app = express()
 

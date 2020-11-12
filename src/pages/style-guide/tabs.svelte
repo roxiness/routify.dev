@@ -43,5 +43,5 @@
         Page 2 content
       </TabsPage>
     </div>
-  </Tabs>  
+  </Tabs>
 </Component>

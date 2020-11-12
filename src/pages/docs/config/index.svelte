@@ -1,5 +1,5 @@
 <script>
-  import { goto } from "@sveltech/routify";
-  $goto('../build')
+  import { goto } from "@roxi/routify";
+  $goto('./build')
 </script>
 <!-- routify:options index=false -->

@@ -23,7 +23,7 @@
   <Code language="svelte">
     {`
       <`}{`script>
-      import { beforeUrlChange } from "@sveltech/routify"
+      import { beforeUrlChange } from "@roxi/routify"
       $beforeUrlChange((event, store) => {
         if(formIsDirty){
           alert('Please save your changes before leaving.')

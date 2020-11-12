@@ -1,5 +1,5 @@
 const express = require('express')
-const { ssr } = require('@sveltech/ssr')
+const { ssr } = require('@roxi/ssr')
 const app = express()
 
 const port = 5000

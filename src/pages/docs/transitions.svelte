@@ -1,6 +1,6 @@
 <script>
   import Prism from "svelte-prism";
-  import { meta } from "@sveltech/routify";
+  import { meta } from "@roxi/routify";
   meta.title = "Transitions";
 </script>
 <!-- routify:options index=30 -->
@@ -33,7 +33,7 @@
       {`
         <script>
           import { writable } from 'svelte/store'
-          import { TabsTransition } from '@sveltech/routify/decorators'
+          import { TabsTransition } from '@roxi/routify/decorators'
           const width = writable()
         <${''}/script>
 
@@ -51,7 +51,7 @@
     <Prism language="svelte">
       {`
         <script>
-          import { BaseTransition } from '@sveltech/routify/decorators'
+          import { BaseTransition } from '@roxi/routify/decorators'
           import { fade } from 'svelte/transition'
 
           const configs = [

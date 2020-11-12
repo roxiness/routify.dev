@@ -10,7 +10,7 @@ summary: |
   - Nollup
   - New documentation
   - Roxi
-  
+
   ### Apologies
   This post should have been published last month, but was delayed by the fact that I only wrote it today.
 
@@ -34,7 +34,7 @@ The 1.8 beta was released a month ago and is finally stable, AFAWK. If we don't 
 
 To try the 1.8 beta, open your terminal and type:
 ```bash
-npx @sveltech/routify init --branch beta
+npx @roxi/routify init --branch beta
 ```
 
 
@@ -64,7 +64,7 @@ Prefetching provides a better experience for visitors with unstable connections.
 ##### To prefetch a page and its external assets:
 ```javascript
 <script>
-  import { prefetch } from '@sveltech/routify'
+  import { prefetch } from '@roxi/routify'
   prefetch('/prefetch/this/page')
 </script>
 ```
@@ -93,7 +93,7 @@ Preloading has no effect if the service worker is configured to cache the whole 
 
 To preload specific pages in specific order:
 ```javascript
-import { routes } from '@sveltech/routify/tmp/routes'
+import { routes } from '@roxi/routify/tmp/routes'
 routes
   //routes consists of the internal API. We want the public one
   .map(route => route.api)

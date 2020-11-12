@@ -108,7 +108,7 @@ After that add `import './tailwind.css'` to the ./src/App.svelte
 ```svelte
 <!-- ./src/App.svelte -->
 <script>
-  import { Router } from "@sveltech/routify";
+  import { Router } from "@roxi/routify";
   import { routes } from "../.routify/routes";
   import './tailwind.css';
 </script>
@@ -194,7 +194,7 @@ For Example:
 ```svelte
 <!-- ./src/pages/index.svelte -->
 <script>
-  import { metatags } from '@sveltech/routify';
+  import { metatags } from '@roxi/routify';
   metatags.title = 'My Routify app';
   metatags.description = 'Description coming soon...';
 </script>

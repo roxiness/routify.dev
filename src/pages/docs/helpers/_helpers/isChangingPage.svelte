@@ -11,7 +11,7 @@
     {`
       <!-- src/pages/_layout.svelte -->
       <sc`}{`ript>
-        import { isChangingPage } from '@sveltech/routify'
+        import { isChangingPage } from '@roxi/routify'
         import Spinner from '_spinner.svelte'
       </script>
 

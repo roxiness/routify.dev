@@ -1,5 +1,5 @@
 <script>
-    import { url } from '@sveltech/routify'
+    import { url } from '@roxi/routify'
 </script>
 
 <style>
@@ -19,6 +19,6 @@
     <h1 class="huge c-h1">404</h1>
     <div class="big">Page not found.
     <!-- link to the parent folder of _fallback.svelte -->
-    <a href={$url('../')}>Go back</a>
+    <a href={$url('./')}>Go back</a>
     </div>
 </div>

@@ -1,5 +1,5 @@
 <script>
-  import { isActive, url, layout } from "@sveltech/routify";
+  import { isActive, url, layout } from "@roxi/routify";
   import Icon from '@/components/Icon.svelte';
 
 </script>

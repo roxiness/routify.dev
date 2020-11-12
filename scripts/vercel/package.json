@@ -4,7 +4,7 @@
     "deploy": "node build && npx vercel"
   },
   "dependencies": {
-    "@sveltech/ssr": "^0.0.8",
+    "@roxi/ssr": "^0.0.8",
     "fs-extra": "^8.1.0"
   }
 }

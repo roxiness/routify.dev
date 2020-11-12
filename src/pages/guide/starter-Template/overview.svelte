@@ -1,7 +1,7 @@
 <script>
   import Prism from "svelte-prism";
   import Note from "@/components/Note.svelte";
-  import { url } from "@sveltech/routify";
+  import { url } from "@roxi/routify";
 
   const structure = [
     [".", ""],
@@ -72,12 +72,12 @@
     <p>
       This is a great way to get started, but in the long run, a CI approach
       might be better suited and we recommend having a look at the
-      <a href={$url('../deployment')}>deployment section.</a>
+      <a href={$url('./deployment')}>deployment section.</a>
     </p>
 
     <p>
       To tweak your build or find out what's included, have a look at the
-      <a href={$url('../build')}>Build section.</a>
+      <a href={$url('./build')}>Build section.</a>
     </p>
 
   </div>

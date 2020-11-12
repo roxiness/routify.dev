@@ -1,5 +1,5 @@
 const fs = require('fs')
-const { ssr } = require('@sveltech/ssr')
+const { ssr } = require('@roxi/ssr')
 const { script, template } = require('./bundle.json')
 
 exports.handler = async (event, context) => {

@@ -5,10 +5,9 @@
   import Button from "@/components/Button.svelte";
   import Title from "./_components/Title.svelte";
 
-  import { url, layout } from "@sveltech/routify";
-  import { format, formatRelative, parseISO } from "date-fns";
+  import { url, layout } from "@roxi/routify";
   import marked from "marked";
-  const posts = $layout.parent.children
+  const posts = $layout.children
     .filter(c => c.meta["frontmatter"])
     .sort((a, b) =>
       b.meta["frontmatter"].published.localeCompare(

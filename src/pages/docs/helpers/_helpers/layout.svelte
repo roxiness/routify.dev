@@ -13,7 +13,7 @@
     {`
       <!-- src/pages/_layout.svelte -->
       <script>
-        import { layout } from '@sveltech/routify'
+        import { layout } from '@roxi/routify'
       </script>
 
       {#each $layout.children as node}

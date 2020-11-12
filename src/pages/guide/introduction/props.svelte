@@ -1,6 +1,6 @@
 <script>
   import Prism from "svelte-prism";
-  import { meta } from "@sveltech/routify";
+  import { meta } from "@roxi/routify";
   meta.title = "Props";
 </script>
 <!-- routify:options index=40 -->

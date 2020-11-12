@@ -1,6 +1,6 @@
 <script>
-  import { redirect } from "@sveltech/routify";
-  $redirect("../installation");
+  import { redirect } from "@roxi/routify";
+  $redirect("./installation");
 </script>
 
 <!-- routify:options index=false -->

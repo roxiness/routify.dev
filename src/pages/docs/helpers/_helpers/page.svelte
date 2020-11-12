@@ -13,7 +13,7 @@
     {`
       <!-- src/pages/_layout.svelte -->
       <script>
-        import { page, metatags } from '@sveltech/routify'
+        import { page, metatags } from '@roxi/routify'
         $: metatags.title = $page.title
       </script>
     `}

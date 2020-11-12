@@ -45,7 +45,7 @@
   <Code language="svelte">
     {`
       <`}{`script>
-        import { prefetch } from '@sveltech/routify'
+        import { prefetch } from '@roxi/routify'
         prefetch('/some/path')
       </script>
   `}

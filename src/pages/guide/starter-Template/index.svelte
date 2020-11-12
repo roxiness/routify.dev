@@ -1,6 +1,6 @@
 <script>
-  import { goto } from "@sveltech/routify";
-  $goto("../overview", false, true);
+  import { goto } from "@roxi/routify";
+  $goto("./overview", false, true);
 </script>
 
 <!-- routify:options index=false -->

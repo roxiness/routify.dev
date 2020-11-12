@@ -4,7 +4,7 @@
   import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
   import ButtonToolbar from '@/components/ButtonToolbar.svelte';
   import Code from "@/components/Code.svelte";
-  
+
   let colors = [
     {
       category: "Grays",
@@ -45,7 +45,7 @@
       ]
     },
   ]
-  
+
 </script>
 
   <!-- routify:options index=false -->

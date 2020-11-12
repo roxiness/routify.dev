@@ -28,7 +28,7 @@
     {`
       <!-- src/pages/_layout.svelte -->
       <`}{`script>
-        import { isActive, url } from '@sveltech/routify'
+        import { isActive, url } from '@roxi/routify'
 
         const links = [
           ['./index', 'Home'],

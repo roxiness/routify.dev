@@ -1,7 +1,7 @@
 <script>
   import FunctionDoc from "@/components/FunctionDoc.svelte";
   import Code from "@/components/Code.svelte";
-  import {afterPageLoad} from '@sveltech/routify'
+  import {afterPageLoad} from '@roxi/routify'
   $afterPageLoad(event => {
     console.log(event)
   })
@@ -22,7 +22,7 @@
   <Code language="svelte">
     {`
       <`}{`script>
-      import { afterPageLoad } from "@sveltech/routify"
+      import { afterPageLoad } from "@roxi/routify"
       $afterPageLoad(page => {
         console.log('loaded ' + page.title)
       })

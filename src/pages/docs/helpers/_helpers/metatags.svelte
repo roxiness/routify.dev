@@ -1,6 +1,6 @@
 <script>
   import FunctionDoc from "@/components/FunctionDoc.svelte";
-  import { url } from '@sveltech/routify'
+  import { url } from '@roxi/routify'
 </script>
 
 <FunctionDoc name="$metatags">

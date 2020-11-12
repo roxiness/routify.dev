@@ -22,7 +22,7 @@
 
     <Prism>
       {`
-        import { metatags } from '@sveltech/routify'
+        import { metatags } from '@roxi/routify'
         metatags.description = 'Routes for Svelte'
     `}
     </Prism>
@@ -52,7 +52,7 @@
     </p>
     <Prism>
       {`
-        import { metatags } from '@sveltech/routify'
+        import { metatags } from '@roxi/routify'
         metatags.title = 'Routify'
     `}
     </Prism>
@@ -72,7 +72,7 @@
     </p>
     <Prism>
       {`
-        import { metatags } from '@sveltech/routify'
+        import { metatags } from '@roxi/routify'
         metatags['twitter:card'] = 'summary_large_image'
     `}
     </Prism>

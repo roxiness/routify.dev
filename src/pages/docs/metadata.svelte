@@ -1,6 +1,6 @@
 <script>
   import Prism from "svelte-prism";
-  import { meta } from "@sveltech/routify";
+  import { meta } from "@roxi/routify";
   meta.title = "Metadata";
 
   const reservedNames = [
@@ -44,7 +44,7 @@
   </p>
   <Prism language="javascript">
     {`
-            import { route, layout, page } from @sveltech/routify
+            import { route, layout, page } from @roxi/routify
 
             $route.meta //meta from the current page
             $page.meta //meta from the current page
@@ -86,7 +86,7 @@
   <Prism language="svelte">
     {`
           <_crip_>
-            import { layout } from @sveltech/routify
+            import { layout } from @roxi/routify
           </_crip_>
 
           {#each $layout.parent.children.filter(c => c.published) as node}

@@ -1,5 +1,5 @@
 <script>
-  import { meta } from "@sveltech/routify";
+  import { meta } from "@roxi/routify";
   meta.title = "Deployments";
   import Prism from "svelte-prism";
 </script>
