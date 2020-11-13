@@ -1,6 +1,7 @@
 <script>
     import NavItems from './nav/NavItems.svelte';
     import NavItemsMobile from './nav/NavItemsMobile.svelte';
+    import VersionSelector from './VersionSelector.svelte'
 
     let showMobileNav = false
     let bodyElement = document.querySelector('body');
@@ -25,9 +26,13 @@
 <header class="c-header">
   <div class="c-container-horizontal">
 
-    <a href="/" class="c-logo">
-      <img src="/images/logo.svg" alt="Routify">
-    </a>
+    <div style="display: flex; align-items: center;">
+      <a href="/" class="c-logo">
+        <img src="/images/logo.svg" alt="Routify">
+      </a>
+      <VersionSelector />
+    </div>
+
 
     <nav class="c-navigation">
       <NavItems />
