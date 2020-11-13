@@ -1,5 +1,5 @@
 <script>
-  let initial = 'http://v1.routify.dev'
+  let initial = 'http://routify.dev'
   let selected = initial
 
   $: if(initial !== selected) window.location.href = selected
