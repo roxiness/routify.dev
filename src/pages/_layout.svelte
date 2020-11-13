@@ -16,7 +16,7 @@
 ] -->
 <Header />
 <main>
-  <div class="c-container-horizontal">asd
+  <div class="c-container-horizontal">
     <slot />
   </div>
 </main>
