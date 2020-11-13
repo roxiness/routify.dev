@@ -1,7 +1,7 @@
 ---
 title: Routify 2 - Released
 author: jakobrosenberg
-published: 2020-11-10T11:45:06.574Z
+published: 2020-11-13T11:45:06.574Z
 summary: |
   After a few months of trialing, fixing bugs and adding many requested features, it's finally here. Big thanks to all who've shared the love for Routify. 💗
 layout: blogpost
