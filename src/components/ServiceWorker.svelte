@@ -36,6 +36,6 @@
     <h3>App has been updated</h3>
     <button
       class="c-button c-button--primary"
-      on:click={() => location.reload()}>Reload</button>
+      on:click={() => location.reload()}>Reload app</button>
   </div>
 {/if}
