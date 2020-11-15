@@ -14,6 +14,9 @@
     font-weight: bold;
     font-size: 1.2em;
     border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
   }
 </style>
 
