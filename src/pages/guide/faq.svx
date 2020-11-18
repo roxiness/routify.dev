@@ -47,5 +47,14 @@ Roxi handles the responsibilities which are currently assigned to the Routify St
 
 Yes. We welcome all contributions and would appreciate additional core members. Especially documentation, examples, guides, art, templates, etc. can use an extra hand.
 
+### Does Routify provide error handling
+
+Routify offers decorators. These are excellent for handling errors. Decorators are components which wrap around each individual descendant layout/page.
+```html
+<script> import {Boundary} from "@crownframework/svelte-error-boundary" </script>
+
+<slot decorator={Boundary} />
+```
+
 <!-- routify:options index=90 -->
 <!-- routify:options title="FAQ" -->
