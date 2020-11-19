@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+## i18n basepaths
+
+This example shows
+- [how to add multiple basepaths to Routify](#adding-language-basepaths-to-routify)
+- [how to manipulate Routify's `urlIndex.js` (for adding i18n to SSG)](#generating-i18n-urls-for-static-site-generation-optional)
+- [how to import the new URLs list in Spank](#use-our-new-i18nurlsjs)
+
+
+
+
+### Adding language basepaths to Routify
+
+```html
+<!-- src/App.svelte -->
+<script>
+  import { Router } from "@roxi/routify";
+  import { routes } from "../.routify/routes";
+
+  // accepted languages
+  const langs = ["/en", "/de", "/fr", "/es"];
+
+  // first url fragment
+  const fragment = "/" + location.pathname.split("/")[1];
+
+  // if fragment is included in accepted languages, use it. Otherwise use ""
+  const lang = langs.includes(fragment) ? fragment : "";
+
+  const config = {
+    urlTransform: {
+      //add the language prefix for the browser
+      apply: (url) => lang + url,
+      //remove the language prefix for Routify
+      remove: (url) => url.replace(lang, ""),
+    },
+  };
+</script>
+
+<Router {routes} {config} />
+```
+
+### Generating i18n URLs for static site generation (optional)
+
+Routify provides all its routes in an `urlIndex.json`.
+For each route, we need to create an additional route for each language.
+To do this we create a wrapper `i18n.urls.js`. For simplicity we put it in the project root.
+```javascript
+/** i18n.urls.js */
+const urls = require('./.routify/urlIndex.json')
+const langs = ['/en', '/de', '/fr', '/es']
+module.exports = urls.map(url => langs.map(lang => lang + url)).flat()
+```
+
+#### Use our new i18n.urls.js
+Lastly we need to change `spank`'s sitemap from `.routify/urlIndex.json` to `i18n.urls.js`.
+This can be done by editing `package.json`
+```json
+{
+  ...
+  "spank": {"sitemap": "i18n.urls.js"}
+}
+```
