@@ -70,7 +70,7 @@
         <!-- src/App.svelte -->
         <scrip`}{`t>
           import { Router } from "@roxi/routify";
-          import { routes } from "@roxi/routify/tmp/routes";
+          import { routes } from "../.routify/routes";
         </script>
 
         <Router {routes} />
