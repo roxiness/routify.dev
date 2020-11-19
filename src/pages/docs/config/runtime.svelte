@@ -59,7 +59,7 @@
           parse: search => fromEntries(new URLSearchParams(search)),
           stringify: params => '?' + (new URLSearchParams(params)).toString()
         },
-        urlTransform = {
+        urlTransform: {
           apply: url => \`/my-base\${url}\`, //external URL
           remove: url => url.replace('/my-base', ''), //internal URL
         },
