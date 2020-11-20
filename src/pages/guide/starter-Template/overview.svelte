@@ -6,11 +6,13 @@
   const structure = [
     [".", ""],
     ["├─ src/", "Source. This is for all your handcrafted code."],
+    ["│  ├─ serviceworker.svelte    ", "Registers serviceworker, handles popups etc."],
+    ["│  ├─ sw.js", "Serviceworker config."],
     ["│  └─ pages/", "Layouts and pages."],
-    ["├─ static/", "Files that don't change. Images, CSS, etc."],
+    ["├─ assets/", "Files that don't change. Images, CSS, etc."],
     ["│  └─ __index.html", "Entry file. Edit to your needs."],
     ["├─ dist/", "Distributables. This is where your built files are output."],
-    ["└─ script/", "Scripts for deployments"]
+    ["└─ api/", "Vercel and Netlify live here."]
   ];
 </script>
 
@@ -33,12 +35,14 @@
       those tasks, we've created a <a href="https://github.com/roxiness/routify-starter" target="_blank" rel="noreferrer noopener">starter template</a> that should help you go
       from prototyping to deployment in 5.3 seconds.
     </p>
-    <p>The starter template features the following - all are optional.</p>
+    <p>The starter template includes the following features - all are optional.</p>
     <ul>
       <li>Dynamic Imports</li>
-      <li>Prerendering</li>
-      <li>SSR</li>
-      <li>Quick deployments</li>
+      <li>SSR (Server Side Rendering)</li>
+      <li>SSG (Static Site Generation)</li>
+      <li>PWA (Progressive Web App)</li>
+      <li>Offline availability</li>
+      <li>Automatic deployments</li>
     </ul>
   </div>
 </div>
@@ -59,26 +63,4 @@
     </table>
   </div>
 </div>
-<div class="c-container-vertical c-container-vertical--small">
-  <div class="c-content">
-    <h3 class="c-h3">Build and deploy</h3>
-    <Prism>
-      {`
-    npm run build
-    npm run deploy:now
-    `}
-    </Prism>
 
-    <p>
-      This is a great way to get started, but in the long run, a CI approach
-      might be better suited and we recommend having a look at the
-      <a href={$url('./deployment')}>deployment section.</a>
-    </p>
-
-    <p>
-      To tweak your build or find out what's included, have a look at the
-      <a href={$url('./build')}>Build section.</a>
-    </p>
-
-  </div>
-</div>
