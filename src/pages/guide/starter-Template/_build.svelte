@@ -2,7 +2,7 @@
   import Prism from "svelte-prism";
   import Note from "@/components/Note.svelte";
 </script>
-
+<!-- TODO: Delete this file? -->
 <!-- routify:options index=30 -->
 <div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
@@ -17,7 +17,7 @@
         </p>
       </li>
       <li>
-        <strong>Prerenders</strong>
+        <strong>SSG (Static Site Generation)</strong>
         <p>
           Prerenders are static pages that have been rendered to HTML in
           advance. This ensures that the rendered page is sent to the browser
@@ -25,7 +25,7 @@
         </p>
       </li>
       <li>
-        <strong>SSR (Server side rendering)</strong>
+        <strong>SSR (Server Side Rendering)</strong>
         <p>
           SSR works like prerendering, except it's performed in realtime. Both
           SSR and prerending are important for SEO, OpenGraph and, other areas
