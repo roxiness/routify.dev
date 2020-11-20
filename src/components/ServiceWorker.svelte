@@ -1,5 +1,19 @@
 <script>
-  let hasUpdate = false;
+  const swUpdated = localStorage.getItem("serviceWorkerUpdated");
+  localStorage.removeItem("serviceWorkerUpdated");
+  let showPopup = swUpdated
+  let secondsLeft = 5
+
+  if(showPopup){
+    const interval = setInterval(()=>{
+      secondsLeft--
+      if(!secondsLeft){
+        clearInterval(interval)
+        showPopup = false
+      }
+    }, 1000)
+  }
+
   if ("serviceWorker" in navigator) {
     import("workbox-window").then(async ({ Workbox }) => {
       const wb = new Workbox("/sw.js");
@@ -10,7 +24,10 @@
       wb.addEventListener("externalinstalled", () =>
         console.log("installed service worker")
       );
-      wb.addEventListener("redundant", () => (hasUpdate = true));
+      wb.addEventListener("redundant", () => {
+        localStorage.setItem("serviceWorkerUpdated", true);
+        location.reload()
+      });
     });
   }
 </script>
@@ -31,11 +48,11 @@
   }
 </style>
 
-{#if hasUpdate}
+{#if showPopup}
   <div class="c-content">
-    <h3>App has been updated</h3>
-    <button
-      class="c-button c-button--primary"
-      on:click={() => location.reload()}>Reload app</button>
+    <h3>App has been updated
+      <button class="c-button c-button--primary" on:click={()=>(showPopup = false)}>close</button>
+    </h3>
+    <p>Popup will close in {secondsLeft} seconds</p>
   </div>
 {/if}
