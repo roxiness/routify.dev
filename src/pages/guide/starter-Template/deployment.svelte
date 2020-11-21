@@ -23,7 +23,7 @@
         <strong>Command line</strong>
         <p>
           To deploy directly from the command line, run
-          <code>npm run deploy:netlify</code>
+          <code>netlify</code>
           from the project folder.
         </p>
       </li>
@@ -55,7 +55,7 @@
         <strong>Command line</strong>
         <p>
           To deploy directly from the command line, run
-          <code>npm run deploy:vercel</code>
+          <code>vercel</code>
           from the project folder.
         </p>
       </li>
