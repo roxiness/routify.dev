@@ -1,12 +1,11 @@
 <script>
-  import { client } from "searchify/runtime";
+  import { client } from "poindexter/runtime";
   import Icon from "./Icon.svelte";
   let query = "";
-  let index = null;
   let results = [];
-  if (routify.inBrowser) client.init().then((res) => (index = res));
+  if (routify.inBrowser) client.init()
+  $: if (query) (results = client.index.search(query));
   const removeFocus = (el) => {document.activeElement.blur()}
-  $: index && (results = index.search(query));
 </script>
 
 <style>
