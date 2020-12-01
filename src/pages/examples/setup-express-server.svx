@@ -2,42 +2,86 @@
 layout: default
 ---
 
+<script>
+    import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
+</script>
 
 # Express example
 
 #### 1. install express and ssr
 ```
-npm i express @sveltech/ssr
+npm i express tossr
 ```
 
-#### 2. create server.js
-```javascript
-const { ssr } = require('@sveltech/ssr')
-const express = require('express')
-const app = express()
+#### 2. Create `server.js`
 
-const ENTRYPOINT = 'dist/__app.html'
-const APP = 'dist/build/bundle.js'
-const PORT = 5000
+<Tabs>
+  <div class="c-tabs">
+    <TabsLink>Minimal</TabsLink>
+    <TabsLink>Basic with SSR and custom endpoint</TabsLink>
 
-// serve assets, if they exist
-app.use(express.static('dist'))
+  </div>
+  <div class="c-tabs-pages">
+    <TabsPage>
 
-// otherwise serve Routify
-app.get('*', async (req, res) => {
-  const html = await ssr(ENTRYPOINT, APP, req.url)
-  res.send(html)
-})
+      ```javascript
+      const express = require('express')
+      const app = express()
 
-// You can also serve in SPA mode without SSR (uncomment below)
-// app.get('*', async (req, res) => {
-//    res.sendFile(ENTRYPOINT, { root: __dirname })
-// })
+      const PORT = 5000
+      const TEMPLATE = 'dist/__app.html'
 
-// start server
-app.listen(PORT)
-console.log('serving on port', PORT)
+      // serve assets, if they exist
+      app.use(express.static('dist'))
+
+      // otherwise serve Routify
+      app.get('*', async (req, res) => {
+        res.sendFile(TEMPLATE, { root: __dirname })
+      })
+
+      // start server
+      app.listen(PORT)
+      console.log('serving on port', PORT)
+
 ```
+
+    </TabsPage>
+    <TabsPage>
+
+      ```javascript
+      const { tossr } = require('tossr')
+      const express = require('express')
+      const app = express()
+
+      const TEMPLATE = 'dist/__app.html'
+      const SCRIPT = 'dist/build/bundle.js'
+      const PORT = 5000
+
+      // serve some custom endpoints
+      app.get('/hello', async (req, res) => {
+        res.send('hello')
+      })
+
+      // else serve assets, if they exist
+      app.use(express.static('dist'))
+
+      // else serve Routify
+      app.get('*', async (req, res) => {
+        const html = await tossr(TEMPLATE, SCRIPT, req.url)
+        res.send(html)
+      })
+
+      // start server
+      app.listen(PORT)
+      console.log('serving on port', PORT)
+```
+    </TabsPage>
+  </div>
+</Tabs>
+
+
+
+
 
 #### 3. Run server
 ```
