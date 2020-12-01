@@ -9,14 +9,16 @@
 
 <style>
   span {
-    position: absolute;
-    background: #87a1e3;
-    color: white;
-    font-size: 10px;
-    padding: 0 4px;
-    border-radius: 4px;
-    margin-left: 4px;
+    display: inline-block;
+    background: #87A1E3;
+    color: #FFF;
+    font-size: 1.1rem;
+    top: -.1rem;
+    position: relative;
+    padding: .1rem .6rem;
+    border-radius: .4rem;
+    margin-left: .4rem;
   }
 </style>
 
-{#if isNew}<span {title}> new</span>{/if}
+{#if isNew}<span {title}>New</span>{/if}
