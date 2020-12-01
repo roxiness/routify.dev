@@ -14,3 +14,5 @@ export { default as IconResolve } from "./resolve.svg";
 export { default as IconFolder } from "./folder.svg";
 export { default as IconFile } from "./file.svg";
 export { default as IconUrl } from "./url.svg";
+
+export { default as IconSearch } from "./search.svg";
