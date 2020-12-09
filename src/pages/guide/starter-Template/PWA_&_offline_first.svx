@@ -6,4 +6,4 @@ layout: default
 <!-- routify:options title="PWA & offline first" -->
 
 # PWA & Offline avaibility
-To enable offline availability, you can turn your SPA into a PWA (Progressive Web Abb), by importing `src/serviceworker.svelte` from any file.
+To enable offline availability, you can turn your SPA into a PWA (Progressive Web App), by importing `src/serviceworker.svelte` from any file.
