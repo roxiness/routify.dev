@@ -1,3 +1,4 @@
+
 ---
 layout: default
 ---
@@ -9,9 +10,9 @@ layout: default
 If you want to start the brand new Routify2 Starter Template with Tailwindcss,
 just run this command in an empty directory.
 
-`npx @roxi/routify init --branch 2.x && npx routify-tailwindcss`
+`npx @roxi/routify init && npx routify-tailwindcss`
 
-This will do all the work below for you, so you can just run `npm run dev:nollup` and enjoy blazing-fast dev exp.
+This will do all the work below for you, so you can just run `npm run dev` and enjoy blazing-fast dev exp.
 
 #### 1. Install the devDependencies
 - **tailwindcss**
@@ -203,5 +204,5 @@ For Example:
 
 ```
 
-Run the dev script `npm run dev:nollup`, then visit http://localhost:5000.
+Run the dev script `npm run dev`, then visit http://localhost:5000.
 If you see the text in red color, Tailwind CSS works.
