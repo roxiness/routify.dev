@@ -72,7 +72,7 @@
     <h3 class="c-h3">Custom</h3>
     <p>
       It's possible to host Routify on your own server. We recommend
-      <a href="https://github.com/sveltech/spassr">spassr</a>
+      <a href="https://github.com/roxiness/spassr">spassr</a>
       which can serve your app as both SPA and SSR.
     </p>
   </div>
