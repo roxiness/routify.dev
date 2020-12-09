@@ -5,7 +5,7 @@ layout: default
 
 
 # Routify and tailwind
-A guide on how to integrate routify and tailwind css.
+A guide on how to integrate routify and tailwind css. Note this is a community written guide by [GHOST](https://github.com/ghostdevv).
 
 ## Clone the template
 Get the latest routify template.
