@@ -32,7 +32,6 @@
     <Prism language="svelte">
       {`
         <script>
-          import { writable } from 'svelte/store'
           import { TabsTransition } from '@roxi/routify/decorators'          
         <${''}/script>
 
