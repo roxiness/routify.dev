@@ -33,12 +33,11 @@
       {`
         <script>
           import { writable } from 'svelte/store'
-          import { TabsTransition } from '@roxi/routify/decorators'
-          const width = writable()
+          import { TabsTransition } from '@roxi/routify/decorators'          
         <${''}/script>
 
-        <div bind:offsetWidth={$width}>
-          <slot decorator={TabsTransition} scoped={{ width }} />
+        <div>
+          <slot decorator={TabsTransition} />
         </div>
       `}
     </Prism>
