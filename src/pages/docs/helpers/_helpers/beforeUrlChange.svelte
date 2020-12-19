@@ -5,7 +5,7 @@
 
   const params = [
     {
-      type: "Function(event):boolean",
+      type: "Function(event, route):boolean",
       name: "callback",
       description: "Function to be called before the URL is changed."
     }
