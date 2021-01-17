@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+## Use Cloudflare [Workers Sites](https://developers.cloudflare.com/workers/platform/sites)
+
+This example assumes you have already [configured Wrangler](https://developers.cloudflare.com/workers/platform/sites/start-from-existing) for your project.
+
+### Configure Wrangler to use `__app.html` as index entrypoint
+
+Cloudlare Workers Sites expects the entrypoint to be `index.html`, and Routify outputs `__app.html`.
+
+```javascript
+  /* workers-site/index.js */
+
+  /**
+   * You can add custom logic to how we fetch your assets
+   * by configuring the function `mapRequestToAsset`
+   */
+  // options.mapRequestToAsset = handlePrefix(/^\/docs/)
+  options.mapRequestToAsset = (request) => {
+    const url = new URL(request.url);
+    url.pathname = `/__app.html`;
+    return mapRequestToAsset(new Request(url, request));
+  };
+```
