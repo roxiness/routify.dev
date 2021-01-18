@@ -3,7 +3,7 @@ layout: default
 ---
 
 # Use Cloudflare [Workers Sites](https://developers.cloudflare.com/workers/platform/sites)
-A guide on how to publish a Routify static site to a Cloudflare Worker. Note this is a community written guide from [Géminis Estudio](https://geminisestudio.cl).
+A guide on how to publish a Routify static site to a Cloudflare Worker. Note this is a community written guide with contributions from [Géminis Estudio](https://geminisestudio.cl) & [Aleš Vaupotič](https://github.com/alesvaupotic/).
 
 ## Prerequisites
 
