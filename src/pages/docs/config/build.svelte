@@ -12,7 +12,7 @@
     ["debug", "boolean", "false", "Show extra debug information"],
     ["pages", "string", "./src/pages", "Path to pages folder"],
     ["ignore", "array|string", false, "Files and folders to be ignored."],
-    ["dynamicImports", "boolean", "false", "Enable code splitting."],
+    ["dynamicImports", "boolean", "true", "Enable code splitting."],
     ["singleBuild", "boolean", "false", "Don't watch for file changes."],
     ["scroll", "boolean", "false", "Don't watch for file changes."],
     ["childProcess", "string", "false", "Run npm task when Routify is ready."],

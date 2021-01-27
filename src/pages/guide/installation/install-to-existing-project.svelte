@@ -14,16 +14,20 @@
     <p>
       This is a guide for installing Routify in an existing project. If you wish
       to create a new project instead. Please refer to our
-      <a href={$url('/guide/introduction/getting-started')}>getting started guide</a>.
+      <a href={$url("/guide/introduction/getting-started")}
+        >getting started guide</a
+      >.
     </p>
   </div>
 </div>
 
 <Note>
-  <p>We recommend using the Starter Template for the full functionality of Routify. If
-  starting a new project isn't an option, we refer to our
-  <a href="https://github.com/roxiness/routify-starter">Starter Template</a>
-  for the implementation of features like SSR, prerendering, and deployments.</p>
+  <p>
+    We recommend using the Starter Template for the full functionality of
+    Routify. If starting a new project isn't an option, we refer to our
+    <a href="https://github.com/roxiness/routify-starter">Starter Template</a>
+    for the implementation of features like SSR, prerendering, and deployments.
+  </p>
 </Note>
 
 <div class="c-container-vertical c-container-vertical--small">
@@ -54,8 +58,8 @@
     <code>routify -c</code>
     is shorthand for
     <code>routify --childprocess</code>
-    . If you do not wish to launch your server as a child process, you can use
-    an npm task runner like
+    . If you do not wish to launch your server as a child process, you can use an
+    npm task runner like
     <code>npm-run-all</code>
   </p>
 </div>
@@ -79,12 +83,32 @@
   </div>
 </div>
 
+
 <div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
-    <h2>4. Enable SPA</h2>
+    <h2>4. Disable if dynamic imports if needed</h2>
+    <p>If your server doesn't support dynamic imports, you need to disable them in Routify.</p>
+  </div>
+  <div class="card">
+    <Prism language="json">
+      {`
+        /** package.json **/
+        ...
+        "routify" : {
+          "dynamicImports": false
+        }
+      `}
+    </Prism>
+  </div>
+</div>
+
+
+<div class="c-container-vertical c-container-vertical--small">
+  <div class="c-content">
+    <h2>5. Enable SPA</h2>
     <p>
-      Make sure that your server redirects all 404s to your app's path. Usually "/index.html" or just
-      "/".
+      Make sure that your server redirects all 404s to your app's path. Usually
+      "/index.html" or just "/".
     </p>
   </div>
 
@@ -95,7 +119,6 @@
         <TabsLink>Apache</TabsLink>
         <TabsLink>Nginx</TabsLink>
         <TabsLink>Other</TabsLink>
-
       </div>
       <div class="c-tabs-pages">
         <TabsPage>
@@ -124,7 +147,6 @@
           </Prism>
         </TabsPage>
         <TabsPage>
-
           <Prism>
             {`
               server {
@@ -140,7 +162,10 @@
               }
             `}
           </Prism>
-          <a href="https://gist.github.com/johngrimes/3a833e23a7db998594c38871e7d3c38e">source</a>
+          <a
+            href="https://gist.github.com/johngrimes/3a833e23a7db998594c38871e7d3c38e"
+            >source</a
+          >
         </TabsPage>
         <TabsPage>
           <p>
