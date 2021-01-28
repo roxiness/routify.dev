@@ -13,6 +13,7 @@
     "build": "run-s build:*",
     "build:app": "routify -b && rollup -c",
     "build:static": "spank",
+    "build:search": "poindexter",
     "serve": "spassr --serve-spa --serve-ssr",
     "export": "routify export",
     "deploy:vercel": "cd scripts/vercel && npm run deploy",
@@ -74,6 +75,8 @@
     "template": "routify-starter:1.0.0"
   },
   "poindexter": {
+    "output": "dist/poindexter.bundle.json",
+    "ignoreSelectors": ["nav", ".c-pagination"],
     "contentSelectors": [
       ".c-sidebar-layout__main",
       "main"
