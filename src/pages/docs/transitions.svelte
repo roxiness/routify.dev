@@ -1,5 +1,5 @@
 <script>
-  import Prism from "svelte-prism";
+  import Code from "@/components/Code.svelte"
   import { meta } from "@roxi/routify";
   meta.title = "Transitions";
 </script>
@@ -29,24 +29,24 @@
       <li>Slides right if the current index is bigger than the previous</li>
     </ul>
     <h4>Usage</h4>
-    <Prism language="svelte">
+    <Code language="svelte">
       {`
         <script>
-          import { TabsTransition } from '@roxi/routify/decorators'          
+          import { TabsTransition } from '@roxi/routify/decorators'
         <${''}/script>
 
         <div>
           <slot decorator={TabsTransition} />
         </div>
       `}
-    </Prism>
+    </Code>
   </div>
 </div>
 <div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h3>BaseTransition</h3>
     <p>Template for creating your own decorations.</p>
-    <Prism language="svelte">
+    <Code language="svelte">
       {`
         <script>
           import { BaseTransition } from '@roxi/routify/decorators'
@@ -66,7 +66,7 @@
           <slot />
         </BaseTransition>
     `}
-    </Prism>
+    </Code>
 
     <p>
       <code>BaseTransition</code>

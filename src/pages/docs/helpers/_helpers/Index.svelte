@@ -37,10 +37,10 @@
 
 
 <!-- routify:options links={
-    url:'#url',
-    goto: '#goto',
-    params: '#params',
-    isActive: '#is-active'
+    "url":"#url",
+    "goto": "#goto",
+    "params": "#params",
+    "isActive": "#is-active"
 } -->
 
 <div class="c-container-vertical c-container-vertical--small">

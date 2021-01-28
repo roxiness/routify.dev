@@ -1,6 +1,5 @@
 <script>
-  import Prism from "svelte-prism";
-  import Note from "@/components/Note.svelte";
+  import Code from "@/components/Code.svelte"
 </script>
 
 <!-- routify:options index=40 -->
@@ -20,19 +19,19 @@
 
     </p>
 
-    <Prism>
+    <Code>
       {`
         import { metatags } from '@roxi/routify'
         metatags.description = 'Routes for Svelte'
     `}
-    </Prism>
+    </Code>
     <p>Would render the following HTML:</p>
-    <Prism language="html">
+    <Code language="html">
       {`
         <meta name="description" content="Routes for Svelte">
     <meta property="og:description" content="Routes for Svelte">
     `}
-    </Prism>
+    </Code>
     <p>
       Tags without a colon, like
       <code>description</code>
@@ -50,38 +49,38 @@
       also generates
       <code>{`<title>Routify</title>`}</code>
     </p>
-    <Prism>
+    <Code>
       {`
         import { metatags } from '@roxi/routify'
         metatags.title = 'Routify'
     `}
-    </Prism>
+    </Code>
     <p>Would render the following HTML:</p>
-    <Prism language="html">
+    <Code language="html">
       {`
       <title>Routify</title>
     <meta name="title" content="Routes for Svelte">
     <meta property="og:title" content="Routes for Svelte">
     `}
-    </Prism>
+    </Code>
   </div>
   <div class="c-container-vertical c-container-vertical--small">
     <h3 class="c-h3">Non-OpenGraph Metadata</h3>
     <p>
       You can set any kind of tag you want. For example, a <code>twitter:card</code> metatag can be created by doing the following
     </p>
-    <Prism>
+    <Code>
       {`
         import { metatags } from '@roxi/routify'
         metatags['twitter:card'] = 'summary_large_image'
     `}
-    </Prism>
+    </Code>
     <p>Would render the following HTML:</p>
-    <Prism language="html">
+    <Code language="html">
       {`
         <meta name="twitter:card" content="summary_large_image">
     `}
-    </Prism>
+    </Code>
   </div>
   <div class="c-container-vertical c-container-vertical--small">
     <h3 class="c-h3">Templates</h3>

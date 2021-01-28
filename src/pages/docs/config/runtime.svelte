@@ -1,10 +1,7 @@
 <script>
+  import Code from "@/components/Code.svelte"
   import New from "../../../components/New.svelte";
   import { meta } from "@roxi/routify";
-  import { default as Prism, highlight } from "svelte-prism";
-  import "prismjs/plugins/command-line/prism-command-line.js";
-  import "prismjs/components/prism-shell-session";
-  import "prismjs/components/prism-json";
 
   meta.title = "Basics";
 
@@ -49,7 +46,7 @@
 </div>
 
 <h3 class="c-h3">Example</h3>
-<Prism>
+<Code>
   {`
     <scri`}{`pt>
       import { Router } from '@roxi/routify'
@@ -69,7 +66,7 @@
 
     <Router {config} />
     `}
-</Prism>
+</Code>
 
 <div class="c-container-vertical">
   <div class="c-content">

@@ -1,11 +1,5 @@
 <script>
-  import { tick, onMount } from "svelte";
   import { meta } from "@roxi/routify";
-  import { default as Prism, highlight } from "svelte-prism";
-  import "prismjs/plugins/command-line/prism-command-line.js";
-  import "prismjs/components/prism-shell-session";
-  import "prismjs/components/prism-json";
-
   meta.title = "Basics";
 
   const config = [

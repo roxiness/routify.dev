@@ -1,8 +1,9 @@
 <script>
-  import Prism from "svelte-prism";
+  import Code from "@/components/Code.svelte";
   import { meta } from "@roxi/routify";
   meta.title = "URL parameters";
 </script>
+
 <!-- routify:options index=30 -->
 
 <h1 class="c-h1">URL parameters</h1>
@@ -12,8 +13,7 @@
   </p>
 
   <p>
-    A file or folder is parameterized if it is wrapped in brackets.
-  (ie.
+    A file or folder is parameterized if it is wrapped in brackets. (ie.
     <code>[slug].svelte</code>
     or
     <code>[slug]/index.svelte</code>)
@@ -24,7 +24,7 @@
 
   <p>
     A parameterized file/folder can access its parameter with
-    <Prism source="export let slug" />
+    <Code>export let slug</Code>
   </p>
   <p>
     A Folder's parameter is passed to
@@ -34,17 +34,19 @@
   <br />
   <h3 class="c-h3">Global parameters</h3>
   <p>
-    To access all parameters, including query parameters, from any component use the
+    To access all parameters, including query parameters, from any component use
+    the
     <code>$params</code>
-    helper. The `$params` helper can be called from a page, layout, or component nested within the page without having to pass the property down.
+    helper. The `$params` helper can be called from a page, layout, or component
+    nested within the page without having to pass the property down.
   </p>
 
-  <Prism>
+  <Code>
     {`
         import { params } from '@roxi/routify'
         $: slug = $params.slug
     `}
-  </Prism>
+  </Code>
 
   <br />
   <h3 class="c-h3">Synchronicity</h3>

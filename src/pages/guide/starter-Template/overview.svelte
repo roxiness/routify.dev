@@ -1,8 +1,4 @@
 <script>
-  import Prism from "svelte-prism";
-  import Note from "@/components/Note.svelte";
-  import { url } from "@roxi/routify";
-
   const structure = [
     [".", ""],
     ["├─ src/", "Source. This is for all your handcrafted code."],

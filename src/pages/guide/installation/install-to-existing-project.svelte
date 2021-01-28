@@ -1,6 +1,7 @@
 <script>
   import { url, meta } from "@roxi/routify";
-  import Prism from "svelte-prism";
+
+  import Code from "@/components/Code.svelte"
   import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
   import Note from "@/components/Note.svelte";
   meta.title = "Installation";
@@ -34,7 +35,7 @@
   <div class="c-content">
     <h2>1. Install module</h2>
     <p>Run in project folder</p>
-    <Prism>npm i -D @roxi/routify</Prism>
+    <Code>npm i -D @roxi/routify</Code>
   </div>
 </div>
 
@@ -42,7 +43,7 @@
   <div class="c-content">
     <h2>2. Update package.json</h2>
   </div>
-  <Prism language="javascript">
+  <Code language="javascript">
     {`
       /** package.json **/
       ...
@@ -53,7 +54,7 @@
           ...
       }
     `}
-  </Prism>
+  </Code>
   <p>
     <code>routify -c</code>
     is shorthand for
@@ -69,7 +70,7 @@
     <h2>3. Add router to your app</h2>
   </div>
   <div class="card">
-    <Prism language="html">
+    <Code language="html">
       {`
         <!-- src/App.svelte -->
         <scrip`}{`t>
@@ -79,7 +80,7 @@
 
         <Router {routes} />
       `}
-    </Prism>
+    </Code>
   </div>
 </div>
 
@@ -90,7 +91,7 @@
     <p>If your server doesn't support dynamic imports, you need to disable them in Routify.</p>
   </div>
   <div class="card">
-    <Prism language="json">
+    <Code language="javascript">
       {`
         /** package.json **/
         ...
@@ -98,7 +99,7 @@
           "dynamicImports": false
         }
       `}
-    </Prism>
+    </Code>
   </div>
 </div>
 
@@ -123,7 +124,7 @@
       <div class="c-tabs-pages">
         <TabsPage>
           <p>For Sirv, enable the single option.</p>
-          <Prism language="javascript">
+          <Code language="javascript">
             {`
               /** package.json **/
               ...
@@ -132,10 +133,10 @@
                   ...
               }
             `}
-          </Prism>
+          </Code>
         </TabsPage>
         <TabsPage>
-          <Prism>
+          <Code>
             {`
               RewriteEngine On
               RewriteBase /
@@ -144,10 +145,10 @@
               RewriteCond %{REQUEST_FILENAME} !-d
               RewriteRule . /index.html [L]
             `}
-          </Prism>
+          </Code>
         </TabsPage>
         <TabsPage>
-          <Prism>
+          <Code>
             {`
               server {
                 listen 80;
@@ -161,7 +162,7 @@
                 }
               }
             `}
-          </Prism>
+          </Code>
           <a
             href="https://gist.github.com/johngrimes/3a833e23a7db998594c38871e7d3c38e"
             >source</a

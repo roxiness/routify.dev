@@ -1,5 +1,5 @@
 <script>
-  import Prism from "svelte-prism";
+  import Code from "@/components/Code.svelte"
   import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
   import { meta } from "@roxi/routify";
   meta.title = "Auth";
@@ -32,7 +32,7 @@
       </div>
       <div class="c-tabs-pages">
         <TabsPage>
-          <Prism language="svelte">
+          <Code language="svelte">
             {`
               <!-- src/pages/_layout.svelte -->
               <scr`}{`ipt>
@@ -46,10 +46,10 @@
                 <slot />
               {/await}
             `}
-          </Prism>
+          </Code>
         </TabsPage>
         <TabsPage>
-          <Prism language="svelte">
+          <Code language="svelte">
             {`
               <!-- src/pages/_layout.svelte -->
               <scr`}{`ipt>
@@ -68,10 +68,10 @@
                 <slot scoped={{user}} />
               {/await}
             `}
-          </Prism>
+          </Code>
         </TabsPage>
         <TabsPage>
-          <Prism language="svelte">
+          <Code language="svelte">
             {`
               <!-- src/pages/_layout.svelte -->
               <scr`}{`ipt>
@@ -82,7 +82,7 @@
                 <slot />
               {/if}
             `}
-          </Prism>
+          </Code>
         </TabsPage>
       </div>
     </Tabs>
@@ -107,7 +107,7 @@
       </div>
       <div class="c-tabs-pages">
         <TabsPage>
-          <Prism language="svelte">
+          <Code language="svelte">
             {`
               <!-- src/pages/admin/_layout.svelte -->
               <scr`}{`ipt>
@@ -118,10 +118,10 @@
                 <slot />
               {/if}
               `}
-          </Prism>
+          </Code>
         </TabsPage>
         <TabsPage>
-          <Prism language="svelte">
+          <Code language="svelte">
             {`
                 <!-- src/pages/admin/_layout.svelte -->
                 <scr`}{`ipt>
@@ -137,12 +137,12 @@
                   {$goto('/login')}
                 {/await}
             `}
-          </Prism>
+          </Code>
 
         </TabsPage>
         <!-- Global guard -->
         <TabsPage>
-          <Prism language="svelte">
+          <Code language="svelte">
             {`
                 <!-- src/pages/_layout.svelte -->
                 <scr`}{`ipt>
@@ -168,12 +168,12 @@
                   <Login let:user={user}>
                 {/if}
             `}
-          </Prism>
+          </Code>
 
         </TabsPage>
         <!-- Global guard (redirect) -->
         <TabsPage>
-          <Prism language="svelte">
+          <Code language="svelte">
             {`
                 <!-- src/pages/_layout.svelte -->
                 <scr`}{`ipt>
@@ -194,7 +194,7 @@
                   <slot />
                 {/if}
 `}
-          </Prism>
+          </Code>
 
         </TabsPage>
       </div>

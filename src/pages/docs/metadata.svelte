@@ -1,5 +1,5 @@
 <script>
-  import Prism from "svelte-prism";
+    import Code from "@/components/Code.svelte"
   import { meta } from "@roxi/routify";
   import New from "../../components/New.svelte";
   meta.title = "Metadata";
@@ -70,7 +70,7 @@
   </p>
   <p>To add metadata, insert a comment with <code>routify:options</code></p>
 
-  <Prism language="html">{`<!-- routify:opt`}{`ions index=1 -->`}</Prism>
+  <Code language="html">{`<!-- routify:opt`}{`ions index=1 -->`}</Code>
 
   <p>
     The metadata can then be accessed through
@@ -79,7 +79,7 @@
     and
     <code>$page</code>
   </p>
-  <Prism language="javascript">
+  <Code language="javascript">
     {`
             import { route, layout, page } from @roxi/routify
 
@@ -87,7 +87,7 @@
             $page.meta //meta from the current page
             $layout.meta //meta from the closest layout
         `}
-  </Prism>
+  </Code>
 </div>
 
 <div class="c-content c-container-vertical">
@@ -130,14 +130,14 @@
     prop to display tags.
   </p>
 
-  <Prism language="html">
+  <Code language="html">
     {`
       <!-- _outify:option_ tags=['recipes', 'cupcakes'] -->
       <!-- _outify:option_ published=true -->
       `}
-  </Prism>
+  </Code>
 
-  <Prism language="svelte">
+  <Code language="svelte">
     {`
           <_crip_>
             import { layout } from @roxi/routify
@@ -151,7 +151,7 @@
              </div>
           {/each}
         `}
-  </Prism>
+  </Code>
 </div>
 
 <div class="c-content">

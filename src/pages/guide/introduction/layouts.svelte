@@ -1,6 +1,6 @@
 <script>
   import { meta } from "@roxi/routify";
-  import Prism from "svelte-prism";
+  import Code from "@/components/Code.svelte"
   import Note from "@/components/Note.svelte";
   meta.title = "Layouts";
 </script>
@@ -13,7 +13,7 @@
 </p>
 
 <p>A typical layout can look like this.</p>
-<Prism language="svelte">
+<Code language="svelte">
   {`
   <!-- _layout.svelte -->
 
@@ -23,7 +23,7 @@
   </slot>
   <p>Copyright my website 2020</p>
 `}
-</Prism>
+</Code>
 <Note>
   <p>
     Layouts are recursive, so whenever a page has displayed all layouts from all

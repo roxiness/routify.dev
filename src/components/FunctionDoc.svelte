@@ -1,5 +1,4 @@
 <script>
-  import Prism from "svelte-prism";
   import { getContext } from "svelte";
   export let name = "";
   export let tags = "";

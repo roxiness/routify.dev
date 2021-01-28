@@ -1,5 +1,5 @@
 <script>
-  import Prism from "svelte-prism";
+  import Code from "@/components/Code.svelte"
   import { meta } from "@roxi/routify";
   meta.title = "Props";
 </script>
@@ -9,15 +9,15 @@
 <div class="c-content">
 
     <p>Props can be passed by using the <code>scoped</code> prop.</p>
-    <Prism language="html">{`<slot scoped={{user: 'jimbo'}} />`}</Prism>
+    <Code language="html">{`<slot scoped={{user: 'jimbo'}} />`}</Code>
     <br>
     <p>Props are available to all descendant layouts and pages.</p>
 
-    <Prism>
+    <Code>
         {`
             export let scoped
             $: {user} = scoped
         `}
-    </Prism>
+    </Code>
 
 </div>

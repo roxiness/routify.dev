@@ -1,5 +1,5 @@
 <script>
-  import Prism from "svelte-prism";
+  import Code from "@/components/Code.svelte";
   import { meta } from "@roxi/routify";
   import Note from "@/components/Note.svelte";
   meta.title = "Decorators";
@@ -15,11 +15,11 @@
   </p>
   <p>Any component with a default slot can be a decorator.</p>
   <h3>Usage</h3>
-  <Prism language="html">{`<slot decorator={MyDecorator} />`}</Prism>
+  <Code language="html">{`<slot decorator={ MyDecorator } />`}</Code>
 
   <h3>Example</h3>
 
-  <Prism language="html">
+  <Code language="html">
     {`
     <!-- _FadeDecorator.svelte -->
     <`}{`script>
@@ -30,18 +30,18 @@
       <slot />
     </div>
   `}
-  </Prism>
+  </Code>
 
-  <Prism language="html">
+  <Code language="html">
     {`
       <!-- _layout.svelte -->
       <`}{`script>
         import FadeDecorator from "./_FadeDecorator.svelte";
       </script>
 
-      <slot decorator={FadeDecorator} />
+      <slot decorator={ FadeDecorator } />
   `}
-  </Prism>
+  </Code>
 
   <Note>
     <p>Decorators can be changed/disabled recursively on any layout or page.</p>

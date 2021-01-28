@@ -1,16 +1,16 @@
 <script>
   import { meta } from "@roxi/routify";
   meta.title = "Deployments";
-  import Prism from "svelte-prism";
+  import Code from "@/components/Code.svelte";
 </script>
 
 <!-- routify:options index=200  -->
 
 <div class="c-content">
+  <h2>Deploying on Apache server</h2>
 
-    <h2>Deploying on Apache server</h2>
-
-    <Prism>{`
+  <Code
+    >{`
       RewriteEngine On
 
       RewriteCond %{REQUEST_FILENAME}.html -f
@@ -22,6 +22,6 @@
       <Files "*.js">
           ForceType text/javascript
       </Files>
-      `}</Prism>
-
+      `}</Code
+  >
 </div>

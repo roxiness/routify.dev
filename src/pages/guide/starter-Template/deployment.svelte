@@ -1,9 +1,3 @@
-<script>
-  import Prism from "svelte-prism";
-  import Note from "@/components/Note.svelte";
-  import { url } from "@roxi/routify";
-</script>
-
 <!-- routify:options index=40 -->
 <div class="c-content">
   <div class="c-container-vertical c-container-vertical--small">
