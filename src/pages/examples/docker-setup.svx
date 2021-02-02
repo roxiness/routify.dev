@@ -4,7 +4,7 @@ layout: default
 
 # Dockerize your routify application
 
-A guide about dockerize your routify webapp.
+A guide about dockerize your routify webapp. Note this is a community written guide with contributions from [HAUDRAUFHAUN](https://github.com/HAUDRAUFHAUN).
 
 ## 📑 Clone the template
 
