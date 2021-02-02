@@ -1,5 +1,6 @@
 <script>
-  import Code from "@/components/Code.svelte"
+  import Code from "@/components/Code.svelte";
+  import Note from "@/components/Note.svelte";
   import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
   import { meta } from "@roxi/routify";
   meta.title = "Auth";
@@ -20,15 +21,12 @@
 <div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h2>Authentication guards</h2>
-    <p>
-      Users should generally be authenticated in the root layout.
-    </p>
+    <p>Users should generally be authenticated in the root layout.</p>
     <Tabs>
       <div class="c-tabs">
         <TabsLink>Minimal</TabsLink>
         <TabsLink>Basic</TabsLink>
         <TabsLink>Store</TabsLink>
-
       </div>
       <div class="c-tabs-pages">
         <TabsPage>
@@ -61,7 +59,7 @@
               {#await authenticate()}
 
               <!-- Show a waiting message/page/animation here -->
-              Verifying user...
+                <h3>Verifying user...</h3>
 
               <!-- Pass the user to all nested pages in the project -->
               {:then user}
@@ -78,8 +76,10 @@
                 import { user } from '../store'
               </script>
 
-              {#if user}
+              {#if $user.authenticated}
                 <slot />
+              {:else}
+                <h3>Authenticating...</h3>
               {/if}
             `}
           </Code>
@@ -103,7 +103,6 @@
         <TabsLink>Async (redirect)</TabsLink>
         <TabsLink>Global guard</TabsLink>
         <TabsLink>Global guard (redirect)</TabsLink>
-
       </div>
       <div class="c-tabs-pages">
         <TabsPage>
@@ -138,7 +137,6 @@
                 {/await}
             `}
           </Code>
-
         </TabsPage>
         <!-- Global guard -->
         <TabsPage>
@@ -169,7 +167,6 @@
                 {/if}
             `}
           </Code>
-
         </TabsPage>
         <!-- Global guard (redirect) -->
         <TabsPage>
@@ -195,21 +192,78 @@
                 {/if}
 `}
           </Code>
-
         </TabsPage>
       </div>
     </Tabs>
   </div>
 </div>
+
 <div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h3>Realtime guards</h3>
     <p>
       For realtime guards, simply replace
-      <code>{'{#await <promise>}'}</code>
+      <code>{"{#await <promise>}"}</code>
       with
-      <code>{'{#if <reactive condition>}'}</code>
+      <code>{"{#if <reactive condition>}"}</code>
     </p>
+  </div>
+</div>
 
+<div class="c-container-vertical c-container-vertical--small">
+  <div class="c-content">
+    <h2>SSR / Static</h2>
+    <p>
+      If you use <code>spank</code>, <code>spassr --ssr</code> or our starter
+      template's serverless SSR functions, you need to call
+      <code>$ready()</code> to let <code>tossr</code> know that the page is
+      ready to be rendered. Otherwise <code>tossr</code> would wait indefinitely
+      for your page (eg. index.svelte) to load.
+    </p>
+    <Tabs>
+      <div class="c-tabs">
+        <TabsLink>Conditional</TabsLink>
+        <TabsLink>Unconditional</TabsLink>
+      </div>
+      <div class="c-tabs-pages">
+        <TabsPage>
+          <Code language="svelte">
+            {`
+                <!-- src/pages/_layout.svelte -->
+                <scr`}{`ipt>
+                  import { $ready } from '@roxi/routify'
+                  ...
+                </script>
+
+
+                {#if condition}
+                  <slot />
+                {:else}
+                  { $ready() }
+                {/if}
+            `}
+          </Code>
+        </TabsPage>
+        <TabsPage>
+          <Code language="svelte">
+            {`
+                <!-- src/pages/_layout.svelte -->
+                <scr`}{`ipt>
+                  import { $ready } from '@roxi/routify'
+                  $ready()
+                  ...
+                </script>
+
+
+                {#if condition}
+                  <slot />
+                {:else}
+                  ...
+                {/if}
+            `}
+          </Code>
+        </TabsPage>
+      </div>
+    </Tabs>
   </div>
 </div>
