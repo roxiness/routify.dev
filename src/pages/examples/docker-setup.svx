@@ -15,19 +15,10 @@ mkdir my-routify-app | cd
 npx @roxi/routify init
 ```
 
-## 📝 Create the Dockerfile
-
-Now you have to create the necessary dockerfiles by running:
-
-```bash
-touch Dockerfile
-```
-
-This will create the main Dockerfile that is going to be the be the construction plan of our docker container.
-
 ## 🏗️ Setup the Dockerfile
 
 Now we can get to the heart of our Dockerization: the `Dockerfile`:
+First, create a file called `Dockerfile` in you main app directory next to `package.json`. Then add following to the file: 
 
 ```docker
 FROM nginx
@@ -38,7 +29,7 @@ This dockerfile will build a basic ngnix container that will serve our built app
 
 ## 🏃‍♂️ Get the container up and running
 
-First, we have to get the build output of our application:
+To get the container up and running, we have to get the build output of our application first:
 
 ```bash
 npm run build
