@@ -45,7 +45,8 @@ const contributors = [
     "github": "ghostdevv",
     "twitter": "onlyspaceghost",
     "discord": "GHOST#7524",
-    "imgpath": "GHOST"
+    "imgpath": "GHOST",
+    "imgext": "png"
   }
 ]
 
