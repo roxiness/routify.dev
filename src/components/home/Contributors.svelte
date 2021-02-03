@@ -10,7 +10,7 @@
         <li class="c-contributors__list-item">
             <a href="https://github.com/{contributor.github}" class="c-contributor">
                 {#if contributor.imgpath}
-                  <img class="c-contributor__img" src="{basepath}/{contributor.imgpath}.jpg" alt="">
+                  <img class="c-contributor__img" src="{basepath}/{contributor.imgpath}.{contributor.imgext ? contributor.imgext : 'jpg'}" alt="">
                 {:else}
                   <img class="c-contributor__img" src="{basepath}/default.jpg" alt="">
                 {/if}
@@ -20,5 +20,3 @@
         {/each}
     </ul>
 </div>
-
-
