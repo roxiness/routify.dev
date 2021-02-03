@@ -39,6 +39,14 @@ const contributors = [
     "github": "lpshanley",
     "twitter": "CitadelOfLukes",
     "imgpath": "luke"
+  },
+  {
+    "name": "GHOST",
+    "github": "ghostdevv",
+    "twitter": "onlyspaceghost",
+    "discord": "GHOST#7524",
+    "imgpath": "GHOST",
+    "imgext": "png"
   }
 ]
 
