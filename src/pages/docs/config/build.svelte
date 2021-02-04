@@ -5,7 +5,7 @@
   const config = [
     ["debug", "boolean", "false", "Show extra debug information"],
     ["pages", "string", "./src/pages", "Path to pages folder"],
-    ["ignore", "array|string", false, "Files and folders to be ignored."],
+    ["ignore", "array|string", false, "Files and folders to be ignored. The expected input is a glob pattern."],
     ["dynamicImports", "boolean", "true", "Enable code splitting."],
     ["singleBuild", "boolean", "false", "Don't watch for file changes."],
     ["scroll", "boolean", "false", "Don't watch for file changes."],
