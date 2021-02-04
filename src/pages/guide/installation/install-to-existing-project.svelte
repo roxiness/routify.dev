@@ -1,7 +1,7 @@
 <script>
   import { url, meta } from "@roxi/routify";
 
-  import Code from "@/components/Code.svelte"
+  import Code from "@/components/Code.svelte";
   import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
   import Note from "@/components/Note.svelte";
   meta.title = "Installation";
@@ -13,14 +13,21 @@
   <h1 class="c-h1">Install to existing project</h1>
   <div class="c-content">
     <p>
-      This is a guide for installing Routify in an existing project. If you wish
-      to create a new project instead. Please refer to our
+      This is a guide for installing Routify in an existing project that. If you
+      wish to create a new project instead. Please refer to our
       <a href={$url("/guide/introduction/getting-started")}
         >getting started guide</a
       >.
     </p>
   </div>
 </div>
+
+<Note>
+  <p>
+    This guide uses Rollup, other bundlers such as webpack are possible but
+    aren't featured in this guide.
+  </p>
+</Note>
 
 <Note>
   <p>
@@ -84,11 +91,13 @@
   </div>
 </div>
 
-
 <div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
     <h2>4. Disable if dynamic imports if needed</h2>
-    <p>If your server doesn't support dynamic imports, you need to disable them in Routify.</p>
+    <p>
+      If your server doesn't support dynamic imports, you need to disable them
+      in Routify.
+    </p>
   </div>
   <div class="card">
     <Code language="javascript">
@@ -103,10 +112,30 @@
   </div>
 </div>
 
+<div class="c-container-vertical c-container-vertical--small">
+  <div class="c-content">
+    <h2>5. Update Rollup config</h2>
+    <p>If you already have a rollup config you may need to do the following</p>
+  </div>
+  <div class="card">
+    <Code language="javascript">
+      {`
+        /* rollup.config.js */
+        ...
+        output: {
+          "format": "esm",
+          "dir": "dist/build"
+          ...
+        },
+        ...
+      `}
+    </Code>
+  </div>
+</div>
 
 <div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
-    <h2>5. Enable SPA</h2>
+    <h2>6. Enable SPA</h2>
     <p>
       Make sure that your server redirects all 404s to your app's path. Usually
       "/index.html" or just "/".
