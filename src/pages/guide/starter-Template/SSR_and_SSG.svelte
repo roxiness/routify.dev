@@ -110,7 +110,7 @@
     <strong id="disabling">Disabling</strong>
     <p>
       While SPA, PWA, SSR, SSG, Dynamic imports etc. all happily coexist, there
-      can be times where you want to disable on or more features.
+      can be times where you want to disable one or more features.
     </p>
     <ul>
       <li>
