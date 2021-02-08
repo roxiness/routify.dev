@@ -22,5 +22,5 @@ Your project may be affected by the changes below if you're using the correspond
 - `$basepath` was deprecated in favor of <a href="/docs/config/runtime">urlTransform</a>.
 - `$layout` now strictly refers to the nearest layout and not the current component. In non-layout files `$layout.parent` should be `$layout`
 - Metadata is now evaluated as JSON and not JS.
-- The Routify rollup plugin, now has to be imported from `@roxi/routify/plugins/rollup`
+- The Routify rollup plugin, now has to be imported directly (`import routify from '@roxi/routify/plugins/rollup'`)
 
