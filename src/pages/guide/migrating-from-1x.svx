@@ -23,4 +23,4 @@ Your project may be affected by the changes below if you're using the correspond
 - `$layout` now strictly refers to the nearest layout and not the current component. In non-layout files `$layout.parent` should be `$layout`
 - Metadata is now evaluated as JSON and not JS.
 - The Routify rollup plugin, now has to be imported directly (`import routify from '@roxi/routify/plugins/rollup'`)
-
+- Routify 2 uses code splitting by default. To disable, set `dynamicImports: false`.
