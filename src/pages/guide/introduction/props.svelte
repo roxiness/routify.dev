@@ -16,7 +16,7 @@
     <Code>
         {`
             export let scoped
-            $: {user} = scoped
+            $: ({user} = scoped)
         `}
     </Code>
 
