@@ -6,7 +6,7 @@
     ["│  ├─ sw.js", "Serviceworker config."],
     ["│  └─ pages/", "Layouts and pages."],
     ["├─ assets/", "Files that don't change. Images, CSS, etc."],
-    ["│  └─ __index.html", "Entry file. Edit to your needs."],
+    ["│  └─ __app.html", "Entry file. Edit to your needs."],
     ["├─ dist/", "Distributables. This is where your built files are output."],
     ["└─ api/", "Vercel and Netlify live here."]
   ];
