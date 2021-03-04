@@ -5,7 +5,7 @@
     {
       type: "Function(page):void",
       name: "callback",
-      description: "Function to be called before URL is changed.",
+      description: "Function to be called after page is loaded.",
     },
   ];
 </script>
