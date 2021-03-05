@@ -4,7 +4,7 @@
   import Note from "@/components/Note.svelte";
 </script>
 
-<FunctionDoc name="$isChangingPage" type="object" tags="1.8 beta">
+<FunctionDoc name="$isChangingPage" type="object">
   <p>Returns true if a page is loading. </p>
 
   <Code language="svelte">

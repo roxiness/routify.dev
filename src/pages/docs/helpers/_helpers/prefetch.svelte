@@ -40,7 +40,7 @@
   ];
 </script>
 
-<FunctionDoc name="prefetch" {params} {types} tags="1.8 beta,wip">
+<FunctionDoc name="prefetch" {params} {types} >
   <p>Prefetch pages and cache their external requests.</p>
   <Code language="svelte">
     {`
