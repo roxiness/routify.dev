@@ -132,7 +132,7 @@
 
   <Code language="html">
     {`
-      <!-- _outify:option_ tags=['recipes', 'cupcakes'] -->
+      <!-- _outify:option_ tags=["recipes", "cupcakes"] -->
       <!-- _outify:option_ published=true -->
       `}
   </Code>
