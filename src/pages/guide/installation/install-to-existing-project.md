@@ -24,13 +24,6 @@
 
 <Note>
   <p>
-    This guide uses Rollup, other bundlers such as webpack are possible but
-    aren't featured in this guide.
-  </p>
-</Note>
-
-<Note>
-  <p>
     We recommend using the Starter Template for the full functionality of
     Routify. If starting a new project isn't an option, we refer to our
     <a href="https://github.com/roxiness/routify-starter">Starter Template</a>
