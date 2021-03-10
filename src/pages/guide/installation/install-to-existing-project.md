@@ -1,26 +1,30 @@
-<script>
-  import { url, meta } from "@roxi/routify";
+---
+layout: default
+---
 
+<script>
+  import { url, meta } from "@roxi/routify"
   import Code from "@/components/Code.svelte";
   import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
   import Note from "@/components/Note.svelte";
   meta.title = "Installation";
+  
+  /**
+   *  this isn't strictly needed, but my vscode's autoformat prefixes
+   *  `$url` in markdown with a backslash: `\$url`
+   */
+  $: link = $url
 </script>
 
 <!-- routify:options index=20 -->
 
-<div class="c-container-vertical c-container-vertical--small">
-  <h1 class="c-h1">Install to existing project</h1>
-  <div class="c-content">
-    <p>
-      This is a guide for installing Routify in an existing project that. If you
-      wish to create a new project instead. Please refer to our
-      <a href={$url("/guide/introduction/getting-started")}
-        >getting started guide</a
-      >.
-    </p>
-  </div>
-</div>
+# Install to existing project
+
+<p>
+  This is a guide for installing Routify in an existing project that. If you
+  wish to create a new project instead. Please refer to our
+  <a href={link("/guide/introduction/getting-started")} >getting started guide</a>.
+</p>
 
 <Note>
   <p>
@@ -31,130 +35,52 @@
   </p>
 </Note>
 
-<div class="c-container-vertical c-container-vertical--small">
-  <div class="c-content">
-    <h2>1. Install module</h2>
-    <p>Run in project folder</p>
-    <Code>npm i -D @roxi/routify</Code>
-  </div>
-</div>
+### 1. Install module
 
-<div class="c-container-vertical c-container-vertical--small">
-  <div class="c-content">
-    <h2>2. Update package.json</h2>
-  </div>
-  <Code language="javascript">
-    {`
-      /** package.json **/
-      ...
-      "scripts": {
-          "dev": "routify -c my-server",
-          "my-server": "rollup -c -w",
-          "build": "routify -b && rollup -c",
-          ...
-      }
-    `}
-  </Code>
-  <p>
-    <code>routify -c</code>
-    is shorthand for
-    <code>routify --childprocess</code>
-    . If you do not wish to launch your server as a child process, you can use an
-    npm task runner like
-    <code>npm-run-all</code>
-  </p>
-</div>
+Run in project folder
+<Code> npm i -D @roxi/routify npm-run-all </Code>
 
-<div class="c-container-vertical c-container-vertical--small">
-  <div class="c-content">
-    <h2>3. Add router to your app</h2>
-  </div>
-  <div class="card">
-    <Code language="html">
-      {`
-        <!-- src/App.svelte -->
-        <scrip`}{`t>
-          import { Router } from "@roxi/routify";
-          import { routes } from "../.routify/routes";
-        </script>
+### 2. Update package.json
 
-        <Router {routes} />
-      `}
-    </Code>
-  </div>
-</div>
+Run Routify alongside your original dev script. We're using `Rollup` in the example, but you can use any bundler.
 
-<div class="c-container-vertical c-container-vertical--small">
-  <div class="c-content">
-    <h2>4. Disable if dynamic imports if needed</h2>
-    <p>
-      If your server doesn't support dynamic imports, you need to disable them
-      in Routify.
-    </p>
-  </div>
-  <div class="card">
-    <Code language="javascript">
-      {`
-        /** package.json **/
+<Code language="javascript">
+  {`
+    /** package.json **/
+    ...
+    "scripts": {
+        "dev": "run-p dev:*",
+        "dev:rollup": "rollup -c -w",
+        "dev:routify": "routify",
+        "build": "routify -b && rollup -c",
         ...
-        "routify" : {
-          "dynamicImports": false
-        }
-      `}
-    </Code>
-  </div>
-</div>
+    }
+  `}
+</Code>
 
-<div class="c-container-vertical c-container-vertical--small">
-  <div class="c-content">
-    <h2>5. Update Rollup config</h2>
-    <p>If you already have a rollup config you may need to do the following</p>
-  </div>
-  <div class="card">
-    <Code language="javascript">
-      {`
-        /* rollup.config.js */
-        ...
-        output: {
-          "format": "esm",
-          "dir": "dist/build"
-          ...
-        },
-        ...
-      `}
-    </Code>
-  </div>
-</div>
+`routify -b` is shorthand for `routify --single-build`. Single-build doesn't watch for file changes and produces a leaner `routes.js` file.
 
-<div class="c-container-vertical c-container-vertical--small">
-  <div class="c-content">
-    <h2>6. Update the script tag</h2>
-    <p>
-      Ensure that your script is loaded with type "module" in your entrypoint HTML file.
-    </p>
-  </div>
-  <div class="card">
-    <Code language="html">
-      {`
-        /* index.html */
-        ...
-        <script type="module" src='/build/main.js'></script>
-        ...
-      `}
-    </Code>
-  </div>
-</div>
+### 3. Add router to your app
 
-<div class="c-container-vertical c-container-vertical--small">
-  <div class="c-content">
-    <h2>7. Enable SPA</h2>
-    <p>
-      Make sure that your server redirects all 404s to your app's path. Usually
-      "/index.html" or just "/".
-    </p>
-  </div>
+<Code language="html">
+  {`
+    <!-- src/App.svelte -->
+    <scrip`}{`t>
+      import { Router } from "@roxi/routify";
+      import { routes } from "../.routify/routes";
+    </script>
 
-  <div class="card">
+    <Router {routes} />`}</Code>
+
+---
+
+# Important
+
+### SPA forwarding
+
+Unless you're using hash based navigation, your server needs to forward all 404 to your HTML template.
+
+<div class="card">
     <Tabs>
       <div class="c-tabs">
         <TabsLink>Sirv</TabsLink>
@@ -218,4 +144,46 @@
       </div>
     </Tabs>
   </div>
-</div>
+
+### Dynamic imports
+
+Routify uses `dynamic imports` aka `code splitting` by default. If your bundler doesn't support `dynamic imports`, you can either
+
+- A) disable `dynamic imports` in routify by setting `dynamicImports` to `false`. See [Config](/docs/config/build).
+- B) enable `dynamic imports` for your bundler. (see Rollup example below)
+
+<Tabs>
+  <div class="c-tabs">
+    <TabsLink>Rollup</TabsLink>
+    <TabsLink>HTML Template</TabsLink>
+  </div>
+  <div class="c-tabs-pages">
+    <TabsPage>
+      <Code language="javascript">
+        {`
+          /* rollup.config.js */
+          ...
+          output: {
+            "format": "esm",
+            "dir": "dist/build"
+            ...
+          },
+          ...
+        `}
+    </Code>
+    </TabsPage>
+    <TabsPage>
+      <p>
+        Ensure that your script is loaded with type "module" in your HTML template.
+      </p>
+      <Code language="html">
+        {`
+          /* index.html */
+          ...
+          <script type="module" src='/build/main.js'></script>
+          ...
+        `}
+      </Code>
+    </TabsPage>
+  </div>
+</Tabs>
