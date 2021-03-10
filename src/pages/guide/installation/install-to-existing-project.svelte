@@ -135,7 +135,26 @@
 
 <div class="c-container-vertical c-container-vertical--small">
   <div class="c-content">
-    <h2>6. Enable SPA</h2>
+    <h2>6. Update the script tag</h2>
+    <p>
+      Ensure that your script is loaded with type "module" in your entrypoint HTML file.
+    </p>
+  </div>
+  <div class="card">
+    <Code language="html">
+      {`
+        /* index.html */
+        ...
+        <script type="module" src='/build/main.js'></script>
+        ...
+      `}
+    </Code>
+  </div>
+</div>
+
+<div class="c-container-vertical c-container-vertical--small">
+  <div class="c-content">
+    <h2>7. Enable SPA</h2>
     <p>
       Make sure that your server redirects all 404s to your app's path. Usually
       "/index.html" or just "/".
