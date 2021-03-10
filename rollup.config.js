@@ -75,7 +75,7 @@ const baseConfig = () => ({
     }),
     {
       transform(code, id) {
-        if (id.match(/(\.svx|\.svelte)$/))
+        if (id.match(/(\.md|\.svelte)$/))
           return code
             .replace(/_outify:option_/g, 'routify:options')
             .replace(/_crip_/g, 'script')
@@ -86,14 +86,14 @@ const baseConfig = () => ({
 
       preprocess: mdsvex({
         remarkPlugins: [slug],
-        extension: '.svx',
+        extension: '.md',
         layout: {
           "blogpost": "./src/pages/blog/_components/Layout.svelte",
           "default": "./src/components/md-layouts/Default.svelte"
         }
       }),
 
-      extensions: ['.svelte', '.md', '.svx'],
+      extensions: ['.svelte', '.md'],
       dev: !production, // run-time checks
       // Extract component CSS — better performance
       css: css => {
