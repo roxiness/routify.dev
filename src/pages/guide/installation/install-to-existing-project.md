@@ -21,8 +21,8 @@ layout: default
 # Install to existing project
 
 <p>
-  This is a guide for installing Routify in an existing project that. If you
-  wish to create a new project instead. Please refer to our
+  This is a guide for installing Routify in an existing project. If you
+  wish to create a new project instead, please refer to our
   <a href={link("/guide/introduction/getting-started")} >getting started guide</a>.
 </p>
 
