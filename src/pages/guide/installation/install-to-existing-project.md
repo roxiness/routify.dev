@@ -60,6 +60,8 @@ Run Routify alongside your original dev script. We're using `Rollup` in the exam
 
 `routify -b` is shorthand for `routify --single-build`. Single-build doesn't watch for file changes and produces a leaner `routes.js` file.
 
+_Note_: You might also want to add the `.routify` folder to `.gitignore`, since it is only needed during development.
+
 ### 3. Add router to your app
 
 <Code language="html">
