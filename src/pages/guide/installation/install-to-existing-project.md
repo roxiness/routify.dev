@@ -60,17 +60,9 @@ Run Routify alongside your original dev script. We're using `Rollup` in the exam
 
 `routify -b` is shorthand for `routify --single-build`. Single-build doesn't watch for file changes and produces a leaner `routes.js` file.
 
-### 3. Update .gitignore
+_Note_: You might also want to add the `.routify` folder to `.gitignore`, since it is only needed during development.
 
-Routify creates a `.routify` folder in your project root to store and update temporary files. These should not be committed to your repo, so just add one line to `.gitignore`.
-
-<Code language="text">
-  # .gitignore
-  
-  .routify
-<Code>
-
-### 4. Add router to your app
+### 3. Add router to your app
 
 <Code language="html">
   {`
