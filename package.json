@@ -76,7 +76,10 @@
   },
   "poindexter": {
     "output": "dist/poindexter.bundle.json",
-    "ignoreSelectors": ["nav", ".c-pagination"],
+    "ignoreSelectors": [
+      "nav",
+      ".c-pagination"
+    ],
     "contentSelectors": [
       ".c-sidebar-layout__main",
       "main"
