@@ -26,7 +26,7 @@
 </Code>
 <Note>
   <p>
-    Layouts are recursive, so whenever a page has displayed all layouts from all
+    Layouts are recursive, so whenever a page is displayed, all layouts from all
     its parent folders are applied.
   </p>
 </Note>
