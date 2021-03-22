@@ -6,11 +6,11 @@
 </script>
 
 <!-- routify:options index=60 -->
-<!-- routify:options title="Prefetching - wip" -->
+<!-- routify:options title="Prefetching" -->
 
 <div class="c-content">
   <div class="c-container-vertical c-container-vertical--small">
-    <h1 class="c-h1">Prefetching (1.8 beta - wip)</h1>
+    <h1 class="c-h1">Prefetching</h1>
     <p>
       Prefetching allows pages and their requested data to be cached in advance.
     </p>
