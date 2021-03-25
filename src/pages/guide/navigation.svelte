@@ -16,7 +16,7 @@
     
     <Note>
       <p>
-        Svelte transitions can occasionally prevent a page from dismounting correctly. If you face this issue, you can add `|local` to the transition (example below) and this should resolve the issue.
+        Svelte transitions can occasionally prevent a page from dismounting correctly. If you face this issue, you can add <code>|local</code> to the transition (example below) and this should resolve the issue.
       </p>
       <code>
         transition:fade|local
