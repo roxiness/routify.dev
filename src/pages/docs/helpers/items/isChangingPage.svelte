@@ -4,6 +4,8 @@
   import Note from "@/components/Note.svelte";
 </script>
 
+<!-- routify:options index=1000 -->
+
 <FunctionDoc name="$isChangingPage" type="object">
   <p>Returns true if a page is loading. </p>
 

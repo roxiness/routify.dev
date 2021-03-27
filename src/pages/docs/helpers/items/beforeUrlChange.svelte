@@ -2,7 +2,6 @@
   import FunctionDoc from "@/components/FunctionDoc.svelte";
   import Code from "@/components/Code.svelte";
 
-
   const params = [
     {
       type: "Function(event, route):boolean",
@@ -11,6 +10,8 @@
     }
   ];
 </script>
+
+<!-- routify:options index=800 -->
 
 <FunctionDoc name="$beforeUrlChange" {params}>
   <p>

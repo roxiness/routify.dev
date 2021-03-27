@@ -1,9 +1,9 @@
 <script>
-  import { isActive, url, context, layout } from "@roxi/routify";
+  import { isActive, url, layout, components } from "@roxi/routify";
   import HelpRequest from "@/components/HelpRequest.svelte";
   import { getContext, tick } from "svelte";
+  import { storeVarToUrl } from "../utils";
   import New from "../New.svelte";
-  $: ({ component } = $context);
   $: list = $layout.children;
 
   const elements = getContext("hashElements");
@@ -31,6 +31,18 @@
       }
     });
   }
+
+  $components.forEach((node) => {
+    if (node.meta.linkChildren) {
+      const parent = $components.find(
+        (_node) => _node.path === node.meta.linkChildren
+      );
+      node.__file.children = parent.__file.children;
+      node.children.forEach((_node) => {
+        _node.path = node.path + "#" + storeVarToUrl(_node.title);
+      });
+    }
+  });
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -42,25 +54,37 @@
         {#each list as { path, title, children, meta }}
           <li
             class="c-sidebar-nav__item "
-            class:c-sidebar-nav__item--selected={$isActive(path)}>
-            <a href={$url(path)}>{title}
-              <New date={meta.new} /></a>
+            class:c-sidebar-nav__item--selected={$isActive(path)}
+          >
+            <a href={$url(path)}
+              >{title}
+              <New date={meta.new} /></a
+            >
             <ul class="c-sidebar-nav-child">
               {#if children && children.length && $isActive(path)}
                 {#each children as child}
                   {#if child.isMeta}
                     <li
                       class="c-sidebar-nav-child__item"
-                      class:c-sidebar-nav-child__item--selected={child.path === currentId}>
-                      <a href={$url(child.path)}>{child.title}
-                        <New date={child.meta.new} /></a>
+                      class:c-sidebar-nav-child__item--selected={child.path ===
+                        currentId}
+                    >
+                      <a href={$url(child.path)}
+                        >{child.title}
+                        <New date={child.meta.new} /></a
+                      >
                     </li>
                   {:else}
                     <li
                       class="c-sidebar-nav-child__item"
-                      class:c-sidebar-nav-child__item--selected={$isActive(child.path)}>
-                      <a href={$url(child.path)}>{child.title}
-                        <New date={child.meta.new} /></a>
+                      class:c-sidebar-nav-child__item--selected={$isActive(
+                        child.path
+                      )}
+                    >
+                      <a href={$url(child.path)}
+                        >{child.title}
+                        <New date={child.meta.new} /></a
+                      >
                     </li>
                   {/if}
                 {/each}

@@ -26,6 +26,8 @@
   ];
 </script>
 
+<!-- routify:options index=50 -->
+
 <FunctionDoc name="$url" {params}>
   <p>
     <code>$url</code>

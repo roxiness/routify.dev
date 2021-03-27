@@ -31,6 +31,8 @@
   ];
 </script>
 
+<!-- routify:options index=200 -->
+
 <FunctionDoc name="$goto" {params}>
   <p>
     Navigate programatically.

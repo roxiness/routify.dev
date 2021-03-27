@@ -6,6 +6,8 @@
   const params = [];
 </script>
 
+<!-- routify:options index=1300 -->
+
 <FunctionDoc name="$ready" {params}>
   <p>
     Call

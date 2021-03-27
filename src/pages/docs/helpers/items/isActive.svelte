@@ -18,6 +18,8 @@
   ];
 </script>
 
+<!-- routify:options index=100 -->
+
 <FunctionDoc name="$isActive" {params}>
   <p>
     <code>$isActive</code>

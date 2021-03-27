@@ -16,6 +16,8 @@
   ];
 </script>
 
+<!-- routify:options index=1500 -->
+
 <FunctionDoc name="getDirection" {params}>
   <p>
     Takes two components and returns the difference between their sibling's ancestors <code>meta.$index</code>.

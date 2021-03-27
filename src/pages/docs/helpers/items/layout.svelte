@@ -4,18 +4,23 @@
   import Note from "@/components/Note.svelte";
 </script>
 
-<FunctionDoc name="$page" type="object">
+<!-- routify:options index=600 -->
+
+<FunctionDoc name="$layout" type="object">
   <p>
-    Returns the node of the current page
+    Returns the node of the current component
   </p>
 
   <Code language="svelte">
     {`
       <!-- src/pages/_layout.svelte -->
       <script>
-        import { page, metatags } from '@roxi/routify'
-        $: metatags.title = $page.title
+        import { layout } from '@roxi/routify'
       </script>
+
+      {#each $layout.children as node}
+        <a href="{node.path}">{node.title}</a>
+      {/each}
     `}
   </Code>
 

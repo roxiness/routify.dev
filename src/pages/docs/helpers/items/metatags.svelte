@@ -3,6 +3,8 @@
   import { url } from '@roxi/routify'
 </script>
 
+<!-- routify:options index=400 -->
+
 <FunctionDoc name="$metatags">
   <p>
     Set metadata and Open Graph data for the current page.

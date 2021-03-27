@@ -40,6 +40,8 @@
   ];
 </script>
 
+<!-- routify:options index=1100 -->
+
 <FunctionDoc name="prefetch" {params} {types} >
   <p>Prefetch pages and cache their external requests.</p>
   <Code language="svelte">

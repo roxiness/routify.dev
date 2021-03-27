@@ -3,6 +3,8 @@
   import Code from "@/components/Code.svelte";
 </script>
 
+<!-- routify:options index=300 -->
+
 <FunctionDoc name="$params" type="object">
   <p>
     Use

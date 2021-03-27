@@ -10,6 +10,8 @@
   ];
 </script>
 
+<!-- routify:options index=900 -->
+
 <FunctionDoc name="$afterPageLoad" {params}>
   <p>
     Called after a page has been loaded

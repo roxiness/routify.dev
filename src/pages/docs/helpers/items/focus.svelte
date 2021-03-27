@@ -11,6 +11,8 @@
   ];
 </script>
 
+<!-- routify:options index=1200 -->
+
 <FunctionDoc name="$focus" {params}>
   <p>
     Focuses on an element. If multiple focuses are called at once, the one closest to the root takes precedence.
