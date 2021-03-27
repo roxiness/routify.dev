@@ -1,5 +1,6 @@
 <script>
   import { getContext } from "svelte";
+  import { storeVarToUrl } from './utils'
   export let name = "";
   export let tags = "";
   export let params = [];
@@ -9,11 +10,7 @@
   $: isFunction = type === "function";
   $: paramNames = params.map((param) => param.name);
 
-  $: hash = name
-    .replace(/\$/, "")
-    .split(/(?=[A-Z])/)
-    .map((x) => x.toLowerCase())
-    .join("-");
+  $: hash = storeVarToUrl(name)
 
   function addHashElement(node) {
     getContext("hashElements").set(hash, node);
