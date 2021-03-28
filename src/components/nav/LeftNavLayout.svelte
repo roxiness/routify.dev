@@ -1,7 +1,7 @@
 <script>
-  import { isActive, url, layout, components } from "@roxi/routify";
-  import HelpRequest from "@/components/HelpRequest.svelte";
-  import { getContext, tick } from "svelte";
+  import { isActive, url, layout, nodes } from "@roxi/routify";
+  import HelpRequest from "../HelpRequest.svelte";
+  import { getContext } from "svelte";
   import { storeVarToUrl } from "../utils";
   import New from "../New.svelte";
   $: list = $layout.children;
@@ -32,11 +32,9 @@
     });
   }
 
-  $components.forEach((node) => {
-    if (node.meta.linkChildren) {
-      const parent = $components.find(
-        (_node) => _node.path === node.meta.linkChildren
-      );
+  $nodes.forEach((node) => {
+    if (node.meta.childrenPath) {
+      const parent = $nodes.find(node.meta.childrenPath);
       node.__file.children = parent.__file.children;
       node.children.forEach((_node) => {
         _node.path = node.path + "#" + storeVarToUrl(_node.title);
