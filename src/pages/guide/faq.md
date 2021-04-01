@@ -58,3 +58,27 @@ Routify offers decorators. These are excellent for handling errors. Decorators a
 
 <!-- routify:options index=90 -->
 <!-- routify:options title="FAQ" -->
+
+### Case insensitive routing
+Case insensitive routing is not currently baked into Routify, however it is easily achievable! There are two ways to do this:
+
+- Config
+  ```html
+  <script>
+    import { Router } from '@roxi/routify'
+    import { routes } from '../.routify/routes'
+    
+    const config = {
+      urlTransform: {
+        remove: url => url.toLowerCase()
+      }
+    }
+  </script>
+
+  <Router {config} {routes} />
+  ```
+  
+- Map
+  ```js
+  routes.forEach(r => r.regex = new RegExp(r.regex, 'i'))
+  ```
