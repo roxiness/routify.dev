@@ -44,6 +44,13 @@
       "pages | layouts",
       "For all pages/layouts. Recreates component if query parameters change.",
       "2020-08-31T16:53:49.319Z",
+    ],
+    [
+      "reset",
+      "boolean",
+      "pages | layouts",
+      "Disables layout inheritance",
+      "2020-08-31T16:53:49.319Z",
     ]
   ];
 </script>
