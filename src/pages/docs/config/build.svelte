@@ -10,7 +10,7 @@
     ["singleBuild", "boolean", "false", "Don't watch for file changes."],
     ["noHashScroll", "boolean", "false", "Disable automatic scroll to hash."],
     ["childProcess", "string", "false", "Run npm task when Routify is ready."],
-    ["extensions", "array", "Included file extensions"],
+    ["extensions", "array","", "Included file extensions"],
     [
       "routifyDir",
       "string",
