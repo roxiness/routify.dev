@@ -1,12 +1,9 @@
 <script context="module">
   import PrismCmp, { globalConfig } from "svelte-prism";
-  import Normalizer from "prismjs/plugins/normalize-whitespace/prism-normalize-whitespace";
-  const nw = new Normalizer({
-    "remove-trailing": true,
-    "remove-indent": true,
-    "left-trim": true,
-    "right-trim": true,
-  });
+  import "prismjs/plugins/normalize-whitespace/prism-normalize-whitespace";
+  import Prism from "prismjs";
+
+  const nw = Prism.plugins.NormalizeWhitespace;
 
   globalConfig.transform = (code) => nw.normalize(code);
 </script>
