@@ -54,8 +54,9 @@ npm i express tossr
       const app = express()
 
       const TEMPLATE = 'dist/__app.html'
-      const SCRIPT = 'dist/build/bundle.js'
+      const SCRIPT = 'dist/build/bundle.js' // dist/build/main.js if you're using dynamic imports
       const PORT = 5000
+      const OPTIONS = { inlineDynamicImports: true },
 
       // serve some custom endpoints
       app.get('/hello', async (req, res) => {
@@ -66,8 +67,8 @@ npm i express tossr
       app.use(express.static('dist'))
 
       // else serve Routify
-      app.get('*', async (req, res) => {
-        const html = await tossr(TEMPLATE, SCRIPT, req.url)
+      app.get('*', async (req, res) => {        
+        const html = await tossr(TEMPLATE, SCRIPT, req.url, OPTIONS)
         res.send(html)
       })
 
