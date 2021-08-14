@@ -7,14 +7,20 @@
       type: "String",
       name: "path",
       default: "./",
-      description: "Absolute, relative or named path."
+      description: "Absolute, relative or named path.",
+    },
+    {
+      type: "Object",
+      name: "params",
+      default: "{}",
+      description: "Parameters to be parsed to the URL.",
     },
     {
       type: "Bool",
       name: "strict",
-      default: "true",
-      description: 'Preserve "/index" at the end of an URL'
-    }
+      default: "false",
+      description: 'strict preserves "/index" at the end of a URL. Set to false to match all descendant paths.'
+    },
   ];
 </script>
 
