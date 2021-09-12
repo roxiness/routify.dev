@@ -11,3 +11,7 @@
     --heading-colour: #1d2c48;
     --heading-font-family: 'Overpass', sans-serif;
 }
+
+body {
+    border-top: solid 4px var(--theme);
+}
