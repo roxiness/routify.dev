@@ -1,6 +1,5 @@
-**/node_modules/
-/public/build/
-/dist
+node_modules
 .routify
-.DS_Store
-.history
+dist
+public/build
+src/tmp

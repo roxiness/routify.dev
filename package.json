@@ -1,85 +1,30 @@
 {
-  "name": "routify-docs-2020",
-  "version": "1.0.1",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sveltech/routify-site-2020.git"
-  },
-  "license": "MIT",
-  "scripts": {
-    "dev": "run-p routify rollup",
-    "dev:nollup": "run-p routify nollup",
-    "dev-dynamic": "cross-env BUNDLING=dynamic npm run dev",
-    "build": "run-s build:*",
-    "build:app": "routify -b && rollup -c",
-    "build:static": "spank",
-    "build:search": "poindexter",
-    "serve": "spassr --serve-spa --serve-ssr",
-    "export": "routify export",
-    "deploy:vercel": "cd scripts/vercel && npm run deploy",
-    "deploy:netlify": "cd scripts/netlify && npm run deploy",
-    "rollup": "rollup -cw",
-    "nollup": "nollup -c",
-    "routify": "routify",
-    "build:sass": "node-sass --recursive --output dist/build --source-map true --source-map-contents scss",
-    "watch:sass": "npm run build:sass && npm run build:sass -- --watch"
-  },
-  "devDependencies": {
-    "@rollup/plugin-alias": "^3.1.1",
-    "@rollup/plugin-commonjs": "^13.0.0",
-    "@rollup/plugin-node-resolve": "^8.0.1",
-    "@rollup/plugin-replace": "^2.3.3",
-    "@roxi/routify": "^2.15.2",
-    "@sveltech/bricks": "^1.0.0",
-    "concurrently": "^5.2.0",
-    "cross-env": "^7.0.2",
-    "date-fns": "^2.14.0",
-    "del": "^5.1.0",
-    "marked": "^1.1.0",
-    "mdsvex": "^0.8.9",
-    "npm-run-all": "^4.1.5",
-    "poindexter": "^1.0.3",
-    "prism-svelte": "^0.4.6",
-    "rollup-plugin-copy": "^3.3.0",
-    "rollup-plugin-hot": "0.0.31",
-    "rollup-plugin-livereload": "^1.3.0",
-    "rollup-plugin-scss": "^2.5.0",
-    "rollup-plugin-svelte": "^5.2.3",
-    "rollup-plugin-svelte-hot": "^0.10.0",
-    "rollup-plugin-svg": "^2.0.0",
-    "rollup-plugin-terser": "^6.1.0",
-    "rollup-plugin-workbox": "^5.0.1",
-    "routify-plugin-frontmatter": "^1.0.1",
-    "searchify": "^1.0.1",
-    "spank": "^1.4.0",
-    "spassr": "^1.1.2",
-    "svelte": "^3.29.7",
-    "svelte-prism": "^1.1.3"
-  },
-  "dependencies": {
-    "node-sass": "^5.0.0",
-    "nollup": "^0.13.8",
-    "prismjs": "^1.20.0",
-    "remark-slug": "^6.0.0",
-    "rollup": "^2.17.1",
-    "routify-dev-ui": "^0.0.3"
-  },
-  "routify": {
-    "extensions": "svelte,html,svx,md",
-    "dynamicImports": true,
-    "plugins": {
-      "routify-plugin-frontmatter": {}
+    "name": "v3.routify.dev",
+    "private": true,
+    "scripts": {
+        "build": "run-s build:*",
+        "build:routify": "routify -b",
+        "build:vite": "vite build",
+        "dev": "run-p dev:*",
+        "dev:routify": "routify",
+        "dev:vite": "vite"
+    },
+    "devDependencies": {
+        "@roxi/routify": "^2.18.3",
+        "@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
+        "mdsvex": "^0.9.8",
+        "npm-run-all": "^4.1.5",
+        "prettier-plugin-svelte": "^2.4.0",
+        "prism-themes": "^1.8.0",
+        "sass": "^1.38.1",
+        "svelte": "^3.42.4",
+        "svelte-preprocess": "^4.8.0",
+        "vite": "^2.3.8"
+    },
+    "routify": {
+        "extensions": [
+            "svelte",
+            "md"
+        ]
     }
-  },
-  "configent": {
-    "template": "routify-starter:1.0.0"
-  },
-  "poindexter": {
-    "output": "dist/poindexter.bundle.json",
-    "ignoreSelectors": ["nav", ".c-pagination"],
-    "contentSelectors": [
-      ".c-sidebar-layout__main",
-      "main"
-    ]
-  }
 }
