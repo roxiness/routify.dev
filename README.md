@@ -1,4 +1,4 @@
-# Routify site 2020 - 2021
+# Routify v2 site
 
 This is the repo for the Routify docs site.
 
