@@ -7,7 +7,8 @@
         "build:vite": "vite build",
         "dev": "run-p dev:*",
         "dev:routify": "routify",
-        "dev:vite": "vite"
+        "dev:vite": "vite",
+        "assets": "pwa-asset-generator public/logo-square.svg public/icons/pwa --background \"#FFFFFF\" --padding \"16px\""
     },
     "devDependencies": {
         "@roxi/routify": "^2.18.3",
@@ -17,6 +18,7 @@
         "npm-run-all": "^4.1.5",
         "prettier-plugin-svelte": "^2.4.0",
         "prism-themes": "^1.8.0",
+        "pwa-asset-generator": "^4.3.6",
         "sass": "^1.38.1",
         "svelte": "^3.42.4",
         "svelte-preprocess": "^4.8.0",
