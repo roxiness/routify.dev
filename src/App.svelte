@@ -4,3 +4,9 @@
 </script>
 
 <Router {routes} />
+
+<style global>
+    body {
+        border-top: solid 4px var(--theme);
+    }
+</style>
