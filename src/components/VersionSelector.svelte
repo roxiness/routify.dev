@@ -21,7 +21,7 @@
 </style>
 
 <select bind:value={selected}>
-  <option value="//v1.routify.dev">1.x</option>
-  <option value="//routify.dev">2.x</option>
-  <option value="//v3.routify.dev">3.x</option>
+  <option value="https://v1.routify.dev">1.x</option>
+  <option value="https://routify.dev">2.x</option>
+  <option value="https://v3.routify.dev">3.x</option>
 </select>
