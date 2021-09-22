@@ -3,5 +3,5 @@ import { mdsvex } from 'mdsvex';
 
 export default {
     extensions: ['.svelte', '.md'],
-    preprocess: [mdsvex(), preprocess()],
+    preprocess: [mdsvex({ extensions: ['md'] }), preprocess()],
 };
