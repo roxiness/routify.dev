@@ -52,7 +52,7 @@
     <div class="features">
         {#each features as { title, description, tags }}
             <card>
-                {#if tags?.length}
+                {#if (tags || []).length}
                     <div class="tags">
                         {#each tags as tag}
                             <span class="tag">
