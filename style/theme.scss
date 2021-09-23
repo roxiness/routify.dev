@@ -11,3 +11,19 @@
     --heading-colour: #1d2c48;
     --heading-font-family: 'Overpass', sans-serif;
 }
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e959ca;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--theme);
+}
