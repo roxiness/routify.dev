@@ -17,7 +17,7 @@
 ] -->
 
 <banner>
-  Routify 3 pulic <b>BETA</b> is here! <a href="https://v3.routify.dev">Check it out here</a>
+  Routify 3 public <b>BETA</b> is here! <a href="https://v3.routify.dev">Check it out</a>
 </banner>
 
 <style>
