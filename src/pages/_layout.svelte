@@ -15,6 +15,25 @@
   {"title": "Discord", "icon":"discord", "path": "https://discord.gg/ntKJD5B"},
   {"title": "Twitter", "icon":"twitter", "path": "https://twitter.com/routifyjs"}
 ] -->
+
+<banner>
+  Routify 3 pulic <b>BETA</b> is here! <a href="https://v3.routify.dev">Check it out here</a>
+</banner>
+
+<style>
+  banner {
+      width: 100%;
+      display: block;
+
+      padding: 12px;
+
+      text-align: center;
+
+      color: rgb(206, 47, 85);
+      background-color: #facffa;
+  }
+</style>
+
 <Header />
 <main>
   <div class="c-container-horizontal">
