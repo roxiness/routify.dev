@@ -46,6 +46,10 @@
 
 <main>
     <img src="/r3-logo.svg" alt="Routify 3 Logo" class="logo" />
+    <div class="subheader">
+        <h3 >Early docs coming soon</h3>
+        Follow us on Discord and Twitter for updates
+    </div>
 
     <code class="install"> npx @roxi/routify@next create my-r3-app </code>
 
@@ -80,6 +84,10 @@
 </main>
 
 <style lang="scss">
+    .subheader {
+        text-align: center;
+        h3 {margin-bottom: 1rem;}
+    }
     main {
         line-height: 1.6rem;
         display: grid;
@@ -90,6 +98,7 @@
         grid-template-areas:
             'logo'
             'install'
+            'subheader'
             'links'
             'features';
 
