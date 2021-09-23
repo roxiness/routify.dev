@@ -2,28 +2,28 @@
     const features = [
         {
             title: '💰 Guards',
-            content:
+            description:
                 'Auth guards are a essential part for a lot of apps, now they are baked in to Routify.',
         },
         {
             title: '💰 Preloads',
-            content: '[jake add description]',
+            description: '[jake add description]',
         },
         {
             title: '💰 Plugins',
-            content: '[jake add description]',
+            description: '[jake add description]',
         },
         {
             title: '💰 Meta Data',
-            content: '[jake add description]',
+            description: '[jake add description]',
         },
         {
             title: '💰 Code Spliting',
-            content: '[jake add description]',
+            description: '[jake add description]',
         },
         {
             title: '💰 Router in Router',
-            content: '[jake add description]',
+            description: '[jake add description]',
         },
     ];
 </script>
@@ -34,10 +34,10 @@
     <code class="install"> npx @roxi/routify@next create r3-app </code>
 
     <div class="features">
-        {#each features as { title, content }}
+        {#each features as { title, description }}
             <card>
                 <h3>{title}</h3>
-                <p>{content}</p>
+                <p>{description}</p>
             </card>
         {/each}
     </div>
