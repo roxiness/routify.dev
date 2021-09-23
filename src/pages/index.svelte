@@ -50,8 +50,18 @@
     <code class="install"> npx @roxi/routify@next create my-r3-app </code>
 
     <div class="features">
-        {#each features as { title, description }}
+        {#each features as { title, description, tags }}
             <card>
+                {#if tags?.length}
+                    <div class="tags">
+                        {#each tags as tag}
+                            <span class="tag">
+                                {tag}
+                            </span>
+                        {/each}
+                    </div>
+                {/if}
+
                 <h3>{title}</h3>
                 <p>{@html description}</p>
             </card>
@@ -89,6 +99,28 @@
             text-align: center;
         }
 
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            padding: 4px 8px;
+            gap: 8px;
+
+            .tag {
+                display: inline-flex;
+
+                color: #ce2f55;
+                background-color: #facffa;
+
+                padding: 2px 12px;
+                border-radius: 32px;
+
+                font-size: 0.7rem;
+                text-transform: uppercase;
+            }
+        }
+
         .features {
             grid-area: features;
 
@@ -104,13 +136,13 @@
             card {
                 display: flex;
                 flex-flow: column nowrap;
-                gap: 16px;
+                gap: 22px;
 
                 min-width: 300px;
                 width: 33%;
                 max-width: 400px;
 
-                padding: 32px;
+                padding: 42px 32px;
                 border-radius: 16px;
 
                 box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.1);
