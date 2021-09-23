@@ -49,6 +49,16 @@
 
     <code class="install"> npx @roxi/routify@next create my-r3-app </code>
 
+    <div class="links">
+        <a href="https://discord.com/invite/ntKJD5B" target="_blank">
+            <img src="/icons/discord.svg" alt="Discord" />
+        </a>
+
+        <a href="https://twitter.com/routifyjs" target="_blank">
+            <img src="/icons/twitter.svg" alt="Twitter" />
+        </a>
+    </div>
+
     <div class="features">
         {#each features as { title, description, tags }}
             <card>
@@ -74,12 +84,13 @@
         line-height: 1.6rem;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: max-content max-content max-content;
+        grid-template-rows: max-content max-content max-content max-content;
         gap: 56px 0px;
 
         grid-template-areas:
             'logo'
             'install'
+            'links'
             'features';
 
         align-items: center;
@@ -96,6 +107,17 @@
         .install {
             grid-area: install;
             text-align: center;
+        }
+
+        .links {
+            grid-area: links;
+
+            display: flex;
+            gap: 16px;
+
+            img {
+                width: 30px;
+            }
         }
 
         .tags {
