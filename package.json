@@ -1,17 +1,14 @@
 {
     "name": "v3.routify.dev",
     "private": true,
+    "type": "module",
     "scripts": {
-        "build": "run-s build:*",
-        "build:routify": "routify -b",
-        "build:vite": "vite build",
-        "dev": "run-p dev:*",
-        "dev:routify": "routify",
-        "dev:vite": "vite",
+        "build": "vite build",
+        "dev": "vite",
         "assets": "pwa-asset-generator public/logo-square.svg public/icons/pwa --background \"#FFFFFF\" --padding \"16px\""
     },
     "devDependencies": {
-        "@roxi/routify": "^2.18.3",
+        "@roxi/routify": "^3.0.0-next.10",
         "@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
         "greset": "^1.0.0",
         "mdsvex": "^0.9.8",

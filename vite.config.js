@@ -1,4 +1,5 @@
 import { svelte } from '@sveltejs/vite-plugin-svelte';
+import routify from '@roxi/routify/vite-plugin';
 import { VitePWA } from 'vite-plugin-pwa';
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
@@ -18,6 +19,7 @@ export default defineConfig({
     },
 
     plugins: [
+        routify(),
         svelte(),
         VitePWA({
             registerType: 'autoUpdate',
