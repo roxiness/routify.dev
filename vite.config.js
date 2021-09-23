@@ -19,7 +19,7 @@ export default defineConfig({
     },
 
     plugins: [
-        routify(),
+        // routify(),
         svelte(),
         VitePWA({
             registerType: 'autoUpdate',
