@@ -91,3 +91,23 @@
     {/each}
   </table>
 </div>
+
+<h2 class="c-h2">Disabling auto-scrolling</h2>
+
+<div class="c-content">
+  By default, Routify will scroll back to the top of the page after a route change. If you want to prevent this, you can add <pre>data-routify="scroll-lock"</pre> to the element you don't want scrolled.
+</div>
+
+<h3 class="c-h3">Example</h3>
+<Code>
+  {`
+  <div data-routify="scroll-lock">
+    <!-- Content you don't want scrolled to the top. -->
+  </div>
+  
+  <!-- Or on the body tag -->
+  <scri`}{`pt>
+    document.body.dataset.routify = 'scroll-lock'
+  </script>
+  `}
+</Code>
