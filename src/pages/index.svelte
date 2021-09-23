@@ -75,7 +75,7 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: max-content max-content max-content;
-        gap: 64px 0px;
+        gap: 56px 0px;
 
         grid-template-areas:
             'logo'
@@ -91,7 +91,6 @@
 
         .logo {
             grid-area: logo;
-            padding: 16px 0px;
         }
 
         .install {
