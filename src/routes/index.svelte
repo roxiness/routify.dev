@@ -1,43 +1,43 @@
 <script>
     const features = [
         {
-            title: '💰 Guards',
+            title: '🛡️ Guards',
             tags: ['new'],
             description:
                 'Want to protect your <code>/admin</code> module or <code>/internal</code> page? With guards you can create your own logic to protect your content.',
         },
         {
-            title: '💰 Preloads',
+            title: '⚙️ Preloads',
             tags: ['new'],
             description:
                 'Run your own logic before the page is loaded. A great place to fetch data.',
         },
         {
-            title: '💰 Plugins',
+            title: '🧩 Plugins',
             tags: ['rewritten'],
             description:
                 'Enhance Routify with premade plugins or create your own.',
         },
         {
-            title: '💰 Meta Data',
+            title: '🖊️ Meta Data',
             tags: ['new', 'rewritten'],
             description:
                 'Metadata lets you add your own data to pages and modules at buildtime. This data can be accessed at any time without even having to load the page.',
         },
         {
-            title: '💰 Bundling',
+            title: '📎 Bundling',
             tags: ['rewritten', 'simplified'],
             description:
                 'Each page in Routify is a dynamically imported file. With bundling you can bundle branches of your route tree and avoid request waterfalls. You can even bundle the root tree and skip dynamic imports all together.',
         },
         {
-            title: '💰 Router instances',
+            title: '💽 Router instances',
             tags: ['new'],
             description:
                 "Need a widget with its own navigation or multiple panes with independent routes? Just add an extra Router, it's free!",
         },
         {
-            title: '💰 File based routes',
+            title: '📁 File based routes',
             description:
                 'Routes are mapped to your filesystem. This keeps things easy to reason about. Should you need to color outside the lines, you can always modify the route tree at build or runtime.',
         },
