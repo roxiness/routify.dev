@@ -1,10 +1,6 @@
 {
-  "name": "routify-docs-2020",
-  "version": "1.0.1",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sveltech/routify-site-2020.git"
-  },
+  "name": "v2.routify.dev",
+  "private": true,
   "license": "MIT",
   "scripts": {
     "dev": "run-p routify rollup",
