@@ -21,8 +21,8 @@
     "rollup": "rollup -cw",
     "nollup": "nollup -c",
     "routify": "routify",
-    "build:sass": "node-sass --recursive --output dist/build --source-map true --source-map-contents scss",
-    "watch:sass": "npm run build:sass && npm run build:sass -- --watch"
+    "build:sass": "sass scss:dist/build --source-map",
+    "watch:sass": "npm run build:sass -- --watch"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.1",
@@ -50,6 +50,7 @@
     "rollup-plugin-terser": "^6.1.0",
     "rollup-plugin-workbox": "^5.0.1",
     "routify-plugin-frontmatter": "^1.0.1",
+    "sass": "^1.42.1",
     "searchify": "^1.0.1",
     "spank": "^1.4.0",
     "spassr": "^1.1.2",
@@ -57,7 +58,6 @@
     "svelte-prism": "^1.1.3"
   },
   "dependencies": {
-    "node-sass": "^5.0.0",
     "nollup": "^0.13.8",
     "prismjs": "^1.20.0",
     "remark-slug": "^6.0.0",
@@ -76,7 +76,10 @@
   },
   "poindexter": {
     "output": "dist/poindexter.bundle.json",
-    "ignoreSelectors": ["nav", ".c-pagination"],
+    "ignoreSelectors": [
+      "nav",
+      ".c-pagination"
+    ],
     "contentSelectors": [
       ".c-sidebar-layout__main",
       "main"
