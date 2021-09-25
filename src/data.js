@@ -42,6 +42,8 @@ const contributors = [
   },
   {
     "name": "GHOST",
+    "realname": "Willow (GHOST)",
+    "description": "Maintainer of Routify and open source enthusiast",
     "github": "ghostdevv",
     "twitter": "onlyspaceghost",
     "discord": "GHOST#7524",
