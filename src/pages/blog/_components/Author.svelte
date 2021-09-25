@@ -4,6 +4,7 @@
   import { page } from "@roxi/routify";
   import Icon from "@/components/Icon.svelte";
   export let id = "";
+
   $: id = id || $page.meta.frontmatter.author;
   $: contributor = contributors.find(c => c.github === id);
   $: name = contributor.realname || contributor.name;
@@ -11,7 +12,7 @@
 
 
 <div class="c-blogpost-author">
-  <img class="c-blogpost-author__img" src="/images/collaborators/{contributor.imgpath}.jpg" alt="" />
+  <img class="c-blogpost-author__img" src="/images/collaborators/{contributor.imgpath}.{contributor.imgext || 'jpg'}" alt="" />
   <div>
     <h3 class="c-blogpost-author__name">{name}</h3>
     <p>{contributor.description}</p>
