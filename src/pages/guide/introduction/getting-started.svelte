@@ -20,7 +20,7 @@
     <p>
       The TV Shows app has a few steps
       <a
-        href="https://github.com/roxiness/routify-example-tvshow/branches/active">
+        href="https://github.com/roxiness/routify-example-tvshow/branches/all">
         (branches)
       </a>
       - each of which can be imported, using Codesandbox's "Import from Github"
