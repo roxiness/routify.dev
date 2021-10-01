@@ -47,7 +47,12 @@
 <main>
     <img src="/r3-logo.svg" alt="Routify 3 Logo" class="logo" />
     <div class="subheader">
-        <h3 >Early docs coming soon</h3>
+        <h3>
+            Preview docs available
+            <button>
+                <a href="https://v3.ci.routify.dev/">Docs</a>
+            </button>
+        </h3>
         Follow us on Discord and Twitter for updates
     </div>
 
@@ -84,9 +89,24 @@
 </main>
 
 <style lang="scss">
+    button {
+        color: white;
+        background: rgb(204, 50, 170);
+        box-shadow: inset 0 0 0 2000px rgb(233 56 194);
+        margin-left: 20px;
+        padding: 0.8rem 1.2rem;
+        border: none;
+        border-radius: 0.6rem;
+        font-size: 1.6rem;
+    }
+    button a {
+        color: white;
+    }
     .subheader {
         text-align: center;
-        h3 {margin-bottom: 1rem;}
+        h3 {
+            margin-bottom: 1rem;
+        }
     }
     main {
         line-height: 1.6rem;
