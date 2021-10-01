@@ -25,7 +25,7 @@
     {`
       <`}{`script>
       import { beforeUrlChange } from "@roxi/routify"
-      $beforeUrlChange((event, store) => {
+      $beforeUrlChange((event, route) => {
         if(formIsDirty){
           alert('Please save your changes before leaving.')
           return false
