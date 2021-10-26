@@ -17,7 +17,7 @@
       RewriteRule !.*\.html$ %{REQUEST_FILENAME}.html [L]
 
       RewriteCond %{REQUEST_FILENAME} !-f
-      RewriteRule . __app.html
+      RewriteRule . index.html
 
       <Files "*.js">
           ForceType text/javascript
