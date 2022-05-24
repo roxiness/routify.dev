@@ -3,6 +3,7 @@ import { svelte } from "@sveltejs/vite-plugin-svelte";
 import preprocess from "svelte-preprocess";
 import { VitePWA } from "vite-plugin-pwa";
 import { defineConfig } from "vite";
+import main from "vite-main-js";
 import { mdsvex } from "mdsvex";
 import { resolve } from "path";
 import slug from "remark-slug";
@@ -35,32 +36,33 @@ export default defineConfig({
         display: "standalone",
         icons: [
           {
-            "src": "public/icons/pwa/manifest-icon-192.maskable.png",
-            "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "any"
+            src: "public/icons/pwa/manifest-icon-192.maskable.png",
+            sizes: "192x192",
+            type: "image/png",
+            purpose: "any",
           },
           {
-            "src": "public/icons/pwa/manifest-icon-192.maskable.png",
-            "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "maskable"
+            src: "public/icons/pwa/manifest-icon-192.maskable.png",
+            sizes: "192x192",
+            type: "image/png",
+            purpose: "maskable",
           },
           {
-            "src": "public/icons/pwa/manifest-icon-512.maskable.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any"
+            src: "public/icons/pwa/manifest-icon-512.maskable.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "any",
           },
           {
-            "src": "public/icons/pwa/manifest-icon-512.maskable.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "maskable"
-          }
+            src: "public/icons/pwa/manifest-icon-512.maskable.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "maskable",
+          },
         ],
       },
     }),
+    main()
   ],
 
   resolve: {

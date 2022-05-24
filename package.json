@@ -9,9 +9,9 @@
     "build": "run-s build:*",
     "build:routify": "routify -b",
     "build:vite": "vite build",
-    "build:static": "spank",
     "build:search": "poindexter",
-    "assets": "pwa-asset-generator public/logo-square.svg public/icons/pwa --background \"#FFFFFF\" --padding \"16px\""
+    "assets": "pwa-asset-generator public/logo-square.svg public/icons/pwa --background \"#FFFFFF\" --padding \"16px\"",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@roxi/routify": "^2.18.7",
@@ -29,12 +29,11 @@
     "rollup": "^2.74.1",
     "routify-plugin-frontmatter": "^1.0.1",
     "sass": "^1.52.1",
-    "spank": "^1.9.0",
-    "spassr": "^1.1.2",
     "svelte": "^3.48.0",
     "svelte-preprocess": "^4.10.6",
     "svelte-prism": "^1.1.5",
     "vite": "^2.9.9",
+    "vite-main-js": "^0.0.1",
     "vite-plugin-pwa": "^0.12.0"
   },
   "routify": {
