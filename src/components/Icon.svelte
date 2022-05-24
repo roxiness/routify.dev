@@ -1,6 +1,6 @@
 <script>
-  // Possible icon types
-  import * as icons from "./icons";
+  import * as icons from './icons/index';
+
   export let name = "";
   export let size = null;
 
@@ -17,5 +17,5 @@
 </script>
 
 <div class="o-svg-icon {sizeClass} {_class}">
-  {@html icon}
+  <svelte:component this={icon} />
 </div>

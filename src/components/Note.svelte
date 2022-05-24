@@ -1,8 +1,8 @@
 <script>
   export let type = "info";
   import Icon from './Icon.svelte';
-  import IconInfo from './icons/info.svg';
-  import IconWarning from './icons/warning.svg';
+  import IconInfo from './icons/info.svelte';
+  import IconWarning from './icons/warning.svelte';
 </script>
 
 

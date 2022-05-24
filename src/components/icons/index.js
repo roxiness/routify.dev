@@ -1,18 +1,18 @@
-export { default as IconChevronUp } from "./chevron-up.svg";
-export { default as IconChevronDown } from "./chevron-down.svg";
-export { default as IconChevronLeft } from "./chevron-left.svg";
-export { default as IconChevronRight } from "./chevron-right.svg";
-export { default as IconInfo } from "./info.svg";
-export { default as IconWarning } from "./warning.svg";
+export { default as IconChevronUp } from "./chevron-up.svelte";
+export { default as IconChevronDown } from "./chevron-down.svelte";
+export { default as IconChevronLeft } from "./chevron-left.svelte";
+export { default as IconChevronRight } from "./chevron-right.svelte";
+export { default as IconInfo } from "./info.svelte";
+export { default as IconWarning } from "./warning.svelte";
 
-export { default as IconDiscord } from "./discord.svg";
-export { default as IconTwitter } from "./twitter.svg";
-export { default as IconGithub } from "./github.svg";
+export { default as IconDiscord } from "./discord.svelte";
+export { default as IconTwitter } from "./twitter.svelte";
+export { default as IconGithub } from "./github.svelte";
 
 
-export { default as IconResolve } from "./resolve.svg";
-export { default as IconFolder } from "./folder.svg";
-export { default as IconFile } from "./file.svg";
-export { default as IconUrl } from "./url.svg";
+export { default as IconResolve } from "./resolve.svelte";
+export { default as IconFolder } from "./folder.svelte";
+export { default as IconFile } from "./file.svelte";
+export { default as IconUrl } from "./url.svelte";
 
-export { default as IconSearch } from "./search.svg";
+export { default as IconSearch } from "./search.svelte";
