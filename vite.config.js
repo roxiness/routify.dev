@@ -1,5 +1,5 @@
 // vite.config.js
-import { svelte } from "@sveltejs/vite-plugin-svelte";
+import { svelte as svelteVitePlugin } from "@sveltejs/vite-plugin-svelte";
 import preprocess from "svelte-preprocess";
 import { VitePWA } from "vite-plugin-pwa";
 import { defineConfig } from "vite";
@@ -8,7 +8,19 @@ import { mdsvex } from "mdsvex";
 import { resolve } from "path";
 import slug from "remark-slug";
 
+/**
+ * @param {import('@sveltejs/vite-plugin-svelte').Options} options
+ */
+const svelte = (options) => {
+  const svelteCfgs = svelteVitePlugin(options);
+  const transform = svelteCfgs[0].transform.bind(svelteCfgs[0]);
+  svelteCfgs[0].transform = (code, id, options) =>
+    transform(code, id, { ...options, ssr: false });
+  return svelteCfgs;
+};
+
 export default defineConfig({
+  ssr: { noExternal: true },
   plugins: [
     svelte({
       preprocess: [
@@ -22,7 +34,6 @@ export default defineConfig({
         }),
         preprocess(),
       ],
-
       extensions: [".svelte", ".md"],
     }),
     VitePWA({
@@ -62,7 +73,7 @@ export default defineConfig({
         ],
       },
     }),
-    main()
+    main(),
   ],
 
   resolve: {
