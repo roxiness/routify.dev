@@ -25,7 +25,7 @@
         const path = fragments.join('/')
 
         /** $redirect to "en/i18n/intro" **/
-        $goto(`+'`/docs/en/${path}`'+`)
+        $goto(` + "\`/docs/en/${path}\`" + `)
       </script>
     `}
     <div slot="caption">

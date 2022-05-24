@@ -2,7 +2,6 @@
   import Header from "@/components/Header.svelte";
   import Footer from "@/components/Footer.svelte";
   import { metatags, page } from "@roxi/routify";
-  import ServiceWorker from '../components/ServiceWorker.svelte'
   const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
   metatags.template("title", title => `${title ? ` ${title} - ` : ""}Routify`);
   $: metatags.title = capitalize($page.title);
@@ -41,4 +40,3 @@
   </div>
 </main>
 <Footer />
-<ServiceWorker />

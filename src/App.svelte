@@ -1,11 +1,9 @@
 <script>
-  import { setContext } from "svelte"
-  import { Router } from "@roxi/routify"
   import { routes } from "../.routify/routes"
-  import { writable } from "svelte/store"
+  import { Router } from "@roxi/routify"
+  import { setContext } from "svelte"
 
   setContext("hashElements", new Map());
-
 </script>
 
 <!-- src/App.svelte -->

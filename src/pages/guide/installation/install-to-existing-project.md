@@ -8,12 +8,7 @@ layout: default
   import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
   import Note from "@/components/Note.svelte";
   meta.title = "Installation";
-  
-  /**
-   *  this isn't strictly needed, but my vscode's autoformat prefixes
-   *  `$url` in markdown with a backslash: `\$url`
-   */
-  $: link = $url
+  import scriptStr from './_script_str.js'
 </script>
 
 <!-- routify:options index=20 -->
@@ -23,7 +18,7 @@ layout: default
 <p>
   This is a guide for installing Routify in an existing project. If you
   wish to create a new project instead, please refer to our
-  <a href={link("/guide/introduction/getting-started")} >getting started guide</a>.
+  <a href={$url("/guide/introduction/getting-started")} >getting started guide</a>.
 </p>
 
 <Note>
@@ -72,8 +67,9 @@ _Note_: You might also want to add the `.routify` folder to `.gitignore`, since 
       import { routes } from "../.routify/routes";
     </script>
 
-    <Router {routes} />`}</Code>
-
+    <Router {routes} />`}
+</Code>
+  
 ---
 
 # Important
@@ -182,7 +178,7 @@ Routify uses `dynamic imports` aka `code splitting` by default. If your bundler 
         {`
           /* index.html */
           ...
-          <script type="module" src='/build/main.js'></script>
+          ${scriptStr}
           ...
         `}
       </Code>

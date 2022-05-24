@@ -2,13 +2,13 @@
 layout: default
 ---
 
-<_crip_>
+<script>
 import { url, meta } from "@roxi/routify"
 import Code from "@/components/Code.svelte";
 import { Tabs, TabsLink, TabsPage } from "@sveltech/bricks";
 import Note from "@/components/Note.svelte";
 meta.title = "Route tree";
-</_crip_>
+</script>
 
 # Route tree
 
