@@ -1,5 +1,6 @@
 <script>
   import Code from "@/components/Code.svelte";
+  import Note from "@/components/Note.svelte";
   import { meta } from "@roxi/routify";
   meta.title = "URL parameters";
 </script>
@@ -56,4 +57,9 @@
     The propagation is to prevent race conditions between parameters and
     component state.
   </p>
+
+  <Note>
+    Accessing local parameters in markup can be trigers to call to the component before navigating to its ancestors. See <a href="https://github.com/roxiness/routify/issues/380" target="_blank">#380</a>
+  </Note>
+
 </div>
