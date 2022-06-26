@@ -28,7 +28,7 @@ meta.title = 'Structure'
 
   <div class="c-container-vertical c-container-vertical--small">
     <h3>Excluding files</h3>
-    <p>Files and directories prefixed with an underscore will <strong>not</strong> be picked up by Routify. (except for <code>_layout.svelte</code> and <code>_reset.svelte</code>)</p>
+    <p>Files and directories prefixed with an underscore will <strong>not</strong> be picked up by Routify. (except for <code>_layout.svelte</code>, <code>_reset.svelte</code> and <code>_fallback.svelte</code>)</p>
   </div>
 
   <div class="c-container-vertical c-container-vertical--small">
