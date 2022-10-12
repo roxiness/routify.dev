@@ -12,7 +12,7 @@
     <h1 class="c-h1">Creating an app</h1>
     <p>To create your first Routify app, open an empty folder and type</p>
 
-    <Code>{`npx @roxi/routify init`}</Code>
+    <Code>{`npm init routify`}</Code>
 
     <p>
       This will install the
