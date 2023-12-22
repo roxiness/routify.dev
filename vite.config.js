@@ -9,6 +9,7 @@ import { resolve } from "path";
 import slug from "remark-slug";
 
 export default defineConfig({
+  ssr: { noExternal: true },
   plugins: [
     svelte({
       preprocess: [
@@ -22,7 +23,7 @@ export default defineConfig({
         }),
         preprocess(),
       ],
-
+      experimental: { dynamicCompileOptions: () => ({ generate: "dom" }) },
       extensions: [".svelte", ".md"],
     }),
     VitePWA({
@@ -62,7 +63,7 @@ export default defineConfig({
         ],
       },
     }),
-    main()
+    main(),
   ],
 
   resolve: {

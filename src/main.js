@@ -7,6 +7,3 @@ import '../scss/global.scss';
 registerSW()();
 
 const app = HMR(App, { target: document.body }, 'routify-app')
-
-export default app;
-
