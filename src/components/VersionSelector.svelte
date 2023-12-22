@@ -1,5 +1,5 @@
 <script>
-  let initial = 'https://routify.dev'
+  let initial = 'https://v2.routify.dev'
   let selected = initial
 
   $: if(initial !== selected) window.location.href = selected
@@ -22,6 +22,6 @@
 
 <select bind:value={selected}>
   <option value="https://v1.routify.dev">1.x</option>
-  <option value="https://routify.dev">2.x</option>
-  <option value="https://v3.routify.dev">3.x</option>
+  <option value="https://v2.routify.dev">2.x</option>
+  <option value="https://routify.dev">3.x</option>
 </select>
